@@ -114,17 +114,25 @@ nav ul li a {
     display: none;
 }
 
-@media(max-width: 786px) {
-
+@media(max-width: 992px) {
+    .social-media{
+        display: none;
+    }
     .logo {
-          position: fixed;
-          top: 0;
-          margin-top: 16px;
+        position:fixed;
+        left: 46%;
+        top: 20px;
+        transform: translate(-50%, -50%);
+        margin-top: 16px;
     }
 
     nav ul {
           max-height: 0px;
           background: #000;
+          overflow: hidden;
+          position: absolute;
+          left: 0;
+          top: 60px;
     }
 
     nav.black ul {
@@ -146,6 +154,16 @@ nav ul li a {
           display: block;
     }
 
+}
+@media(max-width: 500px) {
+    nav ul {
+        max-height: 0px;
+        background: #000;
+        overflow: hidden;
+        width: 100%;
+        top: 60px;
+        padding-right: 0px;
+  }
 }
 
 /* footer */
@@ -211,11 +229,8 @@ nav ul li a {
 
 #copyright_anturio2{
     position: static;
-    left: 0%;
-    right: 0%;
-    top: 0%;
     bottom: 57.14%;
-    margin-right:5px;
+    margin-left: 35%;
 
     /* Body / Body 2 */
     font-family: Inter;
@@ -235,16 +250,13 @@ nav ul li a {
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin: 8px 0px;
 }
 
 #copyright_anturio{
     position: static;
-    left: 0%;
-    right: 0%;
-    top: 0%;
     bottom: 57.14%;
     margin-right:5px;
+    margin-left: 35%;
 
     /* Body / Body 2 */
     font-family: Inter;
@@ -264,10 +276,10 @@ nav ul li a {
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin: 8px 0px;
 }
 #social_media{
     margin-bottom:10%;
+    margin-left:35%;
 }
 
 #social_media img{
@@ -278,14 +290,16 @@ nav ul li a {
 }
 
 .sector_empresa{
-    margin-top: 8% !important;
+    margin-top: 8% ;
 }
 
 .sector_support{
-    margin-top: 8% !important;
+    margin-top: 8% ;
 }
 #anturio_logo{
-    margin-top: 2% !important;
+    margin-top: 4% ;
+    margin-left: 19% ;
+    margin-bottom: 3%;
 }
   
   /* The container <div> - needed to position the dropdown content */
@@ -327,6 +341,8 @@ nav ul li a {
   .dropdown:hover .dropbtn {
     transform: scale(1.2);
     }
+
+    
 /* fim footer */
 
 @media only screen and (max-width: 699px) {
@@ -335,6 +351,10 @@ nav ul li a {
     }
     .sector_empresa{
         display:none;
+    }
+    #anturio_logo{
+        margin-left: 0% !important;
+        margin-bottom:10%;
     }
     .sector_support{
         display:none;
@@ -355,6 +375,9 @@ nav ul li a {
         top:100px;
         margin-left:0%;
     }
+    #copyright_anturio2{
+        margin-left:0%
+    }
 
     #social_media{
         margin-bottom:10%;
@@ -365,6 +388,10 @@ nav ul li a {
   @media only screen and (min-width: 700px) and (max-width: 1038px) {
     #first_links{
         display:none;
+    }
+    #anturio_logo{
+        margin-left: 0% !important;
+        margin-bottom:10%;
     }
     .sector_empresa{
         display:none;
@@ -400,7 +427,7 @@ nav ul li a {
     }
     #social_media{
         margin-bottom:10%;
-        margin-left:0% !important;
+        margin-left:0%;
     }
   }
 /* fim footer */
