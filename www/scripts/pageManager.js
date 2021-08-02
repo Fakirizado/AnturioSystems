@@ -28,6 +28,8 @@ function resizePhone(){
       if($(window).width() < 780)
       {
           $("#items_to_move").insertAfter("#support_div");
+      }else if($(window).width() < 1030){
+            $("#items_to_move").insertAfter("#support_div");
       }else{
             $("#items_to_move").insertAfter("#anturio_logo");
       }
