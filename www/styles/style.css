@@ -26,7 +26,6 @@ header {
 
 .logo {
     line-height: 60px;
-    position: fixed;
     float: left;
     margin: 16px 46px;
     color: #fff;
@@ -39,6 +38,8 @@ nav {
     position: fixed;
     width: 100%;
     line-height: 60px;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav ul {
@@ -79,6 +80,12 @@ nav ul {
     margin: 0;
     transition: 1s;
 }
+.social-media{
+    align-self: center;
+}
+.social-media svg{
+    margin-right: 6px;
+}
 
 nav.black ul {
     background: #000;
@@ -92,7 +99,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .menu-icon {
@@ -249,17 +256,18 @@ nav ul li a {
   .dropdown-content {
     display: none;
     position: absolute;
-    right: 28%;
+    left: -30%;
     background-color: transparent;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    text-align: left;
   }
   
   /* Links inside the dropdown */
   .dropdown-content a {
     color: #FFFFFF;
-    padding: 12px 16px;
+    padding: 0px 16px;
     text-decoration: none;
     display: block;
     font-weight: 300;
@@ -279,7 +287,7 @@ nav ul li a {
     }
 /* fim footer */
 
-@media only screen and (max-width: 500px)  {
+@media only screen and (max-width: 780px) {
     #first_links{
         display:none;
     }
@@ -305,41 +313,5 @@ nav ul li a {
         top:100px;
     }
   }
-
-  @media only screen and (min-width: 700px) and (max-width: 1038px) {
-    #first_links{
-        display:none;
-    }
-    .sector_empresa{
-        display:none;
-    }
-    .sector_support{
-        display:none;
-    }
-    #second_links{
-        line-height: 26px;
-    }
-    #empresas{
-        display:none;
-    }
-
-    #clear_fix{
-        display:none;
-    }
-
-    #copyright_anturio{
-        top:100px;
-    }
-
-    #center_elements{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-  }
-
-
 /* fim footer */
 
