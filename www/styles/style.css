@@ -138,8 +138,8 @@ nav ul li a {
     font-weight: normal;
     font-size: 16px;
     line-height: 26px;
+    
     /* identical to box height, or 162% */
-
     font-feature-settings: 'salt' on, 'liga' off;
 
     /* Text / Gray 300 */
