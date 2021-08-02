@@ -122,3 +122,108 @@ nav ul li a {
     }
 
 }
+
+/* footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+ }
+#first_links a{
+    text-decoration: none;
+    /* Body 1 */
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    /* identical to box height, or 162% */
+
+    font-feature-settings: 'salt' on, 'liga' off;
+
+    /* Text / Gray 300 */
+    color: #D9DBE1;
+}
+
+#first_links a:hover{
+    color: grey;
+}
+
+#second_links a{
+    text-decoration: none;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    /* identical to box height, or 162% */
+
+    font-feature-settings: 'salt' on, 'liga' off;
+    
+    /* Text / Gray 300 */
+    color: #D9DBE1;
+}
+
+#second_links a:hover{
+    color: grey;
+}
+#name_links{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+
+    letter-spacing: 0.15px;
+}
+#copyright_and_image{
+    margin-left:5px;
+}
+#copyright_anturio{
+    position: static;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 57.14%;
+    margin-right:5px;
+
+    /* Body / Body 2 */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+
+    font-feature-settings: 'salt' on, 'liga' off;
+
+    /* Text / Gray 300 */
+
+    color: #D9DBE1;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 8px 0px;
+}
+
+
+#social_media img{
+    /*display:flex;
+    justify-content: space-between;
+    max-width: 400px;
+    heigth:32px;
+    width:32px;*/
+    flex: none;
+    order: 0;
+    flex-grow: 2;
+    margin: 0px 5px;
+}
+/* fim footer */
