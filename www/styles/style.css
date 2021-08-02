@@ -16,13 +16,13 @@ header {
     background-size: cover;
 }
 
-.content {
+/*.content {
     width: 94%;
     margin: 4em auto;
     font-size: 20px;
     line-height: 30px;
     text-align: justify;
-}
+}*/
 
 .logo {
     line-height: 60px;
@@ -124,11 +124,11 @@ nav ul li a {
 
 /* footer */
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+    clear: both; 
+    z-index: 1; 
+    height: 100%;
+    width:
+    margin-top: 40em; 
  }
 
 #first_links a{
