@@ -130,6 +130,7 @@ nav ul li a {
     width: 100%;
     text-align: center;
  }
+
 #first_links a{
     text-decoration: none;
     /* Body 1 */
@@ -169,6 +170,7 @@ nav ul li a {
     color: grey;
 }
 #name_links{
+    color:white;
     font-family: Ubuntu;
     font-style: normal;
     font-weight: 500;
