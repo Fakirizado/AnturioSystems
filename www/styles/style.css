@@ -157,8 +157,8 @@ nav ul li a {
     font-weight: normal;
     font-size: 16px;
     line-height: 26px;
-    /* identical to box height, or 162% */
 
+    /* identical to box height, or 162% */
     font-feature-settings: 'salt' on, 'liga' off;
 
     /* Text / Gray 300 */
@@ -194,13 +194,14 @@ nav ul li a {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    /* identical to box height, or 120% */
 
+    /* identical to box height, or 120% */
     letter-spacing: 0.15px;
 }
 #copyright_and_image{
     margin-left:5px;
 }
+
 #copyright_anturio{
     position: static;
     left: 0%;
@@ -210,23 +211,20 @@ nav ul li a {
     margin-right:5px;
 
     /* Body / Body 2 */
-
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    /* identical to box height, or 171% */
 
+    /* identical to box height, or 171% */
     font-feature-settings: 'salt' on, 'liga' off;
 
     /* Text / Gray 300 */
-
     color: #D9DBE1;
 
 
     /* Inside Auto Layout */
-
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -235,11 +233,6 @@ nav ul li a {
 
 
 #social_media img{
-    /*display:flex;
-    justify-content: space-between;
-    max-width: 400px;
-    heigth:32px;
-    width:32px;*/
     flex: none;
     order: 0;
     flex-grow: 2;
@@ -285,3 +278,32 @@ nav ul li a {
     transform: scale(1.2);
     }
 /* fim footer */
+
+@media only screen and (max-width: 780px) {
+    #first_links{
+        display:none;
+    }
+    .sector_empresa{
+        display:none;
+    }
+    .sector_support{
+        display:none;
+    }
+    #second_links{
+        margin-top:10px;
+        line-height: 26px;
+    }
+    #empresas{
+        display:none;
+    }
+
+    #clear_fix{
+        display:none;
+    }
+
+    #copyright_anturio{
+        top:100px;
+    }
+  }
+/* fim footer */
+
