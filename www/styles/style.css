@@ -341,6 +341,18 @@ nav ul li a {
     transform: scale(1.2);
     }
 
+    .dropbtn:hover {
+        transform: scale(1.2);
+        }
+        .social-media svg:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+            }
+            .logo:hover {
+                transform: scale(1.05);
+                cursor: pointer;
+                }
+
     
 /* fim footer */
 
