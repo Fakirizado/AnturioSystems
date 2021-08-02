@@ -42,7 +42,6 @@ nav {
     justify-content: space-around;
 }
 
-
 nav ul {
     font-family: 'Ubuntu';
     font-style: normal;
@@ -107,6 +106,7 @@ nav ul li a {
     line-height: 60px;
     width: 100%;
     background: #000;
+    text-align: right;
     box-sizing: border-box;
     padding: 15px 24px;
     cursor: pointer;
@@ -114,25 +114,17 @@ nav ul li a {
     display: none;
 }
 
-@media(max-width: 992px) {
-    .social-media{
-        display: none;
-    }
+@media(max-width: 786px) {
+
     .logo {
-        position:fixed;
-        left: 46%;
-        top: 20px;
-        transform: translate(-50%, -50%);
-        margin-top: 16px;
+          position: fixed;
+          top: 0;
+          margin-top: 16px;
     }
 
     nav ul {
           max-height: 0px;
           background: #000;
-          overflow: hidden;
-          position: absolute;
-          left: 0;
-          top: 60px;
     }
 
     nav.black ul {
@@ -154,16 +146,6 @@ nav ul li a {
           display: block;
     }
 
-}
-@media(max-width: 500px) {
-    nav ul {
-        max-height: 0px;
-        background: #000;
-        overflow: hidden;
-        width: 100%;
-        top: 60px;
-        padding-right: 0px;
-  }
 }
 
 /* footer */
@@ -225,6 +207,35 @@ nav ul li a {
 }
 #copyright_and_image{
     margin-left:5px;
+}
+
+#copyright_anturio2{
+    position: static;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 57.14%;
+    margin-right:5px;
+
+    /* Body / Body 2 */
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+
+    /* identical to box height, or 171% */
+    font-feature-settings: 'salt' on, 'liga' off;
+
+    /* Text / Gray 300 */
+    color: #D9DBE1;
+
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 8px 0px;
 }
 
 #copyright_anturio{
@@ -342,10 +353,12 @@ nav ul li a {
 
     #copyright_anturio{
         top:100px;
+        margin-left:0%;
     }
 
     #social_media{
         margin-bottom:10%;
+        margin-left: 0% !important;
     }
   }
 
@@ -372,6 +385,10 @@ nav ul li a {
 
     #copyright_anturio{
         top:100px;
+        margin-left:0%;
+    }
+    #copyright_anturio2{
+        margin-left:0%
     }
 
     #center_elements{
@@ -383,6 +400,7 @@ nav ul li a {
     }
     #social_media{
         margin-bottom:10%;
+        margin-left:0% !important;
     }
   }
 /* fim footer */
