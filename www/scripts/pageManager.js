@@ -28,6 +28,7 @@ function resizePhone(){
       if($(window).width() < 780)
       {
           $("#items_to_move").insertAfter("#support_div");
-          console.log("deu")
+      }else{
+            $("#items_to_move").insertAfter("#anturio_logo");
       }
   }
