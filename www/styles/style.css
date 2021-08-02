@@ -175,8 +175,8 @@ nav ul li a {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    /* identical to box height, or 120% */
 
+    /* identical to box height, or 120% */
     letter-spacing: 0.15px;
 }
 #copyright_and_image{
@@ -191,23 +191,20 @@ nav ul li a {
     margin-right:5px;
 
     /* Body / Body 2 */
-
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    /* identical to box height, or 171% */
 
+    /* identical to box height, or 171% */
     font-feature-settings: 'salt' on, 'liga' off;
 
     /* Text / Gray 300 */
-
     color: #D9DBE1;
 
 
     /* Inside Auto Layout */
-
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -216,11 +213,6 @@ nav ul li a {
 
 
 #social_media img{
-    /*display:flex;
-    justify-content: space-between;
-    max-width: 400px;
-    heigth:32px;
-    width:32px;*/
     flex: none;
     order: 0;
     flex-grow: 2;
