@@ -42,6 +42,7 @@ nav {
     justify-content: space-around;
 }
 
+
 nav ul {
     font-family: 'Ubuntu';
     font-style: normal;
@@ -106,7 +107,6 @@ nav ul li a {
     line-height: 60px;
     width: 100%;
     background: #000;
-    text-align: right;
     box-sizing: border-box;
     padding: 15px 24px;
     cursor: pointer;
@@ -114,17 +114,25 @@ nav ul li a {
     display: none;
 }
 
-@media(max-width: 786px) {
-
+@media(max-width: 992px) {
+    .social-media{
+        display: none;
+    }
     .logo {
-          position: fixed;
-          top: 0;
-          margin-top: 16px;
+        position:fixed;
+        left: 46%;
+        top: 20px;
+        transform: translate(-50%, -50%);
+        margin-top: 16px;
     }
 
     nav ul {
           max-height: 0px;
           background: #000;
+          overflow: hidden;
+          position: absolute;
+          left: 0;
+          top: 60px;
     }
 
     nav.black ul {
@@ -146,6 +154,16 @@ nav ul li a {
           display: block;
     }
 
+}
+@media(max-width: 500px) {
+    nav ul {
+        max-height: 0px;
+        background: #000;
+        overflow: hidden;
+        width: 100%;
+        top: 60px;
+        padding-right: 0px;
+  }
 }
 
 /* footer */
