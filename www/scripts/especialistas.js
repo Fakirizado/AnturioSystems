@@ -10,7 +10,7 @@ $(document).ready(function () {
 });
 
 function changeSvg() {
-    if ($(window).width() < 500) {
+    if ($(window).width() < 608) {
         $('#svg_Number4').remove();
         document.getElementById('number_4').innerHTML = `<svg id="svg_Number4_mobile" width="241" height="240" viewBox="0 0 241 240" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle opacity="0.3" cx="160.118" cy="159.784" r="80.1183" fill="#ED1C23"/>
@@ -29,8 +29,6 @@ function changeSvg() {
         <circle cx="2" cy="2" r="2" fill="#ED1C23"/>
         </svg>
         `
-        
-        console.log(document.getElementById('number_4'));
 
     } else if ($(window).width() < 992) {
         $('#svg_Number4').remove();
@@ -50,8 +48,6 @@ function changeSvg() {
         <circle cx="3" cy="3" r="3" fill="#ED1C23"/>
         </svg>
         `
-        
-        console.log(document.getElementById('number_4'));
 
     } else {
         $('#svg_Number4').remove();
@@ -75,13 +71,12 @@ function changeSvg() {
         <circle cx="4.5" cy="4.5" r="4.5" fill="#ED1C23"/>
         </svg>
         `
-        console.log(document.getElementById('number_4'));
     }
 }
 
 
 function moveTextAboveSVG() {
-    if ($(window).width() < 500) {
+    if ($(window).width() < 608) {
         //Mobile
         $("#especialists_text").insertAfter("#number_4");
     } else {
