@@ -11,7 +11,7 @@
     align-items: center;
 }*/
 
-#diferent_sectors{
+#different_sectors{
     width:auto;
     display: flex;
     justify-content: space-around;
@@ -50,6 +50,37 @@
 
 
 
+/*Mobile*/
+  @media only screen and (max-width: 699px) {
+   
+  }
 
+/* tablet*/
+  @media only screen and (min-width: 700px) and (max-width: 1038px) {
+   #especialists_text{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 36px;
+    /* or 103% */
+    
+    letter-spacing: 0.25px;
+   }
+
+   #dot_point{
+    position: absolute;
+    
+    margin-top:23px;
+    margin-left: 3px;
+    width:6;
+    height:6; 
+   }
+
+   #number_4{
+    padding-right: 0px;
+    align-self:center;
+}
+  }
 
 /* Fim de Especialistas em diferentes setores style */
