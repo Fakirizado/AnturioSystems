@@ -52,8 +52,9 @@ html, body {
 
 #dot_point{
     position: absolute;
-    margin-top:50px;
-    margin-left: 3px;   
+    margin-top:48px;
+    margin-left: 3px; 
+    display: inline-block;
 }
 
 /*Mobile*/
@@ -79,6 +80,11 @@ html, body {
 
         text-align: center;
     }
+    #dot_point{
+    
+        margin-top:11px;
+    }
+    
 
     #number_4{
      /*   flex: 0 0 100%;*/
@@ -113,7 +119,6 @@ html, body {
    }
 
    #dot_point{
-    position: absolute;
     
     margin-top:23px;
     margin-left: 3px;
