@@ -118,11 +118,8 @@ nav ul li a {
         display: none;
     }
     .logo {
-        position:fixed;
-        left: 46%;
-        top: 20px;
-        transform: translate(-50%, -50%);
-        margin-top: 16px;
+        position:absolute;
+        top: -5px;
     }
 
     nav ul {
