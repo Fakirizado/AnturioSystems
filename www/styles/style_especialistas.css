@@ -11,6 +11,13 @@
     align-items: center;
 }*/
 
+html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
+  }
+
 #different_sectors{
     width:auto;
     display: flex;
@@ -48,15 +55,42 @@
     margin-left: 3px;   
 }
 
-
-
 /*Mobile*/
-  @media only screen and (max-width: 699px) {
-   
+  @media only screen and (max-width: 500px) {
+    
+    #different_sectors{
+        width:auto;
+        flex-direction: row;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    #especialists_text{
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+
+       /* flex: 0 0 80px;*/
+
+        text-align: center;
+    }
+
+    #number_4{
+     /*   flex: 0 0 100%;*/
+        padding-right: 40px;
+        align-self: center;
+        padding-bottom: 30px;
+    }
   }
 
 /* tablet*/
-  @media only screen and (min-width: 700px) and (max-width: 1038px) {
+  @media only screen and (min-width: 501px) and (max-width: 992px) {
+    #different_sectors{
+        width:auto;
+    }
    #especialists_text{
     font-family: Ubuntu;
     font-style: normal;
