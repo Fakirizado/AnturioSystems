@@ -10,6 +10,15 @@ body {
     background-color: black;
 }
 
+#video-banner {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1000;
+  }
+
 header {
     width: 100%;
     height: 10vh;
@@ -75,11 +84,15 @@ nav ul {
     line-height: 60px;
     list-style: none;
     background: rgba(0, 0, 0, 0);
-    padding: 0;
+    padding: 10px 10px;
     text-align: right;
     margin: 0;
     transition: 1s;
 }
+
+.dropbtn:active {
+    border-style: outset;
+  }
 .social-media{
     align-self: center;
 }
@@ -113,6 +126,88 @@ nav ul li a {
     display: none;
 }
 
+#title-1{
+    margin-left: 10%;
+    margin-top:100px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+#title-2{
+    margin-left: 10%;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 98px;
+    line-height: 112px;
+    letter-spacing: -1.5px;
+    color: #FFFFFF;
+
+}
+
+#title-3{
+    margin-left: 10%;
+    font-family: 'Montserrat';
+    width: 25%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+
+}
+#sectors-slider{
+    display: flex;
+    justify-content: start;
+    margin-left: 10%;
+    margin-bottom: 50px;
+}
+
+#more-info{
+    margin-left: 10%;
+    margin-bottom: 60px;
+}
+#more-info-button{
+    width: 280px;
+    padding: 15px 40px;
+    background: #ED1C23;
+    border-radius: 5px; 
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border:none;
+}
+.slider-item{
+    cursor:pointer;
+}
+#sectors-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    align-self: flex-end;
+    padding-bottom: 3px;
+}
+
 @media(max-width: 992px) {
     .social-media{
         display: none;
@@ -120,6 +215,10 @@ nav ul li a {
     .logo {
         position:absolute;
         top: -5px;
+        
+    }
+    #sectors-text{
+        display: none;
     }
 
     nav ul {
@@ -128,7 +227,14 @@ nav ul li a {
           overflow: hidden;
           position: absolute;
           left: 0;
-          top: 60px;
+          top: 64px;
+          position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding-right: 0px;
     }
 
     nav.black ul {
@@ -142,13 +248,57 @@ nav ul li a {
     nav ul li {
           box-sizing: border-box;
           width: 100%;
-          padding-top: 0px;
+          padding: 0px 0px;
           text-align: center;
     }
 
     .menu-icon {
           display: block;
     }
+    .dropbtn-sub{
+        border: none;
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 20px;
+        letter-spacing: 0.30px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        line-height: 40px;
+        list-style: none;
+        background: rgba(0, 0, 0, 0);
+        padding: 0;
+        text-align: right;
+        margin: 0;
+        transition: 1s;
+        padding: 0px !important;
+    }
+    #title-1{
+        display:none;
+    }
+    
+    #title-2{
+        margin-top: 100px;
+        font-weight: 300;
+        font-size: 61px;
+        line-height: 72px;
+        letter-spacing: -0.5px;
+    
+    }
+    
+    #title-3{
+        margin-left: 10%;
+        width: 45%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+    }
+    #sectors-slider{
+    margin-bottom: 25px;
+}
 
 }
 @media(max-width: 500px) {
@@ -157,9 +307,44 @@ nav ul li a {
         background: #000;
         overflow: hidden;
         width: 100%;
-        top: 60px;
         padding-right: 0px;
   }
+    #title-2{
+        font-size: 61px;
+        line-height: 72px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        margin-left: 0px !important;
+        margin-right: 0px;
+
+    }
+
+    #sectors-text{
+        display: flex;
+        align-self: center;
+    }
+
+    #title-3{
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+    }
+    #more-info{
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+    #more-info-button{
+        width: 100%;
+    }
+    #sectors-slider{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px;
+    }
 }
 
 /* footer */
@@ -308,7 +493,7 @@ nav ul li a {
   .dropdown-content {
     display: none;
     position: absolute;
-    left: -30%;
+    left: -10%;
     background-color: transparent;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -323,6 +508,7 @@ nav ul li a {
     text-decoration: none;
     display: block;
     font-weight: 300;
+    margin-top: -20px;
   }
   
   /* Change color of dropdown links on hover */
@@ -331,7 +517,12 @@ nav ul li a {
 }
   
   /* Show the dropdown menu on hover */
+
+  @media(min-width: 993px) {
+
   .dropdown:hover .dropdown-content {display: block;}
+
+  }
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {
@@ -339,7 +530,12 @@ nav ul li a {
     }
 
     .dropbtn:hover {
+        cursor: pointer;
+        text-decoration: none;
+        transition: all .5s ease;
+        cursor: pointer;
         transform: scale(1.2);
+        color: rgb(119, 119, 119);
         }
         .social-media svg:hover {
             transform: scale(1.1);
@@ -393,7 +589,7 @@ nav ul li a {
     }
   }
 
-  @media only screen and (min-width: 700px) and (max-width: 1038px) {
+  @media only screen and (min-width: 700px) and (max-width: 993px) {
     #first_links{
         display:none;
     }
