@@ -1,6 +1,7 @@
 /* Especialistas em diferentes setores style */
 
-#diferent_sectors{
+/*#diferent_sectors{
+    width:auto;
     position: relative;
     background: #212121;
     height: 459px;
@@ -8,8 +9,17 @@
     margin-bottom: 50px;
     justify-content: center;
     align-items: center;
-}
+}*/
 
+#diferent_sectors{
+    width:auto;
+    display: flex;
+    justify-content: space-around;
+    background: #212121;
+    height: 459px;
+    color: white;
+    margin-bottom: 50px;
+}
 #especialists_text{
     font-family: Ubuntu;
     font-style: normal;
@@ -18,20 +28,18 @@
     float: left;
 
     line-height: 72px;
-    position: absolute;
+/*    position: absolute;
     left: 231px;
     top: 162px;
-    width:auto;
-
+    width:auto;*/
+    align-self:center;
     letter-spacing: -0.5px;
     color: rgba(255, 255, 255, 0.38);
 }
 
 #number_4{
-    position: absolute;
-    left: 971.5px;
-    top: 100.03px;
-    width:auto;
+    padding-right: 100px;
+    align-self:center;
 }
 
 #dot_point{
