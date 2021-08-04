@@ -753,7 +753,7 @@ html, body {
     font-size: 35px;
     line-height: 36px;
     /* or 103% */
-    
+    padding-left: 10%;
     letter-spacing: 0.25px;
    }
 

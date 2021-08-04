@@ -114,6 +114,7 @@ html, body {
     font-weight: normal;
     font-size: 35px;
     line-height: 36px;
+    padding-left: 10%;
     /* or 103% */
     
     letter-spacing: 0.25px;
