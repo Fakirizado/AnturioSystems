@@ -182,10 +182,14 @@ html, body {
   }
 
   #first_two_icons{
+    display:flex;
+    align-self:center;
     margin-left: 0%;
   }
 
   #second_two_icons{
+    display:flex;
+    align-self:center;
     margin-right: 0%;
   }
 }
