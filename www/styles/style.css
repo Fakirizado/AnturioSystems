@@ -207,6 +207,15 @@ nav ul li a {
     align-self: flex-end;
     padding-bottom: 3px;
 }
+#first-hr{
+    border: 0;
+    clear: both;
+    display: block;
+    width: 100%;
+    background-color: red;
+    height: 8px;
+    margin-bottom: -2px;
+}
 
 @media(max-width: 992px) {
     .social-media{
@@ -218,6 +227,9 @@ nav ul li a {
         
     }
     #sectors-text{
+        display: none;
+    }
+    #first-hr{
         display: none;
     }
 
