@@ -220,3 +220,45 @@ html, body {
  
 }
 /*Fim de Div Construção, Indústria, Distribuição e TI*/
+
+/* Início de Div "Mais de 500 clientes que confiam em nós" */
+#div_trusted_clients{
+  width:auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 360px;
+  background: #212121;
+  margin-bottom:50px; /* temporário */
+  margin-top:50px; /* temporário */
+  color:white;
+}
+
+#clients_text{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 36px;
+
+  letter-spacing: 0.25px;
+  /* float: left; temporário */
+
+  align-self:center;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+#clients_svgs{
+  display: flex;
+  width: 65%;
+  align-self:center;
+  justify-content: space-evenly;
+}
+
+.icons_clients{
+  align-self:center;
+  justify-content: space-between;
+}
+
+
+/* Fim de Div "Mais de 500 clientes que confiam em nós" */
