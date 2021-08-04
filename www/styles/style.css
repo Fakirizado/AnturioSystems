@@ -49,6 +49,7 @@ nav {
     line-height: 60px;
     display: flex;
     justify-content: space-around;
+    z-index: 10000;
 }
 
 nav ul {
@@ -224,6 +225,7 @@ nav ul li a {
     display: flex;
     justify-content: space-between;
     background-color: #F5F5F5;
+    position: relative;
 }
 #we-solution-left{
     display: grid;
@@ -354,15 +356,136 @@ grid-row-end: -1;
     grid-row-start: -5;
     grid-row-end: -5;
 }
+#we-solution-text{
+    position: absolute;
+    text-align: center;
+    left:50%; 
+    top:55%; 
+    transform: translate(-50%, -50%)
+}
+#culture-title{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 98px;
+    line-height: 112px;
+    text-align: center;
+    letter-spacing: -1.5px;
+    color: #ED1C23;
+}
+#culture-subtitle{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #212121;
+    margin-bottom: 30px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#our-culture{
+    width: 222px;
+    height: 46px;
+    padding: 15px 40px;
+    background: #ED1C23;
+    border-radius: 5px; 
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border:none;
+}
+#our-culture:hover{
+    transform: scale(1.1);
+}
 
+@media(max-width: 1250px) {
+ #we-solution-left img{
+    max-width: 83.5px;
+ }
+ #we-solution-right img{
+     max-width: 83.5px;
+}
+#we-solution-left{
+    grid-template-columns: 83.5px 83.5px  83.5px  83.5px  auto;
+    grid-template-rows: 83.5px 83.5px  83.5px  83.5px ;
+}
 
+#we-solution-right{
+    grid-template-columns: auto 83.5px 83.5px  83.5px  83.5px;
+    grid-template-rows: 120px 83.5px  83.5px 83.5px 83.5px;
+}
+#culture-title{
+    font-size: 61px;
+    line-height: 72px;
+    letter-spacing: -0.5px;
+}
+#culture-subtitle{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+#we-solution-text{
+    top:55%; 
+}
+}
 
+@media(max-width: 900px){
+    #we-solution-text{
+        top:48%; 
+    }
+}
+@media(max-width: 750px) {
+    #we-solution-right{
+        display: none;
+    }
+    .remove-mobile{
+        display: none;
+    }
+    #we-solution-left{
+        width: 100%;
+     }
+     #we-solution-left{
+        grid-template-columns:auto auto auto auto;
+        grid-template-rows: auto auto;
+    }
+    #we-solution-left img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        max-width: 1000px;
+     }
+     #culture-title{
+        font-size: 35px;
+        line-height: 36px;
+        letter-spacing: 0.25px;
+    }
+    #we-solution-text{
+        position: relative;
+        transform: none;
+        left: 0px;
+        top: 0px;
+        margin-top:20px;
+    }
+    #we-solution-page{
+        flex-direction: column;
+    }
+    #our-culture{
+        margin-bottom: 50px;
+        margin-top:20px;
+    }
 
-
-
-
-
-
+}
 
 
 
