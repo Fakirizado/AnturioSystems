@@ -790,6 +790,7 @@ html, body {
 /* Fim de Especialistas em diferentes setores style */
 
 
+
 /*Início de Div Construção, Indústria, Distribuição e TI*/
 #div_with_sectors{
     width:auto;
@@ -850,13 +851,21 @@ html, body {
    #first_two_icons{
     margin-left: 0%;
     width:100%;
+    margin-bottom: 22px;
+    justify-content: space-evenly;
   }
   
   #second_two_icons{
     margin-right: 0%;
     width:100%;
+    justify-content: space-evenly;
   }
-  
+  #svg_construction{
+    margin-left: 0%;
+  }
+  #svg_it{
+    margin-right: 0%;
+  }
    
   }
   /*Fim de Div Construção, Indústria, Distribuição e TI*/
