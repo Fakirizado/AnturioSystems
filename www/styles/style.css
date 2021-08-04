@@ -217,6 +217,158 @@ nav ul li a {
     margin-bottom: -2px;
 }
 
+
+/* INICIO DIV SOMOS A SOLUÇÃO*/
+
+#we-solution-page{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+}
+#we-solution-left{
+    display: grid;
+    grid-template-columns: 142.5px 142.5px  142.5px  142.5px  auto;
+    grid-template-rows: 142.5px  142.5px 142.5px 142.5px ;
+    background-color: #F5F5F5;
+    width: 50%;
+}
+
+#we-solution-right{
+    display: grid;
+    grid-template-columns: auto 142.5px 142.5px  142.5px  142.5px;
+    grid-template-rows: 90px 142.5px  142.5px 142.5px 142.5px;
+    background-color: #F5F5F5;
+    width: 50%;
+    justify-content: end;
+    align-content: end;
+}
+
+/* LEFT SIDE */
+#first-first-img-solution {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+#first-red-solution{
+grid-column-start: 3;
+grid-column-end: 3;
+grid-row-start: 1;
+grid-row-end: 1;
+}
+#first-second-img-solution{
+grid-column-start: 4;
+grid-column-end: 4;
+grid-row-start: 1;
+grid-row-end: 1;
+}
+#second-first-img-solution{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+#second-third-img-solution{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+#third-red-solution{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+#third-second-img-solution{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+#fourth-first-img-solution{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+#last-red-solution{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
+/* RIGHT SIDE */
+
+#first-first-img-solution-right {
+    grid-column-start: -2;
+    grid-column-end: -2;
+    grid-row-start: -1;
+    grid-row-end: -1;
+  }
+#first-red-solution-right {
+grid-column-start: -3;
+grid-column-end: -3;
+grid-row-start: -1;
+grid-row-end: -1;
+}
+#first-second-img-solution-right {
+grid-column-start: -4;
+grid-column-end: -4;
+grid-row-start: -1;
+grid-row-end: -1;
+}
+#second-first-img-solution-right {
+    grid-column-start: -1;
+    grid-column-end: -1;
+    grid-row-start: -2;
+    grid-row-end: -2;
+}
+#second-third-img-solution-right {
+    grid-column-start: -3;
+    grid-column-end: -3;
+    grid-row-start: -2;
+    grid-row-end: -2;
+}
+#third-red-solution-right {
+    grid-column-start: -1;
+    grid-column-end: -1;
+    grid-row-start: -3;
+    grid-row-end: -3;
+}
+#third-second-img-solution-right {
+    grid-column-start: -2;
+    grid-column-end: -2;
+    grid-row-start: -3;
+    grid-row-end: -3;
+}
+#fourth-first-img-solution-right {
+    grid-column-start: -1;
+    grid-column-end: -1;
+    grid-row-start: -4;
+    grid-row-end: -4;
+}
+#last-red-solution-right {
+    grid-column-start: -2;
+    grid-column-end: -2;
+    grid-row-start: -5;
+    grid-row-end: -5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FIM DIV SOMOS A SOLUÇÃO*/
+
 @media(max-width: 992px) {
     .social-media{
         display: none;
