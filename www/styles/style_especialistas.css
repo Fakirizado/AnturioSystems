@@ -24,9 +24,12 @@ html, body {
     justify-content: space-around;
     background: #212121;
     height: 459px;
-    color: white;
-    margin-bottom: 50px;
+    color: white;    
+    margin-bottom: 0px;
 }
+
+
+
 #especialists_text{
     font-family: Ubuntu;
     font-style: normal;
@@ -133,6 +136,79 @@ html, body {
     margin-right:0px;
     margin-left:100px;
 }
-  }
+
+}
 
 /* Fim de Especialistas em diferentes setores style */
+
+
+/*Início de Div Construção, Indústria, Distribuição e TI*/
+#div_with_sectors{
+  width:auto;
+  display: flex;
+  justify-content: space-between;
+  background: #2D2D2D;
+  height: 223px;
+  color: white;
+}
+#svg_construction{
+  margin-left: 15%;
+}
+#svg_it{
+  margin-right: 15%;
+}
+
+.svg_sectors{
+  align-self:center;
+}
+
+#first_two_icons{
+  display: flex;
+  justify-content: space-around;
+  width:50%;
+  margin-left: 15%;
+}
+
+#second_two_icons{
+  display: flex;
+  justify-content: space-around;
+  width:50%;
+  margin-right: 15%;
+}
+
+/* tablet*/
+@media only screen and (min-width: 609px) and (max-width: 992px) {
+  #div_with_sectors{
+    justify-content: space-between;
+  }
+
+  #first_two_icons{
+    margin-left: 0%;
+  }
+
+  #second_two_icons{
+    margin-right: 0%;
+  }
+}
+
+/*Mobile*/
+@media only screen and (max-width: 608px) {
+ #div_with_sectors{
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+ }
+ #first_two_icons{
+  margin-left: 0%;
+  width:100%;
+}
+
+#second_two_icons{
+  margin-right: 0%;
+  width:100%;
+}
+
+ 
+}
+/*Fim de Div Construção, Indústria, Distribuição e TI*/
