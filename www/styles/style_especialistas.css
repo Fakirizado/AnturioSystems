@@ -250,7 +250,7 @@ html, body {
 
 #clients_svgs{
   display: flex;
-  width: 65%;
+  width: 100%;
   align-self:center;
   justify-content: space-evenly;
 }
@@ -303,9 +303,12 @@ html, body {
 }
 
 }
+#breakline_phone{
+  display:none;
+}
 
 /*Mobile*/
-@media only screen and (max-width: 608px) {
+@media only screen and (max-width: 607px) {
   #clients_text{
     font-family: Ubuntu;
     font-style: normal;
@@ -318,16 +321,6 @@ html, body {
     letter-spacing: 0.15px;
 
   }
-  
-}
-
-#breakline_phone{
-  display:none;
-}
-
-/*Tablet*/
-@media only screen and (max-width: 608px) {
-  
   #breakline_phone{
     display:block;
   }
@@ -351,13 +344,41 @@ html, body {
     width: 100%;
     margin-top:20px;
     margin-bottom: 50px;
-    justify-content: space-between;
+    align-self:center;
+    justify-content: space-evenly;
   }
   #second_two_icons_clients{
     display:flex;
     margin-right: 0%;
     width: 100%;
-    justify-content: space-between;
+    align-self:center;
+    justify-content: space-evenly;
     }
+  
+}
+
+
+#dot_point_clients{    
+  margin-top: 14px;
+  margin-left: 3px;
+}
+/*Tablet*/
+@media only screen and (min-width: 608px) and (max-width: 992px) {
+  
+  #first_two_icons_clients{
+    display:flex;
+    margin-left: 0%;
+    width: 100%;
+    align-self:center;
+    justify-content: space-evenly;
+  }
+  #second_two_icons_clients{
+    display:flex;
+    margin-right: 0%;
+    width: 100%;
+    align-self:center;
+    justify-content: space-evenly;
+    }
+  
   }
 /* Fim de Div "Mais de 500 clientes que confiam em nós" */
