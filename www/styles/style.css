@@ -540,6 +540,9 @@ nav ul li a {
   .dropdown:hover .dropbtn {
     transform: scale(1.2);
     }
+    #more-info-button:hover{
+        transform: scale(1.05);
+    }
 
     .dropbtn:hover {
         cursor: pointer;
