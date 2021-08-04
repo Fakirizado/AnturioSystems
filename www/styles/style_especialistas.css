@@ -321,31 +321,43 @@ html, body {
   
 }
 
+#breakline_phone{
+  display:none;
+}
+
 /*Tablet*/
 @media only screen and (max-width: 608px) {
+  
+  #breakline_phone{
+    display:block;
+  }
+  
   #clients_svgs{
-    width: auto;
     display: flex;
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
   }
   #div_trusted_clients {
+    display:flex;
     justify-content: center;
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
   }
   #first_two_icons_clients{
+    display:flex;
     margin-left: 0%;
     width: 100%;
-    margin-bottom: 22px;
-    justify-content: space-evenly;
+    margin-top:20px;
+    margin-bottom: 50px;
+    justify-content: space-between;
   }
   #second_two_icons_clients{
+    display:flex;
     margin-right: 0%;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     }
   }
 /* Fim de Div "Mais de 500 clientes que confiam em nós" */
