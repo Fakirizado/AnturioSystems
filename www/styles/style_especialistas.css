@@ -386,3 +386,7 @@ html, body {
   
   }
 /* Fim de Div "Mais de 500 clientes que confiam em nós" */
+
+.hover_social_media{
+  cursor: pointer;
+}

@@ -1350,7 +1350,9 @@ html, body {
 
 
 
-
+.hover_social_media{
+    cursor: pointer;
+  }
 
 
 
