@@ -1350,13 +1350,9 @@ body {
 
 
 
-.hover_social_media{
+.hover_social_media svg:hover {
+  transform: scale(1.1);
   cursor: pointer;
-}
-
-
-
-
-
+  }
 
 /* CONTACT US - FIM */
