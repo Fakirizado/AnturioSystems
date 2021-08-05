@@ -1113,6 +1113,11 @@ html, body {
     #second_two_icons{
       margin-right: 0%;
     }
+    
+    .svg_sectors{
+        display: flex;
+        align-self: center;
+    }
   }
   
   /*Mobile*/
