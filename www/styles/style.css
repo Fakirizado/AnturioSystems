@@ -406,7 +406,7 @@ grid-row-end: -1;
     border:none;
 }
 #our-culture:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 @media(max-width: 1250px) {
@@ -828,11 +828,11 @@ grid-row-end: -1;
         color: rgb(119, 119, 119);
         }
         .social-media svg:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             cursor: pointer;
             }
             .logo:hover {
-                transform: scale(1.05);
+                transform: scale(1.03);
                 cursor: pointer;
                 }
 
@@ -1153,7 +1153,6 @@ html, body {
     flex-direction: column;
     height: 360px;
     background: #212121;
-    margin-bottom:50px; /* temporário */
     color:white;
   }
   
@@ -1321,22 +1320,27 @@ html, body {
 
 #contact-us{
     background: #F5F5F5;
+    padding-top: 100px;
+    padding-bottom: 20px;
 }
 #contact-us-post-form p{
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.4px;
     color: rgba(33, 33, 33, 0.6);
+    width: 450px;
+    margin-left: 5px;
 }
 #terms-conditions{
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    width: 450px;
 }
 .input-contact{
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -1349,6 +1353,16 @@ html, body {
     border: 1px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+#agree{
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
 }
 #submit-button-contact{
     font-family: 'Ubuntu';
@@ -1363,26 +1377,173 @@ html, body {
     background: #ED1C23;
     border-radius: 5px;
     padding: 15px 40px;
-    width: 450px;
     border: none;
+    width: 450px;
 }
 #submit-button-contact:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .input-message{
-    height: 150px;
+    /*height: 150px;*/
+    padding: 15px 5px 135px 10px;
+    overflow: hidden;
+    resize: none;
+}
+#contact-us-phone-btn{
+    background: #ED1C23;
+    border-radius: 5px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    width: 240px;
+    height: 54px;
+    margin-top: 40px;
+    border: none;
 }
 
+#contact-us-phone-btn:hover{
+    transform: scale(1.05);
 
-
-
-
-
+}
+#contact-us-talk-with-us{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 98px;
+    line-height: 112px;
+    letter-spacing: -1.5px;
+    color: #ED1C23;
+}
 .hover_social_media{
     cursor: pointer;
   }
+  #contact-us{
+      display: flex;
+      justify-content: space-between;
+  }
+  #contact-us-text-div{
+      width: 40%;
+      padding-left: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 130px;
+    
+  }
+  #contact-us-img{
+      padding-top: 50px;
+  }
+  #contact-us-phone-btn-mobile{
+      display: none;
+  }
 
 
+@media only screen and (max-width: 1350px) {
+    #contact-us-text-div{
+        padding-left: 3%;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    #contact-us-img{
+        display: none;
+    }
+    #contact-us{
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    #contact-us-phone-btn{
+        display: none;
+    }
+    #contact-us-phone-btn-mobile{
+        display: block;
+        background: #ED1C23;
+        border-radius: 5px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        width: 75px;
+        height: 45px;
+        border: none;
+    }
+    #contact-us-text-div{
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #submit-div-contact{
+        margin-bottom: 15px;
+    }
+    #contact-us{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+    }
+    #submit-div-contact{
+        display: flex;
+        justify-content: space-around;
+    }
+    .input-contact{
+        width: 100%;
+    }
+    #contact-us-form{
+        width: 100%;
+    }
+    #contact-us-post-form{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #terms-conditions, #contact-us-post-form p{
+        width: 100%;
+    }
+    #submit-button-contact{
+        width: 100%;
+        margin-left: 10px;
+    }
+    #contact-us-text-div{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    #contact-us-talk-with-us{
+        font-size: 70px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #contact-us-talk-with-us{
+        font-family: 'Ubuntu';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 36px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #FFFFFF;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    #contact-us-text-div{
+        background: #2D2D2D;
+        margin: 0px;
+        margin-bottom: 35px;
+    }
+    #contact-us{
+        padding-top: 0px;
+    }
+    #submit-div-contact{
+        margin-bottom: 25px;
+    }
+    .other-color{
+        color:red;
+    }
+}
 
 
 
