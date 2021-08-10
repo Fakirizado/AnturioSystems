@@ -257,11 +257,13 @@ var svg_it_mobile = `
 $(window).resize(function () {
     changeSvg();
     moveTextAboveSVG();
+    changeSizesSVG();
 });
 
 $(document).ready(function () {
     changeSvg();
     moveTextAboveSVG();
+    changeSizesSVG();
 });
 
 //changes on svgs when hover
@@ -416,6 +418,12 @@ function toWeb(){
     
     
 `
+}
+function changeSizesSVG() {
+    document.getElementById('svg_construction').setAttribute('width', 150)
+    document.getElementById('svg_industry').setAttribute('width', 150)
+    document.getElementById('svg_distribution').setAttribute('width', 150)
+    document.getElementById('svg_it').setAttribute('width', 150)
 }
 
 function changeSvg() {
