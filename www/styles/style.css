@@ -68,8 +68,8 @@ nav ul {
     padding: 0;
     text-align: right;
     margin: 0;
-    padding-right: 40px;
     transition: 1s;
+    display: flex;
     
 }
 .dropbtn{
@@ -103,10 +103,10 @@ nav ul {
 }
 
 .black {
-    background: #000;
+    background: #212121;
 }
 .black .dropdown-content{
-    background: #000;
+    background: #212121;
 }
 
 nav ul li {
@@ -123,17 +123,25 @@ nav ul li a {
     color: #fff;
     font-size: 14px;
 }
+#close-hamburguer{
+    display: none;
+    position: fixed;
+    right: 20px;
+    top:30px;
+    z-index: 10000;
+}
 
 .menu-icon {
     line-height: 60px;
     width: 100%;
-    background: #000;
+    background: #212121;
     box-sizing: border-box;
     padding: 15px 24px;
     cursor: pointer;
     color: #fff;
     display: none;
 }
+
 
 #title-1{
     margin-left: 10%;
@@ -201,6 +209,9 @@ nav ul li a {
     color: #FFFFFF;
     border:none;
 }
+.social-media-hamburguer{
+    display: none;
+}
 .slider-item{
     cursor:pointer;
 }
@@ -224,6 +235,18 @@ nav ul li a {
     background-color: red;
     height: 8px;
     margin-bottom: -2px;
+}
+#dropdown-language{
+    min-width: 70px;
+    width: 70px;
+}
+#dropdown-language a{
+    color: rgba(255, 255, 255, 0.38);
+}
+
+#dropdown-language a:hover{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
 }
 @media(min-width: 993px) {
     #content-first-page{
@@ -506,7 +529,7 @@ grid-row-end: -1;
 /* FIM DIV SOMOS A SOLUÇÃO*/
 
 @media(max-width: 992px) {
-    .social-media{
+    #nav-social-language{
         display: none;
     }
     .logo {
@@ -523,11 +546,11 @@ grid-row-end: -1;
 
     nav ul {
           max-height: 0px;
-          background: #000;
+          background: #212121;
           overflow: hidden;
           position: absolute;
           left: 0;
-          top: 64px;
+          top: 85px;
           position: absolute;
             margin-left: auto;
             margin-right: auto;
@@ -535,14 +558,55 @@ grid-row-end: -1;
             right: 0;
             text-align: center;
             padding-right: 0px;
+            display: block;
+            height: calc(100vh - 90px);
     }
 
     nav.black ul {
-          background: #000;
+          background: white;
     }
 
     .showing {
           max-height: 34em;
+          background: white;
+          font-family: Ubuntu;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 28px;
+            line-height: 24px;
+            letter-spacing: 0.35px;
+            text-transform: uppercase;
+            color: #212121;
+            padding-left: 5%;
+            height: calc(100vh - 90px);
+    }
+    .social-media-hamburguer{
+        position:absolute;
+        bottom: 20px;
+        flex-direction: column;
+        align-content: center;
+        margin-left: -5%;
+        width: 100%;
+    }
+    .hamburguer-hr{
+        border: 1px solid #EEEEEE;
+        margin-right: 5%;
+    }
+    #hamburguer-icons-text{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #000000;
+    }
+    .showing-display li{
+        text-align: left;
+    }
+    .li-sub{
+        padding-left: 5%;
     }
 
     nav ul li {
@@ -598,6 +662,35 @@ grid-row-end: -1;
     }
     #sectors-slider{
     margin-bottom: 25px;
+}
+.dropbtn{
+    color: #212121;
+    border: none;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 24px;
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+    line-height: 60px;
+    list-style: none;
+    padding: 10px 10px;
+    text-align: right;
+    margin: 0;
+    transition: 1s;
+}
+#sectors-btn{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#sectors-dropdown{
+    width: 100%;
+}
+#sectors-btn svg{
+    align-self: center;
+    margin-right: 5%;
 }
 
 }
@@ -815,7 +908,7 @@ grid-row-end: -1;
   
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
-    font-weight: 1000;
+    font-weight: 500;
 }
   
   /* Show the dropdown menu on hover */
@@ -827,9 +920,6 @@ grid-row-end: -1;
   }
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-    transform: scale(1.2);
-    }
     #more-info-button:hover{
         transform: scale(1.05);
     }
@@ -837,19 +927,17 @@ grid-row-end: -1;
     .dropbtn:hover {
         cursor: pointer;
         text-decoration: none;
-        transition: all .5s ease;
-        cursor: pointer;
-        transform: scale(1.2);
-        color: rgb(119, 119, 119);
+        transition: all .1s ease;
+        color:#FFFFFF;
         }
-        .social-media svg:hover {
-            transform: scale(1.05);
-            cursor: pointer;
-            }
-            .logo:hover {
-                transform: scale(1.03);
-                cursor: pointer;
-                }
+    .social-media svg:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+        }
+    .logo:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+        }
 
     
 /* fim footer */
