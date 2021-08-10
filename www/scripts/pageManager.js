@@ -62,7 +62,7 @@ $(document).ready(function () {
             $("#close-hamburguer").css("display", "block");
            
             $("#sectors-btn").html(`Setores <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L7 7L13 1" stroke="#212121" stroke-width="0.8"/>
+            <path d="M1 1L7 7L13 1" stroke="#212121" stroke-width="1"/>
             </svg>`);
             $("nav ul").toggleClass("showing-display");
           }
@@ -73,33 +73,39 @@ $(document).ready(function () {
         mouseenter: function () {
             if($(window).width() > 992){
             $("#language-btn").html(`PT <svg width="11" height="7" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 3.25L3.5 0.75L1 3.25" stroke="white" stroke-width="0.8"/>
+            <path d="M6 3.25L3.5 0.75L1 3.25" stroke="white" stroke-width="1"/>
             </svg>`);
             $("#our-contacts").css("color", "rgba(255, 255, 255, 0.30)");
             $("#our-blog").css("color", "rgba(255, 255, 255, 0.30)");
             $("#our-team").css("color", "rgba(255, 255, 255, 0.30)");
             $("#sectors-btn").css("color", "rgba(255, 255, 255, 0.30)");
+            $("#sectors-btn svg path").attr("stroke-opacity","0.4");
         }
         }, mouseleave: function () {
             if($(window).width() > 992){
             $("#language-btn").html(`PT <svg width="11" height="7"
             viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 0.75L3.5 3.25L6 0.75" stroke="white" stroke-opacity="0.74"
-                stroke-width="0.8" />`);
+                stroke-width="1" />`);
             $("#our-contacts").removeAttr("style");
             $("#our-blog").removeAttr("style");
             $("#our-team").removeAttr("style");
             $("#sectors-btn").removeAttr("style");
+            $("#sectors-btn svg path").attr("stroke-opacity","0.74");
             }
     }});
 
     $("#our-contacts").on({
         mouseenter: function () {
             if($(window).width() > 992){
+        $("#sectors-btn svg path").attr("stroke-opacity","0.4");
         $("#language-btn").css("color", "rgba(255, 255, 255, 0.30)");
         $("#our-blog").css("color", "rgba(255, 255, 255, 0.30)");
         $("#our-team").css("color", "rgba(255, 255, 255, 0.30)");
         $("#sectors-btn").css("color", "rgba(255, 255, 255, 0.30)");
+        $("#language-btn svg path").attr("stroke-opacity","0.4");
+        $("#sectors-btn svg path").attr("stroke-opacity","0.4");
+        
             }
         }, mouseleave: function () {
             if($(window).width() > 992){
@@ -107,6 +113,8 @@ $(document).ready(function () {
         $("#our-blog").removeAttr("style");
         $("#our-team").removeAttr("style");
         $("#sectors-btn").removeAttr("style");
+        $("#sectors-btn svg path").attr("stroke-opacity","0.74");
+        $("#language-btn svg path").attr("stroke-opacity","0.74");
             }
     }});
 
@@ -117,6 +125,8 @@ $(document).ready(function () {
         $("#language-btn").css("color", "rgba(255, 255, 255, 0.30)");
         $("#our-team").css("color", "rgba(255, 255, 255,  0.30)");
         $("#sectors-btn").css("color", "rgba(255, 255, 255,  0.30)");
+        $("#sectors-btn svg path").attr("stroke-opacity","0.4");
+        $("#language-btn svg path").attr("stroke-opacity","0.4");
             }
         
         }, mouseleave: function () {
@@ -125,6 +135,8 @@ $(document).ready(function () {
         $("#language-btn").removeAttr("style");
         $("#our-team").removeAttr("style");
         $("#sectors-btn").removeAttr("style");
+        $("#sectors-btn svg path").attr("stroke-opacity","0.74");
+        $("#language-btn svg path").attr("stroke-opacity","0.74");
             }
     }});
 
@@ -132,24 +144,26 @@ $(document).ready(function () {
         mouseenter: function () {
             if($(window).width() > 992){
         $("#sectors-btn").html(`Setores <svg width="11" height="7" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 3.25L3.5 0.75L1 3.25" stroke="white" stroke-width="0.8"/>
+        <path d="M6 3.25L3.5 0.75L1 3.25" stroke="white" stroke-width="1"/>
         </svg>`);
         $("#our-contacts").css("color", "rgba(255, 255, 255,  0.30)");
         $("#our-blog").css("color", "rgba(255, 255, 255,  0.30)");
         $("#our-team").css("color", "rgba(255, 255, 255,  0.30)");
         $("#language-btn").css("color", "rgba(255, 255, 255,  0.30)");
+        $("#language-btn svg path").attr("stroke-opacity","0.40");
             }
         }, mouseleave: function () {
             if($(window).width() > 992){
             $("#sectors-btn").html(`Setores <svg width="11" height="7"
             viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 0.75L3.5 3.25L6 0.75" stroke="white" stroke-opacity="0.74"
-                stroke-width="0.8" /></svg>`);
+                stroke-width="1" /></svg>`);
 
         $("#our-contacts").removeAttr("style");
         $("#our-blog").removeAttr("style");
         $("#our-team").removeAttr("style");
         $("#language-btn").removeAttr("style");
+        $("#language-btn svg path").attr("stroke-opacity","0.74");
             }
     }});
 
@@ -160,6 +174,8 @@ $(document).ready(function () {
         $("#our-blog").css("color", "rgba(255, 255, 255, 0.30)");
         $("#sectors-btn").css("color", "rgba(255, 255, 255,  0.30)");
         $("#language-btn").css("color", "rgba(255, 255, 255, 0.30)");
+        $("#sectors-btn svg path").attr("stroke-opacity","0.4");
+        $("#language-btn svg path").attr("stroke-opacity","0.4");
             }
         }, mouseleave: function () {
             if($(window).width() > 992){
@@ -167,6 +183,8 @@ $(document).ready(function () {
         $("#our-blog").removeAttr("style");
         $("#sectors-btn").removeAttr("style");
         $("#language-btn").removeAttr("style");
+        $("#sectors-btn svg path").attr("stroke-opacity","0.74");
+        $("#language-btn svg path").attr("stroke-opacity","0.74");
             }
     }});
 
@@ -250,7 +268,7 @@ $(document).ready(function(){
             }
             else{
                 $("#sectors-btn").html(`Setores <svg width="14" height="9" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 3.25L3.5 0.75L1 3.25" stroke="#212121" stroke-width="0.8"/>
+                <path d="M6 3.25L3.5 0.75L1 3.25" stroke="#212121" stroke-width="1"/>
                 </svg>
                 `);
                   $("#list-menu li:eq(0)").after(`<li class="li-sub"><a class="dropbtn-sub">TI</a></li>`);
