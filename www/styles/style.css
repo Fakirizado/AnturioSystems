@@ -582,7 +582,7 @@ grid-row-end: -1;
     }
     .social-media-hamburguer{
         position:absolute;
-        bottom: 20px;
+        bottom: 40px;
         flex-direction: column;
         align-content: center;
         margin-left: -5%;
