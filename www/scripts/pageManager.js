@@ -75,10 +75,10 @@ $(document).ready(function () {
             $("#language-btn").html(`PT <svg width="11" height="7" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 3.25L3.5 0.75L1 3.25" stroke="white" stroke-width="0.8"/>
             </svg>`);
-            $("#our-contacts").css("color", "rgba(255, 255, 255, 0.64)");
-            $("#our-blog").css("color", "rgba(255, 255, 255, 0.64)");
-            $("#our-team").css("color", "rgba(255, 255, 255, 0.64)");
-            $("#sectors-btn").css("color", "rgba(255, 255, 255, 0.64)");
+            $("#our-contacts").css("color", "rgba(255, 255, 255, 0.30)");
+            $("#our-blog").css("color", "rgba(255, 255, 255, 0.30)");
+            $("#our-team").css("color", "rgba(255, 255, 255, 0.30)");
+            $("#sectors-btn").css("color", "rgba(255, 255, 255, 0.30)");
         }
         }, mouseleave: function () {
             if($(window).width() > 992){
@@ -96,10 +96,10 @@ $(document).ready(function () {
     $("#our-contacts").on({
         mouseenter: function () {
             if($(window).width() > 992){
-        $("#language-btn").css("color", "rgba(255, 255, 255, 0.64)");
-        $("#our-blog").css("color", "rgba(255, 255, 255, 0.64)");
-        $("#our-team").css("color", "rgba(255, 255, 255, 0.64)");
-        $("#sectors-btn").css("color", "rgba(255, 255, 255, 0.64)");
+        $("#language-btn").css("color", "rgba(255, 255, 255, 0.30)");
+        $("#our-blog").css("color", "rgba(255, 255, 255, 0.30)");
+        $("#our-team").css("color", "rgba(255, 255, 255, 0.30)");
+        $("#sectors-btn").css("color", "rgba(255, 255, 255, 0.30)");
             }
         }, mouseleave: function () {
             if($(window).width() > 992){
@@ -113,10 +113,10 @@ $(document).ready(function () {
     $("#our-blog").on({
         mouseenter: function () {
             if($(window).width() > 992){
-        $("#our-contacts").css("color", "rgba(255, 255, 255, 0.64)");
-        $("#language-btn").css("color", "rgba(255, 255, 255, 0.64)");
-        $("#our-team").css("color", "rgba(255, 255, 255, 0.64)");
-        $("#sectors-btn").css("color", "rgba(255, 255, 255, 0.64)");
+        $("#our-contacts").css("color", "rgba(255, 255, 255, 0.30)");
+        $("#language-btn").css("color", "rgba(255, 255, 255, 0.30)");
+        $("#our-team").css("color", "rgba(255, 255, 255,  0.30)");
+        $("#sectors-btn").css("color", "rgba(255, 255, 255,  0.30)");
             }
         
         }, mouseleave: function () {
@@ -134,10 +134,10 @@ $(document).ready(function () {
         $("#sectors-btn").html(`Setores <svg width="11" height="7" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M6 3.25L3.5 0.75L1 3.25" stroke="white" stroke-width="0.8"/>
         </svg>`);
-        $("#our-contacts").css("color", "rgba(255, 255, 255, 0.64)");
-        $("#our-blog").css("color", "rgba(255, 255, 255, 0.64)");
-        $("#our-team").css("color", "rgba(255, 255, 255, 0.64)");
-        $("#language-btn").css("color", "rgba(255, 255, 255, 0.64)");
+        $("#our-contacts").css("color", "rgba(255, 255, 255,  0.30)");
+        $("#our-blog").css("color", "rgba(255, 255, 255,  0.30)");
+        $("#our-team").css("color", "rgba(255, 255, 255,  0.30)");
+        $("#language-btn").css("color", "rgba(255, 255, 255,  0.30)");
             }
         }, mouseleave: function () {
             if($(window).width() > 992){
@@ -156,10 +156,10 @@ $(document).ready(function () {
     $("#our-team").on({
         mouseenter: function () {
             if($(window).width() > 992){
-        $("#our-contacts").css("color", "rgba(255, 255, 255, 0.64)");
-        $("#our-blog").css("color", "rgba(255, 255, 255, 0.64)");
-        $("#sectors-btn").css("color", "rgba(255, 255, 255, 0.64)");
-        $("#language-btn").css("color", "rgba(255, 255, 255, 0.64)");
+        $("#our-contacts").css("color", "rgba(255, 255, 255,  0.30)");
+        $("#our-blog").css("color", "rgba(255, 255, 255, 0.30)");
+        $("#sectors-btn").css("color", "rgba(255, 255, 255,  0.30)");
+        $("#language-btn").css("color", "rgba(255, 255, 255, 0.30)");
             }
         }, mouseleave: function () {
             if($(window).width() > 992){
