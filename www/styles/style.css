@@ -964,13 +964,14 @@ html, body {
 #different_sectors{
     width:auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
     background: #212121;
     height: 459px;
     color: white;
     margin-bottom: 0px;
 }
 #especialists_text{
+    margin-left: 10%;
     font-family: Ubuntu;
     font-style: normal;
     font-weight: 300;
@@ -990,6 +991,7 @@ html, body {
 #number_4{
     /*padding-right: 100px;*/
     align-self:center;
+    margin-left: 10%; 
     margin-right:100px;
 }
 
@@ -1023,6 +1025,7 @@ html, body {
        /* flex: 0 0 80px;*/
 
         text-align: center;
+        margin-left: 0%;
     }
     #dot_point{
     
@@ -1043,6 +1046,7 @@ html, body {
         text-align: center;
         */
         padding-bottom: 30px;
+        margin-top: 54px;
     }
   }
 
@@ -1060,6 +1064,7 @@ html, body {
     /* or 103% */
     padding-left: 10%;
     letter-spacing: 0.25px;
+    margin-left:0%;
    }
 
    #dot_point{
