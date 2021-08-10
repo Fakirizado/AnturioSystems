@@ -541,26 +541,25 @@ function changeSvg() {
         toMobile();
         
         $("#svg_construction").on({
-            click: function (event) {
+            click: function () {
                 document.getElementById('svg_construction').innerHTML = svg_construction_hover_mobile;
-                event.stopPropagation();
             }
         });
 
         $("#svg_industry").on({
-            click: function (event) {
+            click: function () {
                 document.getElementById('svg_industry').innerHTML = svg_industry_hover_mobile;
             }
         });
 
         $("#svg_distribution").on({
-            click: function (event) {
+            click: function () {
                 document.getElementById('svg_distribution').innerHTML = svg_distribution_hover_mobile;
             }
         });
 
         $("#svg_it").on({
-            click: function (event) {
+            click: function () {
                 document.getElementById('svg_it').innerHTML = svg_it_hover_mobile;
             }
         });
