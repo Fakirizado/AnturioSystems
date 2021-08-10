@@ -220,6 +220,11 @@ nav ul li a {
     height: 8px;
     margin-bottom: -2px;
 }
+@media(min-width: 993px) {
+    #content-first-page{
+        height: calc( 100vh - 190px );
+    }
+}
 
 
 /* INICIO DIV SOMOS A SOLUÇÃO*/
