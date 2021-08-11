@@ -478,7 +478,9 @@ grid-row-end: -1;
     border:none;
 }
 #our-culture:hover{
-    transform: scale(1.05);
+    background: transparent;
+    color: #ED1C23;
+    border: solid 2px #ED1C23;
 }
 
 @media(max-width: 1250px) {
@@ -958,7 +960,9 @@ grid-row-end: -1;
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
     #more-info-button:hover{
-        transform: scale(1.05);
+        background: transparent;
+        color: #ED1C23;
+        border: solid 2px #ED1C23;
     }
 
     .dropbtn:hover {
@@ -1545,7 +1549,9 @@ html, body {
     width: 450px;
 }
 #submit-button-contact:hover{
-    transform: scale(1.05);
+    background: transparent;
+    color: #ED1C23;
+    border: solid 2px #ED1C23;
 }
 .input-message{
     /*height: 150px;*/
@@ -1565,10 +1571,24 @@ html, body {
     border: none;
 }
 
-#contact-us-phone-btn:hover{
-    transform: scale(1.05);
-
+#contact-us-phone-btn:hover path {
+    fill: #ED1C23;
 }
+#contact-us-phone-btn:hover {
+    background: transparent;
+    color: #ED1C23;
+    border: solid 2px #ED1C23;
+}
+
+#contact-us-phone-btn-mobile:hover path {
+    fill: #ED1C23;
+}
+#contact-us-phone-btn-mobile:hover {
+    background: transparent;
+    color: #ED1C23;
+    border: solid 2px #ED1C23;
+}
+
 #contact-us-talk-with-us{
     font-family: 'Ubuntu';
     font-style: normal;
