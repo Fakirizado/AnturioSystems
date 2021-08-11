@@ -261,7 +261,7 @@ function HomeLoad() {
     $('#div_trusted_clients').show();
     //Adicionar Secções a ocultar na página inicial
     window.scrollTo(0, 0);
-    //animate(document.getElementById("content-first-page"));
+    animate(document.getElementById("content-first-page"));
 }
 
 //Mostra o contact-us section e oculta tudo o resto
@@ -274,7 +274,7 @@ function ContactUsLoad(){
     $('#div_trusted_clients').hide();
     $('#section-contact-us').show();
     window.scrollTo(0, 0);
-   // animate(document.getElementById("section-contact-us"));
+    animate(document.getElementById("section-contact-us"));
 
 }
 
@@ -1278,6 +1278,16 @@ function changeSlider(){
 
     }, 6000);
 
+}
+
+/**
+ * Function used to animate the page when section is changed
+ * @param {*} newContent
+ */
+ function animate(newContent) {
+    var fadeIn = newContent.animate({
+        opacity: [0, 1]
+    }, 800);
 }
 
 
