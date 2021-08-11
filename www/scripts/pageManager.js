@@ -251,10 +251,41 @@ var svg_it_mobile = `
 
 `
 
+//Oculta tudo o que não pertencer à homepage
+function HomeLoad() {
+    $('#section-contact-us').hide();
+    $('#content-first-page').show();
+    $('#different_sectors').show();
+    $('#div_with_sectors').show();
+    $('#we-solution-page').show();
+    $('#div_trusted_clients').show();
+    //Adicionar Secções a ocultar na página inicial
+    window.scrollTo(0, 0);
+    //animate(document.getElementById("content-first-page"));
+}
+
+//Mostra o contact-us section e oculta tudo o resto
+function ContactUsLoad(){
+    $('#first-hr').hide();
+    $('#content-first-page').hide();
+    $('#different_sectors').hide();
+    $('#div_with_sectors').hide();
+    $('#we-solution-page').hide();
+    $('#div_trusted_clients').hide();
+    $('#section-contact-us').show();
+    window.scrollTo(0, 0);
+   // animate(document.getElementById("section-contact-us"));
+
+}
 
 $(document).ready(function () {
+    HomeLoad();
     $("#close-hamburguer").on("click", function () {
         $(".menu-icon").click();
+    });
+
+    $(".logo").on("click", function () {
+        HomeLoad();
     });
 
     setTimeout(function () {
