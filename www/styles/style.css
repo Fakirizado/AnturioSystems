@@ -101,6 +101,21 @@ nav ul {
 .social-media svg{
     margin-right: 6px;
 }
+#it-sectors-slider{
+    display: none;
+}
+#industry-sectors-slider{
+    display: none;
+}
+#distribution-sectors-slider{
+    display: none;
+}
+.slider-home-page{
+    transition: all 1s linear;
+}
+.hidden-slider {
+    opacity: 0;
+  }
 
 .black {
     background: #212121;
@@ -166,6 +181,7 @@ nav ul li a {
     line-height: 112px;
     letter-spacing: -1.5px;
     color: #FFFFFF;
+    transition: 1s;
 
 }
 
@@ -226,6 +242,8 @@ nav ul li a {
     color: #FFFFFF;
     align-self: flex-end;
     padding-bottom: 3px;
+    margin-left: 22px;
+    padding-top: 16px;
 }
 #first-hr{
     border: 0;
@@ -733,6 +751,7 @@ grid-row-end: -1;
     #sectors-text{
         display: flex;
         align-self: center;
+        margin-top: 20px;
     }
 
     #title-3{
