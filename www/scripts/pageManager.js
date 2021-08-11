@@ -831,19 +831,20 @@ function changeSvg() {
         </svg>`
 
         //Serve para tirar o elemento clicado no móvel
-        $('#svg_construction').addEventListener("click", (evt) => {
+        document.getElementById('svg_construction').addEventListener("click", (evt) => {
             const elementclicked = document.getElementById("svg_construction");
             let targetElement = evt.target; // clicked element
 
             do {
                 if (targetElement == elementclicked) {
                     // This is a click inside. Do nothing, just return.
+                    console.log("sim")
                     return;
                 }
                 // Go up the DOM
                 targetElement = targetElement.parentNode;
             } while (targetElement);
-            
+            console.log("saiu")
         });
 
 //ponto final vermelho
