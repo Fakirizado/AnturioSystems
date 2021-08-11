@@ -426,6 +426,7 @@ function changeSizesSVG() {
     document.getElementById('svg_it').setAttribute('width', 150)
 }
 
+
 function changeSvg() {
 
     if ($(window).width() < 608) {
@@ -440,7 +441,42 @@ function changeSvg() {
         <path d="M119.551 89.9091C117.055 93.1731 114.399 96.7251 111.583 100.565C108.767 104.405 106.399 108.341 104.479 112.373H119.551V89.9091ZM133.567 72.4371V112.373H140.671V124.085H133.567V138.965H119.551V124.085H90.8468V113.621C92.2548 110.805 94.0148 107.637 96.1268 104.117C98.2388 100.533 100.575 96.8851 103.135 93.1731C105.759 89.3971 108.511 85.7171 111.391 82.1331C114.271 78.5491 117.151 75.3171 120.031 72.4371H133.567Z" fill="white"/>
         </svg>`
 
+        //Serve para tirar o elemento clicado no móvel
+       /*  console.log("A")
+        $('#svg_construction').on('click', (evt) => {
+            const elementclicked = document.getElementById("svg_construction");
+            let targetElement = evt.target; // clicked element
 
+            console.log()
+            do {
+                if (targetElement == elementclicked) {
+                    // This is a click inside. Do nothing, just return.
+                    console.log("sim")
+                    return;
+                }
+                // Go up the DOM
+                targetElement = targetElement.parentNode;
+            } while (targetElement);
+            console.log("saiu")
+        });
+
+       document.getElementById('svg_construction').addEventListener("click", (evt) => {
+            const elementclicked = document.getElementById("svg_construction");
+            let targetElement = evt.target; // clicked element
+
+            do {
+                if (targetElement == elementclicked) {
+                    // This is a click inside. Do nothing, just return.
+                    console.log("sim")
+                    return;
+                }
+                // Go up the DOM
+                targetElement = targetElement.parentNode;
+            } while (targetElement);
+            console.log("saiu")
+        }, false);*/
+
+        console.log("A2")
         //ponto final vermelho
         $("#dot_point").empty();
         document.getElementById('dot_point').innerHTML = `<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
