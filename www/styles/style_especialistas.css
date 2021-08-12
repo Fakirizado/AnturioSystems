@@ -1859,6 +1859,9 @@ body {
 }
 
 @media(max-width: 992px) {
+  #construction-item-3, #construction-item-4, #construction-line-2, #construction-line-3{
+      display: none;
+  }
 
   .arrows-sub-homepage{
       display: block;
@@ -1868,11 +1871,6 @@ body {
       transform: scale(1.2);
   }
 
-  #content-homepage-construction {
-}
-  .vertical-line{
-      display: none;
-  }
   .sub-homepage-info{
       position: initial;
       margin-top: 30px;
@@ -1880,9 +1878,6 @@ body {
       display: flex;
       justify-content: space-between;
       bottom: 20px;
-  }
-  .demo-section{
-      
   }
   .demo-section-text{
       width: 80%;
@@ -1895,6 +1890,15 @@ body {
       margin-top:10px
   }
 
+}
+
+@media(max-width: 600px){
+  #construction-item-3, #construction-item-4,  #construction-item-2{
+      display: none;
+  }
+  .vertical-line{
+      display: none;
+  }
 }
 
 @media(max-width: 500px) {
@@ -1952,7 +1956,7 @@ body {
 }
 
 #complete_management_info{
-  align-self: flex-start;
+ /* align-self: flex-start;*/
   font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
@@ -2015,5 +2019,37 @@ color: #000000;
 
 .card_go_down{
   margin-top:15px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 608px) {
+#complete_management{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center; 
+  justify-content: center;
+}
+
+#complete_management_imgs{
+  width:auto;
+  margin-top: -180px;
+  margin-bottom: -460px;
+}
+#management_img{
+  position:initial;
+  width: 306.5px;
+  height: auto;
+  margin-left:0px;
+}
+
+#complete_management_info{
+  width:auto;
+  margin-right: 0%;
+}
+#complete_management_text{
+  text-align: center;
+}
+
 }
 /* Fim Zona Management Construction */

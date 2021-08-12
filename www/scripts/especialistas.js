@@ -759,6 +759,26 @@ $(document).ready(function () {
     }
 });
 
+
+function mobileManagement(){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function resizePhone() {
     if ($(window).width() < 500) {
         $("#items_to_move").insertAfter("#support_div");
@@ -1358,9 +1378,13 @@ function moveTextAboveSVG() {
     if ($(window).width() < 608) {
         //Mobile
         $("#especialists_text").insertAfter("#number_4");
+        document.getElementById('half_anturio_img').style.display = 'none';
+   //$("#complete_management_info").insertAfter("#complete_management_info");
     } else {
         //Back to Web
         $("#especialists_text").insertAfter("#auxDiv");
+        document.getElementById('half_anturio_img').style.display = 'block';
+        $("#complete_management_info").insertAfter("#complete_management_imgs")
     }
 }
 
