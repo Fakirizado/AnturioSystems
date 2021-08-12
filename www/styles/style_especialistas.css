@@ -101,6 +101,21 @@ nav ul {
 .social-media svg{
   margin-right: 6px;
 }
+#it-sectors-slider{
+  display: none;
+}
+#industry-sectors-slider{
+  display: none;
+}
+#distribution-sectors-slider{
+  display: none;
+}
+.slider-home-page{
+  transition: all 1s linear;
+}
+.hidden-slider {
+  opacity: 0;
+}
 
 .black {
   background: #212121;
@@ -166,6 +181,7 @@ nav ul li a {
   line-height: 112px;
   letter-spacing: -1.5px;
   color: #FFFFFF;
+  transition: 1s;
 
 }
 
@@ -193,7 +209,7 @@ nav ul li a {
   margin-left: 10%;
   margin-bottom: 60px;
 }
-#more-info-button{
+.more-info-button-homepage{
   width: 280px;
   padding: 15px 40px;
   background: #ED1C23;
@@ -226,6 +242,8 @@ nav ul li a {
   color: #FFFFFF;
   align-self: flex-end;
   padding-bottom: 3px;
+  margin-left: 22px;
+  padding-top: 16px;
 }
 #first-hr{
   border: 0;
@@ -239,9 +257,27 @@ nav ul li a {
 #dropdown-language{
   min-width: 70px;
   width: 70px;
+  text-align: center;
+  
 }
 #dropdown-language a{
   color: rgba(255, 255, 255, 0.38);
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top:0px;
+}
+.language-hr{
+  border: 0.3px solid rgba(255, 255, 255, 0.38);
+  margin-top: 0px;
+  width: 45%;
+  margin-top: -13px;
+  margin-bottom: -13px;
 }
 
 #dropdown-language a:hover{
@@ -250,6 +286,12 @@ nav ul li a {
 }
 @media(min-width: 993px) {
   #content-first-page{
+      height: calc( 100vh - 190px );
+  }
+  #content-homepage-construction{
+      height: calc( 100vh - 190px );
+  }
+  #content-contact-us{
       height: calc( 100vh - 190px );
   }
 }
@@ -442,7 +484,9 @@ grid-row-end: -1;
   border:none;
 }
 #our-culture:hover{
-  transform: scale(1.05);
+  background: transparent;
+  color: #ED1C23;
+  border: solid 2px #ED1C23;
 }
 
 @media(max-width: 1250px) {
@@ -582,7 +626,7 @@ grid-row-end: -1;
   }
   .social-media-hamburguer{
       position:absolute;
-      bottom: 20px;
+      bottom: 65px;
       flex-direction: column;
       align-content: center;
       margin-left: -5%;
@@ -715,6 +759,7 @@ grid-row-end: -1;
   #sectors-text{
       display: flex;
       align-self: center;
+      margin-top: 20px;
   }
 
   #title-3{
@@ -729,7 +774,7 @@ grid-row-end: -1;
       margin-left: 0px;
       margin-bottom: 0px;
   }
-  #more-info-button{
+  .more-info-button-homepage{
       width: 100%;
   }
   #sectors-slider{
@@ -920,8 +965,10 @@ grid-row-end: -1;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-  #more-info-button:hover{
-      transform: scale(1.05);
+  .more-info-button-homepage:hover{
+      background: transparent;
+      color: #ED1C23;
+      border: solid 2px #ED1C23;
   }
 
   .dropbtn:hover {
@@ -1508,7 +1555,9 @@ body {
   width: 450px;
 }
 #submit-button-contact:hover{
-  transform: scale(1.05);
+  background: transparent;
+  color: #ED1C23;
+  border: solid 2px #ED1C23;
 }
 .input-message{
   /*height: 150px;*/
@@ -1528,10 +1577,24 @@ body {
   border: none;
 }
 
-#contact-us-phone-btn:hover{
-  transform: scale(1.05);
-
+#contact-us-phone-btn:hover path {
+  fill: #ED1C23;
 }
+#contact-us-phone-btn:hover {
+  background: transparent;
+  color: #ED1C23;
+  border: solid 2px #ED1C23;
+}
+
+#contact-us-phone-btn-mobile:hover path {
+  fill: #ED1C23;
+}
+#contact-us-phone-btn-mobile:hover {
+  background: transparent;
+  color: #ED1C23;
+  border: solid 2px #ED1C23;
+}
+
 #contact-us-talk-with-us{
   font-family: 'Ubuntu';
   font-style: normal;
@@ -1677,6 +1740,189 @@ body {
 
 /* CONTACT US - FIM */
 
+
+
+
+/* INICIO DIV CONSTRUÇÃO */
+#content-homepage-construction{
+  position: relative;
+}
+
+.sub-homepage-info{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 30px;
+}
+.sub-homepage-info-item{
+  width: 205px;
+
+
+}
+.sub-homepage-info-title{
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.sub-homepage-info-text{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #FFFFFF;
+}
+.sub-homepage-info-title svg{
+  padding-right: 5px;
+
+}
+.vertical-line{
+  border: 0.5px solid #FFFFFF;
+  transform: rotate(90deg);
+  width: 7%;
+  margin: 0px -7%;
+  align-self: center;
+}
+
+.white-button{
+  /* Button */
+
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #ED1C23;
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  padding: 15px 40px;
+  width: 350px;
+  height: 80px;
+  margin-right: 10%;
+  align-self: center;
+}
+.white-button:hover{
+  color: #FFFFFF;
+  background: transparent;;
+  border: solid 2px #FFFFFF;
+}
+.demo-section{
+  height: 362px;
+  background-color: #ED1C23;
+  display: flex;
+  justify-content: space-between;
+}
+.demo-section-text{
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 49px;
+  line-height: 56px;
+  color: #FFFFFF;
+  margin-left: 10%;
+  width: 50%;
+  align-self: center;
+  text-align: center;
+
+}
+.arrows-sub-homepage{
+  display: none;
+}
+
+@media(max-width: 1500px){
+  .white-button{
+      width: 250px;
+      height: 60px;
+  }
+}
+
+@media(max-width: 1115px) {
+  .sub-homepage-info{
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+
+}
+
+@media(max-width: 992px) {
+
+  .arrows-sub-homepage{
+      display: block;
+      align-self: center;
+  }
+  .arrows-sub-homepage:hover{
+      transform: scale(1.2);
+  }
+
+  #content-homepage-construction {
+}
+  .vertical-line{
+      display: none;
+  }
+  .sub-homepage-info{
+      position: initial;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      bottom: 20px;
+  }
+  .demo-section{
+      
+  }
+  .demo-section-text{
+      width: 80%;
+      margin-left:0px;
+      margin-top: 30px;
+  }
+  .white-button{
+      margin-right:0px;
+      margin-bottom: 30px;
+      margin-top:10px
+  }
+
+}
+
+@media(max-width: 500px) {
+  .white-button{
+      width: 100%;
+      border-radius: 0px;
+  }
+  .demo-section-text{
+      font-size: 36px;
+  }
+}
+
+
+
+
+
+
+
+/* FIM DIV CONSTRUÇÃO */
+
+
+
+
+
+
+
+
+
 /* Zona Management Construction*/
 
 #complete_management{
@@ -1765,5 +2011,9 @@ color: #000000;
 }
 .accordion_background{
   background-color: white;
+}
+
+.card_go_down{
+  margin-top:15px;
 }
 /* Fim Zona Management Construction */
