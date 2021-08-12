@@ -16,8 +16,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <script src="scripts/especialistas.js"></script>
-    <link rel="stylesheet" href="styles/style_especialistas.css">
+
+        <script src="scripts/jquerySwipeHandler.js"></script>
+    <script src="scripts/pageManager.js"></script>
+
+    
+
+   
+    <link rel="stylesheet" href="styles/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
@@ -473,7 +479,11 @@
                 </div>
 
                 <div class="sub-homepage-info">
-                    <div class="sub-homepage-info-item">
+                    <svg id="arrow-construction-left" class="arrows-sub-homepage" width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.1813 2.94972C13.7951 2.33596 13.7937 1.34044 13.1782 0.72841C12.5649 0.118599 11.5738 0.120245 10.9626 0.73209L1.11884 10.5858C0.338463 11.3669 0.338784 12.6327 1.11955 13.4135L10.9748 23.2687C11.5858 23.8797 12.5763 23.8797 13.1873 23.2687C13.7983 22.6578 13.7983 21.6672 13.1873 21.0562L5.54527 13.4142C4.76422 12.6332 4.76422 11.3668 5.54527 10.5858L13.1813 2.94972Z" fill="white"/>
+                        </svg>
+
+                    <div class="sub-homepage-info-item" id="construction-item-1">
                         <p class="sub-homepage-info-title"><svg width="27" height="25" viewBox="0 0 27 25" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -482,14 +492,14 @@
                             </svg> Orçamentação à medida
                         </p>
                         <p class="sub-homepage-info-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
+                            1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
                         </p>
 
                     </div>
 
-                    <hr class="vertical-line">
+                    <hr class="vertical-line" id="construction-line-1">
 
-                    <div class="sub-homepage-info-item">
+                    <div class="sub-homepage-info-item"  id="construction-item-2">
                         <p class="sub-homepage-info-title"><svg width="27" height="25" viewBox="0 0 27 25" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -498,14 +508,14 @@
                             </svg> Orçamentação à medida
                         </p>
                         <p class="sub-homepage-info-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
+                            2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
                         </p>
 
                     </div>
 
-                    <hr class="vertical-line">
+                    <hr class="vertical-line" id="construction-line-2">
 
-                    <div class="sub-homepage-info-item">
+                    <div class="sub-homepage-info-item" id="construction-item-3">
                         <p class="sub-homepage-info-title"><svg width="27" height="25" viewBox="0 0 27 25" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -514,14 +524,14 @@
                             </svg> Orçamentação à medida
                         </p>
                         <p class="sub-homepage-info-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
+                            3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
                         </p>
 
                     </div>
 
-                    <hr class="vertical-line">
+                    <hr class="vertical-line" id="construction-line-3">
 
-                    <div class="sub-homepage-info-item">
+                    <div class="sub-homepage-info-item"  id="construction-item-4">
                         <p class="sub-homepage-info-title"><svg width="27" height="25" viewBox="0 0 27 25" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -530,10 +540,14 @@
                             </svg> Orçamentação à medida
                         </p>
                         <p class="sub-homepage-info-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
+                            4 -Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
                         </p>
 
                     </div>
+                    <svg class="arrows-sub-homepage" id="arrow-construction-rigth" width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.81867 2.94972C0.204914 2.33596 0.206317 1.34044 0.8218 0.72841C1.43506 0.118599 2.4262 0.120245 3.03742 0.73209L12.8812 10.5858C13.6615 11.3669 13.6612 12.6327 12.8804 13.4135L3.0252 23.2687C2.41423 23.8797 1.42366 23.8797 0.812698 23.2687C0.201734 22.6578 0.201733 21.6672 0.812697 21.0562L8.45473 13.4142C9.23578 12.6332 9.23578 11.3668 8.45473 10.5858L0.81867 2.94972Z" fill="white"/>
+                        </svg>
+                        
 
 
                 </div>
