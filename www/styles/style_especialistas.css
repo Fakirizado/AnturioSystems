@@ -2051,5 +2051,13 @@ color: #000000;
   text-align: center;
 }
 
+#buttons_text_management{
+  width:50%;
+}
+
+.accordion_svgs{
+  margin-left:10%;
+}
+
 }
 /* Fim Zona Management Construction */
