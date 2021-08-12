@@ -264,7 +264,202 @@ $(document).ready(function () {
     changeSvg();
     moveTextAboveSVG();
     changeSizesSVG();
+    $("#buttonOne").on({
+        click: function () {
+            changeManagementHeadingOne();
+        }
+    })
+
+    $("#buttonTwo").on({
+        click: function () {
+            changeManagementHeadingTwo();
+        }
+    });
+
+    $("#buttonThree").on({
+        click: function () {
+            changeManagementHeadingThree();
+        }
+    });
+
+    $("#buttonFour").on({
+        click: function () {
+            changeManagementHeadingFour();
+        }
+    });
+
+    $("#buttonFive").on({
+        click: function () {
+            changeManagementHeadingFive();
+        }
+    });
+
+    $("#buttonSix").on({
+        click: function () {
+            changeManagementHeadingSix();
+        }
+    });
+
 });
+var red_svg = `<circle cx="16" cy="16.5" r="16" fill="#ED1C23"/>
+    <path d="M8.34175 19.6231C8.15178 19.8174 8.15178 20.1279 8.34175 20.3222L9.47467 21.4809C9.67065 21.6814 9.99312 21.6816 10.1893 21.4813L15.4377 16.1249C15.6338 15.9248 15.956 15.9248 16.152 16.1249L21.4004 21.4813C21.5966 21.6816 21.9191 21.6814 22.1151 21.4809L23.248 20.3222C23.438 20.1279 23.438 19.8174 23.248 19.6231L16.1524 12.3657C15.9563 12.1651 15.6335 12.1651 15.4374 12.3657L8.34175 19.6231Z" fill="white"/>`
+var black_svg = ` <circle cx="16" cy="16.5" r="16" fill="#424242"/>
+    <path d="M23.2481 14.2231C23.4381 14.0288 23.4381 13.7183 23.2481 13.524L22.1152 12.3653C21.9192 12.1648 21.5967 12.1646 21.4005 12.3649L16.1521 17.7213C15.9561 17.9214 15.6339 17.9214 15.4378 17.7213L10.1894 12.3649C9.99322 12.1646 9.67075 12.1648 9.47477 12.3653L8.34185 13.524C8.15187 13.7183 8.15187 14.0288 8.34185 14.2231L15.4375 21.4805C15.6336 21.6811 15.9564 21.6811 16.1525 21.4805L23.2481 14.2231Z" fill="white"/>`
+
+var collapseOneBool = true;
+var collapseTwoBool = false;
+var collapseThreeBool = false;
+var collapseFourBool = false;
+var collapseFiveBool = false;
+var collapseSixBool = false;
+
+function changeManagementHeadingOne() {
+    if (!collapseOneBool) {
+        document.getElementById('first_svg_management').innerHTML = red_svg
+        collapseOneBool = true
+    } else {
+        document.getElementById('first_svg_management').innerHTML = black_svg
+        collapseOneBool = false
+    }
+    collapseTwoBool = false;
+    collapseThreeBool = false;
+    collapseFourBool = false;
+    collapseFiveBool = false;
+    collapseSixBool = false;
+
+    document.getElementById('second_svg_management').innerHTML = black_svg
+    document.getElementById('third_svg_management').innerHTML = black_svg
+    document.getElementById('fourth_svg_management').innerHTML = black_svg
+    document.getElementById('fifth_svg_management').innerHTML = black_svg
+    document.getElementById('sixth_svg_management').innerHTML = black_svg
+}
+
+function changeManagementHeadingTwo() {
+    if (!collapseTwoBool) {
+        document.getElementById('second_svg_management').innerHTML = red_svg
+        collapseTwoBool = true
+    } else {
+        document.getElementById('second_svg_management').innerHTML = black_svg
+        collapseTwoBool = false
+    }
+    collapseOneBool = false;
+    collapseThreeBool = false;
+    collapseFourBool = false;
+    collapseFiveBool = false;
+    collapseSixBool = false;
+
+    document.getElementById('first_svg_management').innerHTML = black_svg
+    document.getElementById('third_svg_management').innerHTML = black_svg
+    document.getElementById('fourth_svg_management').innerHTML = black_svg
+    document.getElementById('fifth_svg_management').innerHTML = black_svg
+    document.getElementById('sixth_svg_management').innerHTML = black_svg
+}
+
+function changeManagementHeadingThree() {
+    if (!collapseThreeBool) {
+        document.getElementById('third_svg_management').innerHTML = red_svg
+        collapseThreeBool = true
+    } else {
+        document.getElementById('third_svg_management').innerHTML = black_svg
+        collapseThreeBool = false
+    }
+    collapseOneBool = false;
+    collapseTwoBool = false;
+    collapseFourBool = false;
+    collapseFiveBool = false;
+    collapseSixBool = false;
+
+    document.getElementById('first_svg_management').innerHTML = black_svg
+    document.getElementById('second_svg_management').innerHTML = black_svg
+    document.getElementById('fourth_svg_management').innerHTML = black_svg
+    document.getElementById('fifth_svg_management').innerHTML = black_svg
+    document.getElementById('sixth_svg_management').innerHTML = black_svg
+}
+
+function changeManagementHeadingFour() {
+    if (!collapseFourBool) {
+        document.getElementById('fourth_svg_management').innerHTML = red_svg
+        collapseFourBool = true
+    } else {
+        document.getElementById('fourth_svg_management').innerHTML = black_svg
+        collapseFourBool = false
+    }
+    collapseOneBool = false;
+    collapseTwoBool = false;
+    collapseThreeBool = false;
+    collapseFiveBool = false;
+    collapseSixBool = false;
+
+    document.getElementById('first_svg_management').innerHTML = black_svg
+    document.getElementById('third_svg_management').innerHTML = black_svg
+    document.getElementById('second_svg_management').innerHTML = black_svg
+    document.getElementById('fifth_svg_management').innerHTML = black_svg
+    document.getElementById('sixth_svg_management').innerHTML = black_svg
+}
+
+function changeManagementHeadingFive() {
+    if (!collapseFiveBool) {
+        document.getElementById('fifth_svg_management').innerHTML = red_svg
+        collapseFiveBool = true
+    } else {
+        document.getElementById('fifth_svg_management').innerHTML = black_svg
+        collapseFiveBool = false
+    }
+    collapseOneBool = false;
+    collapseTwoBool = false;
+    collapseThreeBool = false;
+    collapseFourBool = false;
+    collapseSixBool = false;
+
+    document.getElementById('first_svg_management').innerHTML = black_svg
+    document.getElementById('third_svg_management').innerHTML = black_svg
+    document.getElementById('second_svg_management').innerHTML = black_svg
+    document.getElementById('fourth_svg_management').innerHTML = black_svg
+    document.getElementById('sixth_svg_management').innerHTML = black_svg
+}
+
+function changeManagementHeadingFive() {
+    if (!collapseFiveBool) {
+        document.getElementById('fifth_svg_management').innerHTML = red_svg
+        collapseFiveBool = true
+    } else {
+        document.getElementById('fifth_svg_management').innerHTML = black_svg
+        collapseFiveBool = false
+    }
+    collapseOneBool = false;
+    collapseTwoBool = false;
+    collapseThreeBool = false;
+    collapseFourBool = false;
+    collapseSixBool = false;
+
+    document.getElementById('first_svg_management').innerHTML = black_svg
+    document.getElementById('third_svg_management').innerHTML = black_svg
+    document.getElementById('second_svg_management').innerHTML = black_svg
+    document.getElementById('fourth_svg_management').innerHTML = black_svg
+    document.getElementById('sixth_svg_management').innerHTML = black_svg
+}
+
+function changeManagementHeadingSix() {
+    if (!collapseSixBool) {
+        document.getElementById('sixth_svg_management').innerHTML = red_svg
+        collapseSixBool = true
+    } else {
+        document.getElementById('sixth_svg_management').innerHTML = black_svg
+        collapseSixBool = false
+    }
+    collapseOneBool = false;
+    collapseTwoBool = false;
+    collapseThreeBool = false;
+    collapseFourBool = false;
+    collapseFiveBool = false;
+
+    document.getElementById('first_svg_management').innerHTML = black_svg
+    document.getElementById('third_svg_management').innerHTML = black_svg
+    document.getElementById('second_svg_management').innerHTML = black_svg
+    document.getElementById('fourth_svg_management').innerHTML = black_svg
+    document.getElementById('fifth_svg_management').innerHTML = black_svg
+}
+
 
 //changes on svgs when hover
 
@@ -442,39 +637,39 @@ function changeSvg() {
         </svg>`
 
         //Serve para tirar o elemento clicado no móvel
-       /*  console.log("A")
-        $('#svg_construction').on('click', (evt) => {
-            const elementclicked = document.getElementById("svg_construction");
-            let targetElement = evt.target; // clicked element
-
-            console.log()
-            do {
-                if (targetElement == elementclicked) {
-                    // This is a click inside. Do nothing, just return.
-                    console.log("sim")
-                    return;
-                }
-                // Go up the DOM
-                targetElement = targetElement.parentNode;
-            } while (targetElement);
-            console.log("saiu")
-        });
-
-       document.getElementById('svg_construction').addEventListener("click", (evt) => {
-            const elementclicked = document.getElementById("svg_construction");
-            let targetElement = evt.target; // clicked element
-
-            do {
-                if (targetElement == elementclicked) {
-                    // This is a click inside. Do nothing, just return.
-                    console.log("sim")
-                    return;
-                }
-                // Go up the DOM
-                targetElement = targetElement.parentNode;
-            } while (targetElement);
-            console.log("saiu")
-        }, false);*/
+        /*  console.log("A")
+         $('#svg_construction').on('click', (evt) => {
+             const elementclicked = document.getElementById("svg_construction");
+             let targetElement = evt.target; // clicked element
+ 
+             console.log()
+             do {
+                 if (targetElement == elementclicked) {
+                     // This is a click inside. Do nothing, just return.
+                     console.log("sim")
+                     return;
+                 }
+                 // Go up the DOM
+                 targetElement = targetElement.parentNode;
+             } while (targetElement);
+             console.log("saiu")
+         });
+ 
+        document.getElementById('svg_construction').addEventListener("click", (evt) => {
+             const elementclicked = document.getElementById("svg_construction");
+             let targetElement = evt.target; // clicked element
+ 
+             do {
+                 if (targetElement == elementclicked) {
+                     // This is a click inside. Do nothing, just return.
+                     console.log("sim")
+                     return;
+                 }
+                 // Go up the DOM
+                 targetElement = targetElement.parentNode;
+             } while (targetElement);
+             console.log("saiu")
+         }, false);*/
 
         console.log("A2")
         //ponto final vermelho

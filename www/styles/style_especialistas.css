@@ -1676,3 +1676,94 @@ body {
 
 
 /* CONTACT US - FIM */
+
+/* Zona Management Construction*/
+
+#complete_management{
+  display:flex;
+  background: #F5F5F5;
+}
+
+#complete_management_imgs{
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    height: 850px;
+    width:50%;
+}
+
+#half_anturio_img{
+  position: absolute;
+  margin-left: -95px;
+}
+
+#management_img{
+  position: relative;
+  width: 490px;
+  height: auto;
+  margin-left: 135px;
+  margin-top: 130px;
+}
+
+#complete_management_info{
+  align-self: flex-start;
+  font-family: Ubuntu;
+font-style: normal;
+font-weight: normal;
+font-size: 35px;
+line-height: 36px;
+/* or 103% */
+
+letter-spacing: 0.25px;
+
+color: #000000;
+  width:50%;
+  margin-right: 12%;
+  margin-top: 134px;
+  margin-left: 1%;
+}
+
+.buttons_text_management{
+  font-family: Ubuntu;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+letter-spacing: 0.15px;
+
+/* 01. Primary/800 */
+
+color: #424242;
+text-decoration: none !important;
+
+}
+
+
+
+.card-header{
+  width: 100%;
+}
+
+.text_accordion{
+  font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+/* or 143% */
+
+letter-spacing: 0.25px;
+
+color: #000000;
+
+}
+
+.accordion_svgs{
+  float: right;
+}
+.accordion_background{
+  background-color: white;
+}
+/* Fim Zona Management Construction */
