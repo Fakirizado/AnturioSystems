@@ -1889,6 +1889,14 @@ html, body {
         margin-bottom: 30px;
         margin-top:10px
     }
+    .sub-homepage-info-text{
+        text-align: center;
+    }
+    .demo-section{
+            flex-direction: column;
+            align-content: center;
+            height: auto;
+    }
 
 }
 
