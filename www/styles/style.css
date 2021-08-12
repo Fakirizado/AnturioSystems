@@ -228,9 +228,6 @@ nav ul li a {
 .social-media-hamburguer{
     display: none;
 }
-.slider-item{
-    cursor:pointer;
-}
 #sectors-text{
     font-family: 'Montserrat';
     font-style: normal;
@@ -1942,7 +1939,9 @@ html, body {
     display:flex;
     background: #F5F5F5;
   }
-  
+  #complete_management_info p{
+    margin-bottom: 30px;
+  }
   #complete_management_imgs{
       position: relative;
       padding-top: 100px;
@@ -2021,6 +2020,40 @@ html, body {
     margin-top:15px;
   }
 
+  @media only screen and (max-width: 1600px){
+    #complete_management_info{
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+  }
+  @media only screen and (max-width: 1200px){
+      #complete_management{
+          flex-direction: column;
+          justify-content: center;
+      }
+      #complete_management_info{
+          width: 70%;
+          margin-top: -90px;
+          margin-right: 15%; 
+         margin-left: 15%;
+         margin-bottom: 30px;
+      }
+      #complete_management_imgs{
+          width: 100%;
+          text-align: center;
+          padding-top: 30px;
+      }
+      #management_img{
+          margin-left: 0px;
+      }
+  }
+
+  @media only screen and (max-width: 800px){
+    #half_anturio_img{
+        width: 400px;
+    }
+  }
+
   /* Mobile */
 @media only screen and (max-width: 608px) {
     #complete_management{
@@ -2036,6 +2069,8 @@ html, body {
       width:auto;
       margin-top: -180px;
       margin-bottom: -460px;
+      text-align: center;
+      padding-top: 100px;
     }
     #management_img{
       position:initial;
@@ -2046,7 +2081,9 @@ html, body {
     
     #complete_management_info{
       width:auto;
-      margin-right: 0%;
+      margin-right: 1%;
+      margin-left: 1%;
+      margin-top: 134px;
     }
     #complete_management_text{
       text-align: center;
