@@ -263,7 +263,9 @@ function HomeLoad() {
     $('#div_trusted_clients').show();
     //Adicionar Secções a ocultar na página inicial
     window.scrollTo(0, 0);
+    $('#video-banner').prop("src", "img/backgroud.png");
     animate(document.getElementById("content-first-page"));
+    animate(document.getElementById("video-banner"));
 }
 
 //Mostra o contact-us section e oculta tudo o resto
@@ -278,7 +280,9 @@ function ContactUsLoad(){
     $('#construction-sections').hide();
     $('#section-contact-us').show();
     window.scrollTo(0, 0);
+    $('#video-banner').prop("src", "img/backgroud.png");
     animate(document.getElementById("section-contact-us"));
+    animate(document.getElementById("video-banner"));
 }
 
 //Mostra a página construção section e oculta tudo o resto
@@ -294,7 +298,9 @@ function ConstructionLoad(){
     $('#div_trusted_clients').show();
     $('#construction-sections').show();
     window.scrollTo(0, 0);
+    $('#video-banner').prop("src", "img/construction_background.jpg");
     animate(document.getElementById("section-construction-homepage"));
+    animate(document.getElementById("video-banner"));
 }
 
 function ChangePageButton(){
