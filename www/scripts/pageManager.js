@@ -255,6 +255,7 @@ var svg_it_mobile = `
 function HomeLoad() {
     $('#section-contact-us').hide();
     $('#section-construction-homepage').hide();
+    $('#construction-sections').hide();
     $('#content-first-page').show();
     $('#different_sectors').show();
     $('#div_with_sectors').show();
@@ -274,6 +275,7 @@ function ContactUsLoad(){
     $('#we-solution-page').hide();
     $('#section-construction-homepage').hide();
     $('#div_trusted_clients').hide();
+    $('#construction-sections').hide();
     $('#section-contact-us').show();
     window.scrollTo(0, 0);
     animate(document.getElementById("section-contact-us"));
@@ -288,8 +290,9 @@ function ConstructionLoad(){
     $('#section-construction-homepage').hide();
     $('#section-contact-us').hide();
     $('#different_sectors').hide();
-    $('#div_trusted_clients').show();
     $('#section-construction-homepage').show();
+    $('#div_trusted_clients').show();
+    $('#construction-sections').show();
     window.scrollTo(0, 0);
     animate(document.getElementById("section-construction-homepage"));
 }

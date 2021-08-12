@@ -288,10 +288,10 @@ nav ul li a {
     #content-first-page{
         height: calc( 100vh - 190px );
     }
-    #section-construction-homepage{
+    #content-homepage-construction{
         height: calc( 100vh - 190px );
     }
-    #section-contact-us{
+    #content-contact-us{
         height: calc( 100vh - 190px );
     }
 }
