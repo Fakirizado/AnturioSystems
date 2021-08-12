@@ -319,6 +319,28 @@ function ChangePageButton() {
 
 }
 
+function resetArrowConstruction(){
+    if ($(window).width() < 601) {
+        $(".vertical-line").hide();
+            $("#construction-item-1").show();
+            $("#construction-item-2").hide();
+            $("#construction-item-3").hide();
+            $("#construction-item-4").hide();
+            animate(document.getElementById('construction-item-1'));
+    }
+    else if($(window).width() < 993){
+            $("#construction-line-3").hide();
+            $("#construction-item-3").hide();
+            $("#construction-item-4").hide();
+            $("#construction-line-1").show();
+            $("#construction-item-1").show();
+            $("#construction-item-2").show();
+            animate(document.getElementById('construction-line-1'));
+            animate(document.getElementById('construction-item-1'));
+            animate(document.getElementById('construction-item-2'));
+    }
+}
+
 function arrowConstructionRigth(){
     if ($(window).width() < 601) {
         $(".vertical-line").hide();
@@ -440,6 +462,11 @@ $(document).ready(function () {
             arrowConstructionLeft();
         });
 
+        
+
+    $("#svg_construction").on("click", function () {
+        ConstructionLoad();
+    });
 
     $(".logo").on("click", function () {
         HomeLoad();
@@ -457,55 +484,72 @@ $(document).ready(function () {
 
     // ÁREA DE CLIQUES NO SLIDER
 
-    $(".slider-item-construction").click(function () {
-        clearTimeout(timer);
-        $('#distribution-sectors-slider').hide();
-        $('#industry-sectors-slider').hide();
-        $('#it-sectors-slider').hide();
-        $('#construction-sectors-slider').show();
-        $('#title-2').html("Solução Construção");
-        timer = setTimeout(function () {
-            changeSlider();
-        }, 5000);
+    $(".slider-item-construction").on({
+        mouseenter: function () {
+            clearTimeout(timer);
+            $('#distribution-sectors-slider').hide();
+            $('#industry-sectors-slider').hide();
+            $('#it-sectors-slider').hide();
+            $('#construction-sectors-slider').show();
+            $('#title-2').html("Solução Construção");
+            animate(document.getElementById("title-2"));
+            animate(document.getElementById('construction-sectors-slider'));
+            timer = setTimeout(function () {
+                changeSlider();
+            }, 10000);
+        }
     });
 
-    $(".slider-item-distribution").click(function () {
-        clearTimeout(timer);
-        $('#construction-sectors-slider').hide();
-        $('#industry-sectors-slider').hide();
-        $('#it-sectors-slider').hide();
-        $('#distribution-sectors-slider').show();
-        $('#title-2').html("Solução Distribuição");
-        timer = setTimeout(function () {
-            changeSlider();
-
-        }, 5000);
+    $(".slider-item-distribution").on({
+        mouseenter: function () {
+            clearTimeout(timer);
+            $('#construction-sectors-slider').hide();
+            $('#industry-sectors-slider').hide();
+            $('#it-sectors-slider').hide();
+            $('#distribution-sectors-slider').show();
+            $('#title-2').html("Solução Distribuição");
+            animate(document.getElementById("title-2"));
+            animate(document.getElementById('distribution-sectors-slider'));
+            timer = setTimeout(function () {
+                changeSlider();
+    
+            }, 10000);
+        }
     });
 
-    $(".slider-item-industry").click(function () {
-        clearTimeout(timer);
-        $('#distribution-sectors-slider').hide();
-        $('#construction-sectors-slider').hide();
-        $('#it-sectors-slider').hide();
-        $('#industry-sectors-slider').show();
-        $('#title-2').html("Solução Indústria");
-        timer = setTimeout(function () {
-            changeSlider();
-
-        }, 5000);
+    $(".slider-item-industry").on({
+        mouseenter: function () {
+            clearTimeout(timer);
+            clearTimeout(timer);
+            $('#distribution-sectors-slider').hide();
+            $('#construction-sectors-slider').hide();
+            $('#it-sectors-slider').hide();
+            $('#industry-sectors-slider').show();
+            $('#title-2').html("Solução Indústria");
+            animate(document.getElementById("title-2"));
+            animate(document.getElementById('industry-sectors-slider'));
+            timer = setTimeout(function () {
+                changeSlider();
+    
+            }, 10000);
+        }
     });
 
-    $(".slider-item-it").click(function () {
-        clearTimeout(timer);
-        $('#construction-sectors-slider').hide();
-        $('#industry-sectors-slider').hide();
-        $('#distribution-sectors-slider').hide();
-        $('#it-sectors-slider').show();
-        $('#title-2').html("Solução TI");
-        timer = setTimeout(function () {
-            changeSlider();
-
-        }, 5000);
+    $(".slider-item-it").on({
+        mouseenter: function () {
+            clearTimeout(timer);
+            $('#construction-sectors-slider').hide();
+            $('#industry-sectors-slider').hide();
+            $('#distribution-sectors-slider').hide();
+            $('#it-sectors-slider').show();
+            $('#title-2').html("Solução TI");
+            animate(document.getElementById("title-2"));
+            animate(document.getElementById('it-sectors-slider'));
+            timer = setTimeout(function () {
+                changeSlider();
+    
+            }, 10000);
+        }
     });
 
     //TOUCH SLIDE HANDLER
@@ -847,7 +891,7 @@ $(window).on("scroll", function () {
 $(window).resize(function () {
     resizePhone();
     if ($(window).width() < 993) {
-        arrowConstructionRigth();
+        resetArrowConstruction();
         $('.li-sub').remove();
     }
     else{
@@ -1141,6 +1185,7 @@ function changeSvg() {
 
         $("#svg_construction").on({
             click: function () {
+                ConstructionLoad();
                 document.getElementById('svg_construction').innerHTML = svg_construction_hover_mobile;
             }
         });
@@ -1237,6 +1282,7 @@ function changeSvg() {
         toMobile();
         $("#svg_construction").on({
             click: function () {
+                ConstructionLoad();
                 document.getElementById('svg_construction').innerHTML = svg_construction_hover_mobile;
             }
         });
@@ -1345,6 +1391,9 @@ function changeSvg() {
                 document.getElementById('svg_construction').innerHTML = svg_construction_hover;
             }, mouseleave: function () {
                 document.getElementById('svg_construction').innerHTML = svg_construction;
+            },
+            click: function (){
+                ConstructionLoad();
             }
         });
 
@@ -1507,33 +1556,43 @@ function moveTextAboveSVG() {
 
 var timer;
 function changeSlider() {
+    clearTimeout(timer);
     if ($("#content-first-page").is(":visible")) {
         if ($("#construction-sectors-slider").is(":visible")) {
             $('#construction-sectors-slider').hide();
             $('#distribution-sectors-slider').show("slow");
 
             $('#title-2').html("Solução Distribuição");
+            animate(document.getElementById("title-2"));
+            animate(document.getElementById('distribution-sectors-slider'));
 
         } else if ($("#distribution-sectors-slider").is(":visible")) {
             $('#distribution-sectors-slider').hide();
             $('#industry-sectors-slider').show("slow");
             $('#title-2').html("Solução Indústria");
+            animate(document.getElementById("title-2"));
+            animate(document.getElementById('industry-sectors-slider'));
 
         } else if ($("#industry-sectors-slider").is(":visible")) {
             $('#industry-sectors-slider').hide();
             $('#it-sectors-slider').show("slow");
             $('#title-2').html("Solução IT");
+            animate(document.getElementById("title-2"));
+            animate(document.getElementById('it-sectors-slider'));
         }
         else {
             $('#it-sectors-slider').hide();
             $('#construction-sectors-slider').show("slow");
             $('#title-2').html("Solução Construção");
+            animate(document.getElementById("title-2"));
+            animate(document.getElementById('construction-sectors-slider'));
         }
     }
+    
     timer = setTimeout(function () {
         changeSlider();
 
-    }, 6000);
+    }, 10000);
 
 }
 
