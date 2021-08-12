@@ -319,6 +319,28 @@ function ChangePageButton() {
 
 }
 
+function resetArrowConstruction(){
+    if ($(window).width() < 601) {
+        $(".vertical-line").hide();
+            $("#construction-item-1").show();
+            $("#construction-item-2").hide();
+            $("#construction-item-3").hide();
+            $("#construction-item-4").hide();
+            animate(document.getElementById('construction-item-1'));
+    }
+    else if($(window).width() < 993){
+            $("#construction-line-3").hide();
+            $("#construction-item-3").hide();
+            $("#construction-item-4").hide();
+            $("#construction-line-1").show();
+            $("#construction-item-1").show();
+            $("#construction-item-2").show();
+            animate(document.getElementById('construction-line-1'));
+            animate(document.getElementById('construction-item-1'));
+            animate(document.getElementById('construction-item-2'));
+    }
+}
+
 function arrowConstructionRigth(){
     if ($(window).width() < 601) {
         $(".vertical-line").hide();
@@ -869,7 +891,7 @@ $(window).on("scroll", function () {
 $(window).resize(function () {
     resizePhone();
     if ($(window).width() < 993) {
-        arrowConstructionRigth();
+        resetArrowConstruction();
         $('.li-sub').remove();
     }
     else{
