@@ -1838,6 +1838,9 @@ html, body {
     text-align: center;
 
 }
+.arrows-sub-homepage{
+    display: none;
+}
 
 @media(max-width: 1500px){
     .white-button{
@@ -1856,13 +1859,30 @@ html, body {
 }
 
 @media(max-width: 992px) {
-    .sub-homepage-info{
+
+    .arrows-sub-homepage{
+        display: block;
+        align-self: center;
+    }
+    .arrows-sub-homepage:hover{
+        transform: scale(1.2);
+    }
+
+    #content-homepage-construction {
+}
+    .vertical-line{
         display: none;
     }
+    .sub-homepage-info{
+        position: initial;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        bottom: 20px;
+    }
     .demo-section{
-        flex-direction: column;
-        align-content: center;
-        height: auto;
+        
     }
     .demo-section-text{
         width: 80%;
