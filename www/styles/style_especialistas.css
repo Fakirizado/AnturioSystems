@@ -1718,6 +1718,52 @@ letter-spacing: 0.25px;
 
 color: #000000;
   width:50%;
+  margin-right: 12%;
+  margin-top: 134px;
+  margin-left: 1%;
 }
 
+.buttons_text_management{
+  font-family: Ubuntu;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+letter-spacing: 0.15px;
+
+/* 01. Primary/800 */
+
+color: #424242;
+text-decoration: none !important;
+
+}
+
+
+
+.card-header{
+  width: 100%;
+}
+
+.text_accordion{
+  font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+/* or 143% */
+
+letter-spacing: 0.25px;
+
+color: #000000;
+
+}
+
+.accordion_svgs{
+  float: right;
+}
+.accordion_background{
+  background-color: white;
+}
 /* Fim Zona Management Construction */

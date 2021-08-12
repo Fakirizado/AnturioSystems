@@ -863,55 +863,160 @@
                 <div id="complete_management_info">
                     <p id="complete_management_text">A gestão completa e eficaz<br> dos seus projetos<span
                             class="other-color" style="color:red">.</span></p>
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="accordion_background card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button id="buttonOne" class="btn buttons_text_management btn-link btn-block text-left"
+                                        type="button" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                        Balanço de Obra <svg id="first_svg_management" class="accordion_svgs" width="32"
+                                            height="33" viewBox="0 0 32 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="16" cy="16.5" r="16" fill="#ED1C23" />
+                                            <path
+                                                d="M8.34175 19.6231C8.15178 19.8174 8.15178 20.1279 8.34175 20.3222L9.47467 21.4809C9.67065 21.6814 9.99312 21.6816 10.1893 21.4813L15.4377 16.1249C15.6338 15.9248 15.956 15.9248 16.152 16.1249L21.4004 21.4813C21.5966 21.6816 21.9191 21.6814 22.1151 21.4809L23.248 20.3222C23.438 20.1279 23.438 19.8174 23.248 19.6231L16.1524 12.3657C15.9563 12.1651 15.6335 12.1651 15.4374 12.3657L8.34175 19.6231Z"
+                                                fill="white" />
+                                        </svg>
 
+                                    </button>
+                                </h2>
+                            </div>
 
-                            
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                    aria-controls="flush-collapseOne">
-                                    Accordion Item #1
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's
-                                    accordion body.</div>
+                            <div id="collapseOne" class="text_accordion collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Consultas dos balanços de obra, para visualização do valor adjudicado, do status dos
+                                    trabalhos em curso e das notas de créditos efetuadas, ou seja, do saldo de cada
+                                    obra.
+                                </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                    aria-controls="flush-collapseTwo">
-                                    Accordion Item #2
-                                </button>
-                            </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                    demonstrate the <code>.accordion-flush</code> class. This is the second item's
-                                    accordion body. Let's imagine this being filled with some actual content.</div>
+                        <div class="card">
+                            <div class="accordion_background card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button id="buttonTwo" class="btn buttons_text_management btn-link btn-block text-left collapsed"
+                                        type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                        Gestão de encomendas e compras a fornecedores <svg id="second_svg_management"
+                                            class="accordion_svgs" width="32" height="33" viewBox="0 0 32 33"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="16" cy="16.5" r="16" fill="#424242" />
+                                            <path
+                                                d="M23.2481 14.2231C23.4381 14.0288 23.4381 13.7183 23.2481 13.524L22.1152 12.3653C21.9192 12.1648 21.5967 12.1646 21.4005 12.3649L16.1521 17.7213C15.9561 17.9214 15.6339 17.9214 15.4378 17.7213L10.1894 12.3649C9.99322 12.1646 9.67075 12.1648 9.47477 12.3653L8.34185 13.524C8.15187 13.7183 8.15187 14.0288 8.34185 14.2231L15.4375 21.4805C15.6336 21.6811 15.9564 21.6811 16.1525 21.4805L23.2481 14.2231Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="text_accordion collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Some placeholder content for the second accordion panel. This panel is hidden by
+                                    default.
+                                </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
-                                    Accordion Item #3
-                                </button>
-                            </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                    demonstrate the <code>.accordion-flush</code> class. This is the third item's
-                                    accordion body. Nothing more exciting happening here in terms of content, but just
-                                    filling up the space to make it look, at least at first glance, a bit more
-                                    representative of how this would look in a real-world application.</div>
+                        <div class="card">
+                            <div class="accordion_background card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button id="buttonThree" class="btn buttons_text_management btn-link btn-block text-left collapsed"
+                                        type="button" data-toggle="collapse" data-target="#collapseThree"
+                                        aria-expanded="false" aria-controls="collapseThree">
+                                        Gestão de tesouraria, pagamentos e cobranças <svg id="third_svg_management" class="accordion_svgs"
+                                            width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="16" cy="16.5" r="16" fill="#424242" />
+                                            <path
+                                                d="M23.2481 14.2231C23.4381 14.0288 23.4381 13.7183 23.2481 13.524L22.1152 12.3653C21.9192 12.1648 21.5967 12.1646 21.4005 12.3649L16.1521 17.7213C15.9561 17.9214 15.6339 17.9214 15.4378 17.7213L10.1894 12.3649C9.99322 12.1646 9.67075 12.1648 9.47477 12.3653L8.34185 13.524C8.15187 13.7183 8.15187 14.0288 8.34185 14.2231L15.4375 21.4805C15.6336 21.6811 15.9564 21.6811 16.1525 21.4805L23.2481 14.2231Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="text_accordion collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    And lastly, the placeholder content for the third and final accordion panel. This
+                                    panel is hidden by default.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="accordion_background card-header" id="headingFour">
+                                <h2 class="mb-0">
+                                    <button id="buttonFour" class="btn buttons_text_management btn-link btn-block text-left collapsed"
+                                        type="button" data-toggle="collapse" data-target="#collapseFour"
+                                        aria-expanded="false" aria-controls="collapseFour">
+                                        Pedido e consulta de preços ágeis <svg id="fourth_svg_management" class="accordion_svgs" width="32"
+                                            height="33" viewBox="0 0 32 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="16" cy="16.5" r="16" fill="#424242" />
+                                            <path
+                                                d="M23.2481 14.2231C23.4381 14.0288 23.4381 13.7183 23.2481 13.524L22.1152 12.3653C21.9192 12.1648 21.5967 12.1646 21.4005 12.3649L16.1521 17.7213C15.9561 17.9214 15.6339 17.9214 15.4378 17.7213L10.1894 12.3649C9.99322 12.1646 9.67075 12.1648 9.47477 12.3653L8.34185 13.524C8.15187 13.7183 8.15187 14.0288 8.34185 14.2231L15.4375 21.4805C15.6336 21.6811 15.9564 21.6811 16.1525 21.4805L23.2481 14.2231Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseFour" class="text_accordion collapse" aria-labelledby="headingFour"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Four
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="accordion_background card-header" id="headingFive">
+                                <h2 class="mb-0">
+                                    <button id="buttonFive" class="btn buttons_text_management btn-link btn-block text-left collapsed"
+                                        type="button" data-toggle="collapse" data-target="#collapseFive"
+                                        aria-expanded="false" aria-controls="collapseFive">
+                                        Gestão de recursos e equipamentos da Obra <svg id="fifth_svg_management" class="accordion_svgs" width="32"
+                                            height="33" viewBox="0 0 32 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="16" cy="16.5" r="16" fill="#424242" />
+                                            <path
+                                                d="M23.2481 14.2231C23.4381 14.0288 23.4381 13.7183 23.2481 13.524L22.1152 12.3653C21.9192 12.1648 21.5967 12.1646 21.4005 12.3649L16.1521 17.7213C15.9561 17.9214 15.6339 17.9214 15.4378 17.7213L10.1894 12.3649C9.99322 12.1646 9.67075 12.1648 9.47477 12.3653L8.34185 13.524C8.15187 13.7183 8.15187 14.0288 8.34185 14.2231L15.4375 21.4805C15.6336 21.6811 15.9564 21.6811 16.1525 21.4805L23.2481 14.2231Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseFive" class="text_accordion collapse" aria-labelledby="headingFive"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Five
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="accordion_background card-header" id="headingSix">
+                                <h2 class="mb-0">
+                                    <button id="buttonSix" class="btn buttons_text_management btn-link btn-block text-left collapsed"
+                                        type="button" data-toggle="collapse" data-target="#collapseSix"
+                                        aria-expanded="false" aria-controls="collapseSix">
+                                        Autos de medição em valor ou percentagem <svg id="sixth_svg_management" class="accordion_svgs" width="32"
+                                            height="33" viewBox="0 0 32 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="16" cy="16.5" r="16" fill="#424242" />
+                                            <path
+                                                d="M23.2481 14.2231C23.4381 14.0288 23.4381 13.7183 23.2481 13.524L22.1152 12.3653C21.9192 12.1648 21.5967 12.1646 21.4005 12.3649L16.1521 17.7213C15.9561 17.9214 15.6339 17.9214 15.4378 17.7213L10.1894 12.3649C9.99322 12.1646 9.67075 12.1648 9.47477 12.3653L8.34185 13.524C8.15187 13.7183 8.15187 14.0288 8.34185 14.2231L15.4375 21.4805C15.6336 21.6811 15.9564 21.6811 16.1525 21.4805L23.2481 14.2231Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseSix" class="text_accordion collapse" aria-labelledby="headingSix"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Six
+                                </div>
                             </div>
                         </div>
                     </div>
