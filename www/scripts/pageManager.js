@@ -254,6 +254,7 @@ var svg_it_mobile = `
 //Oculta tudo o que não pertencer à homepage
 function HomeLoad() {
     $('#section-contact-us').hide();
+    $('#section-construction-homepage').hide();
     $('#content-first-page').show();
     $('#different_sectors').show();
     $('#div_with_sectors').show();
@@ -271,10 +272,41 @@ function ContactUsLoad(){
     $('#different_sectors').hide();
     $('#div_with_sectors').hide();
     $('#we-solution-page').hide();
+    $('#section-construction-homepage').hide();
     $('#div_trusted_clients').hide();
     $('#section-contact-us').show();
     window.scrollTo(0, 0);
     animate(document.getElementById("section-contact-us"));
+}
+
+//Mostra a página construção section e oculta tudo o resto
+function ConstructionLoad(){
+    $('#first-hr').hide();
+    $('#content-first-page').hide();
+    $('#div_with_sectors').hide();
+    $('#we-solution-page').hide();
+    $('#section-construction-homepage').hide();
+    $('#section-contact-us').hide();
+    $('#different_sectors').hide();
+    $('#div_trusted_clients').show();
+    $('#section-construction-homepage').show();
+    window.scrollTo(0, 0);
+    animate(document.getElementById("section-construction-homepage"));
+}
+
+function ChangePageButton(){
+    if($("#construction-sectors-slider").is(":visible")){
+        ConstructionLoad();
+
+    }else if( $("#distribution-sectors-slider").is(":visible")){
+
+
+    }else if( $("#industry-sectors-slider").is(":visible")){
+
+    }
+    else{
+
+    }
 
 }
 
@@ -286,6 +318,10 @@ $(document).ready(function () {
 
     $(".logo").on("click", function () {
         HomeLoad();
+    });
+
+    $("#more-info-button").on("click", function () {
+        ChangePageButton();
     });
 
     setTimeout(function () {
@@ -1252,31 +1288,33 @@ function moveTextAboveSVG() {
 
 var timer;
 function changeSlider(){
-    if($("#construction-sectors-slider").is(":visible")){
-        $('#construction-sectors-slider').hide();
-        $('#distribution-sectors-slider').show("slow");
+    if($("#content-first-page").is(":visible")){
+        if($("#construction-sectors-slider").is(":visible")){
+            $('#construction-sectors-slider').hide();
+            $('#distribution-sectors-slider').show("slow");
+            
+            $('#title-2').html("Solução Distribuição");
         
-        $('#title-2').html("Solução Distribuição");
-       
-    }else if( $("#distribution-sectors-slider").is(":visible")){
-        $('#distribution-sectors-slider').hide();
-        $('#industry-sectors-slider').show("slow");
-        $('#title-2').html("Solução Indústria");
+        }else if( $("#distribution-sectors-slider").is(":visible")){
+            $('#distribution-sectors-slider').hide();
+            $('#industry-sectors-slider').show("slow");
+            $('#title-2').html("Solução Indústria");
 
-    }else if( $("#industry-sectors-slider").is(":visible")){
-        $('#industry-sectors-slider').hide();
-        $('#it-sectors-slider').show("slow");
-        $('#title-2').html("Solução IT");
+        }else if( $("#industry-sectors-slider").is(":visible")){
+            $('#industry-sectors-slider').hide();
+            $('#it-sectors-slider').show("slow");
+            $('#title-2').html("Solução IT");
+        }
+        else{
+            $('#it-sectors-slider').hide();
+            $('#construction-sectors-slider').show("slow");
+            $('#title-2').html("Solução Construção");
+        }
     }
-    else{
-        $('#it-sectors-slider').hide();
-        $('#construction-sectors-slider').show("slow");
-        $('#title-2').html("Solução Construção");
-    }
-    timer = setTimeout(function () {
-        changeSlider();
+        timer = setTimeout(function () {
+            changeSlider();
 
-    }, 6000);
+        }, 6000);
 
 }
 

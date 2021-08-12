@@ -209,7 +209,7 @@ nav ul li a {
     margin-left: 10%;
     margin-bottom: 60px;
 }
-#more-info-button{
+.more-info-button-homepage{
     width: 280px;
     padding: 15px 40px;
     background: #ED1C23;
@@ -286,6 +286,12 @@ nav ul li a {
 }
 @media(min-width: 993px) {
     #content-first-page{
+        height: calc( 100vh - 190px );
+    }
+    #section-construction-homepage{
+        height: calc( 100vh - 190px );
+    }
+    #section-contact-us{
         height: calc( 100vh - 190px );
     }
 }
@@ -768,7 +774,7 @@ grid-row-end: -1;
         margin-left: 0px;
         margin-bottom: 0px;
     }
-    #more-info-button{
+    .more-info-button-homepage{
         width: 100%;
     }
     #sectors-slider{
@@ -959,7 +965,7 @@ grid-row-end: -1;
   }
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-    #more-info-button:hover{
+    .more-info-button-homepage:hover{
         background: transparent;
         color: #ED1C23;
         border: solid 2px #ED1C23;
