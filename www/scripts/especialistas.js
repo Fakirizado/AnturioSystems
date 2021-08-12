@@ -418,27 +418,6 @@ function changeManagementHeadingFive() {
     document.getElementById('sixth_svg_management').innerHTML = black_svg
 }
 
-function changeManagementHeadingFive() {
-    if (!collapseFiveBool) {
-        document.getElementById('fifth_svg_management').innerHTML = red_svg
-        collapseFiveBool = true
-    } else {
-        document.getElementById('fifth_svg_management').innerHTML = black_svg
-        collapseFiveBool = false
-    }
-    collapseOneBool = false;
-    collapseTwoBool = false;
-    collapseThreeBool = false;
-    collapseFourBool = false;
-    collapseSixBool = false;
-
-    document.getElementById('first_svg_management').innerHTML = black_svg
-    document.getElementById('third_svg_management').innerHTML = black_svg
-    document.getElementById('second_svg_management').innerHTML = black_svg
-    document.getElementById('fourth_svg_management').innerHTML = black_svg
-    document.getElementById('sixth_svg_management').innerHTML = black_svg
-}
-
 function changeManagementHeadingSix() {
     if (!collapseSixBool) {
         document.getElementById('sixth_svg_management').innerHTML = red_svg

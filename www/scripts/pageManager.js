@@ -269,7 +269,7 @@ function HomeLoad() {
 }
 
 //Mostra o contact-us section e oculta tudo o resto
-function ContactUsLoad(){
+function ContactUsLoad() {
     $('#first-hr').hide();
     $('#content-first-page').hide();
     $('#different_sectors').hide();
@@ -286,7 +286,7 @@ function ContactUsLoad(){
 }
 
 //Mostra a página construção section e oculta tudo o resto
-function ConstructionLoad(){
+function ConstructionLoad() {
     $('#first-hr').hide();
     $('#content-first-page').hide();
     $('#div_with_sectors').hide();
@@ -303,17 +303,17 @@ function ConstructionLoad(){
     animate(document.getElementById("video-banner"));
 }
 
-function ChangePageButton(){
-    if($("#construction-sectors-slider").is(":visible")){
+function ChangePageButton() {
+    if ($("#construction-sectors-slider").is(":visible")) {
         ConstructionLoad();
 
-    }else if( $("#distribution-sectors-slider").is(":visible")){
+    } else if ($("#distribution-sectors-slider").is(":visible")) {
 
 
-    }else if( $("#industry-sectors-slider").is(":visible")){
+    } else if ($("#industry-sectors-slider").is(":visible")) {
 
     }
-    else{
+    else {
 
     }
 
@@ -338,9 +338,10 @@ $(document).ready(function () {
 
     }, 5000);
 
+
     // ÁREA DE CLIQUES NO SLIDER
 
-    $( ".slider-item-construction" ).click(function() {
+    $(".slider-item-construction").click(function () {
         clearTimeout(timer);
         $('#distribution-sectors-slider').hide();
         $('#industry-sectors-slider').hide();
@@ -350,9 +351,9 @@ $(document).ready(function () {
         timer = setTimeout(function () {
             changeSlider();
         }, 5000);
-      });
+    });
 
-      $( ".slider-item-distribution" ).click(function() {
+    $(".slider-item-distribution").click(function () {
         clearTimeout(timer);
         $('#construction-sectors-slider').hide();
         $('#industry-sectors-slider').hide();
@@ -361,11 +362,11 @@ $(document).ready(function () {
         $('#title-2').html("Solução Distribuição");
         timer = setTimeout(function () {
             changeSlider();
-    
-        }, 5000);
-      });
 
-      $( ".slider-item-industry" ).click(function() {
+        }, 5000);
+    });
+
+    $(".slider-item-industry").click(function () {
         clearTimeout(timer);
         $('#distribution-sectors-slider').hide();
         $('#construction-sectors-slider').hide();
@@ -374,11 +375,11 @@ $(document).ready(function () {
         $('#title-2').html("Solução Indústria");
         timer = setTimeout(function () {
             changeSlider();
-    
-        }, 5000);
-      });
 
-      $( ".slider-item-it" ).click(function() {
+        }, 5000);
+    });
+
+    $(".slider-item-it").click(function () {
         clearTimeout(timer);
         $('#construction-sectors-slider').hide();
         $('#industry-sectors-slider').hide();
@@ -387,11 +388,11 @@ $(document).ready(function () {
         $('#title-2').html("Solução TI");
         timer = setTimeout(function () {
             changeSlider();
-    
-        }, 5000);
-      });
 
-      //ALTERAÇÃO DE CORES QUANDO É MOSTRADO O MENU HAMBURGUER E ANIMAÇÕES
+        }, 5000);
+    });
+
+    //ALTERAÇÃO DE CORES QUANDO É MOSTRADO O MENU HAMBURGUER E ANIMAÇÕES
 
     $(".menu-icon").on("click", function () {
         if ($("#list-menu").hasClass("showing")) {
@@ -625,7 +626,41 @@ $(document).ready(function () {
         }
     });
 
+    $("#buttonOne").on({
+        click: function () {
+            changeManagementHeadingOne();
+        }
+    })
 
+    $("#buttonTwo").on({
+        click: function () {
+            changeManagementHeadingTwo();
+        }
+    });
+
+    $("#buttonThree").on({
+        click: function () {
+            changeManagementHeadingThree();
+        }
+    });
+
+    $("#buttonFour").on({
+        click: function () {
+            changeManagementHeadingFour();
+        }
+    });
+
+    $("#buttonFive").on({
+        click: function () {
+            changeManagementHeadingFive();
+        }
+    });
+
+    $("#buttonSix").on({
+        click: function () {
+            changeManagementHeadingSix();
+        }
+    });
 
 
 });
@@ -921,45 +956,45 @@ function changeSvg() {
             console.log("saiu")
         });
 
-//ponto final vermelho
-$("#dot_point").empty();
-document.getElementById('dot_point').innerHTML = `<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //ponto final vermelho
+        $("#dot_point").empty();
+        document.getElementById('dot_point').innerHTML = `<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="2" cy="2" r="2" fill="#ED1C23"/>
         </svg>
         `
 
 
-//Div Construction zone
-toMobile();
+        //Div Construction zone
+        toMobile();
 
-$("#svg_construction").on({
-    click: function () {
-        document.getElementById('svg_construction').innerHTML = svg_construction_hover_mobile;
-    }
-});
+        $("#svg_construction").on({
+            click: function () {
+                document.getElementById('svg_construction').innerHTML = svg_construction_hover_mobile;
+            }
+        });
 
-$("#svg_industry").on({
-    click: function () {
-        document.getElementById('svg_industry').innerHTML = svg_industry_hover_mobile;
-    }
-});
+        $("#svg_industry").on({
+            click: function () {
+                document.getElementById('svg_industry').innerHTML = svg_industry_hover_mobile;
+            }
+        });
 
-$("#svg_distribution").on({
-    click: function () {
-        document.getElementById('svg_distribution').innerHTML = svg_distribution_hover_mobile;
-    }
-});
+        $("#svg_distribution").on({
+            click: function () {
+                document.getElementById('svg_distribution').innerHTML = svg_distribution_hover_mobile;
+            }
+        });
 
-$("#svg_it").on({
-    click: function () {
-        document.getElementById('svg_it').innerHTML = svg_it_hover_mobile;
-    }
-});
+        $("#svg_it").on({
+            click: function () {
+                document.getElementById('svg_it').innerHTML = svg_it_hover_mobile;
+            }
+        });
 
-//Clients trusted zone
-$('#meo_icon').remove();
-$('#leroy_icon').remove();
-document.getElementById('first_two_icons_clients').innerHTML = `<svg width="101" id="meo_icon" class="icons_clients" height="34" viewBox="0 0 101 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //Clients trusted zone
+        $('#meo_icon').remove();
+        $('#leroy_icon').remove();
+        document.getElementById('first_two_icons_clients').innerHTML = `<svg width="101" id="meo_icon" class="icons_clients" height="34" viewBox="0 0 101 34" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M83.9379 33.5486C74.804 33.5486 67.3726 26.1421 67.3726 17.0376C67.3726 7.9331 74.8029 0.52771 83.9379 0.52771C93.073 0.52771 100.5 7.93423 100.5 17.0387C100.5 26.1432 93.0707 33.5486 83.9379 33.5486ZM83.9379 6.48644C78.1003 6.48644 73.346 11.2204 73.346 17.0387C73.346 22.8571 78.0947 27.5888 83.9334 27.5888C89.7721 27.5888 94.5196 22.8582 94.5196 17.0387C94.5196 11.2192 89.7653 6.48757 83.9334 6.48757" fill="white" fill-opacity="0.38"/>
 <path d="M39.9109 14.1216H61.7943C63.3949 14.1216 63.3949 19.8947 61.7943 19.8947H39.9109C38.3126 19.8947 38.3126 14.1216 39.9109 14.1216Z" fill="white" fill-opacity="0.38"/>
 <path d="M39.1503 4.10927L60.8344 1.19103C62.4192 0.979352 63.1957 6.70263 61.6098 6.91657L39.9268 9.83142C38.342 10.0454 37.5644 4.32095 39.1514 4.10701" fill="white" fill-opacity="0.38"/>
@@ -969,7 +1004,7 @@ document.getElementById('first_two_icons_clients').innerHTML = `<svg width="101"
 <path d="M4.39639 2.05582L0.50579 30.5601C0.292981 32.146 6.01625 32.9237 6.2302 31.3389L10.1208 2.83576C10.3336 1.25099 4.6092 0.473319 4.39526 2.05922" fill="white" fill-opacity="0.38"/>
 </svg>
         `
-document.getElementById('first_two_icons_clients').innerHTML += `
+        document.getElementById('first_two_icons_clients').innerHTML += `
         <svg width="101" id="leroy_icon" class="icons_clients" height="61" viewBox="0 0 101 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.8472 60.0764H89.672L50.4687 20.8737L10.8472 60.0764Z" fill="white" fill-opacity="0.38"/>
                 <path d="M9.34107 58.1486L15.4823 52.1576L13.4367 50.0597L9.57948 53.8242L2.78452 46.8574L0.5 49.0862L9.34107 58.1486Z" fill="white" fill-opacity="0.38"/>
@@ -986,9 +1021,9 @@ document.getElementById('first_two_icons_clients').innerHTML += `
                 </svg>`
 
 
-$('#ogma_icon').remove();
-$('#nacex_icon').remove();
-document.getElementById('second_two_icons_clients').innerHTML = `<svg width="101" id="ogma_icon" class="icons_clients" height="38" viewBox="0 0 101 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        $('#ogma_icon').remove();
+        $('#nacex_icon').remove();
+        document.getElementById('second_two_icons_clients').innerHTML = `<svg width="101" id="ogma_icon" class="icons_clients" height="38" viewBox="0 0 101 38" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M42.9933 32.9286C38.6106 32.9286 35.407 29.9546 35.407 25.8224C35.407 21.7318 38.6106 18.7161 42.9933 18.7161C47.3447 18.7161 50.5796 21.7005 50.5796 25.8224C50.5796 29.9546 47.3447 32.9286 42.9933 32.9286ZM42.9933 21.2727C40.3636 21.2727 38.381 23.2136 38.381 25.8224C38.381 28.4311 40.3636 30.4034 42.9933 30.4034C45.6021 30.4034 47.5743 28.4311 47.5743 25.8224C47.5743 23.2136 45.6334 21.2727 42.9933 21.2727Z" fill="white" fill-opacity="0.38"/>
         <path d="M64.124 32.4696C62.9762 32.72 61.3796 32.9496 60.263 32.9496C55.682 32.9496 52.1863 29.9234 52.1863 25.7911C52.1863 21.7214 55.5986 18.7474 60.0648 18.7474C61.1291 18.7474 62.3605 18.8622 63.1327 19.0605C63.8214 19.2379 64.2492 19.4048 65.4806 20.0623L64.2492 22.4936C63.5083 22.0345 63.2162 21.8884 63.0492 21.8049C62.2457 21.4919 61.0665 21.231 60.1274 21.231C57.2056 21.231 55.1394 23.151 55.1394 25.6763C55.1394 28.3686 57.456 30.4243 60.5761 30.4243C61.15 30.4243 61.6405 30.4034 62.6422 30.226V26.0729H65.5014V32.0626C64.7606 32.3026 64.3849 32.4174 64.124 32.4696Z" fill="white" fill-opacity="0.38"/>
         <path d="M81.8266 32.732V24.2512L77.6993 32.732H75.3531L71.6631 24.8292V32.732H68.5703V18.9441H72.1323L76.6755 28.5283L81.3574 18.9441H84.8981V32.732" fill="white" fill-opacity="0.38"/>
@@ -997,7 +1032,7 @@ document.getElementById('second_two_icons_clients').innerHTML = `<svg width="101
         <path d="M11.0165 17.5657C10.4843 17.8892 10.0565 18.4005 9.87907 19.0579C9.52427 20.3832 10.3069 21.7606 11.6426 22.1154C12.3 22.2928 12.9574 22.1884 13.5 21.8858L24.6551 15.4265C24.9786 15.2387 25.2708 15.0195 25.5213 14.7691C27.1074 13.256 27.5039 10.7307 26.3352 8.7063L11.0165 17.5657Z" fill="white" fill-opacity="0.38"/>
         </svg>
         `
-document.getElementById('second_two_icons_clients').innerHTML += `<svg width="101" id="nacex_icon" class="icons_clients" height="23" viewBox="0 0 101 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        document.getElementById('second_two_icons_clients').innerHTML += `<svg width="101" id="nacex_icon" class="icons_clients" height="23" viewBox="0 0 101 23" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.5 22.1621H5.97385L8.02876 9.24803H8.0819L16.0712 22.1621H21.5451L24.8755 1.08154H19.4016L17.3644 13.9779H17.3113L9.30422 1.08154H3.83037L0.5 22.1621Z" fill="white" fill-opacity="0.38"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M37.1167 14.3144H32.564L35.9298 7.61828L37.099 14.3322L37.1167 14.3144ZM37.9138 18.5128L38.711 22.1798H44.5569L39.9688 1.08154H33.9812L22.5552 22.1621H28.3656L30.3851 18.4951L37.9138 18.5128Z" fill="white" fill-opacity="0.38"/>
         <path d="M62.8204 1.59523C61.3027 0.89973 59.6537 0.537309 57.9842 0.532349C54.8204 0.622264 51.7901 1.82687 49.428 3.93358C47.13 5.92736 45.5958 8.65749 45.0879 11.6572C44.7809 13.0564 44.8137 14.5088 45.1836 15.8926C45.5534 17.2765 46.2496 18.5516 47.2137 19.6111C48.1683 20.6155 49.3207 21.4111 50.5983 21.9477C51.8758 22.4843 53.2507 22.7503 54.6361 22.7289C56.3392 22.6701 58.0235 22.3536 59.6317 21.79L60.73 15.1824C59.3726 16.5657 57.5301 17.3662 55.5927 17.4145C54.8625 17.4725 54.1289 17.3547 53.4534 17.0711C52.778 16.7876 52.1802 16.3463 51.7102 15.7844C51.2402 15.2225 50.9116 14.5562 50.7519 13.8412C50.5921 13.1263 50.6059 12.3834 50.7921 11.6749C51.0073 10.0834 51.7844 8.6213 52.9831 7.55253C54.1818 6.48377 55.7231 5.87877 57.3288 5.84677C58.2084 5.80906 59.0825 6.00369 59.8631 6.41106C60.6436 6.81844 61.3031 7.4242 61.7752 8.16739L62.8204 1.59523Z" fill="white" fill-opacity="0.38"/>
@@ -1007,8 +1042,8 @@ document.getElementById('second_two_icons_clients').innerHTML += `<svg width="10
         `
 
     } else if ($(window).width() < 992) {
-    $('#svg_Number4').remove();
-    document.getElementById('number_4').innerHTML = `<svg id="svg_Number4_tablet" width="294" height="293" viewBox="0 0 294 293" fill="none" xmlns="http://www.w3.org/2000/svg">
+        $('#svg_Number4').remove();
+        document.getElementById('number_4').innerHTML = `<svg id="svg_Number4_tablet" width="294" height="293" viewBox="0 0 294 293" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle opacity="0.3" cx="190.69" cy="195.117" r="97.7857" fill="#ED1C23"/>
         <circle opacity="0.1" cx="97.8763" cy="97.8834" r="97.7857" fill="#ED1C23"/>
         <circle opacity="0.1" cx="196.214" cy="97.8834" r="97.7857" fill="#ED1C23"/>
@@ -1018,44 +1053,44 @@ document.getElementById('second_two_icons_clients').innerHTML += `<svg width="10
         <path d="M147.145 119.009C144.649 122.273 141.993 125.825 139.177 129.665C136.361 133.505 133.993 137.441 132.073 141.473H147.145V119.009ZM161.161 101.537V141.473H168.265V153.185H161.161V168.065H147.145V153.185H118.441V142.721C119.849 139.905 121.609 136.737 123.721 133.217C125.833 129.633 128.169 125.985 130.729 122.273C133.353 118.497 136.105 114.817 138.985 111.233C141.865 107.649 144.745 104.417 147.625 101.537H161.161Z" fill="white"/>
         </svg>`
 
-    //ponto final vermelho
-    $("#dot_point").empty();
-    document.getElementById('dot_point').innerHTML = `<svg id="svg_Number4_tablet" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //ponto final vermelho
+        $("#dot_point").empty();
+        document.getElementById('dot_point').innerHTML = `<svg id="svg_Number4_tablet" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="3" cy="3" r="3" fill="#ED1C23"/>
         </svg>
         `
 
 
-    //Div Construction zone
-    toMobile();
-    $("#svg_construction").on({
-        click: function () {
-            document.getElementById('svg_construction').innerHTML = svg_construction_hover_mobile;
-        }
-    });
+        //Div Construction zone
+        toMobile();
+        $("#svg_construction").on({
+            click: function () {
+                document.getElementById('svg_construction').innerHTML = svg_construction_hover_mobile;
+            }
+        });
 
-    $("#svg_industry").on({
-        click: function () {
-            document.getElementById('svg_industry').innerHTML = svg_industry_hover_mobile;
-        }
-    });
+        $("#svg_industry").on({
+            click: function () {
+                document.getElementById('svg_industry').innerHTML = svg_industry_hover_mobile;
+            }
+        });
 
-    $("#svg_distribution").on({
-        click: function () {
-            document.getElementById('svg_distribution').innerHTML = svg_distribution_hover_mobile;
-        }
-    });
+        $("#svg_distribution").on({
+            click: function () {
+                document.getElementById('svg_distribution').innerHTML = svg_distribution_hover_mobile;
+            }
+        });
 
-    $("#svg_it").on({
-        click: function () {
-            document.getElementById('svg_it').innerHTML = svg_it_hover_mobile;
-        }
-    });
+        $("#svg_it").on({
+            click: function () {
+                document.getElementById('svg_it').innerHTML = svg_it_hover_mobile;
+            }
+        });
 
-    //Clients trusted zone
-    $('#meo_icon').remove();
-    $('#leroy_icon').remove();
-    document.getElementById('first_two_icons_clients').innerHTML = `<svg width="138" id="meo_icon" class="icons_clients" height="46" viewBox="0 0 138 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //Clients trusted zone
+        $('#meo_icon').remove();
+        $('#leroy_icon').remove();
+        document.getElementById('first_two_icons_clients').innerHTML = `<svg width="138" id="meo_icon" class="icons_clients" height="46" viewBox="0 0 138 46" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M114.41 45.6392C101.886 45.6392 91.6958 35.4833 91.6958 22.9992C91.6958 10.5151 101.884 0.36084 114.41 0.36084C126.936 0.36084 137.12 10.5167 137.12 23.0008C137.12 35.4849 126.933 45.6392 114.41 45.6392ZM114.41 8.53145C106.406 8.53145 99.8866 15.0226 99.8866 23.0008C99.8866 30.9789 106.398 37.467 114.404 37.467C122.41 37.467 128.92 30.9805 128.92 23.0008C128.92 15.0211 122.401 8.53301 114.404 8.53301" fill="white" fill-opacity="0.38"/>
         <path d="M54.0405 19.0009H84.047C86.2418 19.0009 86.2418 26.9169 84.047 26.9169H54.0405C51.8488 26.9169 51.8488 19.0009 54.0405 19.0009Z" fill="white" fill-opacity="0.38"/>
         <path d="M52.9971 5.27193L82.7305 1.27043C84.9035 0.980174 85.9683 8.82794 83.7937 9.1213L54.0619 13.1181C51.8889 13.4115 50.8225 5.56218 52.9987 5.26882" fill="white" fill-opacity="0.38"/>
@@ -1066,7 +1101,7 @@ document.getElementById('second_two_icons_clients').innerHTML += `<svg width="10
         </svg>
         
         `
-    document.getElementById('first_two_icons_clients').innerHTML += `<svg width="104" id="leroy_icon" class="icons_clients" height="64" viewBox="0 0 104 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        document.getElementById('first_two_icons_clients').innerHTML += `<svg width="104" id="leroy_icon" class="icons_clients" height="64" viewBox="0 0 104 64" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M11.0308 63.09H92.6156L52.0396 22.5146L11.0308 63.09Z" fill="white" fill-opacity="0.38"/>
         <path d="M9.47143 61.0947L15.8276 54.894L13.7105 52.7226L9.71819 56.6189L2.68531 49.4082L0.320801 51.715L9.47143 61.0947Z" fill="white" fill-opacity="0.38"/>
         <path d="M17.2233 53.4819L23.7362 47.1262L21.9476 45.2941L17.8122 49.3282L15.8264 47.2923L19.1402 44.0591L17.2686 42.1422L13.9548 45.3736L12.2534 43.6298L16.2528 39.727L14.4654 37.8955L7.97314 44.2299L17.2233 53.4819Z" fill="white" fill-opacity="0.38"/>
@@ -1084,9 +1119,9 @@ document.getElementById('second_two_icons_clients').innerHTML += `<svg width="10
         `
 
 
-    $('#ogma_icon').remove();
-    $('#nacex_icon').remove();
-    document.getElementById('second_two_icons_clients').innerHTML = `<svg width="173" id="ogma_icon" class="icons_clients" height="64" viewBox="0 0 173 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        $('#ogma_icon').remove();
+        $('#nacex_icon').remove();
+        document.getElementById('second_two_icons_clients').innerHTML = `<svg width="173" id="ogma_icon" class="icons_clients" height="64" viewBox="0 0 173 64" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M73.3075 56.6579C65.749 56.6579 60.224 51.5288 60.224 44.4022C60.224 37.3475 65.749 32.1465 73.3075 32.1465C80.8121 32.1465 86.3911 37.2935 86.3911 44.4022C86.3911 51.5288 80.8121 56.6579 73.3075 56.6579ZM73.3075 36.5557C68.7724 36.5557 65.353 39.903 65.353 44.4022C65.353 48.9013 68.7724 52.3027 73.3075 52.3027C77.8067 52.3027 81.2081 48.9013 81.2081 44.4022C81.2081 39.903 77.8607 36.5557 73.3075 36.5557Z" fill="white" fill-opacity="0.38"/>
         <path d="M109.75 55.8661C107.77 56.298 105.017 56.6939 103.091 56.6939C95.1909 56.6939 89.162 51.4749 89.162 44.3483C89.162 37.3296 95.0469 32.2006 102.749 32.2006C104.585 32.2006 106.709 32.3985 108.04 32.7405C109.228 33.0464 109.966 33.3343 112.09 34.4681L109.966 38.6613C108.688 37.8695 108.184 37.6175 107.896 37.4736C106.511 36.9337 104.477 36.4838 102.857 36.4838C97.8184 36.4838 94.255 39.7951 94.255 44.1503C94.255 48.7934 98.2503 52.3388 103.631 52.3388C104.621 52.3388 105.467 52.3028 107.195 51.9968V44.8342H112.126V55.1642C110.848 55.5782 110.2 55.7761 109.75 55.8661Z" fill="white" fill-opacity="0.38"/>
         <path d="M140.28 56.3186V41.6924L133.162 56.3186H129.116L122.752 42.6892V56.3186H117.418V32.5397H123.561L131.396 49.0689L139.471 32.5397H145.577V56.3186" fill="white" fill-opacity="0.38"/>
@@ -1096,7 +1131,7 @@ document.getElementById('second_two_icons_clients').innerHTML += `<svg width="10
         </svg>
         
         `
-    document.getElementById('second_two_icons_clients').innerHTML += `<svg width="150" id="nacex_icon" class="icons_clients" height="34" viewBox="0 0 150 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        document.getElementById('second_two_icons_clients').innerHTML += `<svg width="150" id="nacex_icon" class="icons_clients" height="34" viewBox="0 0 150 34" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.685547 32.7239H8.85876L11.927 13.4415H12.0064L23.9356 32.7239H32.1088L37.0815 1.2478H28.9082L25.8664 20.5038H25.7871L13.8315 1.2478H5.65824L0.685547 32.7239Z" fill="white" fill-opacity="0.38"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M55.359 21.0063H48.5612L53.5868 11.008L55.3326 21.0328L55.359 21.0063ZM56.5493 27.2751L57.7396 32.7504H66.4683L59.6176 1.2478H50.6773L33.6167 32.7239H42.2925L45.3078 27.2487L56.5493 27.2751Z" fill="white" fill-opacity="0.38"/>
         <path d="M93.7384 2.01489C91.4723 0.976407 89.0101 0.435262 86.5174 0.427856C81.7934 0.562112 77.2687 2.36075 73.7418 5.50636C70.3105 8.48335 68.0198 12.5598 67.2614 17.0388C66.803 19.128 66.852 21.2966 67.4043 23.3629C67.9565 25.4292 68.996 27.3331 70.4355 28.9151C71.8609 30.4147 73.5816 31.6027 75.4891 32.4039C77.3966 33.2052 79.4495 33.6023 81.5183 33.5704C84.0611 33.4826 86.5761 33.0099 88.9773 32.1685L90.6172 22.3024C88.5905 24.3678 85.8394 25.5631 82.9466 25.6352C81.8562 25.7218 80.7609 25.546 79.7523 25.1226C78.7438 24.6991 77.8512 24.0403 77.1495 23.2013C76.4477 22.3622 75.957 21.3673 75.7185 20.2998C75.48 19.2323 75.5005 18.1232 75.7785 17.0652C76.0998 14.6889 77.2602 12.5058 79.05 10.91C80.8399 9.31414 83.1413 8.4108 85.5387 8.36301C86.8522 8.30671 88.1573 8.59732 89.3227 9.20559C90.4882 9.81386 91.4729 10.7183 92.1778 11.828L93.7384 2.01489Z" fill="white" fill-opacity="0.38"/>
@@ -1105,12 +1140,12 @@ document.getElementById('second_two_icons_clients').innerHTML += `<svg width="10
         </svg>
                
         `
-} else {
+    } else {
 
-    //Back to web
+        //Back to web
 
-    $('#svg_Number4').remove();
-    document.getElementById('number_4').innerHTML = `<svg id="svg_Number4" width="294" height="293" viewBox="0 0 294 293" fill="none" xmlns="http://www.w3.org/2000/svg">
+        $('#svg_Number4').remove();
+        document.getElementById('number_4').innerHTML = `<svg id="svg_Number4" width="294" height="293" viewBox="0 0 294 293" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle opacity="0.3" cx="190.69" cy="195.117" r="97.7857" fill="#ED1C23" />
         <circle opacity="0.1" cx="97.8763" cy="97.8834" r="97.7857" fill="#ED1C23" />
         <circle opacity="0.1" cx="196.214" cy="97.8834" r="97.7857" fill="#ED1C23" />
@@ -1124,53 +1159,53 @@ document.getElementById('second_two_icons_clients').innerHTML += `<svg width="10
             fill="white" />
         </svg>`
 
-    //ponto final vermelho
-    $("#dot_point").empty();
-    document.getElementById('dot_point').innerHTML = `<svg id="dot_point" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //ponto final vermelho
+        $("#dot_point").empty();
+        document.getElementById('dot_point').innerHTML = `<svg id="dot_point" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="4.5" cy="4.5" r="4.5" fill="#ED1C23"/>
         </svg>
         `
 
 
-    toWeb();
-    $("#svg_construction").on({
-        mouseenter: function () {
-            document.getElementById('svg_construction').innerHTML = svg_construction_hover;
-        }, mouseleave: function () {
-            document.getElementById('svg_construction').innerHTML = svg_construction;
-        }
-    });
+        toWeb();
+        $("#svg_construction").on({
+            mouseenter: function () {
+                document.getElementById('svg_construction').innerHTML = svg_construction_hover;
+            }, mouseleave: function () {
+                document.getElementById('svg_construction').innerHTML = svg_construction;
+            }
+        });
 
-    $("#svg_industry").on({
-        mouseenter: function () {
-            document.getElementById('svg_industry').innerHTML = svg_industry_hover;
-        },
-        mouseleave: function () {
-            document.getElementById('svg_industry').innerHTML = svg_industry;
-        }
-    });
+        $("#svg_industry").on({
+            mouseenter: function () {
+                document.getElementById('svg_industry').innerHTML = svg_industry_hover;
+            },
+            mouseleave: function () {
+                document.getElementById('svg_industry').innerHTML = svg_industry;
+            }
+        });
 
-    $("#svg_distribution").on({
-        mouseenter: function () {
-            document.getElementById('svg_distribution').innerHTML = svg_distribution_hover;
-        },
-        mouseleave: function () {
-            document.getElementById('svg_distribution').innerHTML = svg_distribution;
-        }
-    });
+        $("#svg_distribution").on({
+            mouseenter: function () {
+                document.getElementById('svg_distribution').innerHTML = svg_distribution_hover;
+            },
+            mouseleave: function () {
+                document.getElementById('svg_distribution').innerHTML = svg_distribution;
+            }
+        });
 
-    $("#svg_it").on({
-        mouseenter: function () {
-            document.getElementById('svg_it').innerHTML = svg_it_hover;
-        },
-        mouseleave: function () {
-            document.getElementById('svg_it').innerHTML = svg_it;
-        }
-    });
+        $("#svg_it").on({
+            mouseenter: function () {
+                document.getElementById('svg_it').innerHTML = svg_it_hover;
+            },
+            mouseleave: function () {
+                document.getElementById('svg_it').innerHTML = svg_it;
+            }
+        });
 
-    $('#meo_icon').remove();
-    $('#leroy_icon').remove();
-    document.getElementById('first_two_icons_clients').innerHTML = `<svg width="172" id="meo_icon" class="icons_clients" height="58" viewBox="0 0 172 58" fill="none"
+        $('#meo_icon').remove();
+        $('#leroy_icon').remove();
+        document.getElementById('first_two_icons_clients').innerHTML = `<svg width="172" id="meo_icon" class="icons_clients" height="58" viewBox="0 0 172 58" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
             d="M142.874 57.2784C127.234 57.2784 114.509 44.5961 114.509 29.0063C114.509 13.4165 127.232 0.736084 142.874 0.736084C158.516 0.736084 171.233 13.4184 171.233 29.0082C171.233 44.598 158.512 57.2784 142.874 57.2784ZM142.874 10.9393C132.878 10.9393 124.737 19.0453 124.737 29.0082C124.737 38.9711 132.868 47.0733 142.866 47.0733C152.864 47.0733 160.993 38.9731 160.993 29.0082C160.993 19.0434 152.852 10.9413 142.866 10.9413"
@@ -1196,7 +1231,7 @@ document.getElementById('second_two_icons_clients').innerHTML += `<svg width="10
     </svg>
         
         `
-    document.getElementById('first_two_icons_clients').innerHTML += `<svg width="126" id="leroy_icon" class="icons_clients" height="77" viewBox="0 0 126 77" fill="none"
+        document.getElementById('first_two_icons_clients').innerHTML += `<svg width="126" id="leroy_icon" class="icons_clients" height="77" viewBox="0 0 126 77" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path d="M13.3961 76.18H112.152L63.0361 27.0647L13.3961 76.18Z" fill="white"
             fill-opacity="0.38" />
@@ -1236,9 +1271,9 @@ document.getElementById('second_two_icons_clients').innerHTML += `<svg width="10
         
         `
 
-    $('#ogma_icon').remove();
-    $('#nacex_icon').remove();
-    document.getElementById('second_two_icons_clients').innerHTML = `<svg width="204" id="ogma_icon" class="icons_clients" height="77" viewBox="0 0 204 77" fill="none"
+        $('#ogma_icon').remove();
+        $('#nacex_icon').remove();
+        document.getElementById('second_two_icons_clients').innerHTML = `<svg width="204" id="ogma_icon" class="icons_clients" height="77" viewBox="0 0 204 77" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
             d="M86.8478 67.5455C77.9585 67.5455 71.4609 61.5135 71.4609 53.1322C71.4609 44.8356 77.9585 38.719 86.8478 38.719C95.6735 38.719 102.235 44.7721 102.235 53.1322C102.235 61.5135 95.6735 67.5455 86.8478 67.5455ZM86.8478 43.9044C81.5142 43.9044 77.4929 47.841 77.4929 53.1322C77.4929 58.4235 81.5142 62.4236 86.8478 62.4236C92.139 62.4236 96.1391 58.4235 96.1391 53.1322C96.1391 47.841 92.2025 43.9044 86.8478 43.9044Z"
@@ -1260,7 +1295,7 @@ document.getElementById('second_two_icons_clients').innerHTML += `<svg width="10
             fill="white" fill-opacity="0.38" />
     </svg>
         `
-    document.getElementById('second_two_icons_clients').innerHTML += `<svg width="177" id="nacex_icon" class="icons_clients" height="40" viewBox="0 0 177 40" fill="none"
+        document.getElementById('second_two_icons_clients').innerHTML += `<svg width="177" id="nacex_icon" class="icons_clients" height="40" viewBox="0 0 177 40" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
             d="M0.750122 38.9701H10.3978L14.0196 16.2091H14.1132L28.1944 38.9701H37.8421L43.7119 1.81567H34.0642L30.4737 24.5454H30.38L16.2676 1.81567H6.61989L0.750122 38.9701Z"
@@ -1279,7 +1314,7 @@ document.getElementById('second_two_icons_clients').innerHTML += `<svg width="10
             fill="white" fill-opacity="0.38" />
     </svg>       
         `
-}
+    }
 }
 
 
@@ -1296,34 +1331,34 @@ function moveTextAboveSVG() {
 //Função utilizada para alterar o slider ao fim de 6 segundos
 
 var timer;
-function changeSlider(){
-    if($("#content-first-page").is(":visible")){
-        if($("#construction-sectors-slider").is(":visible")){
+function changeSlider() {
+    if ($("#content-first-page").is(":visible")) {
+        if ($("#construction-sectors-slider").is(":visible")) {
             $('#construction-sectors-slider').hide();
             $('#distribution-sectors-slider').show("slow");
-            
+
             $('#title-2').html("Solução Distribuição");
-        
-        }else if( $("#distribution-sectors-slider").is(":visible")){
+
+        } else if ($("#distribution-sectors-slider").is(":visible")) {
             $('#distribution-sectors-slider').hide();
             $('#industry-sectors-slider').show("slow");
             $('#title-2').html("Solução Indústria");
 
-        }else if( $("#industry-sectors-slider").is(":visible")){
+        } else if ($("#industry-sectors-slider").is(":visible")) {
             $('#industry-sectors-slider').hide();
             $('#it-sectors-slider').show("slow");
             $('#title-2').html("Solução IT");
         }
-        else{
+        else {
             $('#it-sectors-slider').hide();
             $('#construction-sectors-slider').show("slow");
             $('#title-2').html("Solução Construção");
         }
     }
-        timer = setTimeout(function () {
-            changeSlider();
+    timer = setTimeout(function () {
+        changeSlider();
 
-        }, 6000);
+    }, 6000);
 
 }
 
@@ -1331,10 +1366,147 @@ function changeSlider(){
  * Function used to animate the page when section is changed
  * @param {*} newContent
  */
- function animate(newContent) {
+function animate(newContent) {
     var fadeIn = newContent.animate({
         opacity: [0, 1]
     }, 800);
 }
 
 
+var red_svg = `<circle cx="16" cy="16.5" r="16" fill="#ED1C23"/>
+    <path d="M8.34175 19.6231C8.15178 19.8174 8.15178 20.1279 8.34175 20.3222L9.47467 21.4809C9.67065 21.6814 9.99312 21.6816 10.1893 21.4813L15.4377 16.1249C15.6338 15.9248 15.956 15.9248 16.152 16.1249L21.4004 21.4813C21.5966 21.6816 21.9191 21.6814 22.1151 21.4809L23.248 20.3222C23.438 20.1279 23.438 19.8174 23.248 19.6231L16.1524 12.3657C15.9563 12.1651 15.6335 12.1651 15.4374 12.3657L8.34175 19.6231Z" fill="white"/>`
+var black_svg = ` <circle cx="16" cy="16.5" r="16" fill="#424242"/>
+    <path d="M23.2481 14.2231C23.4381 14.0288 23.4381 13.7183 23.2481 13.524L22.1152 12.3653C21.9192 12.1648 21.5967 12.1646 21.4005 12.3649L16.1521 17.7213C15.9561 17.9214 15.6339 17.9214 15.4378 17.7213L10.1894 12.3649C9.99322 12.1646 9.67075 12.1648 9.47477 12.3653L8.34185 13.524C8.15187 13.7183 8.15187 14.0288 8.34185 14.2231L15.4375 21.4805C15.6336 21.6811 15.9564 21.6811 16.1525 21.4805L23.2481 14.2231Z" fill="white"/>`
+
+var collapseOneBool = true;
+var collapseTwoBool = false;
+var collapseThreeBool = false;
+var collapseFourBool = false;
+var collapseFiveBool = false;
+var collapseSixBool = false;
+
+function changeManagementHeadingOne() {
+    if (!collapseOneBool) {
+        document.getElementById('first_svg_management').innerHTML = red_svg
+        collapseOneBool = true
+    } else {
+        document.getElementById('first_svg_management').innerHTML = black_svg
+        collapseOneBool = false
+    }
+    collapseTwoBool = false;
+    collapseThreeBool = false;
+    collapseFourBool = false;
+    collapseFiveBool = false;
+    collapseSixBool = false;
+
+    document.getElementById('second_svg_management').innerHTML = black_svg
+    document.getElementById('third_svg_management').innerHTML = black_svg
+    document.getElementById('fourth_svg_management').innerHTML = black_svg
+    document.getElementById('fifth_svg_management').innerHTML = black_svg
+    document.getElementById('sixth_svg_management').innerHTML = black_svg
+}
+
+function changeManagementHeadingTwo() {
+    if (!collapseTwoBool) {
+        document.getElementById('second_svg_management').innerHTML = red_svg
+        collapseTwoBool = true
+    } else {
+        document.getElementById('second_svg_management').innerHTML = black_svg
+        collapseTwoBool = false
+    }
+    collapseOneBool = false;
+    collapseThreeBool = false;
+    collapseFourBool = false;
+    collapseFiveBool = false;
+    collapseSixBool = false;
+
+    document.getElementById('first_svg_management').innerHTML = black_svg
+    document.getElementById('third_svg_management').innerHTML = black_svg
+    document.getElementById('fourth_svg_management').innerHTML = black_svg
+    document.getElementById('fifth_svg_management').innerHTML = black_svg
+    document.getElementById('sixth_svg_management').innerHTML = black_svg
+}
+
+function changeManagementHeadingThree() {
+    if (!collapseThreeBool) {
+        document.getElementById('third_svg_management').innerHTML = red_svg
+        collapseThreeBool = true
+    } else {
+        document.getElementById('third_svg_management').innerHTML = black_svg
+        collapseThreeBool = false
+    }
+    collapseOneBool = false;
+    collapseTwoBool = false;
+    collapseFourBool = false;
+    collapseFiveBool = false;
+    collapseSixBool = false;
+
+    document.getElementById('first_svg_management').innerHTML = black_svg
+    document.getElementById('second_svg_management').innerHTML = black_svg
+    document.getElementById('fourth_svg_management').innerHTML = black_svg
+    document.getElementById('fifth_svg_management').innerHTML = black_svg
+    document.getElementById('sixth_svg_management').innerHTML = black_svg
+}
+
+function changeManagementHeadingFour() {
+    if (!collapseFourBool) {
+        document.getElementById('fourth_svg_management').innerHTML = red_svg
+        collapseFourBool = true
+    } else {
+        document.getElementById('fourth_svg_management').innerHTML = black_svg
+        collapseFourBool = false
+    }
+    collapseOneBool = false;
+    collapseTwoBool = false;
+    collapseThreeBool = false;
+    collapseFiveBool = false;
+    collapseSixBool = false;
+
+    document.getElementById('first_svg_management').innerHTML = black_svg
+    document.getElementById('third_svg_management').innerHTML = black_svg
+    document.getElementById('second_svg_management').innerHTML = black_svg
+    document.getElementById('fifth_svg_management').innerHTML = black_svg
+    document.getElementById('sixth_svg_management').innerHTML = black_svg
+}
+
+function changeManagementHeadingFive() {
+    if (!collapseFiveBool) {
+        document.getElementById('fifth_svg_management').innerHTML = red_svg
+        collapseFiveBool = true
+    } else {
+        document.getElementById('fifth_svg_management').innerHTML = black_svg
+        collapseFiveBool = false
+    }
+    collapseOneBool = false;
+    collapseTwoBool = false;
+    collapseThreeBool = false;
+    collapseFourBool = false;
+    collapseSixBool = false;
+
+    document.getElementById('first_svg_management').innerHTML = black_svg
+    document.getElementById('third_svg_management').innerHTML = black_svg
+    document.getElementById('second_svg_management').innerHTML = black_svg
+    document.getElementById('fourth_svg_management').innerHTML = black_svg
+    document.getElementById('sixth_svg_management').innerHTML = black_svg
+}
+
+function changeManagementHeadingSix() {
+    if (!collapseSixBool) {
+        document.getElementById('sixth_svg_management').innerHTML = red_svg
+        collapseSixBool = true
+    } else {
+        document.getElementById('sixth_svg_management').innerHTML = black_svg
+        collapseSixBool = false
+    }
+    collapseOneBool = false;
+    collapseTwoBool = false;
+    collapseThreeBool = false;
+    collapseFourBool = false;
+    collapseFiveBool = false;
+
+    document.getElementById('first_svg_management').innerHTML = black_svg
+    document.getElementById('third_svg_management').innerHTML = black_svg
+    document.getElementById('second_svg_management').innerHTML = black_svg
+    document.getElementById('fourth_svg_management').innerHTML = black_svg
+    document.getElementById('fifth_svg_management').innerHTML = black_svg
+}
