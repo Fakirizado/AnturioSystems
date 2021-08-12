@@ -2016,5 +2016,9 @@ html, body {
   .accordion_background{
     background-color: white;
   }
+
+  .card_go_down{
+    margin-top:15px;
+  }
   /* Fim Zona Management Construction */
   
