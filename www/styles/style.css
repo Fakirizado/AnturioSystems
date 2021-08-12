@@ -1859,6 +1859,9 @@ html, body {
 }
 
 @media(max-width: 992px) {
+    #construction-item-3, #construction-item-4, #construction-line-2, #construction-line-3{
+        display: none;
+    }
 
     .arrows-sub-homepage{
         display: block;
@@ -1868,11 +1871,6 @@ html, body {
         transform: scale(1.2);
     }
 
-    #content-homepage-construction {
-}
-    .vertical-line{
-        display: none;
-    }
     .sub-homepage-info{
         position: initial;
         margin-top: 30px;
@@ -1880,9 +1878,6 @@ html, body {
         display: flex;
         justify-content: space-between;
         bottom: 20px;
-    }
-    .demo-section{
-        
     }
     .demo-section-text{
         width: 80%;
@@ -1895,6 +1890,15 @@ html, body {
         margin-top:10px
     }
 
+}
+
+@media(max-width: 600px){
+    #construction-item-3, #construction-item-4,  #construction-item-2{
+        display: none;
+    }
+    .vertical-line{
+        display: none;
+    }
 }
 
 @media(max-width: 500px) {
