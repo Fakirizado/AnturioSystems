@@ -2038,6 +2038,7 @@ html, body {
       flex-wrap: wrap;
       align-content: center; 
       justify-content: center;
+      padding-bottom: 50px;
     }
     
     #complete_management_imgs{

@@ -1883,11 +1883,20 @@ body {
       width: 80%;
       margin-left:0px;
       margin-top: 30px;
+      font-size: 48px;
   }
   .white-button{
       margin-right:0px;
       margin-bottom: 30px;
       margin-top:10px
+  }
+  .sub-homepage-info-text{
+      text-align: center;
+  }
+  .demo-section{
+          flex-direction: column;
+          align-content: center;
+          height: auto;
   }
 
 }
@@ -1903,11 +1912,11 @@ body {
 
 @media(max-width: 500px) {
   .white-button{
-      width: 100%;
-      border-radius: 0px;
+      width: 75%;
+      border-radius: 5px;
   }
   .demo-section-text{
-      font-size: 36px;
+      font-size: 24px;
   }
 }
 
@@ -1956,7 +1965,7 @@ body {
 }
 
 #complete_management_info{
- /* align-self: flex-start;*/
+  align-self: flex-start;
   font-family: Ubuntu;
 font-style: normal;
 font-weight: normal;
@@ -2023,41 +2032,42 @@ color: #000000;
 
 /* Mobile */
 @media only screen and (max-width: 608px) {
-#complete_management{
-  width:100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center; 
-  justify-content: center;
-}
-
-#complete_management_imgs{
-  width:auto;
-  margin-top: -180px;
-  margin-bottom: -460px;
-}
-#management_img{
-  position:initial;
-  width: 306.5px;
-  height: auto;
-  margin-left:0px;
-}
-
-#complete_management_info{
-  width:auto;
-  margin-right: 0%;
-}
-#complete_management_text{
-  text-align: center;
-}
-
-#buttons_text_management{
-  width:50%;
-}
-
-.accordion_svgs{
-  margin-left:10%;
-}
-
-}
+  #complete_management{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center; 
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+  
+  #complete_management_imgs{
+    width:auto;
+    margin-top: -180px;
+    margin-bottom: -460px;
+  }
+  #management_img{
+    position:initial;
+    width: 306.5px;
+    height: auto;
+    margin-left:0px;
+  }
+  
+  #complete_management_info{
+    width:auto;
+    margin-right: 0%;
+  }
+  #complete_management_text{
+    text-align: center;
+  }
+  
+  #buttons_text_management{
+    width:50%;
+  }
+  
+  .accordion_svgs{
+    margin-left:10%;
+  }
+  
+  }
 /* Fim Zona Management Construction */
