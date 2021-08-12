@@ -1883,11 +1883,20 @@ html, body {
         width: 80%;
         margin-left:0px;
         margin-top: 30px;
+        font-size: 48px;
     }
     .white-button{
         margin-right:0px;
         margin-bottom: 30px;
         margin-top:10px
+    }
+    .sub-homepage-info-text{
+        text-align: center;
+    }
+    .demo-section{
+            flex-direction: column;
+            align-content: center;
+            height: auto;
     }
 
 }
@@ -1903,11 +1912,11 @@ html, body {
 
 @media(max-width: 500px) {
     .white-button{
-        width: 100%;
-        border-radius: 0px;
+        width: 75%;
+        border-radius: 5px;
     }
     .demo-section-text{
-        font-size: 36px;
+        font-size: 24px;
     }
 }
 

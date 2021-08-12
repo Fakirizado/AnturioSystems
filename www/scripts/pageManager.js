@@ -319,11 +319,127 @@ function ChangePageButton() {
 
 }
 
+function arrowConstructionRigth(){
+    if ($(window).width() < 601) {
+        $(".vertical-line").hide();
+        if($("#construction-item-1").is(":visible")){
+            $("#construction-item-1").hide();
+            $("#construction-item-2").show();
+            animate(document.getElementById('construction-item-2'));
+        }
+        else if($("#construction-item-2").is(":visible")){
+            $("#construction-item-2").hide();
+            $("#construction-item-3").show();
+            animate(document.getElementById('construction-item-3'));
+            
+        }
+        else if($("#construction-item-3").is(":visible")){
+            $("#construction-item-3").hide();
+            $("#construction-item-4").show();
+            animate(document.getElementById('construction-item-4'));
+        }
+        else{
+            $("#construction-item-4").hide();
+            $("#construction-item-1").show();
+            animate(document.getElementById('construction-item-1'));
+        }
+
+    }
+    else if($(window).width() < 993){
+        if($("#construction-item-1").is(":visible")){
+            $("#construction-line-1").hide();
+            $("#construction-item-1").hide();
+            $("#construction-item-2").hide();
+            $("#construction-line-3").show();
+            $("#construction-item-3").show();
+            $("#construction-item-4").show();
+            animate(document.getElementById('construction-line-3'));
+            animate(document.getElementById('construction-item-3'));
+            animate(document.getElementById('construction-item-4'));
+        }
+        else{
+            $("#construction-line-3").hide();
+            $("#construction-item-3").hide();
+            $("#construction-item-4").hide();
+            $("#construction-line-1").show();
+            $("#construction-item-1").show();
+            $("#construction-item-2").show();
+            animate(document.getElementById('construction-line-1'));
+            animate(document.getElementById('construction-item-1'));
+            animate(document.getElementById('construction-item-2'));
+        }
+    }
+
+}
+
+function arrowConstructionLeft(){
+    if ($(window).width() < 601) {
+        if($("#construction-item-1").is(":visible")){
+            $("#construction-item-1").hide();
+            $("#construction-item-4").show();
+            animate(document.getElementById('construction-item-4'));
+        }
+        else if($("#construction-item-2").is(":visible")){
+            $("#construction-item-2").hide();
+            $("#construction-item-1").show();
+            animate(document.getElementById('construction-item-1'));
+            
+        }
+        else if($("#construction-item-3").is(":visible")){
+            $("#construction-item-3").hide();
+            $("#construction-item-2").show();
+            animate(document.getElementById('construction-item-2'));
+        }
+        else{
+            $("#construction-item-4").hide();
+            $("#construction-item-3").show();
+            animate(document.getElementById('construction-item-3'));
+        }
+
+    }
+    else if($(window).width() < 993){
+        if($("#construction-item-1").is(":visible")){
+            $("#construction-line-1").hide();
+            $("#construction-item-1").hide();
+            $("#construction-item-2").hide();
+            $("#construction-line-3").show();
+            $("#construction-item-3").show();
+            $("#construction-item-4").show();
+            animate(document.getElementById('construction-line-3'));
+            animate(document.getElementById('construction-item-3'));
+            animate(document.getElementById('construction-item-4'));
+        }
+        else{
+            $("#construction-line-3").hide();
+            $("#construction-item-3").hide();
+            $("#construction-item-4").hide();
+            $("#construction-line-1").show();
+            $("#construction-item-1").show();
+            $("#construction-item-2").show();
+            animate(document.getElementById('construction-line-1'));
+            animate(document.getElementById('construction-item-1'));
+            animate(document.getElementById('construction-item-2'));
+        }
+    }
+}
+
 $(document).ready(function () {
     HomeLoad();
     $("#close-hamburguer").on("click", function () {
         $(".menu-icon").click();
     });
+    jquerySwipeHandler.handleSwipe("#arrow-construction-rigth", [
+          jquerySwipeHandler.CLICK
+        ],function (direction) {
+            arrowConstructionRigth();
+        });
+
+    jquerySwipeHandler.handleSwipe("#arrow-construction-left", [
+        jquerySwipeHandler.CLICK
+        ],function (direction) {
+            arrowConstructionLeft();
+        });
+
 
     $(".logo").on("click", function () {
         HomeLoad();
@@ -391,6 +507,20 @@ $(document).ready(function () {
 
         }, 5000);
     });
+
+    //TOUCH SLIDE HANDLER
+
+    jquerySwipeHandler.handleSwipe(".sub-homepage-info", [
+        jquerySwipeHandler.SWIPE_LEFT, jquerySwipeHandler.SWIPE_RIGHT
+      ], function (direction) {
+          if ($(window).width() < 993){
+            if(direction == "SWIPE_RIGHT"){
+                arrowConstructionLeft();
+            } else if(direction == "SWIPE_LEFT"){
+              arrowConstructionRigth();
+          }
+          }
+      });
 
     //ALTERAÇÃO DE CORES QUANDO É MOSTRADO O MENU HAMBURGUER E ANIMAÇÕES
 
@@ -717,7 +847,12 @@ $(window).on("scroll", function () {
 $(window).resize(function () {
     resizePhone();
     if ($(window).width() < 993) {
+        arrowConstructionRigth();
         $('.li-sub').remove();
+    }
+    else{
+        $(".sub-homepage-info-item").show();
+        $(".vertical-line").show();
     }
     changeSvg();
     moveTextAboveSVG();
