@@ -428,14 +428,18 @@ $(document).ready(function () {
     $("#close-hamburguer").on("click", function () {
         $(".menu-icon").click();
     });
+    jquerySwipeHandler.handleSwipe("#arrow-construction-rigth", [
+          jquerySwipeHandler.CLICK
+        ],function (direction) {
+            arrowConstructionRigth();
+        });
 
-    $("#arrow-construction-left").on("click", function () {
-        arrowConstructionLeft();
-    });
+    jquerySwipeHandler.handleSwipe("#arrow-construction-left", [
+        jquerySwipeHandler.CLICK
+        ],function (direction) {
+            arrowConstructionLeft();
+        });
 
-    $("#arrow-construction-rigth").on("click", function () {
-        arrowConstructionRigth();
-    });
 
     $(".logo").on("click", function () {
         HomeLoad();
