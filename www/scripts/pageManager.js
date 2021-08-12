@@ -440,6 +440,11 @@ $(document).ready(function () {
             arrowConstructionLeft();
         });
 
+        
+
+    $("#svg_construction").on("click", function () {
+        ConstructionLoad();
+    });
 
     $(".logo").on("click", function () {
         HomeLoad();
@@ -1141,6 +1146,7 @@ function changeSvg() {
 
         $("#svg_construction").on({
             click: function () {
+                ConstructionLoad();
                 document.getElementById('svg_construction').innerHTML = svg_construction_hover_mobile;
             }
         });
@@ -1237,6 +1243,7 @@ function changeSvg() {
         toMobile();
         $("#svg_construction").on({
             click: function () {
+                ConstructionLoad();
                 document.getElementById('svg_construction').innerHTML = svg_construction_hover_mobile;
             }
         });
@@ -1345,6 +1352,9 @@ function changeSvg() {
                 document.getElementById('svg_construction').innerHTML = svg_construction_hover;
             }, mouseleave: function () {
                 document.getElementById('svg_construction').innerHTML = svg_construction;
+            },
+            click: function (){
+                ConstructionLoad();
             }
         });
 
