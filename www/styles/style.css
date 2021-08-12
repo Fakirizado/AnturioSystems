@@ -2029,5 +2029,45 @@ html, body {
   .card_go_down{
     margin-top:15px;
   }
+
+  /* Mobile */
+@media only screen and (max-width: 608px) {
+    #complete_management{
+      width:100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center; 
+      justify-content: center;
+    }
+    
+    #complete_management_imgs{
+      width:auto;
+      margin-top: -180px;
+      margin-bottom: -460px;
+    }
+    #management_img{
+      position:initial;
+      width: 306.5px;
+      height: auto;
+      margin-left:0px;
+    }
+    
+    #complete_management_info{
+      width:auto;
+      margin-right: 0%;
+    }
+    #complete_management_text{
+      text-align: center;
+    }
+    
+    #buttons_text_management{
+      width:50%;
+    }
+    
+    .accordion_svgs{
+      margin-left:10%;
+    }
+    
+    }
   /* Fim Zona Management Construction */
   

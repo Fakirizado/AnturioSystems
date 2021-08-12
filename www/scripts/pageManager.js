@@ -1494,9 +1494,12 @@ function moveTextAboveSVG() {
     if ($(window).width() < 608) {
         //Mobile
         $("#especialists_text").insertAfter("#number_4");
+        document.getElementById('half_anturio_img').style.display = 'none';
     } else {
         //Back to Web
         $("#especialists_text").insertAfter("#auxDiv");
+        document.getElementById('half_anturio_img').style.display = 'block';
+        $("#complete_management_info").insertAfter("#complete_management_imgs")
     }
 }
 
