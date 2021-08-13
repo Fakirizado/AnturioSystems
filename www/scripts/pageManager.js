@@ -930,14 +930,31 @@ $(document).ready(function () {
                 <path d="M6 3.25L3.5 0.75L1 3.25" stroke="#212121" stroke-width="1"/>
                 </svg>
                 `);
-                $("#list-menu li:eq(0)").after(`<li class="li-sub"><a class="dropbtn-sub">TI</a></li>`);
-                $("#list-menu li:eq(0)").after('<li class="li-sub"><a class="dropbtn-sub">Indústria</a></li>');
-                $("#list-menu li:eq(0)").after('<li class="li-sub"><a class="dropbtn-sub">Distribuição</a></li>');
-                $("#list-menu li:eq(0)").after('<li class="li-sub"><a class="dropbtn-sub">Construção</a></li>');
+                $("#list-menu li:eq(0)").after(`<li class="li-sub"><a class="dropbtn-sub" onclick="ITHamburguerClick()">TI</a></li>`);
+                $("#list-menu li:eq(0)").after('<li class="li-sub"><a class="dropbtn-sub" onclick="IndustryHamburguerClick()">Indústria</a></li>');
+                $("#list-menu li:eq(0)").after('<li class="li-sub"><a class="dropbtn-sub" onclick="DistributionHamburguerClick()">Distribuição</a></li>');
+                $("#list-menu li:eq(0)").after('<li class="li-sub"><a class="dropbtn-sub" onclick="ConstructionHamburguerClick()">Construção</a></li>');
             }
         }
     }
 });
+
+function ConstructionHamburguerClick(){
+    $('.menu-icon').click();
+    ConstructionLoad();
+}
+
+function DistributionHamburguerClick(){
+
+}
+
+function IndustryHamburguerClick(){
+    
+}
+
+function ITHamburguerClick(){
+    
+}
 
 function resizePhone() {
     if ($(window).width() < 500) {
