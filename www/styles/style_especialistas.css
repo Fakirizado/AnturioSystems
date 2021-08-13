@@ -2110,13 +2110,13 @@ color: #000000;
 #ideal_solution_chart{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 62px;
   height: 537px;
   justify-content: center;
-  background-color: black;
+  background-color: #212121;
 }
 
 #ideal_solution_chart_text{
+  margin-top: 62px;
   
   /* Headline 3 */
   
@@ -2138,5 +2138,42 @@ color: #000000;
 #ideal_solution_chart_img{
   width: 1040px;
   height: 220px;
+  margin-bottom: 48px;
 }
+/* Tablet */
+@media only screen and (max-width: 1142px) {
+  #ideal_solution_chart_img{
+    height: 80%;
+    width: 80%;
+  }
+  
+  #ideal_solution_chart_text{
+    font-size: 49px;
+line-height: 56px;
+  text-align: center;
+  }
+  #ideal_solution_chart{
+    height:auto;
+  }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 699px) {
+  #ideal_solution_chart_img{
+    height: 80%;
+    width: 80%;
+  }
+  
+  #ideal_solution_chart_text{
+    font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  }
+  #ideal_solution_chart{
+    height:auto;
+  }
+}
+
   /* Fim Ideal Solution Chart Div */
+
