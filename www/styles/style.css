@@ -1943,6 +1943,7 @@ html, body {
 #complete_management{
     display:flex;
     background: #F5F5F5;
+    padding-bottom: 30px;
   }
   #complete_management_info p{
     margin-bottom: 30px;
