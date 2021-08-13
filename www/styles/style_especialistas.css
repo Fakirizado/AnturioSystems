@@ -247,9 +247,20 @@ nav ul li a {
   clear: both;
   display: block;
   width: 100%;
-  background-color: red;
+  background-color: #ED1C23;
   height: 8px;
   margin-bottom: -2px;
+}
+.hr-mobile{
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: #ED1C23;
+  height: 12px;
+  margin-bottom: -2px;
+  display: none;
+  margin-top: -2px;
 }
 #dropdown-language{
   min-width: 70px;
@@ -1917,20 +1928,7 @@ body {
   }
 }
 
-
-
-
-
-
-
 /* FIM DIV CONSTRUÇÃO */
-
-
-
-
-
-
-
 
 
 /* Zona Management Construction*/
@@ -2102,6 +2100,259 @@ color: #000000;
   
   }
 /* Fim Zona Management Construction */
+
+
+/* INICIO SECÇÃO NOSSOS PROJETOS */
+
+
+.projects-section-title{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 61px;
+  line-height: 72px;
+  letter-spacing: -0.5px;
+  color: #000000;
+  text-align: center;
+  padding-top: 50px;
+
+
+}
+.project-item{
+    display: flex;
+    justify-content: center;
+}
+.project-item-logo{
+    position: relative;
+}
+.projects-item-hover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 245px !important;
+    height: 95px !important;
+}
+
+.project-item-logo img{
+  height: 100%;
+}
+.carousel-item {
+    padding: 50px 0px;
+}
+.projects-section{
+    position: relative;
+  background-color: #F5F5F5;
+}
+.projects-elipse{
+    position: absolute;
+    left: -40px;
+    top:10px;
+}
+
+.project-item-study-case{
+    padding: 50px;
+    background-color: #ED1C23;
+    width: 30%;
+    margin-right: 20px;
+}
+.carousel-indicators li{
+  background-color: rgba(33, 33, 33, 0.38);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.carousel-indicators .active{
+  background-color: #ED1C23;
+
+}
+
+
+.project-item-text-1{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.project-item-text-2{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 36px;
+  letter-spacing: 0.25px;
+  color: #FFFFFF;
+  margin-bottom: 35px;
+  margin-top: -15px;
+}
+
+.project-item-text-3{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #FFFFFF;
+    
+}
+
+.project-item-text-4{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #FFFFFF;
+}
+
+.carousel-control-next, .carousel-control-prev{
+  width: 3%;
+  opacity: .8;
+}
+
+.carousel-control-prev-icon {
+  /* Alterar para seta vermelha - pedir */
+  background-image: url("../img/arrow_back_ios_24px.svg");
+}
+  
+.carousel-control-next-icon {
+  background-image: url("../img/arrow_back_ios_24px-1.svg");
+}
+
+@media(max-width: 1300px) {
+  .projects-elipse{
+      display: none;
+  }
+  .project-item-study-case{
+      width: 45%;
+  }
+  .project-item-logo{
+      width: 45%;
+  }
+  .project-item-logo img{
+      width: 100%;
+  }
+
+}
+
+@media(max-width: 1100px) {
+  .project-item-study-case{
+      width: 45%;
+      padding: 10px 40px;
+      margin-right: 10px;
+  }
+}
+
+@media(max-width: 992px) {
+  .carousel-control-prev-icon {
+      background-image: url("../img/arrow_back_ios_24px.svg");
+  }
+      
+  .carousel-control-next-icon {
+      background-image: url("../img/arrow_back_ios_24px-1.svg");
+  }
+  .project-item-study-case{
+      width: 47%;
+      padding: 10px 20px;
+      margin-right: 5px;
+  }
+  .project-item-logo{
+      width: 47%;
+  }
+}
+
+@media(max-width: 800px) {
+  .hr-mobile{
+      display: block;
+  }
+  .carousel-control-prev-icon {
+      display: none;
+  }
+      
+  .carousel-control-next-icon {
+      display: none;
+  }
+  .projects-section-title{
+      display: none;
+  }
+  .project-item{
+      flex-direction: column-reverse;
+      
+  }
+  .project-item-study-case{
+      width: 100%;
+      padding: 10px 10%;
+      margin-right: 0px;
+      text-align: center;
+  }
+  .project-item-logo{
+      width: 100%;
+  }
+  .carousel-item {
+      padding: 0px 0px;
+      padding-bottom: 50px;
+      background-color: #ED1C23;
+  }
+  .carousel-indicators li{
+      background-color: rgba(255, 255, 255, 0.38);
+    }
+    .carousel-indicators .active{
+      background-color: #FFFFFF;
+  }
+  .project-item-text-1{
+      margin-top:25px
+    }
+  
+    .project-item-text-2{
+      margin-bottom: 25px;
+      margin-top: -15px;
+  }
+  
+  .project-item-text-3{
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      margin-bottom: 0px;
+        
+  }
+
+
+
+
+}
+
+/* FIM SECÇÃO NOSSOS PROJETOS */
+
+
+
+/* INICIO SECÇÃO REVIEWS */
+
+.section-reviews{
+  height: 100px;
+  background-color: #F5F5F5;
+
+
+
+
+}
+
+
+
+
+
+
+ /* FIM SECÇÃO REVIEWS */
+
 
 
 /* Ínicio Ideal Solution Chart Div */
