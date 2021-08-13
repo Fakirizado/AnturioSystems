@@ -620,7 +620,35 @@ $(document).ready(function () {
             changeManagementHeadingSix();
         }
     })
+    resizePhone();
+    changeSvg();
+    moveTextAboveSVG();
+    changeSizesSVG();
+    //Adicionar submenu em dispositivos móveis
+    var sectorsbtn = document.getElementById("sectors-btn");
+    sectorsbtn.onclick = function (event) {
+        if ($(window).width() < 993) {
+            if ($(".li-sub").length > 0) {
+                $("#sectors-btn").html(`Setores <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L7 7L13 1" stroke="#212121" stroke-width="1.8"/>
+                </svg>`);
+                $('.li-sub').remove();
+            }
+            else {
+                $("#sectors-btn").html(`Setores <svg width="14" height="9" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 3.25L3.5 0.75L1 3.25" stroke="#212121" stroke-width="1"/>
+                </svg>
+                `);
+                $("#list-menu li:eq(0)").after(`<li class="li-sub"><a class="dropbtn-sub" onclick="ITHamburguerClick()">TI</a></li>`);
+                $("#list-menu li:eq(0)").after('<li class="li-sub"><a class="dropbtn-sub" onclick="IndustryHamburguerClick()">Indústria</a></li>');
+                $("#list-menu li:eq(0)").after('<li class="li-sub"><a class="dropbtn-sub" onclick="DistributionHamburguerClick()">Distribuição</a></li>');
+                $("#list-menu li:eq(0)").after('<li class="li-sub"><a class="dropbtn-sub" onclick="ConstructionHamburguerClick()">Construção</a></li>');
+            }
+        }
+    }
 
+    svgs_hovers();
+    changeHtmlIdealSolution();
 
 });
 
@@ -654,6 +682,7 @@ $(window).resize(function () {
     moveTextAboveSVG();
     changeSizesSVG();
     svgs_hovers();
+    changeHtmlIdealSolution();
 });
 
 
@@ -664,37 +693,6 @@ function changeSizesSVG() {
     document.getElementById('svg_distribution').setAttribute('width', 150)
     document.getElementById('svg_it').setAttribute('width', 150)
 }
-
-$(document).ready(function () {
-    resizePhone();
-    changeSvg();
-    moveTextAboveSVG();
-    changeSizesSVG();
-    //Adicionar submenu em dispositivos móveis
-    var sectorsbtn = document.getElementById("sectors-btn");
-    sectorsbtn.onclick = function (event) {
-        if ($(window).width() < 993) {
-            if ($(".li-sub").length > 0) {
-                $("#sectors-btn").html(`Setores <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L7 7L13 1" stroke="#212121" stroke-width="1.8"/>
-                </svg>`);
-                $('.li-sub').remove();
-            }
-            else {
-                $("#sectors-btn").html(`Setores <svg width="14" height="9" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 3.25L3.5 0.75L1 3.25" stroke="#212121" stroke-width="1"/>
-                </svg>
-                `);
-                $("#list-menu li:eq(0)").after(`<li class="li-sub"><a class="dropbtn-sub" onclick="ITHamburguerClick()">TI</a></li>`);
-                $("#list-menu li:eq(0)").after('<li class="li-sub"><a class="dropbtn-sub" onclick="IndustryHamburguerClick()">Indústria</a></li>');
-                $("#list-menu li:eq(0)").after('<li class="li-sub"><a class="dropbtn-sub" onclick="DistributionHamburguerClick()">Distribuição</a></li>');
-                $("#list-menu li:eq(0)").after('<li class="li-sub"><a class="dropbtn-sub" onclick="ConstructionHamburguerClick()">Construção</a></li>');
-            }
-        }
-    }
-
-    svgs_hovers();
-});
 
 // ******************************************************************************
 // ******************************************************************************
@@ -922,7 +920,7 @@ function changeSvg() {
 
         //Div Construction zone
         toMobile();
-        
+
         //Clients trusted zone
         $('#meo_icon').remove();
         $('#leroy_icon').remove();
@@ -1221,4 +1219,13 @@ function changeManagementHeadingSix() {
     document.getElementById('second_svg_management').innerHTML = black_svg
     document.getElementById('fourth_svg_management').innerHTML = black_svg
     document.getElementById('fifth_svg_management').innerHTML = black_svg
+}
+
+
+function changeHtmlIdealSolution() {
+    if ($(window).width() < 608) {
+        $("#ideal_solution_chart_img").attr("src", "/img/solution_chart_mobile.png");
+    } else if ($(window).width() < 992 && $(window).width() >= 608) {         //Back to Web  
+        $("#ideal_solution_chart_img").attr("src", "/img/solution_chart.png");
+    }
 }
