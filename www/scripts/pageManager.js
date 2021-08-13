@@ -647,7 +647,7 @@ $(document).ready(function () {
     }
 
     svgs_hovers();
-
+    changeHtmlIdealSolution();
 });
 
 // Scrolling Effect
@@ -680,6 +680,7 @@ $(window).resize(function () {
     moveTextAboveSVG();
     changeSizesSVG();
     svgs_hovers();
+    changeHtmlIdealSolution();
 });
 
 
@@ -1216,4 +1217,14 @@ function changeManagementHeadingSix() {
     document.getElementById('second_svg_management').innerHTML = black_svg
     document.getElementById('fourth_svg_management').innerHTML = black_svg
     document.getElementById('fifth_svg_management').innerHTML = black_svg
+}
+
+function changeHtmlIdealSolution() {
+    if ($(window).width() < 608) {
+        $("#ideal_solution_chart_img").attr("src", "/img/solution_chart_mobile.png");
+    } else if ($(window).width() < 1300 && $(window).width() >= 608) {         //Back to Web  
+        $("#ideal_solution_chart_img").attr("src", "/img/solution_chart_tablet.png");
+    }else{
+        $("#ideal_solution_chart_img").attr("src", "/img/solution_chart.png");
+    }
 }

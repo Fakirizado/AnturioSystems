@@ -2354,3 +2354,77 @@ html, body {
    /* FIM SECÇÃO REVIEWS */
 
   
+
+/* Ínicio Ideal Solution Chart Div */
+
+
+#ideal_solution_chart{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #212121;
+  }
+  
+  #ideal_solution_chart_text{
+    margin-top: 62px;
+    
+    /* Headline 3 */
+    
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 49px;
+    line-height: 56px;
+    /* identical to box height, or 114% */
+    
+    
+    /* 03. On Primary / High Emphasis */
+    
+    color: #FFFFFF;
+    
+    
+    }
+    
+  #ideal_solution_chart_img{
+    width: 90%;
+      height: 53%;
+    margin-bottom: 48px;
+  }
+  /* Tablet */
+  @media only screen and (max-width: 1300px) {
+    #ideal_solution_chart_img{
+      height: 80%;
+      width: 80%;
+    }
+    
+    #ideal_solution_chart_text{
+      font-size: 49px;
+  line-height: 56px;
+    text-align: center;
+    }
+    #ideal_solution_chart{
+      height:auto;
+    }
+  }
+  
+  /* Mobile */
+  
+  @media only screen and (max-width: 699px) {
+    #ideal_solution_chart_img{
+      height: 80%;
+      width: 80%;
+    }
+    
+    #ideal_solution_chart_text{
+      font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    }
+    #ideal_solution_chart{
+      height:auto;
+    }
+  }
+  
+    /* Fim Ideal Solution Chart Div */
+  
+  
