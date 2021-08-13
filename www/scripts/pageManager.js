@@ -1,4 +1,3 @@
-
 //Oculta tudo o que não pertencer à homepage
 function HomeLoad() {
     $('#section-contact-us').hide();
