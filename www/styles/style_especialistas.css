@@ -2102,3 +2102,41 @@ color: #000000;
   
   }
 /* Fim Zona Management Construction */
+
+
+/* Ínicio Ideal Solution Chart Div */
+
+
+#ideal_solution_chart{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 62px;
+  height: 537px;
+  justify-content: center;
+  background-color: black;
+}
+
+#ideal_solution_chart_text{
+  
+  /* Headline 3 */
+  
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 49px;
+  line-height: 56px;
+  /* identical to box height, or 114% */
+  
+  
+  /* 03. On Primary / High Emphasis */
+  
+  color: #FFFFFF;
+  
+  
+  }
+  
+#ideal_solution_chart_img{
+  width: 1040px;
+  height: 220px;
+}
+  /* Fim Ideal Solution Chart Div */
