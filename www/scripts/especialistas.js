@@ -1,4 +1,3 @@
-
 //Oculta tudo o que não pertencer à homepage
 function HomeLoad() {
     $('#section-contact-us').hide();
@@ -649,7 +648,6 @@ $(document).ready(function () {
 
     svgs_hovers();
     changeHtmlIdealSolution();
-
 });
 
 // Scrolling Effect
@@ -1220,7 +1218,6 @@ function changeManagementHeadingSix() {
     document.getElementById('fourth_svg_management').innerHTML = black_svg
     document.getElementById('fifth_svg_management').innerHTML = black_svg
 }
-
 
 function changeHtmlIdealSolution() {
     if ($(window).width() < 608) {
