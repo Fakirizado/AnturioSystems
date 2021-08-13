@@ -101,6 +101,13 @@ nav ul {
 .social-media svg{
     margin-right: 6px;
 }
+
+.construction_icon_button_slider, .distribution_icon_button_slider, .industry_icon_button_slider, .it_icon_button_slider{
+    cursor: pointer;
+}
+
+
+
 #it-sectors-slider{
     display: none;
 }
@@ -2367,28 +2374,21 @@ html, body {
   
   #ideal_solution_chart_text{
     margin-top: 62px;
-    
-    /* Headline 3 */
-    
     font-family: Ubuntu;
     font-style: normal;
     font-weight: normal;
     font-size: 49px;
     line-height: 56px;
-    /* identical to box height, or 114% */
-    
-    
-    /* 03. On Primary / High Emphasis */
-    
     color: #FFFFFF;
-    
-    
+    margin-bottom: 80px;
+    width: 95%;
+    text-align: center;
     }
     
   #ideal_solution_chart_img{
     width: 90%;
       height: 53%;
-    margin-bottom: 48px;
+    margin-bottom: 70px;
   }
   /* Tablet */
   @media only screen and (max-width: 1300px) {
@@ -2399,8 +2399,7 @@ html, body {
     
     #ideal_solution_chart_text{
       font-size: 49px;
-  line-height: 56px;
-    text-align: center;
+      line-height: 56px;
     }
     #ideal_solution_chart{
       height:auto;
@@ -2411,14 +2410,13 @@ html, body {
   
   @media only screen and (max-width: 699px) {
     #ideal_solution_chart_img{
-      height: 80%;
-      width: 80%;
+      height: 70%;
+      width: 70%;
     }
     
     #ideal_solution_chart_text{
       font-size: 24px;
     line-height: 24px;
-    text-align: center;
     }
     #ideal_solution_chart{
       height:auto;

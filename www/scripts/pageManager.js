@@ -209,6 +209,22 @@ $(document).ready(function () {
         arrowConstructionLeft();
     });
 
+    $(".construction_icon_button_slider").on("click", function () {
+        ConstructionLoad();
+    });
+
+    $(".distribution_icon_button_slider").on("click", function () {
+        //ConstructionLoad();
+    });
+
+    $(".industry_icon_button_slider").on("click", function () {
+        //ConstructionLoad();
+    });
+
+    $(".it_icon_button_slider").on("click", function () {
+        //ConstructionLoad();
+    });
+
 
 
     $("#svg_construction").on("click", function () {
