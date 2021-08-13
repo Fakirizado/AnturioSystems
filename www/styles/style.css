@@ -106,7 +106,13 @@ nav ul {
     cursor: pointer;
 }
 
+body{
+    display: none;
+}
 
+#construction-sectors-slider{
+    display: none;
+}
 
 #it-sectors-slider{
     display: none;
