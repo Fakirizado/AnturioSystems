@@ -247,9 +247,20 @@ nav ul li a {
     clear: both;
     display: block;
     width: 100%;
-    background-color: red;
+    background-color: #ED1C23;
     height: 8px;
     margin-bottom: -2px;
+}
+.hr-mobile{
+    border: 0;
+    clear: both;
+    display: block;
+    width: 100%;
+    background-color: #ED1C23;
+    height: 12px;
+    margin-bottom: -2px;
+    display: none;
+    margin-top: -2px;
 }
 #dropdown-language{
     min-width: 70px;
@@ -2261,6 +2272,9 @@ html, body {
 }
 
 @media(max-width: 800px) {
+    .hr-mobile{
+        display: block;
+    }
     .carousel-control-prev-icon {
         display: none;
     }
@@ -2317,13 +2331,26 @@ html, body {
 
 }
 
-
-
-
-
-
-
-
   /* FIM SECÇÃO NOSSOS PROJETOS */
+
+
+
+  /* INICIO SECÇÃO REVIEWS */
+
+  .section-reviews{
+    height: 100px;
+    background-color: #F5F5F5;
+
+
+
+
+  }
+
+
+
+
+
+
+   /* FIM SECÇÃO REVIEWS */
 
   
