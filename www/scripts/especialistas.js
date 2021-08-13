@@ -1225,7 +1225,9 @@ function changeManagementHeadingSix() {
 function changeHtmlIdealSolution() {
     if ($(window).width() < 608) {
         $("#ideal_solution_chart_img").attr("src", "/img/solution_chart_mobile.png");
-    } else if ($(window).width() < 992 && $(window).width() >= 608) {         //Back to Web  
+    } else if ($(window).width() < 1142 && $(window).width() >= 608) {         //Back to Web  
+        $("#ideal_solution_chart_img").attr("src", "/img/solution_chart_tablet.png");
+    }else{
         $("#ideal_solution_chart_img").attr("src", "/img/solution_chart.png");
     }
 }
