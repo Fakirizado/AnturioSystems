@@ -2608,3 +2608,141 @@ html, body {
 
 
 /* Fim Secção Reviews com Preview */
+
+
+/* Contacta-nos Section */
+
+@media(min-width: 993px) {
+    #content-contact-us{
+        height: calc( 60vh - 170px );
+    }
+    #contact-us-office-info{
+        height: 40vh;
+    }
+  }
+  
+  
+  #section-contact-us-first{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  
+  #content-contact-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #contact_us_title{
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 98px;
+    line-height: 112px;
+    letter-spacing: -1.5px;
+    color: #FFFFFF;
+    transition: 1s;
+  }
+  /*
+  #offices_cities{
+    display: inline;
+  }*/
+  
+  #offices_cities_text{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+  
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+  
+    /* 03. On Primary / Medium Emphasis */
+  
+    color: rgba(255, 255, 255, 0.74);
+    display: flex;
+    justify-content:space-around;
+    list-style-type:none;
+    margin-bottom:45px;
+  }
+  
+  #offices_cities_text li a{ 
+    padding: 10px 30px;
+  }
+  
+  #offices_cities_text a:hover{
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  
+  /* escritórios */
+  
+  #contact-us-office-info{
+    background: #212121; 
+   /* display: flex;
+    flex-direction: row;
+    justify-content: center;*/
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+  }
+  
+  .offices_div{
+    margin-left: 10%;
+    align-self: center;
+  }
+  
+  
+  .offices_text_class{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    /* identical to box height, or 100% */
+  
+  
+    color: #FFFFFF;
+  }
+  
+  .above_office_text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+  
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+  }
+  
+  .construction-lines-office{
+    border: 0.5px solid #FFFFFF;
+    transform: rotate(90deg);
+    width: 7%;
+    margin: 0px -7%;
+  }
+  
+  #second_offices_div{
+    margin-left: 0%;
+  }
+  
+  #third_offices_div{
+    margin-left: 0%;
+  }
+  
+  .contacts_svg{
+    margin-top:-3px;
+  }
+  /* Fim Contacta-nos Section */
+  

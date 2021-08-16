@@ -713,6 +713,145 @@ $(document).ready(function () {
 
     svgs_hovers();
     changeHtmlIdealSolution();
+
+    var svg_offices = `<svg class="contacts_svg" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z" fill="white" fill-opacity="0.74"/>
+    </svg>`
+    
+
+    $("#lisboa").on({
+        mouseenter: function () {
+            $("#lisboa").html(`Lisboa<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#lisboa").html(`Lisboa`);
+        }
+    });
+    $("#lisboa").on("click", function () {
+        document.getElementById('text_offices').innerHTML = "Av. Cor. Eduardo Galhardo, 3," + svg_offices + "<br> 1170-105 Lisboa, Portugal"
+        document.getElementById('phones_offices1').innerHTML = "(+351) 211 454 004" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "(+351) 960 256 862" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "(+351) 965 258 220 (Dir. Comercial)" + svg_offices;
+        $("#video-banner").attr("src","img/lisboa.png");
+    });
+
+    $("#porto").on({
+        mouseenter: function () {
+            $("#porto").html(`Porto <span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#porto").html(`Porto`);
+        }
+    });
+    $("#porto").on("click", function () {
+        document.getElementById('text_offices').innerHTML = "Morada Porto" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = "Phones Porto" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "Phones Porto" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "Phones Porto" + svg_offices;
+        $("#video-banner").attr("src","img/porto.png");
+    });
+
+    $("#setubal").on({
+        mouseenter: function () {
+            $("#setubal").html(`Setúbal<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#setubal").html(`Setúbal`);
+        }
+    });
+
+    $("#setubal").on("click", function () {
+        document.getElementById('text_offices').innerHTML = "Morada Setúbal" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = "Phones Setúbal" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "Phones Setúbal" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "Phones Setúbal" + svg_offices;
+        $("#video-banner").attr("src","img/setubal.png");
+    });
+
+    $("#faro").on({
+        mouseenter: function () {
+            $("#faro").html(`Faro<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#faro").html(`Faro`);
+        }
+    });
+
+    $("#faro").on("click", function () {
+        document.getElementById('text_offices').innerHTML = "Morada Faro" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = "Phones Faro" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "Phones Faro" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "Phones Faro" + svg_offices;
+        $("#video-banner").attr("src","img/faro.png");
+    });
+
+    $("#funchal").on({
+        mouseenter: function () {
+            $("#funchal").html(`Funchal<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#funchal").html(`Funchal`);
+        }
+    });
+
+    $("#funchal").on("click", function () {
+        document.getElementById('text_offices').innerHTML = "Morada Funchal" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = "Phones Funchal" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "Phones Funchal" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "Phones Funchal" + svg_offices;
+        $("#video-banner").attr("src","img/funchal.png");
+    });
+
+    $("#madrid").on({
+        mouseenter: function () {
+            $("#madrid").html(`Madrid<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#madrid").html(`Madrid`);
+        }
+    });
+
+    $("#madrid").on("click", function () {
+        document.getElementById('text_offices').innerHTML = "Morada Madrid" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = "Phones Madrid" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "Phones Madrid" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "Phones Madrid" + svg_offices;
+        $("#video-banner").attr("src","img/madrid.png");
+    });
+
+    $("#moçambique").on({
+        mouseenter: function () {
+            $("#moçambique").html(`Moçambique<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#moçambique").html(`Moçambique`);
+        }
+    });
+
+    $("#moçambique").on("click", function () {
+        document.getElementById('text_offices').innerHTML = "Morada Moçambique" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = "Phones Moçambique" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "Phones Moçambique" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "Phones Moçambique" + svg_offices;
+        $("#video-banner").attr("src","img/moçambique.png");
+    });
+
+    $("#angola").on({
+        mouseenter: function () {
+            $("#angola").html(`Angola<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#angola").html(`Angola`);
+        }
+    });
+
+    $("#angola").on("click", function () {
+        document.getElementById('text_offices').innerHTML = "Morada Angola" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = "Phones Angola" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "Phones Angola" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "Phones Angola" + svg_offices;
+        $("#video-banner").attr("src","img/angola.png");
+    });
 });
 
 // Scrolling Effect

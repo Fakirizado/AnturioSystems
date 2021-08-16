@@ -14,18 +14,18 @@ function HomeLoad() {
     $('#it-sectors-slider').hide();
     $('#construction-sectors-slider').hide();
     $('#title-2').html("Solução Construção");
-    if(rndInt == 4){
+    if (rndInt == 4) {
         $('#it-sectors-slider').show();
         $('#title-2').html("Solução TI");
-    } else if (rndInt == 3){
+    } else if (rndInt == 3) {
         $('#industry-sectors-slider').show();
         $('#title-2').html("Solução Indústria");
 
-    } else if(rndInt == 2){
+    } else if (rndInt == 2) {
         $('#distribution-sectors-slider').show();
         $('#title-2').html("Solução Distribuição");
     }
-    else{
+    else {
         $('#construction-sectors-slider').show();
         $('#title-2').html("Solução Construção");
     }
@@ -51,7 +51,6 @@ function ContactUsLoad() {
     $('#video-banner').prop("src", "img/backgroud.png");
     animate(document.getElementById("section-contact-us"));
     animate(document.getElementById("video-banner"));
-    $("#video-banner").attr("src","img/lisboa.png");
 }
 
 //Mostra a página construção section e oculta tudo o resto
@@ -214,6 +213,27 @@ function arrowConstructionLeft() {
     }
 }
 
+function setNextPrev() {
+    $carousel.on('slid.bs.carousel', function (e) {
+        //Reset classes
+        $carouselItems.removeClass('prev');
+        $carouselItems.removeClass('next');
+        //Find current slide
+        var $active = $(e.relatedTarget);
+        //Add corresponding classes to next and prev elements
+        if($active.next().addClass('next').length == 0){
+            $($carouselItems[0]).addClass('next');
+        }
+        if($active.prev().addClass('prev').length == 0){
+            $($carouselItems[$carouselItems.length - 1]).addClass('prev');
+        };
+    });
+}
+
+var $carousel = $('#carouseReviews'),
+$carouselItems = $('.carousel-item', $carousel);
+
+
 $("html").css("background-color", "black");
 $(document).ready(function () {
     $("html").removeAttr("style");
@@ -222,6 +242,10 @@ $(document).ready(function () {
     $("#close-hamburguer").on("click", function () {
         $(".menu-icon").click();
     });
+     $carousel = $('#carouseReviews');
+     $carouselItems = $('.carousel-item', $carousel);
+    setNextPrev();
+
     jquerySwipeHandler.handleSwipe("#arrow-construction-rigth", [
         jquerySwipeHandler.CLICK
     ], function (direction) {
@@ -551,7 +575,7 @@ $(document).ready(function () {
 
     $("#first-dropdown-option-1").on({
         mouseenter: function () {
-            $("#first-dropdown-option-1").html(`Construção<span
+            $("#first-dropdown-option-1").html(`Construção <span
             class="dot_point_geral">.</span>`)
         }, mouseleave: function () {
             $("#first-dropdown-option-1").html(`Construção`);
@@ -560,7 +584,7 @@ $(document).ready(function () {
 
     $("#first-dropdown-option-2").on({
         mouseenter: function () {
-            $("#first-dropdown-option-2").html(`Distribuição<span
+            $("#first-dropdown-option-2").html(`Distribuição <span
             class="dot_point_geral">.</span>`);
 
         }, mouseleave: function () {
@@ -570,7 +594,7 @@ $(document).ready(function () {
 
     $("#first-dropdown-option-3").on({
         mouseenter: function () {
-            $("#first-dropdown-option-3").html(`Indústria<span
+            $("#first-dropdown-option-3").html(`Indústria <span
             class="dot_point_geral">.</span>`);
 
         }, mouseleave: function () {
@@ -580,7 +604,7 @@ $(document).ready(function () {
 
     $("#first-dropdown-option-4").on({
         mouseenter: function () {
-            $("#first-dropdown-option-4").html(`TI<span
+            $("#first-dropdown-option-4").html(`TI <span
             class="dot_point_geral">.</span>`);
 
         }, mouseleave: function () {
@@ -828,9 +852,7 @@ $(document).ready(function () {
         document.getElementById('phones_offices3').innerHTML = "Phones Angola" + svg_offices;
         $("#video-banner").attr("src","img/angola.png");
     });
-    
 });
-
 
 // Scrolling Effect
 
@@ -1406,7 +1428,7 @@ function changeHtmlIdealSolution() {
         $("#ideal_solution_chart_img").attr("src", "/img/solution_chart_mobile.png");
     } else if ($(window).width() < 1300 && $(window).width() >= 608) {         //Back to Web  
         $("#ideal_solution_chart_img").attr("src", "/img/solution_chart_tablet.png");
-    }else{
+    } else {
         $("#ideal_solution_chart_img").attr("src", "/img/solution_chart.png");
     }
 }
