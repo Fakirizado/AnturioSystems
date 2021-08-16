@@ -2437,6 +2437,9 @@ html, body {
 
   @media(min-width: 993px) {
     #content-contact-us{
-        height: calc( 60vh - 90px );
+        height: calc( 60vh - 170px );
+    }
+    #contact-us-office-info{
+        height: 40vh;
     }
 }
