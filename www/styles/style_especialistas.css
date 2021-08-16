@@ -101,6 +101,19 @@ nav ul {
 .social-media svg{
   margin-right: 6px;
 }
+
+.construction_icon_button_slider, .distribution_icon_button_slider, .industry_icon_button_slider, .it_icon_button_slider{
+  cursor: pointer;
+}
+
+body{
+  display: none;
+}
+
+#construction-sectors-slider{
+  display: none;
+}
+
 #it-sectors-slider{
   display: none;
 }
@@ -1936,6 +1949,7 @@ body {
 #complete_management{
   display:flex;
   background: #F5F5F5;
+  padding-bottom: 30px;
 }
 #complete_management_info p{
   margin-bottom: 30px;
@@ -2367,28 +2381,21 @@ color: #000000;
 
 #ideal_solution_chart_text{
   margin-top: 62px;
-  
-  /* Headline 3 */
-  
   font-family: Ubuntu;
   font-style: normal;
   font-weight: normal;
   font-size: 49px;
   line-height: 56px;
-  /* identical to box height, or 114% */
-  
-  
-  /* 03. On Primary / High Emphasis */
-  
   color: #FFFFFF;
-  
-  
+  margin-bottom: 80px;
+  width: 95%;
+  text-align: center;
   }
   
 #ideal_solution_chart_img{
   width: 90%;
     height: 53%;
-  margin-bottom: 48px;
+  margin-bottom: 70px;
 }
 /* Tablet */
 @media only screen and (max-width: 1300px) {
@@ -2399,8 +2406,7 @@ color: #000000;
   
   #ideal_solution_chart_text{
     font-size: 49px;
-line-height: 56px;
-  text-align: center;
+    line-height: 56px;
   }
   #ideal_solution_chart{
     height:auto;
@@ -2411,14 +2417,13 @@ line-height: 56px;
 
 @media only screen and (max-width: 699px) {
   #ideal_solution_chart_img{
-    height: 80%;
-    width: 80%;
+    height: 70%;
+    width: 70%;
   }
   
   #ideal_solution_chart_text{
     font-size: 24px;
   line-height: 24px;
-  text-align: center;
   }
   #ideal_solution_chart{
     height:auto;
@@ -2427,3 +2432,82 @@ line-height: 56px;
 
   /* Fim Ideal Solution Chart Div */
 
+ 
+/* Contacta-nos Section */
+
+@media(min-width: 993px) {
+  #content-contact-us{
+      height: calc( 60vh - 170px );
+  }
+  #contact-us-office-info{
+      height: 40vh;
+  }
+}
+
+
+#section-contact-us{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+#content-contact-us{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact_us_title{
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 98px;
+  line-height: 112px;
+  letter-spacing: -1.5px;
+  color: #FFFFFF;
+  transition: 1s;
+}
+
+#offices_cities{
+  display: inline;
+}
+
+#offices_cities_text{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+
+  /* 03. On Primary / Medium Emphasis */
+
+  color: rgba(255, 255, 255, 0.74);
+  display: flex;
+  justify-content:space-around;
+  list-style-type:none;
+  margin-bottom:45px;
+}
+
+#offices_cities_text li a{ 
+  padding: 10px 30px;
+}
+
+#offices_cities_text a:hover{
+  font-weight: bold;
+  color: #FFFFFF;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+/* escritórios */
+
+#contact-us-office-info{
+  background: #212121;
+}
+/* Fim Contacta-nos Section */

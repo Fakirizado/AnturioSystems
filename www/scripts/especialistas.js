@@ -8,6 +8,27 @@ function HomeLoad() {
     $('#div_with_sectors').show();
     $('#we-solution-page').show();
     $('#div_trusted_clients').show();
+    const rndInt = Math.floor(Math.random() * 4) + 1;
+    $('#distribution-sectors-slider').hide();
+    $('#industry-sectors-slider').hide();
+    $('#it-sectors-slider').hide();
+    $('#construction-sectors-slider').hide();
+    $('#title-2').html("Solução Construção");
+    if(rndInt == 4){
+        $('#it-sectors-slider').show();
+        $('#title-2').html("Solução TI");
+    } else if (rndInt == 3){
+        $('#industry-sectors-slider').show();
+        $('#title-2').html("Solução Indústria");
+
+    } else if(rndInt == 2){
+        $('#distribution-sectors-slider').show();
+        $('#title-2').html("Solução Distribuição");
+    }
+    else{
+        $('#construction-sectors-slider').show();
+        $('#title-2').html("Solução Construção");
+    }
     //Adicionar Secções a ocultar na página inicial
     window.scrollTo(0, 0);
     $('#video-banner').prop("src", "img/backgroud.png");
@@ -192,8 +213,11 @@ function arrowConstructionLeft() {
     }
 }
 
+$("html").css("background-color", "black");
 $(document).ready(function () {
+    $("html").removeAttr("style");
     HomeLoad();
+    $("body").show();
     $("#close-hamburguer").on("click", function () {
         $(".menu-icon").click();
     });
@@ -207,6 +231,22 @@ $(document).ready(function () {
         jquerySwipeHandler.CLICK
     ], function (direction) {
         arrowConstructionLeft();
+    });
+
+    $(".construction_icon_button_slider").on("click", function () {
+        ConstructionLoad();
+    });
+
+    $(".distribution_icon_button_slider").on("click", function () {
+        //ConstructionLoad();
+    });
+
+    $(".industry_icon_button_slider").on("click", function () {
+        //ConstructionLoad();
+    });
+
+    $(".it_icon_button_slider").on("click", function () {
+        //ConstructionLoad();
     });
 
 
@@ -226,7 +266,7 @@ $(document).ready(function () {
     setTimeout(function () {
         changeSlider();
 
-    }, 5000);
+    }, 10000);
 
 
     // ÁREA DE CLIQUES NO SLIDER
@@ -510,7 +550,7 @@ $(document).ready(function () {
 
     $("#first-dropdown-option-1").on({
         mouseenter: function () {
-            $("#first-dropdown-option-1").html(`Construção <span
+            $("#first-dropdown-option-1").html(`Construção<span
             class="dot_point_geral">.</span>`)
         }, mouseleave: function () {
             $("#first-dropdown-option-1").html(`Construção`);
@@ -519,7 +559,7 @@ $(document).ready(function () {
 
     $("#first-dropdown-option-2").on({
         mouseenter: function () {
-            $("#first-dropdown-option-2").html(`Distribuição <span
+            $("#first-dropdown-option-2").html(`Distribuição<span
             class="dot_point_geral">.</span>`);
 
         }, mouseleave: function () {
@@ -529,7 +569,7 @@ $(document).ready(function () {
 
     $("#first-dropdown-option-3").on({
         mouseenter: function () {
-            $("#first-dropdown-option-3").html(`Indústria <span
+            $("#first-dropdown-option-3").html(`Indústria<span
             class="dot_point_geral">.</span>`);
 
         }, mouseleave: function () {
@@ -539,7 +579,7 @@ $(document).ready(function () {
 
     $("#first-dropdown-option-4").on({
         mouseenter: function () {
-            $("#first-dropdown-option-4").html(`TI <span
+            $("#first-dropdown-option-4").html(`TI<span
             class="dot_point_geral">.</span>`);
 
         }, mouseleave: function () {
@@ -648,7 +688,82 @@ $(document).ready(function () {
 
     svgs_hovers();
     changeHtmlIdealSolution();
+
+    $("#lisboa").on({
+        mouseenter: function () {
+            $("#lisboa").html(`Lisboa<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#lisboa").html(`Lisboa`);
+        }
+    });
+
+    $("#porto").on({
+        mouseenter: function () {
+            $("#porto").html(`Porto <span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#porto").html(`Porto`);
+        }
+    });
+
+    $("#setubal").on({
+        mouseenter: function () {
+            $("#setubal").html(`Setúbal<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#setubal").html(`Setúbal`);
+        }
+    });
+
+    $("#faro").on({
+        mouseenter: function () {
+            $("#faro").html(`Faro<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#faro").html(`Faro`);
+        }
+    });
+
+    $("#funchal").on({
+        mouseenter: function () {
+            $("#funchal").html(`Funchal<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#funchal").html(`Funchal`);
+        }
+    });
+
+    $("#madrid").on({
+        mouseenter: function () {
+            $("#madrid").html(`Madrid<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#madrid").html(`Madrid`);
+        }
+    });
+
+    $("#moçambique").on({
+        mouseenter: function () {
+            $("#moçambique").html(`Moçambique<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#moçambique").html(`Moçambique`);
+        }
+    });
+
+    $("#angola").on({
+        mouseenter: function () {
+            $("#angola").html(`Angola<span
+            class="dot_point_geral">.</span>`)
+        }, mouseleave: function () {
+            $("#angola").html(`Angola`);
+        }
+    });
+
+    
 });
+
 
 // Scrolling Effect
 
