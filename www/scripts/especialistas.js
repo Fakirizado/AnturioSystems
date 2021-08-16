@@ -51,6 +51,7 @@ function ContactUsLoad() {
     $('#video-banner').prop("src", "img/backgroud.png");
     animate(document.getElementById("section-contact-us"));
     animate(document.getElementById("video-banner"));
+    $("#video-banner").attr("src","img/lisboa.png");
 }
 
 //Mostra a página construção section e oculta tudo o resto
@@ -707,6 +708,7 @@ $(document).ready(function () {
         document.getElementById('phones_offices1').innerHTML = "(+351) 211 454 004" + svg_offices;
         document.getElementById('phones_offices2').innerHTML = "(+351) 960 256 862" + svg_offices;
         document.getElementById('phones_offices3').innerHTML = "(+351) 965 258 220 (Dir. Comercial)" + svg_offices;
+        $("#video-banner").attr("src","img/lisboa.png");
     });
 
     $("#porto").on({
@@ -722,6 +724,7 @@ $(document).ready(function () {
         document.getElementById('phones_offices1').innerHTML = "Phones Porto" + svg_offices;
         document.getElementById('phones_offices2').innerHTML = "Phones Porto" + svg_offices;
         document.getElementById('phones_offices3').innerHTML = "Phones Porto" + svg_offices;
+        $("#video-banner").attr("src","img/porto.png");
     });
 
     $("#setubal").on({
@@ -738,6 +741,7 @@ $(document).ready(function () {
         document.getElementById('phones_offices1').innerHTML = "Phones Setúbal" + svg_offices;
         document.getElementById('phones_offices2').innerHTML = "Phones Setúbal" + svg_offices;
         document.getElementById('phones_offices3').innerHTML = "Phones Setúbal" + svg_offices;
+        $("#video-banner").attr("src","img/setubal.png");
     });
 
     $("#faro").on({
@@ -754,6 +758,7 @@ $(document).ready(function () {
         document.getElementById('phones_offices1').innerHTML = "Phones Faro" + svg_offices;
         document.getElementById('phones_offices2').innerHTML = "Phones Faro" + svg_offices;
         document.getElementById('phones_offices3').innerHTML = "Phones Faro" + svg_offices;
+        $("#video-banner").attr("src","img/faro.png");
     });
 
     $("#funchal").on({
@@ -770,6 +775,7 @@ $(document).ready(function () {
         document.getElementById('phones_offices1').innerHTML = "Phones Funchal" + svg_offices;
         document.getElementById('phones_offices2').innerHTML = "Phones Funchal" + svg_offices;
         document.getElementById('phones_offices3').innerHTML = "Phones Funchal" + svg_offices;
+        $("#video-banner").attr("src","img/funchal.png");
     });
 
     $("#madrid").on({
@@ -786,6 +792,7 @@ $(document).ready(function () {
         document.getElementById('phones_offices1').innerHTML = "Phones Madrid" + svg_offices;
         document.getElementById('phones_offices2').innerHTML = "Phones Madrid" + svg_offices;
         document.getElementById('phones_offices3').innerHTML = "Phones Madrid" + svg_offices;
+        $("#video-banner").attr("src","img/madrid.png");
     });
 
     $("#moçambique").on({
@@ -802,6 +809,7 @@ $(document).ready(function () {
         document.getElementById('phones_offices1').innerHTML = "Phones Moçambique" + svg_offices;
         document.getElementById('phones_offices2').innerHTML = "Phones Moçambique" + svg_offices;
         document.getElementById('phones_offices3').innerHTML = "Phones Moçambique" + svg_offices;
+        $("#video-banner").attr("src","img/moçambique.png");
     });
 
     $("#angola").on({
@@ -818,6 +826,7 @@ $(document).ready(function () {
         document.getElementById('phones_offices1').innerHTML = "Phones Angola" + svg_offices;
         document.getElementById('phones_offices2').innerHTML = "Phones Angola" + svg_offices;
         document.getElementById('phones_offices3').innerHTML = "Phones Angola" + svg_offices;
+        $("#video-banner").attr("src","img/angola.png");
     });
     
 });
