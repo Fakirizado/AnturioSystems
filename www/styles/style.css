@@ -2681,7 +2681,6 @@ html, body {
     text-decoration: underline;
   }
   
-  
   /* escritórios */
   
   #contact-us-office-info{
@@ -2742,6 +2741,14 @@ html, body {
   
   .contacts_svg{
     margin-top:-3px;
+  }
+
+  
+.hover{
+    font-weight: bold;
+    color: #FFFFFF !important;
+    cursor: pointer;
+    text-decoration: underline !important;
   }
   /* Fim Contacta-nos Section */
   
