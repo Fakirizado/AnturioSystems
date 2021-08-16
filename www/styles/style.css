@@ -2613,11 +2613,11 @@ html, body {
 /* Contacta-nos Section */
 
 @media(min-width: 993px) {
-    #content-contact-us{
-        height: calc( 60vh - 170px );
+    #section-contact-us_first{
+        height: calc( 65vh - 70px );
     }
     #contact-us-office-info{
-        height: 40vh;
+        height: 35vh;
     }
   }
   
@@ -2630,9 +2630,8 @@ html, body {
   }
   
   #content-contact-us{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      padding-top: 80px;
+      text-align: center;
   }
   
   #contact_us_title{
@@ -2656,18 +2655,14 @@ html, body {
     font-weight: bold;
     font-size: 14px;
     line-height: 24px;
-    /* identical to box height, or 171% */
-  
     letter-spacing: 0.35px;
     text-transform: uppercase;
-  
-    /* 03. On Primary / Medium Emphasis */
-  
     color: rgba(255, 255, 255, 0.74);
     display: flex;
     justify-content:space-around;
     list-style-type:none;
     margin-bottom:45px;
+    margin-top: 20px;
   }
   
   #offices_cities_text li a{ 
