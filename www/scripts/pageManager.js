@@ -38,6 +38,9 @@ function HomeLoad() {
 
 //Mostra o contact-us section e oculta tudo o resto
 function ContactUsLoad() {
+    if (($(window).width() < 993) &&  ($(".menu-icon").is('[style]'))) {
+        $(".menu-icon").click();
+    }
     $('#first-hr').hide();
     $('#content-first-page').hide();
     $('#different_sectors').hide();
@@ -286,6 +289,9 @@ $(document).ready(function () {
     });
 
     $(".logo").on("click", function () {
+        if (($(window).width() < 993) &&  ($(".menu-icon").is('[style]'))) {
+            $(".menu-icon").click();
+        }
         HomeLoad();
     });
 
