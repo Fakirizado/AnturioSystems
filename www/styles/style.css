@@ -2432,4 +2432,11 @@ html, body {
   
     /* Fim Ideal Solution Chart Div */
   
-  
+   
+  /* Contacta-nos Section */
+
+  @media(min-width: 993px) {
+    #content-contact-us{
+        height: calc( 60vh - 90px );
+    }
+}
