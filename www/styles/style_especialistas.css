@@ -2445,7 +2445,7 @@ color: #000000;
 }
 
 
-#section-contact-us{
+#section-contact-us-first{
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -2468,10 +2468,10 @@ color: #000000;
   color: #FFFFFF;
   transition: 1s;
 }
-
+/*
 #offices_cities{
   display: inline;
-}
+}*/
 
 #offices_cities_text{
   font-family: Ubuntu;
@@ -2508,6 +2508,43 @@ color: #000000;
 /* escritórios */
 
 #contact-us-office-info{
-  background: #212121;
+  background: #212121; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.offices_div{
+  margin-left: 10%;
+  align-self: center;
+}
+
+
+.offices_text_class{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height, or 100% */
+
+
+  color: #FFFFFF;
+}
+
+.above_office_text{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+}
+
+.construction-lines-office{
+  color:white;
 }
 /* Fim Contacta-nos Section */
