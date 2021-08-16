@@ -55,7 +55,9 @@ function ContactUsLoad() {
     $("#lisboa").addClass("hover");
 
     document.getElementById("lisboa").innerHTML = `Lisboa<span class=\"dot_point_geral\">.</span>`
+    $("#lisboa").click();
 }
+
 //Mostra a página construção section e oculta tudo o resto
 function ConstructionLoad() {
     $('#first-hr').hide();
@@ -224,17 +226,17 @@ function setNextPrev() {
         //Find current slide
         var $active = $(e.relatedTarget);
         //Add corresponding classes to next and prev elements
-        if ($active.next().addClass('next').length == 0) {
+        if($active.next().addClass('next').length == 0){
             $($carouselItems[0]).addClass('next');
         }
-        if ($active.prev().addClass('prev').length == 0) {
+        if($active.prev().addClass('prev').length == 0){
             $($carouselItems[$carouselItems.length - 1]).addClass('prev');
         };
     });
 }
 
 var $carousel = $('#carouseReviews'),
-    $carouselItems = $('.carousel-item', $carousel);
+$carouselItems = $('.carousel-item', $carousel);
 
 
 $("html").css("background-color", "black");
@@ -245,8 +247,8 @@ $(document).ready(function () {
     $("#close-hamburguer").on("click", function () {
         $(".menu-icon").click();
     });
-    $carousel = $('#carouseReviews');
-    $carouselItems = $('.carousel-item', $carousel);
+     $carousel = $('#carouseReviews');
+     $carouselItems = $('.carousel-item', $carousel);
     setNextPrev();
 
     jquerySwipeHandler.handleSwipe("#arrow-construction-rigth", [
@@ -720,7 +722,7 @@ $(document).ready(function () {
     var svg_offices = `<svg class="contacts_svg" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z" fill="white" fill-opacity="0.74"/>
     </svg>`
-
+    
 
     $("#lisboa").on({
         mouseenter: function () {

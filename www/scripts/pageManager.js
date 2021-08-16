@@ -55,6 +55,7 @@ function ContactUsLoad() {
     $("#lisboa").addClass("hover");
 
     document.getElementById("lisboa").innerHTML = `Lisboa<span class=\"dot_point_geral\">.</span>`
+    $("#lisboa").click();
 }
 
 //Mostra a página construção section e oculta tudo o resto
