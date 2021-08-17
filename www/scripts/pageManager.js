@@ -1726,7 +1726,7 @@ function mobileVersionOffices() {
         document.getElementById('offices_cities').style.display = "none"
     } else {
         document.getElementById('accordionOffices').style.display = "none"
-        document.getElementById('contact-us-office-info').style.display = "block"
+        document.getElementById('contact-us-office-info').style.display = "flex"
         document.getElementById('offices_cities').style.display = "block"
     }
 }
