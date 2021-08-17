@@ -68,6 +68,10 @@ function ContactUsLoad() {
     document.getElementById("lisboa").innerHTML = `Lisboa<span class=\"dot_point_geral\">.</span>`
     $("#lisboa").click();
     currentPage = "home";
+    
+    if(document.getElementsByClassName('buttonOne')[0].getAttribute('aria-expanded') === "false"){
+        $(".buttonOne").click();
+    }
 }
 
 //Mostra a página construção section e oculta tudo o resto
@@ -91,6 +95,10 @@ function ConstructionLoad() {
     animate(document.getElementById("video-banner"));
     resetArrowConstruction("construction");
     currentPage = "construction";
+    if(document.getElementsByClassName('buttonOne')[1].getAttribute('aria-expanded') === "false"){
+        $(".buttonOne").click();
+    }
+
 }
 
 function DistributionLoad() {
@@ -114,6 +122,10 @@ function DistributionLoad() {
     animate(document.getElementById("video-banner"));
     resetArrowConstruction("distribution");
     currentPage = "distribution";
+
+    if(document.getElementsByClassName('buttonOne')[2].getAttribute('aria-expanded') === "false"){
+        $(".buttonOne").click();
+    }
 }
 
 function IndustryLoad() {
@@ -137,6 +149,9 @@ function IndustryLoad() {
     animate(document.getElementById("video-banner"));
     resetArrowConstruction("industry");
     currentPage = "industry";
+    if(document.getElementsByClassName('buttonOne')[3].getAttribute('aria-expanded') === "false"){
+        $(".buttonOne").click();
+    }
 }
 
 function ChangePageButton() {
@@ -1528,9 +1543,9 @@ function changeManagementHeadingOne() {
     $(".second_svg_management").html(black_svg);
     $(".third_svg_management").html(black_svg);
     $(".fourth_svg_management").html(black_svg);
-    $(".fifth_svg_managementt").html(black_svg);
+    $(".fifth_svg_management").html(black_svg);
     $(".sixth_svg_management").html(black_svg);
-    $(".seventh_svg_managementt").html(black_svg);
+    $(".seventh_svg_management").html(black_svg);
     $(".eigthth_svg_management").html(black_svg);
 }
 
@@ -1553,9 +1568,9 @@ function changeManagementHeadingTwo() {
     $(".first_svg_management").html(black_svg);
     $(".third_svg_management").html(black_svg);
     $(".fourth_svg_management").html(black_svg);
-    $(".fifth_svg_managementt").html(black_svg);
+    $(".fifth_svg_management").html(black_svg);
     $(".sixth_svg_management").html(black_svg);
-    $(".seventh_svg_managementt").html(black_svg);
+    $(".seventh_svg_management").html(black_svg);
     $(".eigthth_svg_management").html(black_svg);
 }
 
@@ -1578,9 +1593,9 @@ function changeManagementHeadingThree() {
     $(".second_svg_management").html(black_svg);
     $(".first_svg_management").html(black_svg);
     $(".fourth_svg_management").html(black_svg);
-    $(".fifth_svg_managementt").html(black_svg);
+    $(".fifth_svg_management").html(black_svg);
     $(".sixth_svg_management").html(black_svg);
-    $(".seventh_svg_managementt").html(black_svg);
+    $(".seventh_svg_management").html(black_svg);
     $(".eigthth_svg_management").html(black_svg);
 }
 
@@ -1603,9 +1618,9 @@ function changeManagementHeadingFour() {
     $(".second_svg_management").html(black_svg);
     $(".third_svg_management").html(black_svg);
     $(".first_svg_management").html(black_svg);
-    $(".fifth_svg_managementt").html(black_svg);
+    $(".fifth_svg_management").html(black_svg);
     $(".sixth_svg_management").html(black_svg);
-    $(".seventh_svg_managementt").html(black_svg);
+    $(".seventh_svg_management").html(black_svg);
     $(".eigthth_svg_management").html(black_svg);
 }
 
@@ -1628,9 +1643,9 @@ function changeManagementHeadingFive() {
     $(".second_svg_management").html(black_svg);
     $(".third_svg_management").html(black_svg);
     $(".fourth_svg_management").html(black_svg);
-    $(".first_svg_managementt").html(black_svg);
+    $(".first_svg_management").html(black_svg);
     $(".sixth_svg_management").html(black_svg);
-    $(".seventh_svg_managementt").html(black_svg);
+    $(".seventh_svg_management").html(black_svg);
     $(".eigthth_svg_management").html(black_svg);
 }
 
@@ -1653,9 +1668,9 @@ function changeManagementHeadingSix() {
     $(".second_svg_management").html(black_svg);
     $(".third_svg_management").html(black_svg);
     $(".fourth_svg_management").html(black_svg);
-    $(".fifth_svg_managementt").html(black_svg);
+    $(".fifth_svg_management").html(black_svg);
     $(".first_svg_management").html(black_svg);
-    $(".seventh_svg_managementt").html(black_svg);
+    $(".seventh_svg_management").html(black_svg);
     $(".eigthth_svg_management").html(black_svg);
 }
 
@@ -1678,7 +1693,7 @@ function changeManagementHeadingSeven() {
     $(".second_svg_management").html(black_svg);
     $(".third_svg_management").html(black_svg);
     $(".fourth_svg_management").html(black_svg);
-    $(".fifth_svg_managementt").html(black_svg);
+    $(".fifth_svg_management").html(black_svg);
     $(".first_svg_management").html(black_svg);
     $(".sixth_svg_management").html(black_svg);
     $(".eigthth_svg_management").html(black_svg);
@@ -1703,10 +1718,10 @@ function changeManagementHeadingEigth() {
     $(".second_svg_management").html(black_svg);
     $(".third_svg_management").html(black_svg);
     $(".fourth_svg_management").html(black_svg);
-    $(".fifth_svg_managementt").html(black_svg);
+    $(".fifth_svg_management").html(black_svg);
     $(".first_svg_management").html(black_svg);
     $(".sixth_svg_management").html(black_svg);
-    $(".seventh_svg_managementt").html(black_svg);
+    $(".seventh_svg_management").html(black_svg);
 }
 
 function changeHtmlIdealSolution() {
