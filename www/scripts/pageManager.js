@@ -43,7 +43,7 @@ function HomeLoad() {
 
 //Mostra o contact-us section e oculta tudo o resto
 function ContactUsLoad() {
-    if (($(window).width() < 993) &&  ($(".menu-icon").is('[style]'))) {
+    if (($(window).width() < 993) && ($(".menu-icon").is('[style]'))) {
         $(".menu-icon").click();
     }
     $('#first-hr').hide();
@@ -291,17 +291,17 @@ function setNextPrev() {
         //Find current slide
         var $active = $(e.relatedTarget);
         //Add corresponding classes to next and prev elements
-        if($active.next().addClass('next').length == 0){
+        if ($active.next().addClass('next').length == 0) {
             $($carouselItems[0]).addClass('next');
         }
-        if($active.prev().addClass('prev').length == 0){
+        if ($active.prev().addClass('prev').length == 0) {
             $($carouselItems[$carouselItems.length - 1]).addClass('prev');
         };
     });
 }
 
 var $carousel = $('#carouseReviews'),
-$carouselItems = $('.carousel-item', $carousel);
+    $carouselItems = $('.carousel-item', $carousel);
 
 
 $("html").css("background-color", "black");
@@ -312,8 +312,8 @@ $(document).ready(function () {
     $("#close-hamburguer").on("click", function () {
         $(".menu-icon").click();
     });
-     $carousel = $('#carouseReviews');
-     $carouselItems = $('.carousel-item', $carousel);
+    $carousel = $('#carouseReviews');
+    $carouselItems = $('.carousel-item', $carousel);
     setNextPrev();
 
     jquerySwipeHandler.handleSwipe("#arrow-construction-rigth", [
@@ -382,10 +382,10 @@ $(document).ready(function () {
         IndustryLoad();
     });
 
-    
+
 
     $(".logo").on("click", function () {
-        if (($(window).width() < 993) &&  ($(".menu-icon").is('[style]'))) {
+        if (($(window).width() < 993) && ($(".menu-icon").is('[style]'))) {
             $(".menu-icon").click();
         }
         HomeLoad();
@@ -754,6 +754,16 @@ $(document).ready(function () {
             changeManagementHeadingSix();
         }
     });
+    $(".buttonSeven").on({
+        click: function () {
+            changeManagementHeadingSeven();
+        }
+    });
+    $(".buttonEigth").on({
+        click: function () {
+            changeManagementHeadingEigth();
+        }
+    });
 
     $('.first_svg_management').on({
         click: function () {
@@ -791,10 +801,23 @@ $(document).ready(function () {
             changeManagementHeadingSix();
         }
     })
+    $('.seventh_svg_management').on({
+        click: function () {
+            $('.buttonSeven').click();
+            changeManagementHeadingSeven();
+        }
+    })
+    $('.eigthth_svg_management').on({
+        click: function () {
+            $('.buttonEigth').click();
+            changeManagementHeadingEigth();
+        }
+    })
     resizePhone();
     changeSvg();
     moveTextAboveSVG();
     changeSizesSVG();
+    mobileVersionOffices();
     //Adicionar submenu em dispositivos móveis
     var sectorsbtn = document.getElementById("sectors-btn");
     sectorsbtn.onclick = function (event) {
@@ -824,7 +847,7 @@ $(document).ready(function () {
     var svg_offices = `<svg class="contacts_svg" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z" fill="white" fill-opacity="0.74"/>
     </svg>`
-    
+
 
     $("#lisboa").on({
         mouseenter: function () {
@@ -930,7 +953,7 @@ $(document).ready(function () {
         }, mouseleave: function () {
             if (document.getElementById('funchal').classList.contains('hover')) {
             } else {
-            $("#funchal").html(`Funchal`);
+                $("#funchal").html(`Funchal`);
             }
         }
     });
@@ -954,7 +977,7 @@ $(document).ready(function () {
         }, mouseleave: function () {
             if (document.getElementById('madrid').classList.contains('hover')) {
             } else {
-            $("#madrid").html(`Madrid`);
+                $("#madrid").html(`Madrid`);
             }
         }
     });
@@ -978,7 +1001,7 @@ $(document).ready(function () {
         }, mouseleave: function () {
             if (document.getElementById('moçambique').classList.contains('hover')) {
             } else {
-            $("#moçambique").html(`Moçambique`);
+                $("#moçambique").html(`Moçambique`);
             }
         }
     });
@@ -1002,7 +1025,7 @@ $(document).ready(function () {
         }, mouseleave: function () {
             if (document.getElementById('angola').classList.contains('hover')) {
             } else {
-            $("#angola").html(`Angola`);
+                $("#angola").html(`Angola`);
             }
         }
     });
@@ -1043,10 +1066,10 @@ $(window).on("scroll", function () {
 $(window).resize(function () {
     resizePhone();
     if ($(window).width() < 993) {
-        if(currentPage != "home"){
+        if (currentPage != "home") {
             resetArrowConstruction(currentPage);
         }
-        
+
         $('.li-sub').remove();
     }
     else {
@@ -1058,6 +1081,7 @@ $(window).resize(function () {
     changeSizesSVG();
     svgs_hovers();
     changeHtmlIdealSolution();
+    mobileVersionOffices();
 });
 
 
@@ -1482,6 +1506,8 @@ var collapseThreeBool = false;
 var collapseFourBool = false;
 var collapseFiveBool = false;
 var collapseSixBool = false;
+var collapseSevenBool = false;
+var collapseEigthBool = false;
 
 function changeManagementHeadingOne() {
     if (!collapseOneBool) {
@@ -1496,12 +1522,16 @@ function changeManagementHeadingOne() {
     collapseFourBool = false;
     collapseFiveBool = false;
     collapseSixBool = false;
+    collapseSevenBool = false;
+    collapseEigthBool = false;
 
     $(".second_svg_management").html(black_svg);
     $(".third_svg_management").html(black_svg);
     $(".fourth_svg_management").html(black_svg);
     $(".fifth_svg_managementt").html(black_svg);
     $(".sixth_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingTwo() {
@@ -1517,12 +1547,16 @@ function changeManagementHeadingTwo() {
     collapseFourBool = false;
     collapseFiveBool = false;
     collapseSixBool = false;
+    collapseSevenBool = false;
+    collapseEigthBool = false;
 
     $(".first_svg_management").html(black_svg);
     $(".third_svg_management").html(black_svg);
     $(".fourth_svg_management").html(black_svg);
     $(".fifth_svg_managementt").html(black_svg);
     $(".sixth_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingThree() {
@@ -1538,12 +1572,16 @@ function changeManagementHeadingThree() {
     collapseFourBool = false;
     collapseFiveBool = false;
     collapseSixBool = false;
+    collapseSevenBool = false;
+    collapseEigthBool = false;
 
     $(".second_svg_management").html(black_svg);
     $(".first_svg_management").html(black_svg);
     $(".fourth_svg_management").html(black_svg);
     $(".fifth_svg_managementt").html(black_svg);
     $(".sixth_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingFour() {
@@ -1559,12 +1597,16 @@ function changeManagementHeadingFour() {
     collapseThreeBool = false;
     collapseFiveBool = false;
     collapseSixBool = false;
+    collapseSevenBool = false;
+    collapseEigthBool = false;
 
     $(".second_svg_management").html(black_svg);
     $(".third_svg_management").html(black_svg);
     $(".first_svg_management").html(black_svg);
     $(".fifth_svg_managementt").html(black_svg);
     $(".sixth_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingFive() {
@@ -1580,12 +1622,16 @@ function changeManagementHeadingFive() {
     collapseThreeBool = false;
     collapseFourBool = false;
     collapseSixBool = false;
+    collapseSevenBool = false;
+    collapseEigthBool = false;
 
     $(".second_svg_management").html(black_svg);
     $(".third_svg_management").html(black_svg);
     $(".fourth_svg_management").html(black_svg);
     $(".first_svg_managementt").html(black_svg);
     $(".sixth_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingSix() {
@@ -1601,12 +1647,66 @@ function changeManagementHeadingSix() {
     collapseThreeBool = false;
     collapseFourBool = false;
     collapseFiveBool = false;
+    collapseSevenBool = false;
+    collapseEigthBool = false;
 
     $(".second_svg_management").html(black_svg);
     $(".third_svg_management").html(black_svg);
     $(".fourth_svg_management").html(black_svg);
     $(".fifth_svg_managementt").html(black_svg);
     $(".first_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
+}
+
+
+function changeManagementHeadingSeven() {
+    if (!collapseSevenBool) {
+        $(".seventh_svg_management").html(red_svg);
+        collapseSevenBool = true
+    } else {
+        $(".seventh_svg_management").html(black_svg);
+        collapseSevenBool = false
+    }
+    collapseOneBool = false;
+    collapseTwoBool = false;
+    collapseThreeBool = false;
+    collapseFourBool = false;
+    collapseFiveBool = false;
+    collapseEigthBool = false;
+
+    $(".second_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".first_svg_management").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
+}
+
+function changeManagementHeadingEigth() {
+    if (!collapseEigthBool) {
+        $(".eigthth_svg_management").html(red_svg);
+        collapseEigthBool = true
+    } else {
+        $(".eigthth_svg_management").html(black_svg);
+        collapseEigthBool = false
+    }
+    collapseOneBool = false;
+    collapseTwoBool = false;
+    collapseThreeBool = false;
+    collapseFourBool = false;
+    collapseFiveBool = false;
+    collapseSevenBool = false
+    console.log("a");
+
+    $(".second_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".first_svg_management").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
 }
 
 function changeHtmlIdealSolution() {
@@ -1616,5 +1716,17 @@ function changeHtmlIdealSolution() {
         $("#ideal_solution_chart_img").attr("src", "/img/solution_chart_tablet.png");
     } else {
         $("#ideal_solution_chart_img").attr("src", "/img/solution_chart.png");
+    }
+}
+
+function mobileVersionOffices() {
+    if ($(window).width() < 608) {
+        document.getElementById('accordionOffices').style.display = "block"
+        document.getElementById('contact-us-office-info').style.display = "none"
+        document.getElementById('offices_cities').style.display = "none"
+    } else {
+        document.getElementById('accordionOffices').style.display = "none"
+        document.getElementById('contact-us-office-info').style.display = "block"
+        document.getElementById('offices_cities').style.display = "block"
     }
 }

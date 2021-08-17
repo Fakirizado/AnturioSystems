@@ -2748,5 +2748,64 @@ html, body {
     cursor: pointer;
     text-decoration: underline !important;
   }
+  
+
+.offices_div{
+    margin-left: 10%;
+    align-self: center;
+    width:25%;
+  }
+   
+  /* tablet*/
+  @media only screen and (max-width: 1004px) {
+    #offices_cities_text li a {
+      padding: 10px 20px;
+  }
+  }
+  
+  
+  @media only screen and (max-width: 890px) {
+    #offices_cities_text li a {
+      padding: 10px 10px;
+  }
+  #third_offices_div{
+    margin-right: 10%;
+  }
+  }
+  
+  @media only screen and (max-width: 704px) {
+    #offices_cities_text li a {
+      padding: 10px 5px;
+  }
+  }
+  
+  /*mobile*/
+  @media only screen and (max-width: 620px) {
+    #offices_cities_text li a {
+      padding: 10px 10px;
+  }
+  #third_offices_div{
+    margin-right: 10%;
+  }
+  #contact_us_title{
+    font-size: 49px;
+  line-height: 56px;
+  
+  }
+  
+  .accordion_offices{
+    background:#212121;
+  }
+  .offices_btn{
+    font-size: 14px;
+  line-height: 24px;
+  
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  
+  
+  color: #FFFFFF;
+  }
+  }
   /* Fim Contacta-nos Section */
   

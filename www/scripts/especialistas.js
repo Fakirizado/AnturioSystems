@@ -1,8 +1,12 @@
+var currentPage = "home";
 //Oculta tudo o que não pertencer à homepage
 function HomeLoad() {
     $('#section-contact-us').hide();
     $('#section-construction-homepage').hide();
+    $('#section-distribution-homepage').hide();
+    $('#section-industry-homepage').hide();
     $('#construction-sections').hide();
+    $('#distribution-sections').hide();
     $('#content-first-page').show();
     $('#different_sectors').show();
     $('#div_with_sectors').show();
@@ -34,6 +38,7 @@ function HomeLoad() {
     $('#video-banner').prop("src", "img/backgroud.png");
     animate(document.getElementById("content-first-page"));
     animate(document.getElementById("video-banner"));
+    currentPage = "home";
 }
 
 //Mostra o contact-us section e oculta tudo o resto
@@ -47,8 +52,11 @@ function ContactUsLoad() {
     $('#div_with_sectors').hide();
     $('#we-solution-page').hide();
     $('#section-construction-homepage').hide();
+    $('#section-distribution-homepage').hide();
+    $('#section-industry-homepage').hide();
     $('#div_trusted_clients').hide();
     $('#construction-sections').hide();
+    $('#distribution-sections').hide();
     $('#section-contact-us').show();
     window.scrollTo(0, 0);
     $('#video-banner').prop("src", "img/lisboa.png");
@@ -59,6 +67,7 @@ function ContactUsLoad() {
 
     document.getElementById("lisboa").innerHTML = `Lisboa<span class=\"dot_point_geral\">.</span>`
     $("#lisboa").click();
+    currentPage = "home";
 }
 
 //Mostra a página construção section e oculta tudo o resto
@@ -68,8 +77,11 @@ function ConstructionLoad() {
     $('#div_with_sectors').hide();
     $('#we-solution-page').hide();
     $('#section-construction-homepage').hide();
+    $('#section-distribution-homepage').hide();
+    $('#section-industry-homepage').hide();
     $('#section-contact-us').hide();
     $('#different_sectors').hide();
+    $('#distribution-sections').hide();
     $('#section-construction-homepage').show();
     $('#div_trusted_clients').show();
     $('#construction-sections').show();
@@ -77,6 +89,54 @@ function ConstructionLoad() {
     $('#video-banner').prop("src", "img/construction_background.jpg");
     animate(document.getElementById("section-construction-homepage"));
     animate(document.getElementById("video-banner"));
+    resetArrowConstruction("construction");
+    currentPage = "construction";
+}
+
+function DistributionLoad() {
+    $('#first-hr').hide();
+    $('#content-first-page').hide();
+    $('#div_with_sectors').hide();
+    $('#we-solution-page').hide();
+    $('#section-construction-homepage').hide();
+    $('#section-distribution-homepage').hide();
+    $('#section-industry-homepage').hide();
+    $('#section-contact-us').hide();
+    $('#different_sectors').hide();
+    $('#construction-sections').hide();
+    $('#section-distribution-homepage').show();
+    $('#div_trusted_clients').show();
+    $('#distribution-sections').show();
+    $('#distribution-sections').show();
+    window.scrollTo(0, 0);
+    $('#video-banner').prop("src", "img/construction_background.jpg");
+    animate(document.getElementById("section-distribution-homepage"));
+    animate(document.getElementById("video-banner"));
+    resetArrowConstruction("distribution");
+    currentPage = "distribution";
+}
+
+function IndustryLoad() {
+    $('#first-hr').hide();
+    $('#content-first-page').hide();
+    $('#div_with_sectors').hide();
+    $('#we-solution-page').hide();
+    $('#section-construction-homepage').hide();
+    $('#section-distribution-homepage').hide();
+    $('#section-industry-homepage').hide();
+    $('#section-contact-us').hide();
+    $('#different_sectors').hide();
+    $('#distribution-sections').hide();
+    $('#construction-sections').hide();
+    $('#section-industry-homepage').show();
+    $('#div_trusted_clients').show();
+    $('#distribution-sections').show();
+    window.scrollTo(0, 0);
+    $('#video-banner').prop("src", "img/construction_background.jpg");
+    animate(document.getElementById("section-industry-homepage"));
+    animate(document.getElementById("video-banner"));
+    resetArrowConstruction("industry");
+    currentPage = "industry";
 }
 
 function ChangePageButton() {
@@ -84,10 +144,9 @@ function ChangePageButton() {
         ConstructionLoad();
 
     } else if ($("#distribution-sectors-slider").is(":visible")) {
-
-
+        DistributionLoad();
     } else if ($("#industry-sectors-slider").is(":visible")) {
-
+        IndustryLoad();
     }
     else {
 
@@ -95,128 +154,131 @@ function ChangePageButton() {
 
 }
 
-function resetArrowConstruction() {
+function resetArrowConstruction(section) {
     if ($(window).width() < 601) {
         $(".vertical-line").hide();
-        $("#construction-item-1").show();
-        $("#construction-item-2").hide();
-        $("#construction-item-3").hide();
-        $("#construction-item-4").hide();
-        animate(document.getElementById('construction-item-1'));
+        $("#" + section + "-item-1").show();
+        $("#" + section + "-item-2").hide();
+        $("#" + section + "-item-3").hide();
+        $("#" + section + "-item-4").hide();
+        animate(document.getElementById(section + '-item-1'));
     }
     else if ($(window).width() < 993) {
-        $("#construction-line-3").hide();
-        $("#construction-item-3").hide();
-        $("#construction-item-4").hide();
-        $("#construction-line-1").show();
-        $("#construction-item-1").show();
-        $("#construction-item-2").show();
-        animate(document.getElementById('construction-line-1'));
-        animate(document.getElementById('construction-item-1'));
-        animate(document.getElementById('construction-item-2'));
+        $("#" + section + "-line-3").hide();
+        $("#" + section + "-item-3").hide();
+        $("#" + section + "-item-4").hide();
+        $("#" + section + "-line-2").hide();
+        $("#" + section + "-line-1").show();
+        $("#" + section + "-item-1").show();
+        $("#" + section + "-item-2").show();
+        animate(document.getElementById(section + '-line-1'));
+        animate(document.getElementById(section + '-item-1'));
+        animate(document.getElementById(section + '-item-2'));
     }
 }
 
-function arrowConstructionRigth() {
+function arrowConstructionRigth(section) {
     if ($(window).width() < 601) {
         $(".vertical-line").hide();
-        if ($("#construction-item-1").is(":visible")) {
-            $("#construction-item-1").hide();
-            $("#construction-item-2").show();
-            animate(document.getElementById('construction-item-2'));
+        if ($("#" + section + "-item-1").is(":visible")) {
+            $("#" + section + "-item-1").hide();
+            $("#" + section + "-item-2").show();
+            animate(document.getElementById(section + '-item-2'));
         }
-        else if ($("#construction-item-2").is(":visible")) {
-            $("#construction-item-2").hide();
-            $("#construction-item-3").show();
-            animate(document.getElementById('construction-item-3'));
+        else if ($("#" + section + "-item-2").is(":visible")) {
+            $("#" + section + "-item-2").hide();
+            $("#" + section + "-item-3").show();
+            animate(document.getElementById(section + '-item-3'));
 
         }
-        else if ($("#construction-item-3").is(":visible")) {
-            $("#construction-item-3").hide();
-            $("#construction-item-4").show();
-            animate(document.getElementById('construction-item-4'));
+        else if ($("#" + section + "-item-3").is(":visible")) {
+            $("#" + section + "-item-3").hide();
+            $("#" + section + "-item-4").show();
+            animate(document.getElementById(section + '-item-4'));
         }
         else {
-            $("#construction-item-4").hide();
-            $("#construction-item-1").show();
-            animate(document.getElementById('construction-item-1'));
+            $("#" + section + "-item-4").hide();
+            $("#" + section + "-item-1").show();
+            animate(document.getElementById(section + '-item-1'));
         }
 
     }
     else if ($(window).width() < 993) {
-        if ($("#construction-item-1").is(":visible")) {
-            $("#construction-line-1").hide();
-            $("#construction-item-1").hide();
-            $("#construction-item-2").hide();
-            $("#construction-line-3").show();
-            $("#construction-item-3").show();
-            $("#construction-item-4").show();
-            animate(document.getElementById('construction-line-3'));
-            animate(document.getElementById('construction-item-3'));
-            animate(document.getElementById('construction-item-4'));
+        if ($("#" + section + "-item-1").is(":visible")) {
+            $("#" + section + "-line-1").hide();
+            $("#" + section + "-item-1").hide();
+            $("#" + section + "-item-2").hide();
+            $("#" + section + "-line-2").hide();
+            $("#" + section + "-line-3").show();
+            $("#" + section + "-item-3").show();
+            $("#" + section + "-item-4").show();
+            animate(document.getElementById(section + '-line-3'));
+            animate(document.getElementById(section + '-item-3'));
+            animate(document.getElementById(section + '-item-4'));
         }
         else {
-            $("#construction-line-3").hide();
-            $("#construction-item-3").hide();
-            $("#construction-item-4").hide();
-            $("#construction-line-1").show();
-            $("#construction-item-1").show();
-            $("#construction-item-2").show();
-            animate(document.getElementById('construction-line-1'));
-            animate(document.getElementById('construction-item-1'));
-            animate(document.getElementById('construction-item-2'));
+            $("#" + section + "-line-3").hide();
+            $("#" + section + "-item-3").hide();
+            $("#" + section + "-item-4").hide();
+            $("#" + section + "-line-2").hide();
+            $("#" + section + "-line-1").show();
+            $("#" + section + "-item-1").show();
+            $("#" + section + "-item-2").show();
+            animate(document.getElementById(section + '-line-1'));
+            animate(document.getElementById(section + '-item-1'));
+            animate(document.getElementById(section + '-item-2'));
         }
     }
 
 }
 
-function arrowConstructionLeft() {
+function arrowConstructionLeft(section) {
     if ($(window).width() < 601) {
-        if ($("#construction-item-1").is(":visible")) {
-            $("#construction-item-1").hide();
-            $("#construction-item-4").show();
-            animate(document.getElementById('construction-item-4'));
+        if ($("#" + section + "-item-1").is(":visible")) {
+            $("#" + section + "-item-1").hide();
+            $("#" + section + "-item-4").show();
+            animate(document.getElementById(section + '-item-4'));
         }
-        else if ($("#construction-item-2").is(":visible")) {
-            $("#construction-item-2").hide();
-            $("#construction-item-1").show();
-            animate(document.getElementById('construction-item-1'));
+        else if ($("#" + section + "-item-2").is(":visible")) {
+            $("#" + section + "-item-2").hide();
+            $("#" + section + "-item-1").show();
+            animate(document.getElementById(section + '-item-1'));
 
         }
-        else if ($("#construction-item-3").is(":visible")) {
-            $("#construction-item-3").hide();
-            $("#construction-item-2").show();
-            animate(document.getElementById('construction-item-2'));
+        else if ($("#" + section + "-item-3").is(":visible")) {
+            $("#" + section + "-item-3").hide();
+            $("#" + section + "-item-2").show();
+            animate(document.getElementById(section + '-item-2'));
         }
         else {
-            $("#construction-item-4").hide();
-            $("#construction-item-3").show();
-            animate(document.getElementById('construction-item-3'));
+            $("#" + section + "-item-4").hide();
+            $("#" + section + "-item-3").show();
+            animate(document.getElementById(section + '-item-3'));
         }
 
     }
     else if ($(window).width() < 993) {
-        if ($("#construction-item-1").is(":visible")) {
-            $("#construction-line-1").hide();
-            $("#construction-item-1").hide();
-            $("#construction-item-2").hide();
-            $("#construction-line-3").show();
-            $("#construction-item-3").show();
-            $("#construction-item-4").show();
-            animate(document.getElementById('construction-line-3'));
-            animate(document.getElementById('construction-item-3'));
-            animate(document.getElementById('construction-item-4'));
+        if ($("#" + section + "-item-1").is(":visible")) {
+            $("#" + section + "-line-1").hide();
+            $("#" + section + "-item-1").hide();
+            $("#" + section + "-item-2").hide();
+            $("#" + section + "-line-3").show();
+            $("#" + section + "-item-3").show();
+            $("#" + section + "-item-4").show();
+            animate(document.getElementById(section + '-line-3'));
+            animate(document.getElementById(section + '-item-3'));
+            animate(document.getElementById(section + '-item-4'));
         }
         else {
-            $("#construction-line-3").hide();
-            $("#construction-item-3").hide();
-            $("#construction-item-4").hide();
-            $("#construction-line-1").show();
-            $("#construction-item-1").show();
-            $("#construction-item-2").show();
-            animate(document.getElementById('construction-line-1'));
-            animate(document.getElementById('construction-item-1'));
-            animate(document.getElementById('construction-item-2'));
+            $("#" + section + "-line-3").hide();
+            $("#" + section + "-item-3").hide();
+            $("#" + section + "-item-4").hide();
+            $("#" + section + "-line-1").show();
+            $("#" + section + "-item-1").show();
+            $("#" + section + "-item-2").show();
+            animate(document.getElementById(section + '-line-1'));
+            animate(document.getElementById(section + '-item-1'));
+            animate(document.getElementById(section + '-item-2'));
         }
     }
 }
@@ -257,13 +319,37 @@ $(document).ready(function () {
     jquerySwipeHandler.handleSwipe("#arrow-construction-rigth", [
         jquerySwipeHandler.CLICK
     ], function (direction) {
-        arrowConstructionRigth();
+        arrowConstructionRigth('construction');
+    });
+
+    jquerySwipeHandler.handleSwipe("#arrow-distribution-rigth", [
+        jquerySwipeHandler.CLICK
+    ], function (direction) {
+        arrowConstructionRigth('distribution');
+    });
+
+    jquerySwipeHandler.handleSwipe("#arrow-industry-rigth", [
+        jquerySwipeHandler.CLICK
+    ], function (direction) {
+        arrowConstructionRigth('industry');
     });
 
     jquerySwipeHandler.handleSwipe("#arrow-construction-left", [
         jquerySwipeHandler.CLICK
     ], function (direction) {
-        arrowConstructionLeft();
+        arrowConstructionLeft('construction');
+    });
+
+    jquerySwipeHandler.handleSwipe("#arrow-distribution-left", [
+        jquerySwipeHandler.CLICK
+    ], function (direction) {
+        arrowConstructionLeft('distribution');
+    });
+
+    jquerySwipeHandler.handleSwipe("#arrow-industry-left", [
+        jquerySwipeHandler.CLICK
+    ], function (direction) {
+        arrowConstructionLeft('industry');
     });
 
     $(".construction_icon_button_slider").on("click", function () {
@@ -271,11 +357,11 @@ $(document).ready(function () {
     });
 
     $(".distribution_icon_button_slider").on("click", function () {
-        //ConstructionLoad();
+        DistributionLoad();
     });
 
     $(".industry_icon_button_slider").on("click", function () {
-        //ConstructionLoad();
+        IndustryLoad();
     });
 
     $(".it_icon_button_slider").on("click", function () {
@@ -287,6 +373,16 @@ $(document).ready(function () {
     $("#svg_construction").on("click", function () {
         ConstructionLoad();
     });
+
+    $("#svg_distribution").on("click", function () {
+        DistributionLoad();
+    });
+
+    $("#svg_industry").on("click", function () {
+        IndustryLoad();
+    });
+
+
 
     $(".logo").on("click", function () {
         if (($(window).width() < 993) && ($(".menu-icon").is('[style]'))) {
@@ -382,9 +478,9 @@ $(document).ready(function () {
     ], function (direction) {
         if ($(window).width() < 993) {
             if (direction == "SWIPE_RIGHT") {
-                arrowConstructionLeft();
+                arrowConstructionLeft(currentPage);
             } else if (direction == "SWIPE_LEFT") {
-                arrowConstructionRigth();
+                arrowConstructionRigth(currentPage);
             }
         }
     });
@@ -623,99 +719,97 @@ $(document).ready(function () {
         }
     });
 
-    $("#buttonOne").on({
+    $(".buttonOne").on({
         click: function () {
             changeManagementHeadingOne();
         }
     })
 
-    $("#buttonTwo").on({
+    $(".buttonTwo").on({
         click: function () {
             changeManagementHeadingTwo();
         }
     });
 
-    $("#buttonThree").on({
+    $(".buttonThree").on({
         click: function () {
             changeManagementHeadingThree();
         }
     });
 
-    $("#buttonFour").on({
+    $(".buttonFour").on({
         click: function () {
             changeManagementHeadingFour();
         }
     });
 
-    $("#buttonFive").on({
+    $(".buttonFive").on({
         click: function () {
             changeManagementHeadingFive();
         }
     });
 
-    $("#buttonSix").on({
+    $(".buttonSix").on({
         click: function () {
             changeManagementHeadingSix();
         }
     });
-
-    $("#buttonSeven").on({
+    $(".buttonSeven").on({
         click: function () {
             changeManagementHeadingSeven();
         }
     });
-
-    $("#buttonEight").on({
+    $(".buttonEigth").on({
         click: function () {
             changeManagementHeadingEigth();
         }
     });
 
-    $('#first_svg_management').on({
+    $('.first_svg_management').on({
         click: function () {
-            $('#buttonOne').click();
+            $('.buttonOne').click();
             changeManagementHeadingOne();
         }
     })
-    $('#second_svg_management').on({
+    $('.second_svg_management').on({
         click: function () {
-            $('#buttonTwo').click();
+            $('.buttonTwo').click();
             changeManagementHeadingTwo();
         }
     })
-    $('#third_svg_management').on({
+    $('.third_svg_management').on({
         click: function () {
-            $('#buttonThree').click();
+            $('.buttonThree').click();
             changeManagementHeadingThree();
         }
     })
-    $('#fourth_svg_management').on({
+    $('.fourth_svg_management').on({
         click: function () {
-            $('#buttonFour').click();
+            $('.buttonFour').click();
             changeManagementHeadingFour();
         }
     })
-    $('#fifth_svg_management').on({
+    $('.fifth_svg_management').on({
         click: function () {
-            $('#buttonFive').click();
+            $('.buttonFive').click();
             changeManagementHeadingFive();
         }
     })
-    $('#sixth_svg_management').on({
+    $('.sixth_svg_management').on({
         click: function () {
-            $('#buttonSix').click();
+            $('.buttonSix').click();
             changeManagementHeadingSix();
         }
     })
-    $('#seventh_svg_management').on({
+    $('.seventh_svg_management').on({
         click: function () {
-            $('#buttonSeven').click();
+            $('.buttonSeven').click();
             changeManagementHeadingSeven();
         }
     })
-    $('#eigthth_svg_management').on({
+    $('.eigthth_svg_management').on({
         click: function () {
-            $('#buttonEigth').click();
+            $('.buttonEigth').click();
             changeManagementHeadingEigth();
         }
     })
@@ -972,7 +1066,10 @@ $(window).on("scroll", function () {
 $(window).resize(function () {
     resizePhone();
     if ($(window).width() < 993) {
-        resetArrowConstruction();
+        if (currentPage != "home") {
+            resetArrowConstruction(currentPage);
+        }
+
         $('.li-sub').remove();
     }
     else {
@@ -1008,10 +1105,13 @@ function ConstructionHamburguerClick() {
 }
 
 function DistributionHamburguerClick() {
-
+    $('.menu-icon').click();
+    DistributionLoad();
 }
 
 function IndustryHamburguerClick() {
+    $('.menu-icon').click();
+    IndustryLoad();
 
 }
 
@@ -1123,12 +1223,14 @@ function svgs_hovers() {
 
         $("#svg_industry").on({
             click: function () {
+                IndustryLoad();
                 document.getElementById('svg_industry').innerHTML = svg_industry_hover_mobile;
             }
         });
 
         $("#svg_distribution").on({
             click: function () {
+                DistributionLoad();
                 document.getElementById('svg_distribution').innerHTML = svg_distribution_hover_mobile;
             }
         });
@@ -1141,20 +1243,22 @@ function svgs_hovers() {
     } else if ($(window).width() < 992) {
         $("#svg_construction").on({
             click: function () {
-                ConstructionLoad();
                 document.getElementById('svg_construction').innerHTML = svg_construction_hover_mobile;
+                ConstructionLoad();
             }
         });
 
         $("#svg_industry").on({
             click: function () {
                 document.getElementById('svg_industry').innerHTML = svg_industry_hover_mobile;
+                IndustryLoad();
             }
         });
 
         $("#svg_distribution").on({
             click: function () {
                 document.getElementById('svg_distribution').innerHTML = svg_distribution_hover_mobile;
+                DistributionLoad();
             }
         });
 
@@ -1181,6 +1285,9 @@ function svgs_hovers() {
             },
             mouseleave: function () {
                 document.getElementById('svg_industry').innerHTML = svg_industry;
+            },
+            click: function () {
+                IndustryLoad();
             }
         });
 
@@ -1190,6 +1297,9 @@ function svgs_hovers() {
             },
             mouseleave: function () {
                 document.getElementById('svg_distribution').innerHTML = svg_distribution;
+            },
+            click: function () {
+                DistributionLoad();
             }
         });
 
@@ -1401,10 +1511,10 @@ var collapseEigthBool = false;
 
 function changeManagementHeadingOne() {
     if (!collapseOneBool) {
-        document.getElementById('first_svg_management').innerHTML = red_svg
+        $(".first_svg_management").html(red_svg);
         collapseOneBool = true
     } else {
-        document.getElementById('first_svg_management').innerHTML = black_svg
+        $(".first_svg_management").html(black_svg);
         collapseOneBool = false
     }
     collapseTwoBool = false;
@@ -1415,21 +1525,21 @@ function changeManagementHeadingOne() {
     collapseSevenBool = false;
     collapseEigthBool = false;
 
-    document.getElementById('second_svg_management').innerHTML = black_svg
-    document.getElementById('third_svg_management').innerHTML = black_svg
-    document.getElementById('fourth_svg_management').innerHTML = black_svg
-    document.getElementById('fifth_svg_management').innerHTML = black_svg
-    document.getElementById('sixth_svg_management').innerHTML = black_svg
-    document.getElementById('seventh_svg_management').innerHTML = black_svg
-    document.getElementById('eigthth_svg_management').innerHTML = black_svg
+    $(".second_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingTwo() {
     if (!collapseTwoBool) {
-        document.getElementById('second_svg_management').innerHTML = red_svg
+        $(".second_svg_management").html(red_svg);
         collapseTwoBool = true
     } else {
-        document.getElementById('second_svg_management').innerHTML = black_svg
+        $(".second_svg_management").html(black_svg);
         collapseTwoBool = false
     }
     collapseOneBool = false;
@@ -1440,21 +1550,21 @@ function changeManagementHeadingTwo() {
     collapseSevenBool = false;
     collapseEigthBool = false;
 
-    document.getElementById('first_svg_management').innerHTML = black_svg
-    document.getElementById('third_svg_management').innerHTML = black_svg
-    document.getElementById('fourth_svg_management').innerHTML = black_svg
-    document.getElementById('fifth_svg_management').innerHTML = black_svg
-    document.getElementById('sixth_svg_management').innerHTML = black_svg
-    document.getElementById('seventh_svg_management').innerHTML = black_svg
-    document.getElementById('eigthth_svg_management').innerHTML = black_svg
+    $(".first_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingThree() {
     if (!collapseThreeBool) {
-        document.getElementById('third_svg_management').innerHTML = red_svg
+        $(".third_svg_management").html(red_svg);
         collapseThreeBool = true
     } else {
-        document.getElementById('third_svg_management').innerHTML = black_svg
+        $(".third_svg_management").html(black_svg);
         collapseThreeBool = false
     }
     collapseOneBool = false;
@@ -1465,21 +1575,21 @@ function changeManagementHeadingThree() {
     collapseSevenBool = false;
     collapseEigthBool = false;
 
-    document.getElementById('first_svg_management').innerHTML = black_svg
-    document.getElementById('second_svg_management').innerHTML = black_svg
-    document.getElementById('fourth_svg_management').innerHTML = black_svg
-    document.getElementById('fifth_svg_management').innerHTML = black_svg
-    document.getElementById('sixth_svg_management').innerHTML = black_svg
-    document.getElementById('seventh_svg_management').innerHTML = black_svg
-    document.getElementById('eigthth_svg_management').innerHTML = black_svg
+    $(".second_svg_management").html(black_svg);
+    $(".first_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingFour() {
     if (!collapseFourBool) {
-        document.getElementById('fourth_svg_management').innerHTML = red_svg
+        $(".fourth_svg_management").html(red_svg);
         collapseFourBool = true
     } else {
-        document.getElementById('fourth_svg_management').innerHTML = black_svg
+        $(".fourth_svg_management").html(black_svg);
         collapseFourBool = false
     }
     collapseOneBool = false;
@@ -1490,21 +1600,21 @@ function changeManagementHeadingFour() {
     collapseSevenBool = false;
     collapseEigthBool = false;
 
-    document.getElementById('first_svg_management').innerHTML = black_svg
-    document.getElementById('third_svg_management').innerHTML = black_svg
-    document.getElementById('second_svg_management').innerHTML = black_svg
-    document.getElementById('fifth_svg_management').innerHTML = black_svg
-    document.getElementById('sixth_svg_management').innerHTML = black_svg
-    document.getElementById('seventh_svg_management').innerHTML = black_svg
-    document.getElementById('eigthth_svg_management').innerHTML = black_svg
+    $(".second_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".first_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingFive() {
     if (!collapseFiveBool) {
-        document.getElementById('fifth_svg_management').innerHTML = red_svg
+        $(".fifth_svg_management").html(red_svg);
         collapseFiveBool = true
     } else {
-        document.getElementById('fifth_svg_management').innerHTML = black_svg
+        $(".fifth_svg_management").html(black_svg);
         collapseFiveBool = false
     }
     collapseOneBool = false;
@@ -1515,21 +1625,21 @@ function changeManagementHeadingFive() {
     collapseSevenBool = false;
     collapseEigthBool = false;
 
-    document.getElementById('first_svg_management').innerHTML = black_svg
-    document.getElementById('third_svg_management').innerHTML = black_svg
-    document.getElementById('second_svg_management').innerHTML = black_svg
-    document.getElementById('fourth_svg_management').innerHTML = black_svg
-    document.getElementById('sixth_svg_management').innerHTML = black_svg
-    document.getElementById('seventh_svg_management').innerHTML = black_svg
-    document.getElementById('eigthth_svg_management').innerHTML = black_svg
+    $(".second_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".first_svg_managementt").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingSix() {
     if (!collapseSixBool) {
-        document.getElementById('sixth_svg_management').innerHTML = red_svg
+        $(".sixth_svg_management").html(red_svg);
         collapseSixBool = true
     } else {
-        document.getElementById('sixth_svg_management').innerHTML = black_svg
+        $(".sixth_svg_management").html(black_svg);
         collapseSixBool = false
     }
     collapseOneBool = false;
@@ -1540,21 +1650,22 @@ function changeManagementHeadingSix() {
     collapseSevenBool = false;
     collapseEigthBool = false;
 
-    document.getElementById('first_svg_management').innerHTML = black_svg
-    document.getElementById('third_svg_management').innerHTML = black_svg
-    document.getElementById('second_svg_management').innerHTML = black_svg
-    document.getElementById('fourth_svg_management').innerHTML = black_svg
-    document.getElementById('fifth_svg_management').innerHTML = black_svg
-    document.getElementById('seventh_svg_management').innerHTML = black_svg
-    document.getElementById('eigthth_svg_management').innerHTML = black_svg
+    $(".second_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".first_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
 }
+
 
 function changeManagementHeadingSeven() {
     if (!collapseSevenBool) {
-        document.getElementById('seventh_svg_management').innerHTML = red_svg
+        $(".seventh_svg_management").html(red_svg);
         collapseSevenBool = true
     } else {
-        document.getElementById('seventh_svg_management').innerHTML = black_svg
+        $(".seventh_svg_management").html(black_svg);
         collapseSevenBool = false
     }
     collapseOneBool = false;
@@ -1562,24 +1673,23 @@ function changeManagementHeadingSeven() {
     collapseThreeBool = false;
     collapseFourBool = false;
     collapseFiveBool = false;
-    collapseSixBool = false;
     collapseEigthBool = false;
 
-    document.getElementById('first_svg_management').innerHTML = black_svg
-    document.getElementById('third_svg_management').innerHTML = black_svg
-    document.getElementById('second_svg_management').innerHTML = black_svg
-    document.getElementById('fourth_svg_management').innerHTML = black_svg
-    document.getElementById('fifth_svg_management').innerHTML = black_svg
-    document.getElementById('sixth_svg_management').innerHTML = black_svg
-    document.getElementById('eigthth_svg_management').innerHTML = black_svg
+    $(".second_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".first_svg_management").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
+    $(".eigthth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingEigth() {
     if (!collapseEigthBool) {
-        document.getElementById('eigthth_svg_management').innerHTML = red_svg
+        $(".eigthth_svg_management").html(red_svg);
         collapseEigthBool = true
     } else {
-        document.getElementById('eigthth_svg_management').innerHTML = black_svg
+        $(".eigthth_svg_management").html(black_svg);
         collapseEigthBool = false
     }
     collapseOneBool = false;
@@ -1587,18 +1697,17 @@ function changeManagementHeadingEigth() {
     collapseThreeBool = false;
     collapseFourBool = false;
     collapseFiveBool = false;
-    collapseSevenBool = false;
-    collapseSixBool = false;
+    collapseSevenBool = false
+    console.log("a");
 
-    document.getElementById('first_svg_management').innerHTML = black_svg
-    document.getElementById('third_svg_management').innerHTML = black_svg
-    document.getElementById('second_svg_management').innerHTML = black_svg
-    document.getElementById('fourth_svg_management').innerHTML = black_svg
-    document.getElementById('fifth_svg_management').innerHTML = black_svg
-    document.getElementById('sixth_svg_management').innerHTML = black_svg
-    document.getElementById('seventh_svg_management').innerHTML = black_svg
+    $(".second_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".first_svg_management").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
+    $(".seventh_svg_managementt").html(black_svg);
 }
-
 
 function changeHtmlIdealSolution() {
     if ($(window).width() < 608) {
@@ -1615,7 +1724,7 @@ function mobileVersionOffices() {
         document.getElementById('accordionOffices').style.display = "block"
         document.getElementById('contact-us-office-info').style.display = "none"
         document.getElementById('offices_cities').style.display = "none"
-    }else{
+    } else {
         document.getElementById('accordionOffices').style.display = "none"
         document.getElementById('contact-us-office-info').style.display = "block"
         document.getElementById('offices_cities').style.display = "block"
