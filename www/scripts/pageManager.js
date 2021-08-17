@@ -6,6 +6,7 @@ function HomeLoad() {
     $('#section-distribution-homepage').hide();
     $('#section-industry-homepage').hide();
     $('#construction-sections').hide();
+    $('#distribution-sections').hide();
     $('#content-first-page').show();
     $('#different_sectors').show();
     $('#div_with_sectors').show();
@@ -55,6 +56,7 @@ function ContactUsLoad() {
     $('#section-industry-homepage').hide();
     $('#div_trusted_clients').hide();
     $('#construction-sections').hide();
+    $('#distribution-sections').hide();
     $('#section-contact-us').show();
     window.scrollTo(0, 0);
     $('#video-banner').prop("src", "img/lisboa.png");
@@ -79,6 +81,7 @@ function ConstructionLoad() {
     $('#section-industry-homepage').hide();
     $('#section-contact-us').hide();
     $('#different_sectors').hide();
+    $('#distribution-sections').hide();
     $('#section-construction-homepage').show();
     $('#div_trusted_clients').show();
     $('#construction-sections').show();
@@ -104,6 +107,7 @@ function DistributionLoad() {
     $('#section-distribution-homepage').show();
     $('#div_trusted_clients').show();
     $('#distribution-sections').show();
+    $('#distribution-sections').show();
     window.scrollTo(0, 0);
     $('#video-banner').prop("src", "img/construction_background.jpg");
     animate(document.getElementById("section-distribution-homepage"));
@@ -122,6 +126,7 @@ function IndustryLoad() {
     $('#section-industry-homepage').hide();
     $('#section-contact-us').hide();
     $('#different_sectors').hide();
+    $('#distribution-sections').hide();
     $('#construction-sections').hide();
     $('#section-industry-homepage').show();
     $('#div_trusted_clients').show();
@@ -714,75 +719,75 @@ $(document).ready(function () {
         }
     });
 
-    $("#buttonOne").on({
+    $(".buttonOne").on({
         click: function () {
             changeManagementHeadingOne();
         }
     })
 
-    $("#buttonTwo").on({
+    $(".buttonTwo").on({
         click: function () {
             changeManagementHeadingTwo();
         }
     });
 
-    $("#buttonThree").on({
+    $(".buttonThree").on({
         click: function () {
             changeManagementHeadingThree();
         }
     });
 
-    $("#buttonFour").on({
+    $(".buttonFour").on({
         click: function () {
             changeManagementHeadingFour();
         }
     });
 
-    $("#buttonFive").on({
+    $(".buttonFive").on({
         click: function () {
             changeManagementHeadingFive();
         }
     });
 
-    $("#buttonSix").on({
+    $(".buttonSix").on({
         click: function () {
             changeManagementHeadingSix();
         }
     });
 
-    $('#first_svg_management').on({
+    $('.first_svg_management').on({
         click: function () {
-            $('#buttonOne').click();
+            $('.buttonOne').click();
             changeManagementHeadingOne();
         }
     })
-    $('#second_svg_management').on({
+    $('.second_svg_management').on({
         click: function () {
-            $('#buttonTwo').click();
+            $('.buttonTwo').click();
             changeManagementHeadingTwo();
         }
     })
-    $('#third_svg_management').on({
+    $('.third_svg_management').on({
         click: function () {
-            $('#buttonThree').click();
+            $('.buttonThree').click();
             changeManagementHeadingThree();
         }
     })
-    $('#fourth_svg_management').on({
+    $('.fourth_svg_management').on({
         click: function () {
-            $('#buttonFour').click();
+            $('.buttonFour').click();
             changeManagementHeadingFour();
         }
     })
-    $('#fifth_svg_management').on({
+    $('.fifth_svg_management').on({
         click: function () {
-            $('#buttonFive').click();
+            $('.buttonFive').click();
             changeManagementHeadingFive();
         }
     })
-    $('#sixth_svg_management').on({
+    $('.sixth_svg_management').on({
         click: function () {
-            $('#buttonSix').click();
+            $('.buttonSix').click();
             changeManagementHeadingSix();
         }
     })
@@ -1480,10 +1485,10 @@ var collapseSixBool = false;
 
 function changeManagementHeadingOne() {
     if (!collapseOneBool) {
-        document.getElementById('first_svg_management').innerHTML = red_svg
+        $(".first_svg_management").html(red_svg);
         collapseOneBool = true
     } else {
-        document.getElementById('first_svg_management').innerHTML = black_svg
+        $(".first_svg_management").html(black_svg);
         collapseOneBool = false
     }
     collapseTwoBool = false;
@@ -1492,19 +1497,19 @@ function changeManagementHeadingOne() {
     collapseFiveBool = false;
     collapseSixBool = false;
 
-    document.getElementById('second_svg_management').innerHTML = black_svg
-    document.getElementById('third_svg_management').innerHTML = black_svg
-    document.getElementById('fourth_svg_management').innerHTML = black_svg
-    document.getElementById('fifth_svg_management').innerHTML = black_svg
-    document.getElementById('sixth_svg_management').innerHTML = black_svg
+    $(".second_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingTwo() {
     if (!collapseTwoBool) {
-        document.getElementById('second_svg_management').innerHTML = red_svg
+        $(".second_svg_management").html(red_svg);
         collapseTwoBool = true
     } else {
-        document.getElementById('second_svg_management').innerHTML = black_svg
+        $(".second_svg_management").html(black_svg);
         collapseTwoBool = false
     }
     collapseOneBool = false;
@@ -1513,19 +1518,19 @@ function changeManagementHeadingTwo() {
     collapseFiveBool = false;
     collapseSixBool = false;
 
-    document.getElementById('first_svg_management').innerHTML = black_svg
-    document.getElementById('third_svg_management').innerHTML = black_svg
-    document.getElementById('fourth_svg_management').innerHTML = black_svg
-    document.getElementById('fifth_svg_management').innerHTML = black_svg
-    document.getElementById('sixth_svg_management').innerHTML = black_svg
+    $(".first_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingThree() {
     if (!collapseThreeBool) {
-        document.getElementById('third_svg_management').innerHTML = red_svg
+        $(".third_svg_management").html(red_svg);
         collapseThreeBool = true
     } else {
-        document.getElementById('third_svg_management').innerHTML = black_svg
+        $(".third_svg_management").html(black_svg);
         collapseThreeBool = false
     }
     collapseOneBool = false;
@@ -1534,19 +1539,19 @@ function changeManagementHeadingThree() {
     collapseFiveBool = false;
     collapseSixBool = false;
 
-    document.getElementById('first_svg_management').innerHTML = black_svg
-    document.getElementById('second_svg_management').innerHTML = black_svg
-    document.getElementById('fourth_svg_management').innerHTML = black_svg
-    document.getElementById('fifth_svg_management').innerHTML = black_svg
-    document.getElementById('sixth_svg_management').innerHTML = black_svg
+    $(".second_svg_management").html(black_svg);
+    $(".first_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingFour() {
     if (!collapseFourBool) {
-        document.getElementById('fourth_svg_management').innerHTML = red_svg
+        $(".fourth_svg_management").html(red_svg);
         collapseFourBool = true
     } else {
-        document.getElementById('fourth_svg_management').innerHTML = black_svg
+        $(".fourth_svg_management").html(black_svg);
         collapseFourBool = false
     }
     collapseOneBool = false;
@@ -1555,19 +1560,19 @@ function changeManagementHeadingFour() {
     collapseFiveBool = false;
     collapseSixBool = false;
 
-    document.getElementById('first_svg_management').innerHTML = black_svg
-    document.getElementById('third_svg_management').innerHTML = black_svg
-    document.getElementById('second_svg_management').innerHTML = black_svg
-    document.getElementById('fifth_svg_management').innerHTML = black_svg
-    document.getElementById('sixth_svg_management').innerHTML = black_svg
+    $(".second_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".first_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingFive() {
     if (!collapseFiveBool) {
-        document.getElementById('fifth_svg_management').innerHTML = red_svg
+        $(".fifth_svg_management").html(red_svg);
         collapseFiveBool = true
     } else {
-        document.getElementById('fifth_svg_management').innerHTML = black_svg
+        $(".fifth_svg_management").html(black_svg);
         collapseFiveBool = false
     }
     collapseOneBool = false;
@@ -1576,19 +1581,19 @@ function changeManagementHeadingFive() {
     collapseFourBool = false;
     collapseSixBool = false;
 
-    document.getElementById('first_svg_management').innerHTML = black_svg
-    document.getElementById('third_svg_management').innerHTML = black_svg
-    document.getElementById('second_svg_management').innerHTML = black_svg
-    document.getElementById('fourth_svg_management').innerHTML = black_svg
-    document.getElementById('sixth_svg_management').innerHTML = black_svg
+    $(".second_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".first_svg_managementt").html(black_svg);
+    $(".sixth_svg_management").html(black_svg);
 }
 
 function changeManagementHeadingSix() {
     if (!collapseSixBool) {
-        document.getElementById('sixth_svg_management').innerHTML = red_svg
+        $(".sixth_svg_management").html(red_svg);
         collapseSixBool = true
     } else {
-        document.getElementById('sixth_svg_management').innerHTML = black_svg
+        $(".sixth_svg_management").html(black_svg);
         collapseSixBool = false
     }
     collapseOneBool = false;
@@ -1597,11 +1602,11 @@ function changeManagementHeadingSix() {
     collapseFourBool = false;
     collapseFiveBool = false;
 
-    document.getElementById('first_svg_management').innerHTML = black_svg
-    document.getElementById('third_svg_management').innerHTML = black_svg
-    document.getElementById('second_svg_management').innerHTML = black_svg
-    document.getElementById('fourth_svg_management').innerHTML = black_svg
-    document.getElementById('fifth_svg_management').innerHTML = black_svg
+    $(".second_svg_management").html(black_svg);
+    $(".third_svg_management").html(black_svg);
+    $(".fourth_svg_management").html(black_svg);
+    $(".fifth_svg_managementt").html(black_svg);
+    $(".first_svg_management").html(black_svg);
 }
 
 function changeHtmlIdealSolution() {
