@@ -312,6 +312,9 @@ nav ul li a {
     #content-homepage-construction{
         height: calc( 100vh - 190px );
     }
+    #content-homepage-distribution, #content-homepage-industry{
+        height: calc( 100vh - 190px );
+    }
     #content-contact-us{
         height: calc( 100vh - 190px );
     }
@@ -1765,7 +1768,7 @@ html, body {
 
 
 /* INICIO DIV CONSTRUÇÃO */
-#content-homepage-construction{
+#content-homepage-construction, #content-homepage-distribution, #content-homepage-industry {
     position: relative;
 }
 
@@ -2430,7 +2433,7 @@ html, body {
    
   /* Contacta-nos Section */
 
-  @media(min-width: 993px) {
+  @media(min-width: 621px) {
     #content-contact-us{
         height: calc( 60vh - 170px );
     }

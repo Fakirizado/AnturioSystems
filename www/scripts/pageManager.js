@@ -1,7 +1,10 @@
+var currentPage = "home";
 //Oculta tudo o que não pertencer à homepage
 function HomeLoad() {
     $('#section-contact-us').hide();
     $('#section-construction-homepage').hide();
+    $('#section-distribution-homepage').hide();
+    $('#section-industry-homepage').hide();
     $('#construction-sections').hide();
     $('#content-first-page').show();
     $('#different_sectors').show();
@@ -34,6 +37,7 @@ function HomeLoad() {
     $('#video-banner').prop("src", "img/backgroud.png");
     animate(document.getElementById("content-first-page"));
     animate(document.getElementById("video-banner"));
+    currentPage = "home";
 }
 
 //Mostra o contact-us section e oculta tudo o resto
@@ -47,6 +51,8 @@ function ContactUsLoad() {
     $('#div_with_sectors').hide();
     $('#we-solution-page').hide();
     $('#section-construction-homepage').hide();
+    $('#section-distribution-homepage').hide();
+    $('#section-industry-homepage').hide();
     $('#div_trusted_clients').hide();
     $('#construction-sections').hide();
     $('#section-contact-us').show();
@@ -59,6 +65,7 @@ function ContactUsLoad() {
 
     document.getElementById("lisboa").innerHTML = `Lisboa<span class=\"dot_point_geral\">.</span>`
     $("#lisboa").click();
+    currentPage = "home";
 }
 
 //Mostra a página construção section e oculta tudo o resto
@@ -68,6 +75,8 @@ function ConstructionLoad() {
     $('#div_with_sectors').hide();
     $('#we-solution-page').hide();
     $('#section-construction-homepage').hide();
+    $('#section-distribution-homepage').hide();
+    $('#section-industry-homepage').hide();
     $('#section-contact-us').hide();
     $('#different_sectors').hide();
     $('#section-construction-homepage').show();
@@ -77,6 +86,52 @@ function ConstructionLoad() {
     $('#video-banner').prop("src", "img/construction_background.jpg");
     animate(document.getElementById("section-construction-homepage"));
     animate(document.getElementById("video-banner"));
+    resetArrowConstruction("construction");
+    currentPage = "construction";
+}
+
+function DistributionLoad() {
+    $('#first-hr').hide();
+    $('#content-first-page').hide();
+    $('#div_with_sectors').hide();
+    $('#we-solution-page').hide();
+    $('#section-construction-homepage').hide();
+    $('#section-distribution-homepage').hide();
+    $('#section-industry-homepage').hide();
+    $('#section-contact-us').hide();
+    $('#different_sectors').hide();
+    $('#construction-sections').hide();
+    $('#section-distribution-homepage').show();
+    $('#div_trusted_clients').show();
+    $('#distribution-sections').show();
+    window.scrollTo(0, 0);
+    $('#video-banner').prop("src", "img/construction_background.jpg");
+    animate(document.getElementById("section-distribution-homepage"));
+    animate(document.getElementById("video-banner"));
+    resetArrowConstruction("distribution");
+    currentPage = "distribution";
+}
+
+function IndustryLoad() {
+    $('#first-hr').hide();
+    $('#content-first-page').hide();
+    $('#div_with_sectors').hide();
+    $('#we-solution-page').hide();
+    $('#section-construction-homepage').hide();
+    $('#section-distribution-homepage').hide();
+    $('#section-industry-homepage').hide();
+    $('#section-contact-us').hide();
+    $('#different_sectors').hide();
+    $('#construction-sections').hide();
+    $('#section-industry-homepage').show();
+    $('#div_trusted_clients').show();
+    $('#distribution-sections').show();
+    window.scrollTo(0, 0);
+    $('#video-banner').prop("src", "img/construction_background.jpg");
+    animate(document.getElementById("section-industry-homepage"));
+    animate(document.getElementById("video-banner"));
+    resetArrowConstruction("industry");
+    currentPage = "industry";
 }
 
 function ChangePageButton() {
@@ -84,10 +139,9 @@ function ChangePageButton() {
         ConstructionLoad();
 
     } else if ($("#distribution-sectors-slider").is(":visible")) {
-
-
+        DistributionLoad();
     } else if ($("#industry-sectors-slider").is(":visible")) {
-
+        IndustryLoad();
     }
     else {
 
@@ -95,128 +149,131 @@ function ChangePageButton() {
 
 }
 
-function resetArrowConstruction() {
+function resetArrowConstruction(section) {
     if ($(window).width() < 601) {
         $(".vertical-line").hide();
-        $("#construction-item-1").show();
-        $("#construction-item-2").hide();
-        $("#construction-item-3").hide();
-        $("#construction-item-4").hide();
-        animate(document.getElementById('construction-item-1'));
+        $("#" + section + "-item-1").show();
+        $("#" + section + "-item-2").hide();
+        $("#" + section + "-item-3").hide();
+        $("#" + section + "-item-4").hide();
+        animate(document.getElementById(section + '-item-1'));
     }
     else if ($(window).width() < 993) {
-        $("#construction-line-3").hide();
-        $("#construction-item-3").hide();
-        $("#construction-item-4").hide();
-        $("#construction-line-1").show();
-        $("#construction-item-1").show();
-        $("#construction-item-2").show();
-        animate(document.getElementById('construction-line-1'));
-        animate(document.getElementById('construction-item-1'));
-        animate(document.getElementById('construction-item-2'));
+        $("#" + section + "-line-3").hide();
+        $("#" + section + "-item-3").hide();
+        $("#" + section + "-item-4").hide();
+        $("#" + section + "-line-2").hide();
+        $("#" + section + "-line-1").show();
+        $("#" + section + "-item-1").show();
+        $("#" + section + "-item-2").show();
+        animate(document.getElementById(section + '-line-1'));
+        animate(document.getElementById(section + '-item-1'));
+        animate(document.getElementById(section + '-item-2'));
     }
 }
 
-function arrowConstructionRigth() {
+function arrowConstructionRigth(section) {
     if ($(window).width() < 601) {
         $(".vertical-line").hide();
-        if ($("#construction-item-1").is(":visible")) {
-            $("#construction-item-1").hide();
-            $("#construction-item-2").show();
-            animate(document.getElementById('construction-item-2'));
+        if ($("#" + section + "-item-1").is(":visible")) {
+            $("#" + section + "-item-1").hide();
+            $("#" + section + "-item-2").show();
+            animate(document.getElementById(section + '-item-2'));
         }
-        else if ($("#construction-item-2").is(":visible")) {
-            $("#construction-item-2").hide();
-            $("#construction-item-3").show();
-            animate(document.getElementById('construction-item-3'));
+        else if ($("#" + section + "-item-2").is(":visible")) {
+            $("#" + section + "-item-2").hide();
+            $("#" + section + "-item-3").show();
+            animate(document.getElementById(section + '-item-3'));
 
         }
-        else if ($("#construction-item-3").is(":visible")) {
-            $("#construction-item-3").hide();
-            $("#construction-item-4").show();
-            animate(document.getElementById('construction-item-4'));
+        else if ($("#" + section + "-item-3").is(":visible")) {
+            $("#" + section + "-item-3").hide();
+            $("#" + section + "-item-4").show();
+            animate(document.getElementById(section + '-item-4'));
         }
         else {
-            $("#construction-item-4").hide();
-            $("#construction-item-1").show();
-            animate(document.getElementById('construction-item-1'));
+            $("#" + section + "-item-4").hide();
+            $("#" + section + "-item-1").show();
+            animate(document.getElementById(section + '-item-1'));
         }
 
     }
     else if ($(window).width() < 993) {
-        if ($("#construction-item-1").is(":visible")) {
-            $("#construction-line-1").hide();
-            $("#construction-item-1").hide();
-            $("#construction-item-2").hide();
-            $("#construction-line-3").show();
-            $("#construction-item-3").show();
-            $("#construction-item-4").show();
-            animate(document.getElementById('construction-line-3'));
-            animate(document.getElementById('construction-item-3'));
-            animate(document.getElementById('construction-item-4'));
+        if ($("#" + section + "-item-1").is(":visible")) {
+            $("#" + section + "-line-1").hide();
+            $("#" + section + "-item-1").hide();
+            $("#" + section + "-item-2").hide();
+            $("#" + section + "-line-2").hide();
+            $("#" + section + "-line-3").show();
+            $("#" + section + "-item-3").show();
+            $("#" + section + "-item-4").show();
+            animate(document.getElementById(section + '-line-3'));
+            animate(document.getElementById(section + '-item-3'));
+            animate(document.getElementById(section + '-item-4'));
         }
         else {
-            $("#construction-line-3").hide();
-            $("#construction-item-3").hide();
-            $("#construction-item-4").hide();
-            $("#construction-line-1").show();
-            $("#construction-item-1").show();
-            $("#construction-item-2").show();
-            animate(document.getElementById('construction-line-1'));
-            animate(document.getElementById('construction-item-1'));
-            animate(document.getElementById('construction-item-2'));
+            $("#" + section + "-line-3").hide();
+            $("#" + section + "-item-3").hide();
+            $("#" + section + "-item-4").hide();
+            $("#" + section + "-line-2").hide();
+            $("#" + section + "-line-1").show();
+            $("#" + section + "-item-1").show();
+            $("#" + section + "-item-2").show();
+            animate(document.getElementById(section + '-line-1'));
+            animate(document.getElementById(section + '-item-1'));
+            animate(document.getElementById(section + '-item-2'));
         }
     }
 
 }
 
-function arrowConstructionLeft() {
+function arrowConstructionLeft(section) {
     if ($(window).width() < 601) {
-        if ($("#construction-item-1").is(":visible")) {
-            $("#construction-item-1").hide();
-            $("#construction-item-4").show();
-            animate(document.getElementById('construction-item-4'));
+        if ($("#" + section + "-item-1").is(":visible")) {
+            $("#" + section + "-item-1").hide();
+            $("#" + section + "-item-4").show();
+            animate(document.getElementById(section + '-item-4'));
         }
-        else if ($("#construction-item-2").is(":visible")) {
-            $("#construction-item-2").hide();
-            $("#construction-item-1").show();
-            animate(document.getElementById('construction-item-1'));
+        else if ($("#" + section + "-item-2").is(":visible")) {
+            $("#" + section + "-item-2").hide();
+            $("#" + section + "-item-1").show();
+            animate(document.getElementById(section + '-item-1'));
 
         }
-        else if ($("#construction-item-3").is(":visible")) {
-            $("#construction-item-3").hide();
-            $("#construction-item-2").show();
-            animate(document.getElementById('construction-item-2'));
+        else if ($("#" + section + "-item-3").is(":visible")) {
+            $("#" + section + "-item-3").hide();
+            $("#" + section + "-item-2").show();
+            animate(document.getElementById(section + '-item-2'));
         }
         else {
-            $("#construction-item-4").hide();
-            $("#construction-item-3").show();
-            animate(document.getElementById('construction-item-3'));
+            $("#" + section + "-item-4").hide();
+            $("#" + section + "-item-3").show();
+            animate(document.getElementById(section + '-item-3'));
         }
 
     }
     else if ($(window).width() < 993) {
-        if ($("#construction-item-1").is(":visible")) {
-            $("#construction-line-1").hide();
-            $("#construction-item-1").hide();
-            $("#construction-item-2").hide();
-            $("#construction-line-3").show();
-            $("#construction-item-3").show();
-            $("#construction-item-4").show();
-            animate(document.getElementById('construction-line-3'));
-            animate(document.getElementById('construction-item-3'));
-            animate(document.getElementById('construction-item-4'));
+        if ($("#" + section + "-item-1").is(":visible")) {
+            $("#" + section + "-line-1").hide();
+            $("#" + section + "-item-1").hide();
+            $("#" + section + "-item-2").hide();
+            $("#" + section + "-line-3").show();
+            $("#" + section + "-item-3").show();
+            $("#" + section + "-item-4").show();
+            animate(document.getElementById(section + '-line-3'));
+            animate(document.getElementById(section + '-item-3'));
+            animate(document.getElementById(section + '-item-4'));
         }
         else {
-            $("#construction-line-3").hide();
-            $("#construction-item-3").hide();
-            $("#construction-item-4").hide();
-            $("#construction-line-1").show();
-            $("#construction-item-1").show();
-            $("#construction-item-2").show();
-            animate(document.getElementById('construction-line-1'));
-            animate(document.getElementById('construction-item-1'));
-            animate(document.getElementById('construction-item-2'));
+            $("#" + section + "-line-3").hide();
+            $("#" + section + "-item-3").hide();
+            $("#" + section + "-item-4").hide();
+            $("#" + section + "-line-1").show();
+            $("#" + section + "-item-1").show();
+            $("#" + section + "-item-2").show();
+            animate(document.getElementById(section + '-line-1'));
+            animate(document.getElementById(section + '-item-1'));
+            animate(document.getElementById(section + '-item-2'));
         }
     }
 }
@@ -257,13 +314,37 @@ $(document).ready(function () {
     jquerySwipeHandler.handleSwipe("#arrow-construction-rigth", [
         jquerySwipeHandler.CLICK
     ], function (direction) {
-        arrowConstructionRigth();
+        arrowConstructionRigth('construction');
+    });
+
+    jquerySwipeHandler.handleSwipe("#arrow-distribution-rigth", [
+        jquerySwipeHandler.CLICK
+    ], function (direction) {
+        arrowConstructionRigth('distribution');
+    });
+
+    jquerySwipeHandler.handleSwipe("#arrow-industry-rigth", [
+        jquerySwipeHandler.CLICK
+    ], function (direction) {
+        arrowConstructionRigth('industry');
     });
 
     jquerySwipeHandler.handleSwipe("#arrow-construction-left", [
         jquerySwipeHandler.CLICK
     ], function (direction) {
-        arrowConstructionLeft();
+        arrowConstructionLeft('construction');
+    });
+
+    jquerySwipeHandler.handleSwipe("#arrow-distribution-left", [
+        jquerySwipeHandler.CLICK
+    ], function (direction) {
+        arrowConstructionLeft('distribution');
+    });
+
+    jquerySwipeHandler.handleSwipe("#arrow-industry-left", [
+        jquerySwipeHandler.CLICK
+    ], function (direction) {
+        arrowConstructionLeft('industry');
     });
 
     $(".construction_icon_button_slider").on("click", function () {
@@ -271,11 +352,11 @@ $(document).ready(function () {
     });
 
     $(".distribution_icon_button_slider").on("click", function () {
-        //ConstructionLoad();
+        DistributionLoad();
     });
 
     $(".industry_icon_button_slider").on("click", function () {
-        //ConstructionLoad();
+        IndustryLoad();
     });
 
     $(".it_icon_button_slider").on("click", function () {
@@ -287,6 +368,16 @@ $(document).ready(function () {
     $("#svg_construction").on("click", function () {
         ConstructionLoad();
     });
+
+    $("#svg_distribution").on("click", function () {
+        DistributionLoad();
+    });
+
+    $("#svg_industry").on("click", function () {
+        IndustryLoad();
+    });
+
+    
 
     $(".logo").on("click", function () {
         if (($(window).width() < 993) &&  ($(".menu-icon").is('[style]'))) {
@@ -382,9 +473,9 @@ $(document).ready(function () {
     ], function (direction) {
         if ($(window).width() < 993) {
             if (direction == "SWIPE_RIGHT") {
-                arrowConstructionLeft();
+                arrowConstructionLeft(currentPage);
             } else if (direction == "SWIPE_LEFT") {
-                arrowConstructionRigth();
+                arrowConstructionRigth(currentPage);
             }
         }
     });
@@ -947,7 +1038,10 @@ $(window).on("scroll", function () {
 $(window).resize(function () {
     resizePhone();
     if ($(window).width() < 993) {
-        resetArrowConstruction();
+        if(currentPage != "home"){
+            resetArrowConstruction(currentPage);
+        }
+        
         $('.li-sub').remove();
     }
     else {
@@ -982,10 +1076,13 @@ function ConstructionHamburguerClick() {
 }
 
 function DistributionHamburguerClick() {
-
+    $('.menu-icon').click();
+    DistributionLoad();
 }
 
 function IndustryHamburguerClick() {
+    $('.menu-icon').click();
+    IndustryLoad();
 
 }
 
@@ -1097,12 +1194,14 @@ function svgs_hovers() {
 
         $("#svg_industry").on({
             click: function () {
+                IndustryLoad();
                 document.getElementById('svg_industry').innerHTML = svg_industry_hover_mobile;
             }
         });
 
         $("#svg_distribution").on({
             click: function () {
+                DistributionLoad();
                 document.getElementById('svg_distribution').innerHTML = svg_distribution_hover_mobile;
             }
         });
@@ -1115,20 +1214,22 @@ function svgs_hovers() {
     } else if ($(window).width() < 992) {
         $("#svg_construction").on({
             click: function () {
-                ConstructionLoad();
                 document.getElementById('svg_construction').innerHTML = svg_construction_hover_mobile;
+                ConstructionLoad();
             }
         });
 
         $("#svg_industry").on({
             click: function () {
                 document.getElementById('svg_industry').innerHTML = svg_industry_hover_mobile;
+                IndustryLoad();
             }
         });
 
         $("#svg_distribution").on({
             click: function () {
                 document.getElementById('svg_distribution').innerHTML = svg_distribution_hover_mobile;
+                DistributionLoad();
             }
         });
 
@@ -1155,6 +1256,9 @@ function svgs_hovers() {
             },
             mouseleave: function () {
                 document.getElementById('svg_industry').innerHTML = svg_industry;
+            },
+            click: function () {
+                IndustryLoad();
             }
         });
 
@@ -1164,6 +1268,9 @@ function svgs_hovers() {
             },
             mouseleave: function () {
                 document.getElementById('svg_distribution').innerHTML = svg_distribution;
+            },
+            click: function () {
+                DistributionLoad();
             }
         });
 
