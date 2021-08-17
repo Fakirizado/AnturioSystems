@@ -82,8 +82,8 @@
                             </a>
                             <div class="dropdown-content" id="dropdown-sectors">
                                 <a id="first-dropdown-option-1" href="#" onclick="ConstructionLoad()">Construção</a>
-                                <a id="first-dropdown-option-2" href="#">Distribuição</a>
-                                <a id="first-dropdown-option-3" href="#">Indústria</a>
+                                <a id="first-dropdown-option-2" href="#" onclick="DistributionLoad()">Distribuição</a>
+                                <a id="first-dropdown-option-3" href="#" onclick="IndustryLoad();">Indústria</a>
                                 <a id="first-dropdown-option-4" href="#">TI</a>
                             </div>
                         </div>
@@ -186,15 +186,19 @@
 
     <img id="video-banner" src="img\backgroud.png" alt="">
 
+    <!--Icon de fecho do menu hambúrguer -->
+
     <svg id="close-hamburguer" width="20" height="20" viewBox="0 0 24 24" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path d="M11 1L1 11M1 1L11 11" stroke="#212121" stroke-width="1.7" stroke-linecap="round" />
     </svg>
 
 
-    <!-- Conteúdo 1ª Àrea site-->
+
 
     <div class="content">
+
+        <!-- Conteúdo 1ª Àrea site (Home Page)-->
 
         <div id="content-first-page">
 
@@ -408,10 +412,6 @@
                         fill="#ED1C23" />
                 </svg>
 
-
-
-
-
                 <p id="sectors-text"> SETORES </p>
 
 
@@ -489,7 +489,7 @@
                     </p>
                 </div>
 
-                <hr class="vertical-line" id="construction-line-1">
+                <hr class="vertical-line">
                 <div class="offices_div" id="second_offices_div">
                     <p class="offices_text_class">Telefones</p>
 
@@ -517,7 +517,7 @@
                     </p>
                 </div>
 
-                <hr class="vertical-line" id="construction-line-1">
+                <hr class="vertical-line">
                 <div class="offices_div" id="third_offices_div">
                     <p class="offices_text_class">E-mail</p>
 
@@ -529,7 +529,7 @@
                         </svg></p>
                 </div>
 
-                <hr class="vertical-line" id="construction-line-1">
+                <hr class="vertical-line">
             </div>
 
         </div>
@@ -539,7 +539,7 @@
         <div id="section-construction-homepage">
             <div id="content-homepage-construction">
                 <p id="title-1">
-                    Solução para Construção civil
+                    Solução para Construção Civil
                 </p>
 
                 <p id="title-2">
@@ -640,6 +640,221 @@
 
             </div>
         </div>
+
+        <!-- SECÇÃO DISTRIBUIÇÃO -->
+
+        <div id="section-distribution-homepage">
+            <div id="content-homepage-distribution">
+                <p id="title-1">
+                    Solução para Distribuição
+                </p>
+
+                <p id="title-2">
+                    Distribuição
+                </p>
+
+                <p id="title-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus tellus eget sollicitudin enim rutrum
+                    viverra
+                    sit.
+                </p>
+
+                <div id="more-info">
+                    <button id="distribution-info-button" class="more-info-button-homepage">
+                        Fale Connosco
+                    </button>
+                </div>
+
+                <div class="sub-homepage-info">
+                    <svg id="arrow-distribution-left" class="arrows-sub-homepage" width="14" height="24"
+                        viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.1813 2.94972C13.7951 2.33596 13.7937 1.34044 13.1782 0.72841C12.5649 0.118599 11.5738 0.120245 10.9626 0.73209L1.11884 10.5858C0.338463 11.3669 0.338784 12.6327 1.11955 13.4135L10.9748 23.2687C11.5858 23.8797 12.5763 23.8797 13.1873 23.2687C13.7983 22.6578 13.7983 21.6672 13.1873 21.0562L5.54527 13.4142C4.76422 12.6332 4.76422 11.3668 5.54527 10.5858L13.1813 2.94972Z"
+                            fill="white" />
+                    </svg>
+
+                    <div class="sub-homepage-info-item" id="distribution-item-1">
+                        <p class="sub-homepage-info-title"><svg width="27" height="25" viewBox="0 0 27 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.77778 0C1.23611 0 0 1.25 0 2.77778V22.2222C0 22.9589 0.292658 23.6655 0.813592 24.1864C1.33453 24.7073 2.04107 25 2.77778 25H22.2222C22.9589 25 23.6655 24.7073 24.1864 24.1864C24.7073 23.6655 25 22.9589 25 22.2222V19.0556C25.8194 18.5694 26.3889 17.6944 26.3889 16.6667V8.33333C26.3889 7.30556 25.8194 6.43056 25 5.94444V2.77778C25 2.04107 24.7073 1.33453 24.1864 0.813592C23.6655 0.292658 22.9589 0 22.2222 0H2.77778ZM2.77778 2.77778H22.2222V5.55556H13.8889C13.1522 5.55556 12.4456 5.84821 11.9247 6.36915C11.4038 6.89008 11.1111 7.59662 11.1111 8.33333V16.6667C11.1111 17.4034 11.4038 18.1099 11.9247 18.6309C12.4456 19.1518 13.1522 19.4444 13.8889 19.4444H22.2222V22.2222H2.77778V2.77778ZM13.8889 8.33333H23.6111V16.6667H13.8889V8.33333ZM18.0556 10.4167C17.503 10.4167 16.9731 10.6362 16.5824 11.0269C16.1917 11.4176 15.9722 11.9475 15.9722 12.5C15.9722 13.0525 16.1917 13.5824 16.5824 13.9731C16.9731 14.3638 17.503 14.5833 18.0556 14.5833C18.6081 14.5833 19.138 14.3638 19.5287 13.9731C19.9194 13.5824 20.1389 13.0525 20.1389 12.5C20.1389 11.9475 19.9194 11.4176 19.5287 11.0269C19.138 10.6362 18.6081 10.4167 18.0556 10.4167Z"
+                                    fill="white" />
+                            </svg> Orçamentação à medida
+                        </p>
+                        <p class="sub-homepage-info-text">
+                            1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
+                        </p>
+
+                    </div>
+
+                    <hr class="vertical-line" id="distribution-line-1">
+
+                    <div class="sub-homepage-info-item" id="distribution-item-2">
+                        <p class="sub-homepage-info-title"><svg width="27" height="25" viewBox="0 0 27 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.77778 0C1.23611 0 0 1.25 0 2.77778V22.2222C0 22.9589 0.292658 23.6655 0.813592 24.1864C1.33453 24.7073 2.04107 25 2.77778 25H22.2222C22.9589 25 23.6655 24.7073 24.1864 24.1864C24.7073 23.6655 25 22.9589 25 22.2222V19.0556C25.8194 18.5694 26.3889 17.6944 26.3889 16.6667V8.33333C26.3889 7.30556 25.8194 6.43056 25 5.94444V2.77778C25 2.04107 24.7073 1.33453 24.1864 0.813592C23.6655 0.292658 22.9589 0 22.2222 0H2.77778ZM2.77778 2.77778H22.2222V5.55556H13.8889C13.1522 5.55556 12.4456 5.84821 11.9247 6.36915C11.4038 6.89008 11.1111 7.59662 11.1111 8.33333V16.6667C11.1111 17.4034 11.4038 18.1099 11.9247 18.6309C12.4456 19.1518 13.1522 19.4444 13.8889 19.4444H22.2222V22.2222H2.77778V2.77778ZM13.8889 8.33333H23.6111V16.6667H13.8889V8.33333ZM18.0556 10.4167C17.503 10.4167 16.9731 10.6362 16.5824 11.0269C16.1917 11.4176 15.9722 11.9475 15.9722 12.5C15.9722 13.0525 16.1917 13.5824 16.5824 13.9731C16.9731 14.3638 17.503 14.5833 18.0556 14.5833C18.6081 14.5833 19.138 14.3638 19.5287 13.9731C19.9194 13.5824 20.1389 13.0525 20.1389 12.5C20.1389 11.9475 19.9194 11.4176 19.5287 11.0269C19.138 10.6362 18.6081 10.4167 18.0556 10.4167Z"
+                                    fill="white" />
+                            </svg> Orçamentação à medida
+                        </p>
+                        <p class="sub-homepage-info-text">
+                            2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
+                        </p>
+
+                    </div>
+
+                    <hr class="vertical-line" id="distribution-line-2">
+
+                    <div class="sub-homepage-info-item" id="distribution-item-3">
+                        <p class="sub-homepage-info-title"><svg width="27" height="25" viewBox="0 0 27 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.77778 0C1.23611 0 0 1.25 0 2.77778V22.2222C0 22.9589 0.292658 23.6655 0.813592 24.1864C1.33453 24.7073 2.04107 25 2.77778 25H22.2222C22.9589 25 23.6655 24.7073 24.1864 24.1864C24.7073 23.6655 25 22.9589 25 22.2222V19.0556C25.8194 18.5694 26.3889 17.6944 26.3889 16.6667V8.33333C26.3889 7.30556 25.8194 6.43056 25 5.94444V2.77778C25 2.04107 24.7073 1.33453 24.1864 0.813592C23.6655 0.292658 22.9589 0 22.2222 0H2.77778ZM2.77778 2.77778H22.2222V5.55556H13.8889C13.1522 5.55556 12.4456 5.84821 11.9247 6.36915C11.4038 6.89008 11.1111 7.59662 11.1111 8.33333V16.6667C11.1111 17.4034 11.4038 18.1099 11.9247 18.6309C12.4456 19.1518 13.1522 19.4444 13.8889 19.4444H22.2222V22.2222H2.77778V2.77778ZM13.8889 8.33333H23.6111V16.6667H13.8889V8.33333ZM18.0556 10.4167C17.503 10.4167 16.9731 10.6362 16.5824 11.0269C16.1917 11.4176 15.9722 11.9475 15.9722 12.5C15.9722 13.0525 16.1917 13.5824 16.5824 13.9731C16.9731 14.3638 17.503 14.5833 18.0556 14.5833C18.6081 14.5833 19.138 14.3638 19.5287 13.9731C19.9194 13.5824 20.1389 13.0525 20.1389 12.5C20.1389 11.9475 19.9194 11.4176 19.5287 11.0269C19.138 10.6362 18.6081 10.4167 18.0556 10.4167Z"
+                                    fill="white" />
+                            </svg> Orçamentação à medida
+                        </p>
+                        <p class="sub-homepage-info-text">
+                            3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
+                        </p>
+
+                    </div>
+
+                    <hr class="vertical-line" id="distribution-line-3">
+
+                    <div class="sub-homepage-info-item" id="distribution-item-4">
+                        <p class="sub-homepage-info-title"><svg width="27" height="25" viewBox="0 0 27 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.77778 0C1.23611 0 0 1.25 0 2.77778V22.2222C0 22.9589 0.292658 23.6655 0.813592 24.1864C1.33453 24.7073 2.04107 25 2.77778 25H22.2222C22.9589 25 23.6655 24.7073 24.1864 24.1864C24.7073 23.6655 25 22.9589 25 22.2222V19.0556C25.8194 18.5694 26.3889 17.6944 26.3889 16.6667V8.33333C26.3889 7.30556 25.8194 6.43056 25 5.94444V2.77778C25 2.04107 24.7073 1.33453 24.1864 0.813592C23.6655 0.292658 22.9589 0 22.2222 0H2.77778ZM2.77778 2.77778H22.2222V5.55556H13.8889C13.1522 5.55556 12.4456 5.84821 11.9247 6.36915C11.4038 6.89008 11.1111 7.59662 11.1111 8.33333V16.6667C11.1111 17.4034 11.4038 18.1099 11.9247 18.6309C12.4456 19.1518 13.1522 19.4444 13.8889 19.4444H22.2222V22.2222H2.77778V2.77778ZM13.8889 8.33333H23.6111V16.6667H13.8889V8.33333ZM18.0556 10.4167C17.503 10.4167 16.9731 10.6362 16.5824 11.0269C16.1917 11.4176 15.9722 11.9475 15.9722 12.5C15.9722 13.0525 16.1917 13.5824 16.5824 13.9731C16.9731 14.3638 17.503 14.5833 18.0556 14.5833C18.6081 14.5833 19.138 14.3638 19.5287 13.9731C19.9194 13.5824 20.1389 13.0525 20.1389 12.5C20.1389 11.9475 19.9194 11.4176 19.5287 11.0269C19.138 10.6362 18.6081 10.4167 18.0556 10.4167Z"
+                                    fill="white" />
+                            </svg> Orçamentação à medida
+                        </p>
+                        <p class="sub-homepage-info-text">
+                            4 -Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
+                        </p>
+
+                    </div>
+                    <svg class="arrows-sub-homepage" id="arrow-distribution-rigth" width="14" height="24"
+                        viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.81867 2.94972C0.204914 2.33596 0.206317 1.34044 0.8218 0.72841C1.43506 0.118599 2.4262 0.120245 3.03742 0.73209L12.8812 10.5858C13.6615 11.3669 13.6612 12.6327 12.8804 13.4135L3.0252 23.2687C2.41423 23.8797 1.42366 23.8797 0.812698 23.2687C0.201734 22.6578 0.201733 21.6672 0.812697 21.0562L8.45473 13.4142C9.23578 12.6332 9.23578 11.3668 8.45473 10.5858L0.81867 2.94972Z"
+                            fill="white" />
+                    </svg>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+         <!-- SECÇÃO INDÚSTRIA -->
+
+         <div id="section-industry-homepage">
+            <div id="content-homepage-industry">
+                <p id="title-1">
+                    Solução para Indústria
+                </p>
+
+                <p id="title-2">
+                    Indústria
+                </p>
+
+                <p id="title-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus tellus eget sollicitudin enim rutrum
+                    viverra
+                    sit.
+                </p>
+
+                <div id="more-info">
+                    <button id="industry-info-button" class="more-info-button-homepage">
+                        Fale Connosco
+                    </button>
+                </div>
+
+                <div class="sub-homepage-info">
+                    <svg id="arrow-industry-left" class="arrows-sub-homepage" width="14" height="24"
+                        viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.1813 2.94972C13.7951 2.33596 13.7937 1.34044 13.1782 0.72841C12.5649 0.118599 11.5738 0.120245 10.9626 0.73209L1.11884 10.5858C0.338463 11.3669 0.338784 12.6327 1.11955 13.4135L10.9748 23.2687C11.5858 23.8797 12.5763 23.8797 13.1873 23.2687C13.7983 22.6578 13.7983 21.6672 13.1873 21.0562L5.54527 13.4142C4.76422 12.6332 4.76422 11.3668 5.54527 10.5858L13.1813 2.94972Z"
+                            fill="white" />
+                    </svg>
+
+                    <div class="sub-homepage-info-item" id="industry-item-1">
+                        <p class="sub-homepage-info-title"><svg width="27" height="25" viewBox="0 0 27 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.77778 0C1.23611 0 0 1.25 0 2.77778V22.2222C0 22.9589 0.292658 23.6655 0.813592 24.1864C1.33453 24.7073 2.04107 25 2.77778 25H22.2222C22.9589 25 23.6655 24.7073 24.1864 24.1864C24.7073 23.6655 25 22.9589 25 22.2222V19.0556C25.8194 18.5694 26.3889 17.6944 26.3889 16.6667V8.33333C26.3889 7.30556 25.8194 6.43056 25 5.94444V2.77778C25 2.04107 24.7073 1.33453 24.1864 0.813592C23.6655 0.292658 22.9589 0 22.2222 0H2.77778ZM2.77778 2.77778H22.2222V5.55556H13.8889C13.1522 5.55556 12.4456 5.84821 11.9247 6.36915C11.4038 6.89008 11.1111 7.59662 11.1111 8.33333V16.6667C11.1111 17.4034 11.4038 18.1099 11.9247 18.6309C12.4456 19.1518 13.1522 19.4444 13.8889 19.4444H22.2222V22.2222H2.77778V2.77778ZM13.8889 8.33333H23.6111V16.6667H13.8889V8.33333ZM18.0556 10.4167C17.503 10.4167 16.9731 10.6362 16.5824 11.0269C16.1917 11.4176 15.9722 11.9475 15.9722 12.5C15.9722 13.0525 16.1917 13.5824 16.5824 13.9731C16.9731 14.3638 17.503 14.5833 18.0556 14.5833C18.6081 14.5833 19.138 14.3638 19.5287 13.9731C19.9194 13.5824 20.1389 13.0525 20.1389 12.5C20.1389 11.9475 19.9194 11.4176 19.5287 11.0269C19.138 10.6362 18.6081 10.4167 18.0556 10.4167Z"
+                                    fill="white" />
+                            </svg> Orçamentação à medida
+                        </p>
+                        <p class="sub-homepage-info-text">
+                            1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
+                        </p>
+
+                    </div>
+
+                    <hr class="vertical-line" id="industry-line-1">
+
+                    <div class="sub-homepage-info-item" id="industry-item-2">
+                        <p class="sub-homepage-info-title"><svg width="27" height="25" viewBox="0 0 27 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.77778 0C1.23611 0 0 1.25 0 2.77778V22.2222C0 22.9589 0.292658 23.6655 0.813592 24.1864C1.33453 24.7073 2.04107 25 2.77778 25H22.2222C22.9589 25 23.6655 24.7073 24.1864 24.1864C24.7073 23.6655 25 22.9589 25 22.2222V19.0556C25.8194 18.5694 26.3889 17.6944 26.3889 16.6667V8.33333C26.3889 7.30556 25.8194 6.43056 25 5.94444V2.77778C25 2.04107 24.7073 1.33453 24.1864 0.813592C23.6655 0.292658 22.9589 0 22.2222 0H2.77778ZM2.77778 2.77778H22.2222V5.55556H13.8889C13.1522 5.55556 12.4456 5.84821 11.9247 6.36915C11.4038 6.89008 11.1111 7.59662 11.1111 8.33333V16.6667C11.1111 17.4034 11.4038 18.1099 11.9247 18.6309C12.4456 19.1518 13.1522 19.4444 13.8889 19.4444H22.2222V22.2222H2.77778V2.77778ZM13.8889 8.33333H23.6111V16.6667H13.8889V8.33333ZM18.0556 10.4167C17.503 10.4167 16.9731 10.6362 16.5824 11.0269C16.1917 11.4176 15.9722 11.9475 15.9722 12.5C15.9722 13.0525 16.1917 13.5824 16.5824 13.9731C16.9731 14.3638 17.503 14.5833 18.0556 14.5833C18.6081 14.5833 19.138 14.3638 19.5287 13.9731C19.9194 13.5824 20.1389 13.0525 20.1389 12.5C20.1389 11.9475 19.9194 11.4176 19.5287 11.0269C19.138 10.6362 18.6081 10.4167 18.0556 10.4167Z"
+                                    fill="white" />
+                            </svg> Orçamentação à medida
+                        </p>
+                        <p class="sub-homepage-info-text">
+                            2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
+                        </p>
+
+                    </div>
+
+                    <hr class="vertical-line" id="industry-line-2">
+
+                    <div class="sub-homepage-info-item" id="industry-item-3">
+                        <p class="sub-homepage-info-title"><svg width="27" height="25" viewBox="0 0 27 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.77778 0C1.23611 0 0 1.25 0 2.77778V22.2222C0 22.9589 0.292658 23.6655 0.813592 24.1864C1.33453 24.7073 2.04107 25 2.77778 25H22.2222C22.9589 25 23.6655 24.7073 24.1864 24.1864C24.7073 23.6655 25 22.9589 25 22.2222V19.0556C25.8194 18.5694 26.3889 17.6944 26.3889 16.6667V8.33333C26.3889 7.30556 25.8194 6.43056 25 5.94444V2.77778C25 2.04107 24.7073 1.33453 24.1864 0.813592C23.6655 0.292658 22.9589 0 22.2222 0H2.77778ZM2.77778 2.77778H22.2222V5.55556H13.8889C13.1522 5.55556 12.4456 5.84821 11.9247 6.36915C11.4038 6.89008 11.1111 7.59662 11.1111 8.33333V16.6667C11.1111 17.4034 11.4038 18.1099 11.9247 18.6309C12.4456 19.1518 13.1522 19.4444 13.8889 19.4444H22.2222V22.2222H2.77778V2.77778ZM13.8889 8.33333H23.6111V16.6667H13.8889V8.33333ZM18.0556 10.4167C17.503 10.4167 16.9731 10.6362 16.5824 11.0269C16.1917 11.4176 15.9722 11.9475 15.9722 12.5C15.9722 13.0525 16.1917 13.5824 16.5824 13.9731C16.9731 14.3638 17.503 14.5833 18.0556 14.5833C18.6081 14.5833 19.138 14.3638 19.5287 13.9731C19.9194 13.5824 20.1389 13.0525 20.1389 12.5C20.1389 11.9475 19.9194 11.4176 19.5287 11.0269C19.138 10.6362 18.6081 10.4167 18.0556 10.4167Z"
+                                    fill="white" />
+                            </svg> Orçamentação à medida
+                        </p>
+                        <p class="sub-homepage-info-text">
+                            3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
+                        </p>
+
+                    </div>
+
+                    <hr class="vertical-line" id="industry-line-3">
+
+                    <div class="sub-homepage-info-item" id="industry-item-4">
+                        <p class="sub-homepage-info-title"><svg width="27" height="25" viewBox="0 0 27 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.77778 0C1.23611 0 0 1.25 0 2.77778V22.2222C0 22.9589 0.292658 23.6655 0.813592 24.1864C1.33453 24.7073 2.04107 25 2.77778 25H22.2222C22.9589 25 23.6655 24.7073 24.1864 24.1864C24.7073 23.6655 25 22.9589 25 22.2222V19.0556C25.8194 18.5694 26.3889 17.6944 26.3889 16.6667V8.33333C26.3889 7.30556 25.8194 6.43056 25 5.94444V2.77778C25 2.04107 24.7073 1.33453 24.1864 0.813592C23.6655 0.292658 22.9589 0 22.2222 0H2.77778ZM2.77778 2.77778H22.2222V5.55556H13.8889C13.1522 5.55556 12.4456 5.84821 11.9247 6.36915C11.4038 6.89008 11.1111 7.59662 11.1111 8.33333V16.6667C11.1111 17.4034 11.4038 18.1099 11.9247 18.6309C12.4456 19.1518 13.1522 19.4444 13.8889 19.4444H22.2222V22.2222H2.77778V2.77778ZM13.8889 8.33333H23.6111V16.6667H13.8889V8.33333ZM18.0556 10.4167C17.503 10.4167 16.9731 10.6362 16.5824 11.0269C16.1917 11.4176 15.9722 11.9475 15.9722 12.5C15.9722 13.0525 16.1917 13.5824 16.5824 13.9731C16.9731 14.3638 17.503 14.5833 18.0556 14.5833C18.6081 14.5833 19.138 14.3638 19.5287 13.9731C19.9194 13.5824 20.1389 13.0525 20.1389 12.5C20.1389 11.9475 19.9194 11.4176 19.5287 11.0269C19.138 10.6362 18.6081 10.4167 18.0556 10.4167Z"
+                                    fill="white" />
+                            </svg> Orçamentação à medida
+                        </p>
+                        <p class="sub-homepage-info-text">
+                            4 -Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus a eu eget.
+                        </p>
+
+                    </div>
+                    <svg class="arrows-sub-homepage" id="arrow-industry-rigth" width="14" height="24"
+                        viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.81867 2.94972C0.204914 2.33596 0.206317 1.34044 0.8218 0.72841C1.43506 0.118599 2.4262 0.120245 3.03742 0.73209L12.8812 10.5858C13.6615 11.3669 13.6612 12.6327 12.8804 13.4135L3.0252 23.2687C2.41423 23.8797 1.42366 23.8797 0.812698 23.2687C0.201734 22.6578 0.201733 21.6672 0.812697 21.0562L8.45473 13.4142C9.23578 12.6332 9.23578 11.3668 8.45473 10.5858L0.81867 2.94972Z"
+                            fill="white" />
+                    </svg>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
         <hr id="first-hr">
         <div id="different_sectors">
             <div id="auxDiv"></div>
@@ -1033,10 +1248,10 @@
                             <div class="accordion_background card-header" id="headingOne">
                                 <h2 class="mb-0">
                                     <button id="buttonOne"
-                                        class="btn buttons_text_management btn-link btn-block text-left" type="button"
+                                        class="btn buttons_text_management btn-link btn-block text-left buttonOne" type="button"
                                         data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                                         aria-controls="collapseOne">
-                                        Balanço de Obra <svg id="first_svg_management" class="accordion_svgs" width="32"
+                                        Balanço de Obra <svg id="first_svg_management" class="accordion_svgs first_svg_management" width="32"
                                             height="33" viewBox="0 0 32 33" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="16" cy="16.5" r="16" fill="#ED1C23" />
@@ -1062,11 +1277,11 @@
                             <div class="accordion_background card-header" id="headingTwo">
                                 <h2 class="mb-0">
                                     <button id="buttonTwo"
-                                        class="btn buttons_text_management btn-link btn-block text-left collapsed"
+                                        class="btn buttons_text_management btn-link btn-block text-left collapsed buttonTwo"
                                         type="button" data-toggle="collapse" data-target="#collapseTwo"
                                         aria-expanded="false" aria-controls="collapseTwo">
                                         Gestão de encomendas e compras a fornecedores <svg id="second_svg_management"
-                                            class="accordion_svgs" width="32" height="33" viewBox="0 0 32 33"
+                                            class="accordion_svgs second_svg_management" width="32" height="33" viewBox="0 0 32 33"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="16" cy="16.5" r="16" fill="#424242" />
                                             <path
@@ -1091,11 +1306,11 @@
                             <div class="accordion_background card-header" id="headingThree">
                                 <h2 class="mb-0">
                                     <button id="buttonThree"
-                                        class="btn buttons_text_management btn-link btn-block text-left collapsed"
+                                        class="btn buttons_text_management btn-link btn-block text-left collapsed buttonThree"
                                         type="button" data-toggle="collapse" data-target="#collapseThree"
                                         aria-expanded="false" aria-controls="collapseThree">
                                         Gestão de tesouraria, pagamentos e cobranças <svg id="third_svg_management"
-                                            class="accordion_svgs" width="32" height="33" viewBox="0 0 32 33"
+                                            class="accordion_svgs third_svg_management" width="32" height="33" viewBox="0 0 32 33"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="16" cy="16.5" r="16" fill="#424242" />
                                             <path
@@ -1120,11 +1335,11 @@
                             <div class="accordion_background card-header" id="headingFour">
                                 <h2 class="mb-0">
                                     <button id="buttonFour"
-                                        class="btn buttons_text_management btn-link btn-block text-left collapsed"
+                                        class="btn buttons_text_management btn-link btn-block text-left collapsed buttonFour"
                                         type="button" data-toggle="collapse" data-target="#collapseFour"
                                         aria-expanded="false" aria-controls="collapseFour">
                                         Pedido e consulta de preços ágeis <svg id="fourth_svg_management"
-                                            class="accordion_svgs" width="32" height="33" viewBox="0 0 32 33"
+                                            class="accordion_svgs fourth_svg_management" width="32" height="33" viewBox="0 0 32 33"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="16" cy="16.5" r="16" fill="#424242" />
                                             <path
@@ -1147,11 +1362,11 @@
                             <div class="accordion_background card-header" id="headingFive">
                                 <h2 class="mb-0">
                                     <button id="buttonFive"
-                                        class="btn buttons_text_management btn-link btn-block text-left collapsed"
+                                        class="btn buttons_text_management btn-link btn-block text-left collapsed buttonFive"
                                         type="button" data-toggle="collapse" data-target="#collapseFive"
                                         aria-expanded="false" aria-controls="collapseFive">
                                         Gestão de recursos e equipamentos da Obra <svg id="fifth_svg_management"
-                                            class="accordion_svgs" width="32" height="33" viewBox="0 0 32 33"
+                                            class="accordion_svgs fifth_svg_management" width="32" height="33" viewBox="0 0 32 33"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="16" cy="16.5" r="16" fill="#424242" />
                                             <path
@@ -1174,11 +1389,11 @@
                             <div class="accordion_background card-header" id="headingSix">
                                 <h2 class="mb-0">
                                     <button id="buttonSix"
-                                        class="btn buttons_text_management btn-link btn-block text-left collapsed"
+                                        class="btn buttons_text_management btn-link btn-block text-left collapsed buttonSix"
                                         type="button" data-toggle="collapse" data-target="#collapseSix"
                                         aria-expanded="false" aria-controls="collapseSix">
                                         Autos de medição em valor ou percentagem <svg id="sixth_svg_management"
-                                            class="accordion_svgs" width="32" height="33" viewBox="0 0 32 33"
+                                            class="accordion_svgs sixth_svg_management" width="32" height="33" viewBox="0 0 32 33"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="16" cy="16.5" r="16" fill="#424242" />
                                             <path
@@ -1358,11 +1573,13 @@
 
                         </div>
                     </div>
-                    <a class="carousel-control-prev carousel-control-projects" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <a class="carousel-control-prev carousel-control-projects" href="#carouselExampleIndicators"
+                        role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next  carousel-control-projects" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <a class="carousel-control-next  carousel-control-projects" href="#carouselExampleIndicators"
+                        role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
@@ -1414,7 +1631,9 @@
 
                                 <div class="review-content">
                                     <p class="review-content-text">
-                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet integer posuere urna vitae.”
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum
+                                        ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet
+                                        integer posuere urna vitae.”
                                     </p>
 
                                 </div>
@@ -1445,7 +1664,9 @@
 
                                 <div class="review-content">
                                     <p class="review-content-text">
-                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet integer posuere urna vitae.”
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum
+                                        ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet
+                                        integer posuere urna vitae.”
                                     </p>
 
                                 </div>
@@ -1476,7 +1697,9 @@
 
                                 <div class="review-content">
                                     <p class="review-content-text">
-                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet integer posuere urna vitae.”
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum
+                                        ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet
+                                        integer posuere urna vitae.”
                                     </p>
 
                                 </div>
@@ -1509,7 +1732,9 @@
 
                                 <div class="review-content">
                                     <p class="review-content-text">
-                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet integer posuere urna vitae.”
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum
+                                        ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet
+                                        integer posuere urna vitae.”
                                     </p>
 
                                 </div>
@@ -1540,7 +1765,9 @@
 
                                 <div class="review-content">
                                     <p class="review-content-text">
-                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet integer posuere urna vitae.”
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum
+                                        ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet
+                                        integer posuere urna vitae.”
                                     </p>
 
                                 </div>
@@ -1553,12 +1780,16 @@
 
                         </div>
                     </div>
-                    <a class="carousel-control-prev carousel-control-reviews" href="#carouseReviews" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon carousel-control-prev-icon-reviews" aria-hidden="true"></span>
+                    <a class="carousel-control-prev carousel-control-reviews" href="#carouseReviews" role="button"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon carousel-control-prev-icon-reviews"
+                            aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next carousel-control-reviews" href="#carouseReviews" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon carousel-control-next-icon-reviews" aria-hidden="true"></span>
+                    <a class="carousel-control-next carousel-control-reviews" href="#carouseReviews" role="button"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon carousel-control-next-icon-reviews"
+                            aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
@@ -1596,6 +1827,602 @@
 
 
         <!-- Fim Conteúdo Secções Construção-->
+
+        <!-- Início Conteúdo Secções Distribuição-->
+        <div id="distribution-sections">
+            <div id="complete_management">
+                <div id="complete_management_imgs">
+                    <img id="half_anturio_img" src="img\anturio.png" alt="">
+                    <img id="management_img" src="img\management.png" alt="">
+                </div>
+
+                <div id="complete_management_info">
+                    <p id="complete_management_text">A gestão completa e eficaz dos seus projetos<span
+                            class="other-color" style="color:red">.</span></p>
+                    <div class="accordion" id="accordionDistribution">
+                        <div class="card">
+                            <div class="accordion_background card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button id="buttonOne"
+                                        class="btn buttons_text_management btn-link btn-block text-left buttonOne" type="button"
+                                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        Balanço de Obra <svg id="first_svg_management" class="accordion_svgs first_svg_management" width="32"
+                                            height="33" viewBox="0 0 32 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="16" cy="16.5" r="16" fill="#ED1C23" />
+                                            <path
+                                                d="M8.34175 19.6231C8.15178 19.8174 8.15178 20.1279 8.34175 20.3222L9.47467 21.4809C9.67065 21.6814 9.99312 21.6816 10.1893 21.4813L15.4377 16.1249C15.6338 15.9248 15.956 15.9248 16.152 16.1249L21.4004 21.4813C21.5966 21.6816 21.9191 21.6814 22.1151 21.4809L23.248 20.3222C23.438 20.1279 23.438 19.8174 23.248 19.6231L16.1524 12.3657C15.9563 12.1651 15.6335 12.1651 15.4374 12.3657L8.34175 19.6231Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="text_accordion collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordionDistribution">
+                                <div class="card-body">
+                                    Consultas dos balanços de obra, para visualização do valor adjudicado, do status dos
+                                    trabalhos em curso e das notas de créditos efetuadas, ou seja, do saldo de cada
+                                    obra.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_go_down card">
+                            <div class="accordion_background card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button id="buttonTwo"
+                                        class="btn buttons_text_management btn-link btn-block text-left collapsed buttonTwo"
+                                        type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                        Gestão de encomendas e compras a fornecedores <svg id="second_svg_management"
+                                            class="accordion_svgs second_svg_management" width="32" height="33" viewBox="0 0 32 33"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="16" cy="16.5" r="16" fill="#424242" />
+                                            <path
+                                                d="M23.2481 14.2231C23.4381 14.0288 23.4381 13.7183 23.2481 13.524L22.1152 12.3653C21.9192 12.1648 21.5967 12.1646 21.4005 12.3649L16.1521 17.7213C15.9561 17.9214 15.6339 17.9214 15.4378 17.7213L10.1894 12.3649C9.99322 12.1646 9.67075 12.1648 9.47477 12.3653L8.34185 13.524C8.15187 13.7183 8.15187 14.0288 8.34185 14.2231L15.4375 21.4805C15.6336 21.6811 15.9564 21.6811 16.1525 21.4805L23.2481 14.2231Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="text_accordion collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionDistribution">
+                                <div class="card-body">
+                                    Gestão do fluxo de encomendas a fornecedores, desde a encomenda e criação de ordens
+                                    de compra até à receção dos artigos ou mercadorias. Cálculo de necessidades e
+                                    preparação de encomendas de material a entregar nas obras definidas com respetivos
+                                    timings, e possibilidade de atribuir um estado para as encomendas efetuadas.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_go_down card">
+                            <div class="accordion_background card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button id="buttonThree"
+                                        class="btn buttons_text_management btn-link btn-block text-left collapsed buttonThree"
+                                        type="button" data-toggle="collapse" data-target="#collapseThree"
+                                        aria-expanded="false" aria-controls="collapseThree">
+                                        Gestão de tesouraria, pagamentos e cobranças <svg id="third_svg_management"
+                                            class="accordion_svgs third_svg_management" width="32" height="33" viewBox="0 0 32 33"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="16" cy="16.5" r="16" fill="#424242" />
+                                            <path
+                                                d="M23.2481 14.2231C23.4381 14.0288 23.4381 13.7183 23.2481 13.524L22.1152 12.3653C21.9192 12.1648 21.5967 12.1646 21.4005 12.3649L16.1521 17.7213C15.9561 17.9214 15.6339 17.9214 15.4378 17.7213L10.1894 12.3649C9.99322 12.1646 9.67075 12.1648 9.47477 12.3653L8.34185 13.524C8.15187 13.7183 8.15187 14.0288 8.34185 14.2231L15.4375 21.4805C15.6336 21.6811 15.9564 21.6811 16.1525 21.4805L23.2481 14.2231Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="text_accordion collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionDistribution">
+                                <div class="card-body">
+                                    Gestão automática de pagamentos e recebimentos via débito direto SEPA ou referências
+                                    multibanco. Cronograma financeiro acordado com o cliente e monitor de gestão de
+                                    dívidas e cobranças. Gestão e controlo de contas bancárias. Emissão automática de
+                                    pagamentos a fornecedores. 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_go_down card">
+                            <div class="accordion_background card-header" id="headingFour">
+                                <h2 class="mb-0">
+                                    <button id="buttonFour"
+                                        class="btn buttons_text_management btn-link btn-block text-left collapsed buttonFour"
+                                        type="button" data-toggle="collapse" data-target="#collapseFour"
+                                        aria-expanded="false" aria-controls="collapseFour">
+                                        Pedido e consulta de preços ágeis <svg id="fourth_svg_management"
+                                            class="accordion_svgs fourth_svg_management" width="32" height="33" viewBox="0 0 32 33"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="16" cy="16.5" r="16" fill="#424242" />
+                                            <path
+                                                d="M23.2481 14.2231C23.4381 14.0288 23.4381 13.7183 23.2481 13.524L22.1152 12.3653C21.9192 12.1648 21.5967 12.1646 21.4005 12.3649L16.1521 17.7213C15.9561 17.9214 15.6339 17.9214 15.4378 17.7213L10.1894 12.3649C9.99322 12.1646 9.67075 12.1648 9.47477 12.3653L8.34185 13.524C8.15187 13.7183 8.15187 14.0288 8.34185 14.2231L15.4375 21.4805C15.6336 21.6811 15.9564 21.6811 16.1525 21.4805L23.2481 14.2231Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseFour" class="text_accordion collapse" aria-labelledby="headingFour"
+                                data-parent="#accordionDistribution">
+                                <div class="card-body">
+                                    Consulta e pedidos automáticos de preços – relativos a materiais, serviços ou
+                                    subempreitadas dos orçamentos dos vários processos – a fornecedores.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_go_down card">
+                            <div class="accordion_background card-header" id="headingFive">
+                                <h2 class="mb-0">
+                                    <button id="buttonFive"
+                                        class="btn buttons_text_management btn-link btn-block text-left collapsed buttonFive"
+                                        type="button" data-toggle="collapse" data-target="#collapseFive"
+                                        aria-expanded="false" aria-controls="collapseFive">
+                                        Gestão de recursos e equipamentos da Obra <svg id="fifth_svg_management"
+                                            class="accordion_svgs fifth_svg_management" width="32" height="33" viewBox="0 0 32 33"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="16" cy="16.5" r="16" fill="#424242" />
+                                            <path
+                                                d="M23.2481 14.2231C23.4381 14.0288 23.4381 13.7183 23.2481 13.524L22.1152 12.3653C21.9192 12.1648 21.5967 12.1646 21.4005 12.3649L16.1521 17.7213C15.9561 17.9214 15.6339 17.9214 15.4378 17.7213L10.1894 12.3649C9.99322 12.1646 9.67075 12.1648 9.47477 12.3653L8.34185 13.524C8.15187 13.7183 8.15187 14.0288 8.34185 14.2231L15.4375 21.4805C15.6336 21.6811 15.9564 21.6811 16.1525 21.4805L23.2481 14.2231Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseFive" class="text_accordion collapse" aria-labelledby="headingFive"
+                                data-parent="#accordionDistribution">
+                                <div class="card-body">
+                                    Monitor de ocupação horária que permite ter uma visualização da gestão da ocupação e
+                                    da disponibilidade de recursos distribuídos pelo articulado da obra.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_go_down card">
+                            <div class="accordion_background card-header" id="headingSix">
+                                <h2 class="mb-0">
+                                    <button id="buttonSix"
+                                        class="btn buttons_text_management btn-link btn-block text-left collapsed buttonSix"
+                                        type="button" data-toggle="collapse" data-target="#collapseSix"
+                                        aria-expanded="false" aria-controls="collapseSix">
+                                        Autos de medição em valor ou percentagem <svg id="sixth_svg_management"
+                                            class="accordion_svgs sixth_svg_management" width="32" height="33" viewBox="0 0 32 33"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="16" cy="16.5" r="16" fill="#424242" />
+                                            <path
+                                                d="M23.2481 14.2231C23.4381 14.0288 23.4381 13.7183 23.2481 13.524L22.1152 12.3653C21.9192 12.1648 21.5967 12.1646 21.4005 12.3649L16.1521 17.7213C15.9561 17.9214 15.6339 17.9214 15.4378 17.7213L10.1894 12.3649C9.99322 12.1646 9.67075 12.1648 9.47477 12.3653L8.34185 13.524C8.15187 13.7183 8.15187 14.0288 8.34185 14.2231L15.4375 21.4805C15.6336 21.6811 15.9564 21.6811 16.1525 21.4805L23.2481 14.2231Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseSix" class="text_accordion collapse" aria-labelledby="headingSix"
+                                data-parent="#accordionDistribution">
+                                <div class="card-body">
+                                    Introdução de medições por item/capítulo, com controlo dos trabalhos em curso,
+                                    registo de trabalhos a mais ou a menos realizados e emissão da respetiva faturação
+                                    de forma automática.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ideal Solution Chart Div-->
+            <div id="ideal_solution_chart">
+                <p id="ideal_solution_chart_text">A solução ideal para Construção Civil<span style="color:red">.</span>
+                </p>
+
+                <img id="ideal_solution_chart_img" src="img/solution_chart.png" alt="">
+
+            </div>
+
+            <hr class="hr-mobile">
+            <!-- SECÇÂO NOSSOS PROJETOS-->
+            <div id="projects-section-construction" class="projects-section">
+
+                <p class="projects-section-title">Os Nossos Projetos<span class="dot_point_geral">.</span>
+                </p>
+
+                <img class="projects-elipse" src="img\elipse_grey.png" alt="">
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators carousel-indicators-white">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="project-item">
+                                <div class="project-item-study-case">
+                                    <p class="project-item-text-1">
+                                        Caso de Estudo #01
+                                    </p>
+
+                                    <p class="project-item-text-2">
+                                        Lorem Ipsum
+                                    </p>
+
+                                    <p class="project-item-text-3">
+                                        Lorem Ipsum
+                                    </p>
+
+                                    <p class="project-item-text-4">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra ut in
+                                        volutpat, integer netus. Sed ipsum nec feugiat elementum. Elit diam nisi id
+                                        phasellus egestas ut cursus.
+                                    </p>
+
+                                    <p class="project-item-text-3">
+                                        Lorem Ipsum
+                                    </p>
+
+                                    <p class="project-item-text-4">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra ut in
+                                        volutpat.
+                                    </p>
+
+                                </div>
+                                <div class="project-item-logo">
+                                    <img src="img\projects-background.jpg" alt="">
+                                    <img class="projects-item-hover" src="img\ogma_project.png" alt="">
+
+
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+                            <div class="project-item">
+                                <div class="project-item-study-case">
+                                    <p class="project-item-text-1">
+                                        Caso de Estudo #02
+                                    </p>
+
+                                    <p class="project-item-text-2">
+                                        Lorem Ipsum
+                                    </p>
+
+                                    <p class="project-item-text-3">
+                                        Lorem Ipsum
+                                    </p>
+
+                                    <p class="project-item-text-4">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra ut in
+                                        volutpat, integer netus. Sed ipsum nec feugiat elementum. Elit diam nisi id
+                                        phasellus egestas ut cursus.
+                                    </p>
+
+                                    <p class="project-item-text-3">
+                                        Lorem Ipsum
+                                    </p>
+
+                                    <p class="project-item-text-4">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra ut in
+                                        volutpat.
+                                    </p>
+
+                                </div>
+                                <div class="project-item-logo">
+                                    <img src="img\projects-background.jpg" alt="">
+                                    <img class="projects-item-hover" src="img\ogma_project.png" alt="">
+
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+                            <div class="project-item">
+                                <div class="project-item-study-case">
+                                    <p class="project-item-text-1">
+                                        Caso de Estudo #03
+                                    </p>
+
+                                    <p class="project-item-text-2">
+                                        Lorem Ipsum
+                                    </p>
+
+                                    <p class="project-item-text-3">
+                                        Lorem Ipsum
+                                    </p>
+
+                                    <p class="project-item-text-4">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra ut in
+                                        volutpat, integer netus. Sed ipsum nec feugiat elementum. Elit diam nisi id
+                                        phasellus egestas ut cursus.
+                                    </p>
+
+                                    <p class="project-item-text-3">
+                                        Lorem Ipsum
+                                    </p>
+
+                                    <p class="project-item-text-4">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra ut in
+                                        volutpat.
+                                    </p>
+
+                                </div>
+                                <div class="project-item-logo">
+                                    <img src="img\projects-background.jpg" alt="">
+                                    <img class="projects-item-hover" src="img\ogma_project.png" alt="">
+
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev carousel-control-projects" href="#carouselExampleIndicators"
+                        role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next  carousel-control-projects" href="#carouselExampleIndicators"
+                        role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <hr id="first-hr-sections">
+
+            </div>
+
+
+
+
+
+
+
+            <!-- FIM SECÇÂO NOSSOS PROJETOS-->
+
+
+
+
+            <!-- SECÇÂO REVIEWS-->
+
+            <div class="section-reviews">
+                <div id="carouseReviews" class="carousel" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouseReviews" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouseReviews" data-slide-to="1"></li>
+                        <li data-target="#carouseReviews" data-slide-to="2"></li>
+                        <li data-target="#carouseReviews" data-slide-to="3"></li>
+                        <li data-target="#carouseReviews" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <img src="img/review_header_image_1.png" alt="" style="border-radius: 50%;">
+                                    <div class="review-header-data">
+                                        <p class="review-header-name">
+                                            José Figueira
+                                        </p>
+
+                                        <p class="review-header-role">
+                                            CEO da Ogma
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="review-content">
+                                    <p class="review-content-text">
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum
+                                        ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet
+                                        integer posuere urna vitae.”
+                                    </p>
+
+                                </div>
+                                <div class="review-logo">
+                                    <img src="img/review_logo.png" alt="">
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div class="carousel-item next">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <img src="img/review_header_image.png" alt="" style="border-radius: 50%;">
+                                    <div class="review-header-data">
+                                        <p class="review-header-name    ">
+                                            Luisa Montereal
+                                        </p>
+
+                                        <p class="review-header-role">
+                                            CEO da Ogma
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="review-content">
+                                    <p class="review-content-text">
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum
+                                        ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet
+                                        integer posuere urna vitae.”
+                                    </p>
+
+                                </div>
+                                <div class="review-logo">
+                                    <img src="img/review_logo.png" alt="">
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <img src="img/review_header_image_2.png" alt="">
+                                    <div class="review-header-data">
+                                        <p class="review-header-name">
+                                            Maria Oliveira
+                                        </p>
+
+                                        <p class="review-header-role">
+                                            CEO da Ogma
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="review-content">
+                                    <p class="review-content-text">
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum
+                                        ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet
+                                        integer posuere urna vitae.”
+                                    </p>
+
+                                </div>
+                                <div class="review-logo">
+                                    <img src="img/review_logo.png" alt="">
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="carousel-item">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <img src="img/review_header_image_1.png" alt="" style="border-radius: 50%;">
+                                    <div class="review-header-data">
+                                        <p class="review-header-name">
+                                            José Figueira
+                                        </p>
+
+                                        <p class="review-header-role">
+                                            CEO da Ogma
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="review-content">
+                                    <p class="review-content-text">
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum
+                                        ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet
+                                        integer posuere urna vitae.”
+                                    </p>
+
+                                </div>
+                                <div class="review-logo">
+                                    <img src="img/review_logo.png" alt="">
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div class="carousel-item prev">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <img src="img/review_header_image.png" alt="" style="border-radius: 50%;">
+                                    <div class="review-header-data">
+                                        <p class="review-header-name    ">
+                                            Luisa Montereal
+                                        </p>
+
+                                        <p class="review-header-role">
+                                            CEO da Ogma
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="review-content">
+                                    <p class="review-content-text">
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis vestibulum
+                                        ultricies dui mauris orci massa. Habitant id vitae tempus adipiscing imperdiet
+                                        integer posuere urna vitae.”
+                                    </p>
+
+                                </div>
+                                <div class="review-logo">
+                                    <img src="img/review_logo.png" alt="">
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev carousel-control-reviews" href="#carouseReviews" role="button"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon carousel-control-prev-icon-reviews"
+                            aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next carousel-control-reviews" href="#carouseReviews" role="button"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon carousel-control-next-icon-reviews"
+                            aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+
+
+
+            </div>
+
+
+
+            <!-- FIM SECÇÃO REVIEWS-->
+
+
+
+            <!-- SECÇÂO PEDIR DEMO-->
+
+            <div id="demo-section-construction" class="demo-section">
+                <p class="demo-section-text"><strong>Obras entregues no tempo previsto,</strong> ao custo estimado e com
+                    a máxima qualidade</p>
+                <button class="white-button">
+                    Pedir a demo
+                </button>
+
+            </div>
+
+            <!-- FIM SECÇÂO PEDIR DEMO-->
+
+
+
+
+
+
+        </div>
+
+
+        <!-- Fim Conteúdo Secções Distribuição-->
 
 
 
