@@ -916,10 +916,10 @@ $(document).ready(function () {
         $("#porto").addClass("hover");
         takeDotsOut();
         $("#porto").html(`Porto<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "Morada Porto" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = "Phones Porto" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = "Phones Porto" + svg_offices;
-        document.getElementById('phones_offices3').innerHTML = "Phones Porto" + svg_offices;
+        document.getElementById('text_offices').innerHTML = "Rua do Outeiro, nº 1315, 1º andar J, 4470-637 Maia, Portugal" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = "(+351) 211 454 004" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = " (+351) 961 401 165" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = ""
         $("#video-banner").attr("src", "img/porto.png");
     });
 
@@ -940,10 +940,10 @@ $(document).ready(function () {
         $("#setubal").addClass("hover");
         takeDotsOut();
         $("#setubal").html(`Setúbal<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "Morada Setúbal" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = "Phones Setúbal" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = "Phones Setúbal" + svg_offices;
-        document.getElementById('phones_offices3').innerHTML = "Phones Setúbal" + svg_offices;
+        document.getElementById('text_offices').innerHTML = "R. Regimento Infantaria 11, nº30 2ºA, 2900-584 Setúbal, Portugal" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = " (+351) 211 454 004" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = " (+351) 211 454 004" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "";
         $("#video-banner").attr("src", "img/setubal.png");
     });
 
@@ -964,10 +964,10 @@ $(document).ready(function () {
         $("#faro").addClass("hover");
         takeDotsOut();
         $("#faro").html(`Faro<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "Morada Faro" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = "Phones Faro" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = "Phones Faro" + svg_offices;
-        document.getElementById('phones_offices3').innerHTML = "Phones Faro" + svg_offices;
+        document.getElementById('text_offices').innerHTML = "Largo de S. Luís 11-C, 3º Esq. 8000-143 Faro, Portugal" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = "(+351) 211 454 004" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "(+351) 967 334 745" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "";
         $("#video-banner").attr("src", "img/faro.png");
     });
 
@@ -988,10 +988,10 @@ $(document).ready(function () {
         $("#funchal").addClass("hover");
         takeDotsOut();
         $("#funchal").html(`Funchal<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "Morada Funchal" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = "Phones Funchal" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = "Phones Funchal" + svg_offices;
-        document.getElementById('phones_offices3').innerHTML = "Phones Funchal" + svg_offices;
+        document.getElementById('text_offices').innerHTML = "Av. Luís Camões, Edf. Camões R/C, 9000-168 Funchal, Portugal" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = "(+351) 211 454 004" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "(+351) 961 348 300" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "";
         $("#video-banner").attr("src", "img/funchal.png");
     });
 
@@ -1012,10 +1012,10 @@ $(document).ready(function () {
         $("#madrid").addClass("hover");
         takeDotsOut();
         $("#madrid").html(`Madrid<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "Morada Madrid" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = "Phones Madrid" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = "Phones Madrid" + svg_offices;
-        document.getElementById('phones_offices3').innerHTML = "Phones Madrid" + svg_offices;
+        document.getElementById('text_offices').innerHTML = "Calle Francisco Alonso, 2, 1º 20 28660 Boadilla del Monte, Madrid, España" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = "(+34) 682 351 263" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "";
         $("#video-banner").attr("src", "img/madrid.png");
     });
 
@@ -1036,10 +1036,10 @@ $(document).ready(function () {
         $("#moçambique").addClass("hover");
         takeDotsOut();
         $("#moçambique").html(`Moçambique<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "Morada Moçambique" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = "Phones Moçambique" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = "Phones Moçambique" + svg_offices;
-        document.getElementById('phones_offices3').innerHTML = "Phones Moçambique" + svg_offices;
+        document.getElementById('text_offices').innerHTML = "Rua Kwame Nkrumah, nº417 R\C, Maputo – Moçambique" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = "(+258) 21 483 353" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = " (+258) 821 799 555" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "";
         $("#video-banner").attr("src", "img/moçambique.png");
     });
 
@@ -1060,10 +1060,10 @@ $(document).ready(function () {
         $("#angola").addClass("hover");
         takeDotsOut();
         $("#angola").html(`Angola<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "Morada Angola" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = "Phones Angola" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = "Phones Angola" + svg_offices;
-        document.getElementById('phones_offices3').innerHTML = "Phones Angola" + svg_offices;
+        document.getElementById('text_offices').innerHTML = "Rua à direita do Gamek, 5.º Quart. C/2(A), Morro Bento, Luanda" + svg_offices;
+        document.getElementById('phones_offices1').innerHTML = "(+244) 928 402 097" + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "(+244) 991 402 097" + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "";
         $("#video-banner").attr("src", "img/angola.png");
     });
 });
