@@ -312,6 +312,9 @@ nav ul li a {
   #content-homepage-construction{
       height: calc( 100vh - 190px );
   }
+  #content-homepage-distribution, #content-homepage-industry{
+      height: calc( 100vh - 190px );
+  }
   #content-contact-us{
       height: calc( 100vh - 190px );
   }
@@ -1765,7 +1768,7 @@ body {
 
 
 /* INICIO DIV CONSTRUÇÃO */
-#content-homepage-construction{
+#content-homepage-construction, #content-homepage-distribution, #content-homepage-industry {
   position: relative;
 }
 
@@ -2429,7 +2432,8 @@ color: #000000;
 
  
 /* Contacta-nos Section */
-@media (min-width:621px){
+
+@media(min-width: 621px) {
   #content-contact-us{
       height: calc( 60vh - 170px );
   }
@@ -2437,6 +2441,7 @@ color: #000000;
       height: 40vh;
   }
 }
+
 
 /* Inicio Secção Reviews com Preview */
 .section-reviews{
@@ -2688,7 +2693,6 @@ color: #000000;
 }
 
 
-
 .offices_text_class{
   font-family: Ubuntu;
   font-style: normal;
@@ -2711,7 +2715,6 @@ color: #000000;
 
   letter-spacing: 0.5px;
   color: #FFFFFF;
-  margin-right:10%;
 }
 
 .construction-lines-office{
@@ -2721,6 +2724,13 @@ color: #000000;
   margin: 0px -7%;
 }
 
+#second_offices_div{
+  margin-left: 0%;
+}
+
+#third_offices_div{
+  margin-left: 0%;
+}
 
 .contacts_svg{
   margin-top:-3px;
@@ -2733,14 +2743,7 @@ color: #000000;
   cursor: pointer;
   text-decoration: underline !important;
 }
-/*
-#second_offices_div{
-  margin-left: 0%;
-}
 
-#third_offices_div{
-  margin-left: 0%;
-}*/
 
 .offices_div{
   margin-left: 10%;
@@ -2789,14 +2792,50 @@ line-height: 56px;
   background:#212121;
 }
 .offices_btn{
+  text-decoration: none;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
   font-size: 14px;
-line-height: 24px;
-
-letter-spacing: 0.35px;
-text-transform: uppercase;
-
-
-color: #FFFFFF;
+  line-height: 24px;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
+.offices_btn:hover{
+    color: #FFFFFF;
+}
+#section-contact-us{
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .card-contact-us, .card-contact-us .card-body{
+      background-color: rgba(33, 33, 33, 0.8);
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 24px;
+      text-align: center;
+      color: #FFFFFF;
+  }
+  #section-contact-us_first{
+      padding-bottom: 25px;
+  }
+  #accordionOffices{
+      margin-bottom: 40px;
+  }
+
+  .offices_div{
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .horizontal-line{
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    width:30%;
+  }
+  
 }
 /* Fim Contacta-nos Section */
