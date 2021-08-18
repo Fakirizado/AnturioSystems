@@ -67,6 +67,18 @@ $(document).ready(function () {
         $(".menu-icon").click();
     });
 
+
+    //ADICIONA CLIQUES NOS BOTÕES DE REDES SOCIAIS
+
+
+    $(".instagram_click").on("click", function () {
+        window.open("https://www.instagram.com/anturiocorp/");
+    });
+    
+    $(".facebook_click").on("click", function () {
+        window.open("https://www.facebook.com/ANTURIOcom");
+    });
+
     //ADICIONA A POSSIBILIDADE DE SWIPE PARA ITERAÇÃO COM O sub-homepage-info
 
     jquerySwipeHandler.handleSwipe("#arrow-construction-rigth", [
