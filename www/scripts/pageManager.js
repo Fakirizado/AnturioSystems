@@ -7,6 +7,7 @@ function HomeLoad() {
     $('#section-industry-homepage').hide();
     $('#construction-sections').hide();
     $('#distribution-sections').hide();
+    $('#industry-sections').hide();
     $('#content-first-page').show();
     $('#different_sectors').show();
     $('#div_with_sectors').show();
@@ -57,6 +58,7 @@ function ContactUsLoad() {
     $('#div_trusted_clients').hide();
     $('#construction-sections').hide();
     $('#distribution-sections').hide();
+    $('#industry-sections').hide();
     $('#section-contact-us').show();
     window.scrollTo(0, 0);
     $('#video-banner').prop("src", "img/lisboa.png");
@@ -86,6 +88,7 @@ function ConstructionLoad() {
     $('#section-contact-us').hide();
     $('#different_sectors').hide();
     $('#distribution-sections').hide();
+    $('#industry-sections').hide();
     $('#section-construction-homepage').show();
     $('#div_trusted_clients').show();
     $('#construction-sections').show();
@@ -98,6 +101,9 @@ function ConstructionLoad() {
     if(document.getElementsByClassName('buttonOne')[1].getAttribute('aria-expanded') === "false"){
         $(".buttonOne").click();
     }
+    $carousel = $('#carouseReviews');
+    $carouselItems = $('.carousel-item', $carousel);
+    setNextPrev();
 
 }
 
@@ -112,6 +118,7 @@ function DistributionLoad() {
     $('#section-contact-us').hide();
     $('#different_sectors').hide();
     $('#construction-sections').hide();
+    $('#industry-sections').hide();
     $('#section-distribution-homepage').show();
     $('#div_trusted_clients').show();
     $('#distribution-sections').show();
@@ -126,6 +133,9 @@ function DistributionLoad() {
     if(document.getElementsByClassName('buttonOne')[2].getAttribute('aria-expanded') === "false"){
         $(".buttonOne").click();
     }
+    $carousel = $('#carouseReviewsDistribution');
+    $carouselItems = $('.carousel-item', $carousel);
+    setNextPrev();
 }
 
 function IndustryLoad() {
@@ -142,7 +152,7 @@ function IndustryLoad() {
     $('#construction-sections').hide();
     $('#section-industry-homepage').show();
     $('#div_trusted_clients').show();
-    $('#distribution-sections').show();
+    $('#industry-sections').show();
     window.scrollTo(0, 0);
     $('#video-banner').prop("src", "img/construction_background.jpg");
     animate(document.getElementById("section-industry-homepage"));
@@ -152,6 +162,9 @@ function IndustryLoad() {
     if(document.getElementsByClassName('buttonOne')[3].getAttribute('aria-expanded') === "false"){
         $(".buttonOne").click();
     }
+    $carousel = $('#carouseReviewsIndustry');
+    $carouselItems = $('.carousel-item', $carousel);
+    setNextPrev();
 }
 
 function ChangePageButton() {
@@ -327,9 +340,6 @@ $(document).ready(function () {
     $("#close-hamburguer").on("click", function () {
         $(".menu-icon").click();
     });
-    $carousel = $('#carouseReviews');
-    $carouselItems = $('.carousel-item', $carousel);
-    setNextPrev();
 
     jquerySwipeHandler.handleSwipe("#arrow-construction-rigth", [
         jquerySwipeHandler.CLICK
@@ -1436,11 +1446,11 @@ function moveTextAboveSVG() {
     if ($(window).width() < 608) {
         //Mobile
         $("#especialists_text").insertAfter("#number_4");
-        document.getElementById('half_anturio_img').style.display = 'none';
+        $(".half_anturio_img").hide();
     } else {
         //Back to Web
         $("#especialists_text").insertAfter("#auxDiv");
-        document.getElementById('half_anturio_img').style.display = 'block';
+        $(".half_anturio_img").show();
         $("#complete_management_info").insertAfter("#complete_management_imgs")
     }
 }
@@ -1725,6 +1735,9 @@ function changeManagementHeadingEigth() {
 }
 
 function changeHtmlIdealSolution() {
+
+    // CONSTRUÇÃO
+     
     if ($(window).width() < 608) {
         $("#ideal_solution_chart_img").attr("src", "/img/solution_chart_mobile.png");
     } else if ($(window).width() < 1300 && $(window).width() >= 608) {         //Back to Web  
@@ -1732,6 +1745,31 @@ function changeHtmlIdealSolution() {
     } else {
         $("#ideal_solution_chart_img").attr("src", "/img/solution_chart.png");
     }
+
+    // DISTRIBUIÇÃO
+
+    if ($(window).width() < 608) {
+        $("#ideal_solution_chart_img_distribution").attr("src", "/img/solution_chart_mobile.png");
+    } else if ($(window).width() < 1300 && $(window).width() >= 608) {         //Back to Web  
+        $("#ideal_solution_chart_img_distribution").attr("src", "/img/solution_chart_tablet.png");
+    } else {
+        $("#ideal_solution_chart_img_distribution").attr("src", "/img/solution_chart.png");
+    }
+
+    // INDÚSTRIA
+
+
+    if ($(window).width() < 608) {
+        $("#ideal_solution_chart_img_industry").attr("src", "/img/solution_chart_mobile.png");
+    } else if ($(window).width() < 1300 && $(window).width() >= 608) {         //Back to Web  
+        $("#ideal_solution_chart_img_industry").attr("src", "/img/solution_chart_tablet.png");
+    } else {
+        $("#ideal_solution_chart_img_industry").attr("src", "/img/solution_chart.png");
+    }
+
+
+
+    
 }
 
 function mobileVersionOffices() {
