@@ -905,7 +905,15 @@ $(document).ready(function () {
         })
     });
 
-    
+    $(".email_anturio_svg").on("click", function () {
+        window.open('mailto:info@anturio.com', "_blank");
+    });
+
+    $(".svg_address_lisboa").on("click", function () {
+        var url = "https://www.google.com/maps/dir//Anturio+-+Business+Software+Av.+Cor.+Eduardo+Galhardo+n%C2%BA3+1170-105+Lisboa/@38.7278729,-9.1250916,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933930ff668db:0xfbc85ac01dafd318!2m2!1d-9.1250916!2d38.7278729"
+        window.open(url, "_blank");
+    });
+
 
     $("#porto").on({
         mouseenter: function () {
@@ -937,6 +945,12 @@ $(document).ready(function () {
         })
     });
 
+    $(".svg_address_porto").on("click", function(){
+        var url = "https://www.google.com/maps/place/Anturio+norte/@41.2575551,-8.6446539,21z/data=!4m12!1m6!3m5!1s0xd24678c9dbd2303:0x11b5c8b84a3aa4ed!2sAnturio+norte!8m2!3d41.257597!4d-8.6446754!3m4!1s0xd24678c9dbd2303:0x11b5c8b84a3aa4ed!8m2!3d41.257597!4d-8.6446754?hl=pt-PT"
+        window.open(url, "_blank");
+    })
+    
+
     $("#setubal").on({
         mouseenter: function () {
             $("#setubal").html(`Setúbal<span
@@ -966,6 +980,11 @@ $(document).ready(function () {
             window.open(url, "_blank");
         })
     });
+
+    $(".svg_address_setubal").on("click", function(){
+        var url = "https://www.google.com/maps/place/ANTURIO+-+Business+Software+-+Set%C3%BAbal/@38.522444,-8.8931217,17z/data=!4m12!1m6!3m5!1s0xd194307d0255727:0xd85f47930ec52b20!2sANTURIO+-+Business+Software+-+Set%C3%BAbal!8m2!3d38.5224481!4d-8.8909269!3m4!1s0xd194307d0255727:0xd85f47930ec52b20!8m2!3d38.5224481!4d-8.8909269?hl=pt-PT"
+        window.open(url, "_blank");
+    })
 
     $("#faro").on({
         mouseenter: function () {
@@ -998,6 +1017,12 @@ $(document).ready(function () {
         })
     });
 
+    $(".svg_address_faro").on("click", function(){
+        var url = "https://www.google.com/maps/place/Anturio+Corporation+%7C+Algarve/@37.0219462,-7.9295108,17z/data=!3m1!4b1!4m5!3m4!1s0xd0552cff744f23b:0xb7dc945e268c6ad5!8m2!3d37.0219407!4d-7.9273079?hl=pt-PT"
+        window.open(url, "_blank");
+    })
+    
+
     $("#funchal").on({
         mouseenter: function () {
             $("#funchal").html(`Funchal<span
@@ -1027,6 +1052,11 @@ $(document).ready(function () {
             window.open(url, "_blank");
         })
     });
+
+    $(".svg_address_funchal").on("click", function(){
+        var url = "https://www.google.com/maps/place/Ant%C3%BArio+-+Business+Software+-+Consultadoria+Inform%C3%A1tica,+Lda./@32.6386691,-16.9496828,15z/data=!4m9!1m2!2m1!1sAnturio+Funchal!3m5!1s0xc605f8c3d17f255:0x1cd60503369ac573!8m2!3d32.6386331!4d-16.9409272!15sCg9BbnR1cmlvIEZ1bmNoYWySARNjb21wdXRlcl9jb25zdWx0YW50?hl=pt-PT"
+        window.open(url, "_blank");
+    })
 
     $("#madrid").on({
         mouseenter: function () {
@@ -1058,6 +1088,11 @@ $(document).ready(function () {
         })
     });
 
+    $(".svg_address_madrid").on("click", function(){
+        var url = "https://www.google.com/maps/place/C.+Francisco+Alonso,+2,+20,+28660+Boadilla+del+Monte,+Madrid,+Espanha/@40.400799,-3.8846583,17z/data=!3m1!4b1!4m5!3m4!1s0xd418f8c699e0e2d:0x81ebe65697c382e!8m2!3d40.400799!4d-3.8824643?hl=pt-PT"
+        window.open(url, "_blank");
+    })
+
     $("#moçambique").on({
         mouseenter: function () {
             $("#moçambique").html(`Moçambique<span
@@ -1088,6 +1123,11 @@ $(document).ready(function () {
         })
     });
 
+    $(".svg_address_moncambique").on("click", function(){
+        var url = "https://www.google.com/maps/place/Avenida+Kwame+Nkrumah,+Maputo,+Mo%C3%A7ambique/@-25.963004,32.5891816,17z/data=!3m1!4b1!4m5!3m4!1s0x1ee69badcc55b70f:0x647353ba8a07ed06!8m2!3d-25.963004!4d32.5913756?hl=pt-PT"
+        window.open(url, "_blank");
+    })
+
     $("#angola").on({
         mouseenter: function () {
             $("#angola").html(`Angola<span
@@ -1117,6 +1157,11 @@ $(document).ready(function () {
             window.open(url, "_blank");
         })
     });
+
+    $(".svg_address_angola").on("click", function(){
+        var url = "https://www.google.com/maps/place/Anturio/@-8.9004774,13.1907957,14.92z/data=!4m12!1m6!3m5!1s0x1a51f4dda398de13:0x194866f94c0d674!2sAnturio!8m2!3d-8.9004566!4d13.1953841!3m4!1s0x1a51f4dda398de13:0x194866f94c0d674!8m2!3d-8.9004566!4d13.1953841?hl=pt-PT"
+        window.open(url, "_blank");
+    })
 
     
 });

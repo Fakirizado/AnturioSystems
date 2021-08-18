@@ -2897,7 +2897,7 @@ html, body {
     
   }
 
-  .svg_address{
+  .svg_address, .email_anturio_svg{
       cursor: pointer;
   }
   /* Fim Contacta-nos Section */
