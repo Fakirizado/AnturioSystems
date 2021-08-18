@@ -2797,15 +2797,41 @@ html, body {
     background:#212121;
   }
   .offices_btn{
+    text-decoration: none;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
     font-size: 14px;
-  line-height: 24px;
-  
-  letter-spacing: 0.35px;
-  text-transform: uppercase;
-  
-  
-  color: #FFFFFF;
+    line-height: 24px;
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+    color: #FFFFFF;
   }
+  .offices_btn:hover{
+      color: #FFFFFF;
+  }
+  #section-contact-us{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-contact-us, .card-contact-us .card-body{
+        background-color: rgba(33, 33, 33, 0.8);
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    #section-contact-us_first{
+        padding-bottom: 25px;
+    }
+    #accordionOffices{
+        margin-bottom: 40px;
+    }
+    
   }
   /* Fim Contacta-nos Section */
   
