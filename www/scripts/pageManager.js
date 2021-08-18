@@ -68,8 +68,8 @@ function ContactUsLoad() {
     $("#lisboa").addClass("hover");
 
     document.getElementById("lisboa").innerHTML = `Lisboa<span class=\"dot_point_geral\">.</span>`
-    $("#lisboa").click();
     currentPage = "home";
+    $("#lisboa").click();
     
     if(document.getElementsByClassName('buttonOne')[0].getAttribute('aria-expanded') === "false"){
         $(".buttonOne").click();
@@ -892,12 +892,20 @@ $(document).ready(function () {
         $("#lisboa").html(`Lisboa<span
         class="dot_point_geral">.</span>`)
 
-        document.getElementById('text_offices').innerHTML = "Av. Cor. Eduardo Galhardo, 3," + svg_offices + "<br> 1170-105 Lisboa, Portugal"
-        document.getElementById('phones_offices1').innerHTML = "(+351) 211 454 004" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = "(+351) 960 256 862" + svg_offices;
-        document.getElementById('phones_offices3').innerHTML = "(+351) 965 258 220 (Dir. Comercial)" + svg_offices;
+        let offices_cities_address= svg_offices.replace('class="contacts_svg"','class="contacts_svg svg_address"');
+       
+        document.getElementById('text_offices').innerHTML = "Av. Cor. Eduardo Galhardo, 3, " + offices_cities_address + "<br> 1170-105 Lisboa, Portugal"
+        document.getElementById('phones_offices1').innerHTML = "(+351) 211 454 004 " + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "(+351) 960 256 862 " + svg_offices;
+        document.getElementById('phones_offices3').innerHTML = "(+351) 965 258 220 (Dir. Comercial) " + svg_offices;
         $("#video-banner").attr("src", "img/lisboa.png");
+        $(".svg_address").on("click", function(){
+            var url = "https://www.google.com/maps/dir//Anturio+-+Business+Software+Av.+Cor.+Eduardo+Galhardo+n%C2%BA3+1170-105+Lisboa/@38.7278729,-9.1250916,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933930ff668db:0xfbc85ac01dafd318!2m2!1d-9.1250916!2d38.7278729"
+            window.open(url, "_blank");
+        })
     });
+
+    
 
     $("#porto").on({
         mouseenter: function () {
@@ -916,11 +924,17 @@ $(document).ready(function () {
         $("#porto").addClass("hover");
         takeDotsOut();
         $("#porto").html(`Porto<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "Rua do Outeiro, nº 1315, 1º andar J, 4470-637 Maia, Portugal" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = "(+351) 211 454 004" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = " (+351) 961 401 165" + svg_offices;
+        let offices_cities_address = svg_offices.replace('class="contacts_svg"','class="contacts_svg svg_address"');
+
+        document.getElementById('text_offices').innerHTML = "Rua do Outeiro, nº 1315, 1º andar J, 4470-637 Maia, Portugal " + offices_cities_address;
+        document.getElementById('phones_offices1').innerHTML = "(+351) 211 454 004 " + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = " (+351) 961 401 165 " + svg_offices;
         document.getElementById('phones_offices3').innerHTML = ""
         $("#video-banner").attr("src", "img/porto.png");
+        $(".svg_address").on("click", function(){
+            var url = "https://www.google.com/maps/place/Anturio+norte/@41.2575551,-8.6446539,21z/data=!4m12!1m6!3m5!1s0xd24678c9dbd2303:0x11b5c8b84a3aa4ed!2sAnturio+norte!8m2!3d41.257597!4d-8.6446754!3m4!1s0xd24678c9dbd2303:0x11b5c8b84a3aa4ed!8m2!3d41.257597!4d-8.6446754?hl=pt-PT"
+            window.open(url, "_blank");
+        })
     });
 
     $("#setubal").on({
@@ -940,11 +954,17 @@ $(document).ready(function () {
         $("#setubal").addClass("hover");
         takeDotsOut();
         $("#setubal").html(`Setúbal<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "R. Regimento Infantaria 11, nº30 2ºA, 2900-584 Setúbal, Portugal" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = " (+351) 211 454 004" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = " (+351) 211 454 004" + svg_offices;
+        let offices_cities_address = svg_offices.replace('class="contacts_svg"','class="contacts_svg svg_address"');
+        
+        document.getElementById('text_offices').innerHTML = "R. Regimento Infantaria 11, nº30 2ºA, 2900-584 Setúbal, Portugal " + offices_cities_address;
+        document.getElementById('phones_offices1').innerHTML = " (+351) 211 454 004 " + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = " (+351) 211 454 004 " + svg_offices;
         document.getElementById('phones_offices3').innerHTML = "";
         $("#video-banner").attr("src", "img/setubal.png");
+        $(".svg_address").on("click", function(){
+            var url = "https://www.google.com/maps/place/ANTURIO+-+Business+Software+-+Set%C3%BAbal/@38.522444,-8.8931217,17z/data=!4m12!1m6!3m5!1s0xd194307d0255727:0xd85f47930ec52b20!2sANTURIO+-+Business+Software+-+Set%C3%BAbal!8m2!3d38.5224481!4d-8.8909269!3m4!1s0xd194307d0255727:0xd85f47930ec52b20!8m2!3d38.5224481!4d-8.8909269?hl=pt-PT"
+            window.open(url, "_blank");
+        })
     });
 
     $("#faro").on({
@@ -964,11 +984,18 @@ $(document).ready(function () {
         $("#faro").addClass("hover");
         takeDotsOut();
         $("#faro").html(`Faro<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "Largo de S. Luís 11-C, 3º Esq. 8000-143 Faro, Portugal" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = "(+351) 211 454 004" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = "(+351) 967 334 745" + svg_offices;
+        let offices_cities_address = svg_offices.replace('class="contacts_svg"','class="contacts_svg svg_address"');
+        
+        document.getElementById('text_offices').innerHTML = "Largo de S. Luís 11-C, 3º Esq. 8000-143 Faro, Portugal " + offices_cities_address;
+        document.getElementById('phones_offices1').innerHTML = "(+351) 211 454 004 " + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "(+351) 967 334 745 " + svg_offices;
         document.getElementById('phones_offices3').innerHTML = "";
         $("#video-banner").attr("src", "img/faro.png");
+        
+        $(".svg_address").on("click", function(){
+            var url = "https://www.google.com/maps/place/Anturio+Corporation+%7C+Algarve/@37.0219462,-7.9295108,17z/data=!3m1!4b1!4m5!3m4!1s0xd0552cff744f23b:0xb7dc945e268c6ad5!8m2!3d37.0219407!4d-7.9273079?hl=pt-PT"
+            window.open(url, "_blank");
+        })
     });
 
     $("#funchal").on({
@@ -988,11 +1015,17 @@ $(document).ready(function () {
         $("#funchal").addClass("hover");
         takeDotsOut();
         $("#funchal").html(`Funchal<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "Av. Luís Camões, Edf. Camões R/C, 9000-168 Funchal, Portugal" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = "(+351) 211 454 004" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = "(+351) 961 348 300" + svg_offices;
+        let offices_cities_address = svg_offices.replace('class="contacts_svg"','class="contacts_svg svg_address"');
+
+        document.getElementById('text_offices').innerHTML = "Av. Luís Camões, Edf. Camões R/C, 9000-168 Funchal, Portugal " + offices_cities_address;
+        document.getElementById('phones_offices1').innerHTML = "(+351) 211 454 004 " + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "(+351) 961 348 300 " + svg_offices;
         document.getElementById('phones_offices3').innerHTML = "";
         $("#video-banner").attr("src", "img/funchal.png");
+        $(".svg_address").on("click", function(){
+            var url = "https://www.google.com/maps/place/Ant%C3%BArio+-+Business+Software+-+Consultadoria+Inform%C3%A1tica,+Lda./@32.6386691,-16.9496828,15z/data=!4m9!1m2!2m1!1sAnturio+Funchal!3m5!1s0xc605f8c3d17f255:0x1cd60503369ac573!8m2!3d32.6386331!4d-16.9409272!15sCg9BbnR1cmlvIEZ1bmNoYWySARNjb21wdXRlcl9jb25zdWx0YW50?hl=pt-PT"
+            window.open(url, "_blank");
+        })
     });
 
     $("#madrid").on({
@@ -1012,11 +1045,17 @@ $(document).ready(function () {
         $("#madrid").addClass("hover");
         takeDotsOut();
         $("#madrid").html(`Madrid<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "Calle Francisco Alonso, 2, 1º 20 28660 Boadilla del Monte, Madrid, España" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = "(+34) 682 351 263" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = "" + svg_offices;
+        let offices_cities_address = svg_offices.replace('class="contacts_svg"','class="contacts_svg svg_address"');
+
+        document.getElementById('text_offices').innerHTML = "Calle Francisco Alonso, 2, 1º 20 28660 Boadilla del Monte, Madrid, España " + offices_cities_address;
+        document.getElementById('phones_offices1').innerHTML = "(+34) 682 351 263 " + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = ""
         document.getElementById('phones_offices3').innerHTML = "";
         $("#video-banner").attr("src", "img/madrid.png");
+        $(".svg_address").on("click", function(){
+            var url = "https://www.google.com/maps/place/C.+Francisco+Alonso,+2,+20,+28660+Boadilla+del+Monte,+Madrid,+Espanha/@40.400799,-3.8846583,17z/data=!3m1!4b1!4m5!3m4!1s0xd418f8c699e0e2d:0x81ebe65697c382e!8m2!3d40.400799!4d-3.8824643?hl=pt-PT"
+            window.open(url, "_blank");
+        })
     });
 
     $("#moçambique").on({
@@ -1036,11 +1075,17 @@ $(document).ready(function () {
         $("#moçambique").addClass("hover");
         takeDotsOut();
         $("#moçambique").html(`Moçambique<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "Rua Kwame Nkrumah, nº417 R\C, Maputo – Moçambique" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = "(+258) 21 483 353" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = " (+258) 821 799 555" + svg_offices;
+        let offices_cities_address = svg_offices.replace('class="contacts_svg"','class="contacts_svg svg_address"');
+
+        document.getElementById('text_offices').innerHTML = "Rua Kwame Nkrumah, nº417 R\C, Maputo – Moçambique " + offices_cities_address;
+        document.getElementById('phones_offices1').innerHTML = "(+258) 21 483 353 " + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = " (+258) 821 799 555 " + svg_offices;
         document.getElementById('phones_offices3').innerHTML = "";
         $("#video-banner").attr("src", "img/moçambique.png");
+        $(".svg_address").on("click", function(){
+            var url = "https://www.google.com/maps/place/Avenida+Kwame+Nkrumah,+Maputo,+Mo%C3%A7ambique/@-25.963004,32.5891816,17z/data=!3m1!4b1!4m5!3m4!1s0x1ee69badcc55b70f:0x647353ba8a07ed06!8m2!3d-25.963004!4d32.5913756?hl=pt-PT"
+            window.open(url, "_blank");
+        })
     });
 
     $("#angola").on({
@@ -1060,12 +1105,20 @@ $(document).ready(function () {
         $("#angola").addClass("hover");
         takeDotsOut();
         $("#angola").html(`Angola<span class="dot_point_geral">.</span>`);
-        document.getElementById('text_offices').innerHTML = "Rua à direita do Gamek, 5.º Quart. C/2(A), Morro Bento, Luanda" + svg_offices;
-        document.getElementById('phones_offices1').innerHTML = "(+244) 928 402 097" + svg_offices;
-        document.getElementById('phones_offices2').innerHTML = "(+244) 991 402 097" + svg_offices;
+        let offices_cities_address = svg_offices.replace('class="contacts_svg"','class="contacts_svg svg_address"');
+
+        document.getElementById('text_offices').innerHTML = "Rua à direita do Gamek, 5.º Quart. C/2(A), Morro Bento, Luanda " + offices_cities_address;
+        document.getElementById('phones_offices1').innerHTML = "(+244) 928 402 097 " + svg_offices;
+        document.getElementById('phones_offices2').innerHTML = "(+244) 991 402 097 " + svg_offices;
         document.getElementById('phones_offices3').innerHTML = "";
         $("#video-banner").attr("src", "img/angola.png");
+        $(".svg_address").on("click", function(){
+            var url = "https://www.google.com/maps/place/Anturio/@-8.9004774,13.1907957,14.92z/data=!4m12!1m6!3m5!1s0x1a51f4dda398de13:0x194866f94c0d674!2sAnturio!8m2!3d-8.9004566!4d13.1953841!3m4!1s0x1a51f4dda398de13:0x194866f94c0d674!8m2!3d-8.9004566!4d13.1953841?hl=pt-PT"
+            window.open(url, "_blank");
+        })
     });
+
+    
 });
 
 
