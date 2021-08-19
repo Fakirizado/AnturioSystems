@@ -512,16 +512,19 @@ $(document).ready(function () {
     $('.sixth_svg_management').on({
         click: function () {
             $('.buttonSix').click();
+            changeManagementHeadingSix();
         }
     })
     $('.seventh_svg_management').on({
         click: function () {
             $('.buttonSeven').click();
+            changeManagementHeadingSeven();
         }
     })
     $('.eigthth_svg_management').on({
         click: function () {
             $('.buttonEigth').click();
+            changeManagementHeadingEigth();
         }
     });
 
