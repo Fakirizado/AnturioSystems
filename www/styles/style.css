@@ -2011,8 +2011,8 @@ grid-row-end: -1;
 
   @media only screen and (max-width: 1600px){
     #complete_management_info{
-        margin-right: 5%;
-        margin-left: 5%;
+        margin-right: 11%;
+        margin-left: 3%;
     }
   }
   @media only screen and (max-width: 1200px){
