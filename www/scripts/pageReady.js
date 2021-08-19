@@ -487,49 +487,41 @@ $(document).ready(function () {
     $('.first_svg_management').on({
         click: function () {
             $('.buttonOne').click();
-            changeManagementHeadingOne();
         }
     })
     $('.second_svg_management').on({
         click: function () {
             $('.buttonTwo').click();
-            changeManagementHeadingTwo();
         }
     })
     $('.third_svg_management').on({
         click: function () {
             $('.buttonThree').click();
-            changeManagementHeadingThree();
         }
     })
     $('.fourth_svg_management').on({
         click: function () {
             $('.buttonFour').click();
-            changeManagementHeadingFour();
         }
     })
     $('.fifth_svg_management').on({
         click: function () {
             $('.buttonFive').click();
-            changeManagementHeadingFive();
         }
     })
     $('.sixth_svg_management').on({
         click: function () {
             $('.buttonSix').click();
-            changeManagementHeadingSix();
         }
     })
     $('.seventh_svg_management').on({
         click: function () {
             $('.buttonSeven').click();
-            changeManagementHeadingSeven();
         }
     })
     $('.eigthth_svg_management').on({
         click: function () {
             $('.buttonEigth').click();
-            changeManagementHeadingEigth();
         }
     });
 
