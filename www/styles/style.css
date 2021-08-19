@@ -992,6 +992,7 @@ grid-row-end: -1;
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
     font-weight: 500;
+    cursor:pointer;
 }
   
   /* Show the dropdown menu on hover */
