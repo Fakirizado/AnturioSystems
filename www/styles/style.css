@@ -99,10 +99,10 @@ nav ul {
     margin: 0;
     transition: 1s;
 }
+#language-btn{
+    color: #FFFFFF;
+}
 
-.dropbtn:active {
-    border-style: outset;
-  }
 .social-media{
     align-self: center;
     padding-right: 40px;
@@ -1104,7 +1104,7 @@ grid-row-end: -1;
 #different_sectors{
     width:auto;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     background: #212121;
     height: 459px;
     color: white;
@@ -1112,6 +1112,7 @@ grid-row-end: -1;
 }
 #especialists_text{
     margin-left: 10%;
+    margin-right: 50px;
     font-family: Ubuntu;
     font-style: normal;
     font-weight: 300;
@@ -1123,10 +1124,15 @@ grid-row-end: -1;
     color: rgba(255, 255, 255, 0.38);
 }
 
+#svg_Number4_tablet{
+    width: 250px;
+
+}
+
+
 #number_4{
     align-self:center;
-    margin-left: 10%; 
-    margin-right:100px;
+    margin-right:10%;
 }
 
 #dot_point{
@@ -1172,6 +1178,9 @@ grid-row-end: -1;
         padding-bottom: 30px;
         margin-top: 54px;
     }
+    #different_sectors {
+        justify-content: center;
+    }
   }
 
 /* tablet*/
@@ -1200,8 +1209,6 @@ grid-row-end: -1;
 
    #number_4{
     align-self:center;
-    margin-right:0px;
-    margin-left:100px;
 }
   }
 
@@ -1378,8 +1385,6 @@ grid-row-end: -1;
   
    #number_4{
     align-self:center;
-    margin-right:0px;
-    margin-left:100px;
   }
   
   }
@@ -2784,4 +2789,5 @@ grid-row-end: -1;
       cursor: pointer;
   }
   /* Fim Contacta-nos Section */
+  
   
