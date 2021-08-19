@@ -1085,7 +1085,7 @@ function changeHtmlIdealSolution() {
 // ******************************************************************************
 
 function mobileVersionOffices() {
-    if ($(window).width() < 608) {
+    if ($(window).width() < 621) {
         document.getElementById('accordionOffices').style.display = "block"
         document.getElementById('contact-us-office-info').style.display = "none"
         document.getElementById('offices_cities').style.display = "none"
