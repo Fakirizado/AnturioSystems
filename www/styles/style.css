@@ -3122,7 +3122,7 @@ grid-row-end: -1;
     color: #FFFFFF;
     margin-right: 18%;
     margin-left: 18%;
-    margin-bottom: 73px;
+    margin-bottom: 80px;
     padding-top: 40px;
 }
 
@@ -3210,6 +3210,12 @@ grid-row-end: -1;
        margin-right: 10%;
        margin-left: 10%;
     }
+    .control_and_planning_img{
+        width: 100%;
+    }
+    .control_and_planning_img img{
+        margin-left: 0px;
+    }
 }
 
 
@@ -3221,6 +3227,10 @@ grid-row-end: -1;
     .control_and_planning_title{
         font-size: 35px;
         line-height: 36px;
+    }
+    .control_and_planning_content {
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
 }
