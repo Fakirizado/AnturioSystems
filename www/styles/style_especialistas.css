@@ -2788,8 +2788,17 @@ line-height: 56px;
 
 
 /* Início SECÇÃO O QUE PODE GANHAR COM ESTA SOLUÇÃO */
+.hr_separate_accordion_gains{
+  width: 150px;
+  height: 10px;
+  background: #ED1C23;
+  border-radius: 2px;
+  margin-top: 0%;
+  margin-bottom: 54px;
+}
 #solution_gains{
   background: #F5F5F5;
+  padding-bottom: 5%;
 }
 
 #solution_gains_text{
@@ -2803,6 +2812,7 @@ line-height: 56px;
 }
 
 .solution_gains_class{
+  margin-top: 5%;
   display: flex;
   justify-content: space-between;
   margin-right:11%;
@@ -2830,7 +2840,7 @@ line-height: 56px;
 
 .svg_gains{
   display: flex;
-  text-align: left;
+  margin-top: 8%;
   margin-left:11%;
   margin-bottom: 5%;
 }
@@ -2846,5 +2856,51 @@ line-height: 56px;
   text-align: left;
   margin-left: 11%;
   margin-right: 11%;
+  margin-bottom: 30px;
 }
+
+/* tablet*/
+@media only screen and (max-width: 992px) {
+  #solution_gains_text{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 49px;
+  line-height: 56px;
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  }
+}
+
+/*Mobile*/
+@media only screen and (max-width: 775px) {
+  .solution_gains_class{
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-right: 2%;
+    margin-left: 2%;
+    text-align:center;
+  }
+
+  .solution_gains_sub{
+    width:100%;
+  }
+  .solution_gains_sub_title{
+    text-align: center;
+  }
+
+  .solution_gains_sub_title{
+    text-align: center;
+  }
+
+  .svg_gains{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+
+
 /* FIM SECÇÃO O QUE PODE GANHAR COM ESTA SOLUÇÃO */
