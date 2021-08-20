@@ -2812,4 +2812,172 @@ grid-row-end: -1;
   }
   /* Fim Contacta-nos Section */
   
+
+
+
+  /* INICIO SECÇÃO SOLUÇÃO À MEDIDA */
+
+  .solution-business{
+    background: #F5F5F5;
+    position: relative;
+  }
+  .solution-ideal-circle{
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      z-index: 0;
+  }
+  .solution-business-content{
+      margin-right: 11%;
+      margin-left: 11%;
+      text-align: center;
+      padding-bottom: 60px;
+      z-index: 1;
+      position: relative;
+  }
+  .solution-business-title{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 61px;
+    line-height: 72px;
+    letter-spacing: -0.5px;
+    color: #18191F;
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
   
+.solution-card-title{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    font-feature-settings: 'salt' on, 'liga' off;
+    color: #18191F;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-top:25px;
+}
+.solution-card-text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: #18191F;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top:10px;
+    padding-bottom: 10px;
+}
+.line-solution{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.solution-card-item{
+    box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+    border-radius: 8px;
+    width: 23.5%;
+    background: #FFFFFF;
+}
+
+@media(min-width: 993px) {
+    .solution-cards-carousel-tablet, .solution-cards-carousel-mobile{
+        display: none;
+    }
+}
+
+@media(max-width: 992px) {
+    .solution-ideal-circle, .solution-cards-desktop, .solution-cards-carousel-mobile{
+        display: none;
+    }
+    .solution-cards-carousel-tablet{
+        display: block;
+    }
+    .solution-card-item{
+        width: 31.3%;
+    }
+    .solution-business-content{
+        margin-right: 0%;
+        margin-left: 0%;
+        padding-bottom: 0px;
+    }
+    .solution-business-title{
+        padding-top: 50px;
+        padding-bottom: 0px;
+        font-size: 49px;
+        line-height: 56px;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+     .line-solution{
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 5px;
+    }
+    .carouselSolution .carousel-item{
+        background-color: #F5F5F5;
+    }
+
+    .carouselSolution .carousel-control-projects{
+        width: 5%;
+    }
+
+    .carouselSolution .carousel-control-next .carousel-control-next-icon{
+        background-image: url("../img/arrow_solutions_rigth.svg");
+        display: block;
+
+    }
+
+    .carouselSolution .carousel-control-prev .carousel-control-prev-icon{
+        background-image: url("../img/arrow_solutions_left.svg");
+        display: block;
+    }
+
+}
+
+@media(max-width: 570px) {
+    .solution-cards-carousel-tablet{
+        display: none;
+    }
+    .solution-cards-carousel-mobile{
+        display: block
+    }
+    .solution-business-title{
+        padding-bottom: 30px;
+        font-size: 35px;
+        line-height: 36px;
+        text-align: center;
+        letter-spacing: 0.25px;
+    }
+    .solution-card-text{
+        padding-bottom: 30px;
+    }
+    .solution-card-item{
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .solution-business-content{
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+    .carouselSolution .carousel-control-next .carousel-control-next-icon{
+        display: none;
+
+    }
+    .carouselSolution .carousel-control-prev .carousel-control-prev-icon{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+  /* FIM SECÇÃO SOLUÇÃO À MEDIDA */
