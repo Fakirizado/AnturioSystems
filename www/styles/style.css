@@ -2920,6 +2920,7 @@ grid-row-end: -1;
     }
     .carouselSolution .carousel-item{
         background-color: #F5F5F5;
+        padding-bottom: 50px;
     }
 
     .carouselSolution .carousel-control-projects{
@@ -2944,7 +2945,8 @@ grid-row-end: -1;
         display: none;
     }
     .solution-cards-carousel-mobile{
-        display: block
+        display: block;
+        padding-bottom: 30px;
     }
     .solution-business-title{
         padding-bottom: 30px;
@@ -2966,11 +2968,15 @@ grid-row-end: -1;
         margin-left: 2%;
     }
     .carouselSolution .carousel-control-next .carousel-control-next-icon{
-        display: none;
+        display: block;
 
     }
     .carouselSolution .carousel-control-prev .carousel-control-prev-icon{
-        display: none;
+        display: block;
+    }
+    .carouselSolution .carousel-item{
+        background-color: #F5F5F5;
+        padding-bottom: 0px;
     }
 
 }
