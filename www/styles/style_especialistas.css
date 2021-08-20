@@ -1,13 +1,31 @@
-html, body {
+/** 
+ * AnturioSystems
+ *
+ * FICHEIRO CSS, ESTÁ DIVIDIDO POR SECÇÕES
+ * 
+ * @author João Cardoso <joao.martins@anturio.com>
+ * @author Diogo Gomes <diogo.gomes@anturio.com>
+ */
+
+
+/** 
+ *
+ * CSS GLOBAL E NAVBAR
+ *
+ */
+
+ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Helvetica Neue",sans-serif;
   font-weight: lighter;
   background-color: black;
+  position: relative;
 }
 
 #video-banner {
@@ -24,14 +42,6 @@ header {
   height: 10vh;
   background-size: cover;
 }
-
-/*.content {
-  width: 94%;
-  margin: 4em auto;
-  font-size: 20px;
-  line-height: 30px;
-  text-align: justify;
-}*/
 
 .logo {
   line-height: 60px;
@@ -64,7 +74,6 @@ nav ul {
   line-height: 60px;
   list-style: none;
   background: rgba(0, 0, 0, 0);
-  /*overflow: hidden;*/
   padding: 0;
   text-align: right;
   margin: 0;
@@ -100,10 +109,6 @@ nav ul {
 }
 .social-media svg{
   margin-right: 6px;
-}
-
-.construction_icon_button_slider, .distribution_icon_button_slider, .industry_icon_button_slider, .it_icon_button_slider{
-  cursor: pointer;
 }
 
 body{
@@ -321,7 +326,12 @@ nav ul li a {
 }
 
 
-/* INICIO DIV SOMOS A SOLUÇÃO*/
+/** 
+*
+* INICIO DIV SOMOS A SOLUÇÃO
+*
+*/
+
 
 #we-solution-page{
   display: flex;
@@ -347,7 +357,12 @@ nav ul li a {
   align-content: end;
 }
 
-/* LEFT SIDE */
+/** 
+*
+* LEFT SIDE
+*
+*/
+
 #first-first-img-solution {
   grid-column-start: 2;
   grid-column-end: 2;
@@ -402,7 +417,11 @@ grid-row-end: 1;
   grid-row-start: 5;
   grid-row-end: 5;
 }
-/* RIGHT SIDE */
+/** 
+*
+* RIGHT SIDE
+*
+*/
 
 #first-first-img-solution-right {
   grid-column-start: -2;
@@ -591,10 +610,11 @@ grid-row-end: -1;
 
 }
 
-
-
-
-/* FIM DIV SOMOS A SOLUÇÃO*/
+/** 
+*
+* FIM DIV SOMOS A SOLUÇÃO
+*
+*/
 
 @media(max-width: 992px) {
   #nav-social-language{
@@ -809,27 +829,25 @@ grid-row-end: -1;
   }
 }
 
-/* footer */
+/** 
+*
+* FOOTER
+*
+*/
 .footer {
   clear: both; 
   z-index: 1; 
   height: 100%;
-  /*margin-top: 40em; */
 }
 
 #first_links a{
   text-decoration: none;
-  /* Body 1 */
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 26px;
-
-  /* identical to box height, or 162% */
   font-feature-settings: 'salt' on, 'liga' off;
-
-  /* Text / Gray 300 */
   color: #D9DBE1;
 }
 
@@ -844,11 +862,7 @@ grid-row-end: -1;
   font-weight: normal;
   font-size: 16px;
   line-height: 26px;
-  /* identical to box height, or 162% */
-
   font-feature-settings: 'salt' on, 'liga' off;
-  
-  /* Text / Gray 300 */
   color: #D9DBE1;
 }
 
@@ -862,8 +876,6 @@ grid-row-end: -1;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-
-  /* identical to box height, or 120% */
   letter-spacing: 0.15px;
 }
 #copyright_and_image{
@@ -874,22 +886,13 @@ grid-row-end: -1;
   position: static;
   bottom: 57.14%;
   margin-left: 35%;
-
-  /* Body / Body 2 */
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-
-  /* identical to box height, or 171% */
   font-feature-settings: 'salt' on, 'liga' off;
-
-  /* Text / Gray 300 */
   color: #D9DBE1;
-
-
-  /* Inside Auto Layout */
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -900,22 +903,13 @@ grid-row-end: -1;
   bottom: 57.14%;
   margin-right:5px;
   margin-left: 35%;
-
-  /* Body / Body 2 */
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-
-  /* identical to box height, or 171% */
   font-feature-settings: 'salt' on, 'liga' off;
-
-  /* Text / Gray 300 */
   color: #D9DBE1;
-
-
-  /* Inside Auto Layout */
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -1010,9 +1004,6 @@ grid-row-end: -1;
       cursor: pointer;
       }
 
-  
-/* fim footer */
-
 @media only screen and (max-width: 699px) {
   #first_links{
       display:none;
@@ -1098,27 +1089,17 @@ grid-row-end: -1;
       margin-left:0%;
   }
 }
-/* fim footer */
+/** 
+*
+* FIM FOOTER
+*
+*/
 
-/* Especialistas em diferentes setores style */
-
-/*#diferent_sectors{
-  width:auto;
-  position: relative;
-  background: #212121;
-  height: 459px;
-  color: white;
-  margin-bottom: 50px;
-  justify-content: center;
-  align-items: center;
-}*/
-
-html, body {
-  overflow-x: hidden;
-}
-body {
-  position: relative;
-}
+/** 
+*
+* Especialistas em diferentes setores
+*
+*/
 
 #different_sectors{
   width:auto;
@@ -1136,19 +1117,13 @@ body {
   font-weight: 300;
   font-size: 61px;
   float: left;
-
   line-height: 72px;
-/*    position: absolute;
-  left: 231px;
-  top: 162px;
-  width:auto;*/
   align-self:center;
   letter-spacing: -0.5px;
   color: rgba(255, 255, 255, 0.38);
 }
 
 #number_4{
-  /*padding-right: 100px;*/
   align-self:center;
   margin-left: 10%; 
   margin-right:100px;
@@ -1178,11 +1153,8 @@ body {
       font-weight: normal;
       font-size: 24px;
       line-height: 24px;
-
       margin-left:auto;
       margin-right:auto;
-     /* flex: 0 0 80px;*/
-
       text-align: center;
       margin-left: 0%;
   }
@@ -1193,17 +1165,10 @@ body {
   
 
   #number_4{
-   /*   flex: 0 0 100%;*/
-    /*  padding-right: 40px;*/
       align-self: center;
       justify-content: center;
       margin-left:auto;
       margin-right:auto;
-      /*
-      margin-left:auto;
-      margin-right:auto;
-      text-align: center;
-      */
       padding-bottom: 30px;
       margin-top: 54px;
   }
@@ -1220,7 +1185,6 @@ body {
   font-weight: normal;
   font-size: 35px;
   line-height: 36px;
-  /* or 103% */
   padding-left: 10%;
   letter-spacing: 0.25px;
   margin-left:0%;
@@ -1360,10 +1324,7 @@ body {
   font-weight: normal;
   font-size: 35px;
   line-height: 36px;
-
   letter-spacing: 0.25px;
-  /* float: left; temporário */
-
   align-self:center;
   color: rgba(255, 255, 255, 0.38);
 }
@@ -1404,8 +1365,6 @@ body {
   font-size: 35px;
   line-height: 36px;
   padding-left: 10%;
-  /* or 103% */
-  
   letter-spacing: 0.25px;
  }
 
@@ -1436,8 +1395,6 @@ body {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    /* or 120% */
-
     text-align: center;
     letter-spacing: 0.15px;
 
@@ -1584,7 +1541,6 @@ body {
   border: solid 2px #ED1C23;
 }
 .input-message{
-  /*height: 150px;*/
   padding: 15px 5px 135px 10px;
   overflow: hidden;
   resize: none;
@@ -1759,13 +1715,7 @@ body {
   }
 }
 
-
-
-
 /* CONTACT US - FIM */
-
-
-
 
 /* INICIO DIV CONSTRUÇÃO */
 #content-homepage-construction, #content-homepage-distribution, #content-homepage-industry {
@@ -1818,8 +1768,6 @@ body {
 }
 
 .white-button{
-  /* Button */
-
   font-family: Ubuntu;
   font-style: normal;
   font-weight: 500;
@@ -1965,9 +1913,9 @@ body {
     width:50%;
 }
 
-#half_anturio_img{
+.half_anturio_img{
   position: absolute;
-  margin-left: -95px;
+  margin-left: -100px;
 }
 
 #management_img{
@@ -2061,11 +2009,15 @@ color: #000000;
     #management_img{
         margin-left: 0px;
     }
+    .half_anturio_img{
+      margin-left: -350px;
+  }
 }
 
 @media only screen and (max-width: 800px){
-  #half_anturio_img{
+  .half_anturio_img{
       width: 400px;
+      margin-left: -200px;
   }
 }
 
@@ -2390,14 +2342,14 @@ color: #000000;
   text-align: center;
   }
   
-#ideal_solution_chart_img{
+.img_solution_chart{
   width: 90%;
     height: 53%;
   margin-bottom: 70px;
 }
 /* Tablet */
 @media only screen and (max-width: 1300px) {
-  #ideal_solution_chart_img{
+  .img_solution_chart{
     height: 80%;
     width: 80%;
   }
@@ -2414,7 +2366,7 @@ color: #000000;
 /* Mobile */
 
 @media only screen and (max-width: 699px) {
-  #ideal_solution_chart_img{
+  .img_solution_chart{
     height: 70%;
     width: 70%;
   }
@@ -2447,18 +2399,18 @@ color: #000000;
 .section-reviews{
   background-color: #F5F5F5;
 }
-#carouseReviews{
+.carouselReviews{
   position: relative;
 }
 
-#carouseReviews .carousel-inner .prev .review-item, #carouseReviews .carousel-inner .next .review-item{
+.carouselReviews .carousel-inner .prev .review-item, .carouselReviews .carousel-inner .next .review-item{
   padding: 20px 30px;
   margin-top: 20px;
 }
 
 
 
-#carouseReviews .carousel-inner .prev{
+.carouselReviews .carousel-inner .prev{
   width: 100%;
   z-index: 0;
   display: block;
@@ -2467,7 +2419,7 @@ color: #000000;
   right: 22%;
   margin:0px;
 }
-#carouseReviews .carousel-inner .next{
+.carouselReviews .carousel-inner .next{
   width: 100%;
   position: absolute;
   z-index: 0;
@@ -2476,15 +2428,15 @@ color: #000000;
   left: 22%;
   margin:0px;
 }
-#carouseReviews .carousel-inner{
+.carouselReviews .carousel-inner{
   width: 100%;
 }
-#carouseReviews .carousel-inner .carousel-item{
+.carouselReviews .carousel-inner .carousel-item{
   width: 100%;
   background-color: initial;
   
 }
-#carouseReviews .carousel-inner .active{
+.carouselReviews .carousel-inner .active{
   
   z-index: 1;
   
@@ -2569,10 +2521,10 @@ color: #000000;
 }
 
 @media(max-width: 992px) {
-  #carouseReviews .carousel-inner .prev{
+  .carouselReviews .carousel-inner .prev{
       right: 12%;
   }
-  #carouseReviews .carousel-inner .next{
+  .carouselReviews .carousel-inner .next{
       left: 12%;
   }
   .review-item{
@@ -2594,11 +2546,11 @@ color: #000000;
 }
 
 @media(max-width: 500px) {
-  #carouseReviews .carousel-inner .prev{
+  .carouselReviews .carousel-inner .prev{
       right: 3%;
       opacity: 0.8;
   }
-  #carouseReviews .carousel-inner .next{
+  .carouselReviews .carousel-inner .next{
       opacity: 0.8;
       left: 3%;
   }
@@ -2647,10 +2599,6 @@ color: #000000;
   color: #FFFFFF;
   transition: 1s;
 }
-/*
-#offices_cities{
-  display: inline;
-}*/
 
 #offices_cities_text{
   font-family: Ubuntu;
@@ -2683,14 +2631,12 @@ color: #000000;
 
 #contact-us-office-info{
   background: #212121; 
- /* display: flex;
-  flex-direction: row;
-  justify-content: center;*/
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 
 
 .offices_text_class{
@@ -2699,9 +2645,6 @@ color: #000000;
   font-weight: normal;
   font-size: 24px;
   line-height: 24px;
-  /* identical to box height, or 100% */
-
-
   color: #FFFFFF;
 }
 
@@ -2711,8 +2654,6 @@ color: #000000;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  /* or 150% */
-
   letter-spacing: 0.5px;
   color: #FFFFFF;
 }
@@ -2774,7 +2715,6 @@ color: #000000;
 }
 }
 
-/*mobile*/
 @media only screen and (max-width: 620px) {
   #offices_cities_text li a {
     padding: 10px 10px;
@@ -2819,6 +2759,7 @@ line-height: 56px;
       line-height: 24px;
       text-align: center;
       color: #FFFFFF;
+      border-radius: 5px !important;
   }
   #section-contact-us_first{
       padding-bottom: 25px;
@@ -2838,4 +2779,72 @@ line-height: 56px;
   }
   
 }
+
+.svg_address, .email_anturio_svg, .svg_phone{
+    cursor: pointer;
+}
 /* Fim Contacta-nos Section */
+
+
+
+/* Início SECÇÃO O QUE PODE GANHAR COM ESTA SOLUÇÃO */
+#solution_gains{
+  background: #F5F5F5;
+}
+
+#solution_gains_text{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 49px;
+  line-height: 56px;
+  color: #212121;
+  text-align: center;
+}
+
+.solution_gains_class{
+  display: flex;
+  justify-content: space-between;
+  margin-right:11%;
+  margin-left: 11%;
+  text-align: center;
+}
+.solution_gains_sub{
+  background: #FFFFFF;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 2px 1px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.08);
+  width:32%;
+}
+
+.solution_gains_sub_title{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #252B42;
+  text-align: left;
+  margin-left: 11%;
+  margin-right: 11%;
+}
+
+.svg_gains{
+  display: flex;
+  text-align: left;
+  margin-left:11%;
+  margin-bottom: 5%;
+}
+
+.solution_gains_sub_text{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #737373;
+  text-align: left;
+  margin-left: 11%;
+  margin-right: 11%;
+}
+/* FIM SECÇÃO O QUE PODE GANHAR COM ESTA SOLUÇÃO */

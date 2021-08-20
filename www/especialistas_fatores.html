@@ -1,3 +1,14 @@
+<!--  AnturioSystems
+  
+  FICHEIRO HTML COM PRINCÍPIO DE DESENVOLVIMENTO EM SINGLE PAGE APPLICATION, PELO QUE É NECESSARIO 
+  OCULTAR E MOSTRAR AS DIVERSAS SECÇÕES COM RECURSO A JS
+ 
+ @author João Cardoso <joao.martins@anturio.com>
+ @author Diogo Gomes <diogo.gomes@anturio.com>
+
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,6 +31,7 @@
     <script src="scripts/jquerySwipeHandler.js"></script>
     <script src="scripts/svgManager.js"></script>
     <script src="scripts/especialistas.js"></script>
+    <script src="scripts/pageReady.js"></script>
 
 
     <link rel="stylesheet" href="styles/style_especialistas.css">
@@ -100,7 +112,7 @@
                             <p>Encontra-nos nas redes sociais</p>
                         </div>
                         <div id="hamburguer-icons">
-                            <svg width="50" height="50" viewBox="0 0 60 60" fill="none"
+                            <svg class="facebook_click" width="50" height="50" viewBox="0 0 60 60" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30Z"
@@ -109,7 +121,7 @@
                                     d="M36.9809 31.875L37.8141 26.4457H32.6045V22.9225C32.6045 21.4371 33.3323 19.9893 35.6655 19.9893H38.0338V15.3668C38.0338 15.3668 35.8846 15 33.8297 15C29.5395 15 26.7352 17.6004 26.7352 22.3078V26.4457H21.9662V31.875H26.7352V45H32.6045V31.875H36.9809Z"
                                     fill="#F5F5F5" />
                             </svg>
-                            <svg width="50" height="50" viewBox="0 0 60 60" fill="none"
+                            <svg class="instagram_click" width="50" height="50" viewBox="0 0 60 60" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30Z"
@@ -137,7 +149,8 @@
             </div>
             <div id="nav-social-language">
                 <div class="social-media">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="facebook_click" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
                             fill="#F5F5F5" />
@@ -146,7 +159,8 @@
                             fill="#212121" />
                     </svg>
 
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="instagram_click" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
                             fill="#F5F5F5" />
@@ -478,8 +492,8 @@
                     <p class="offices_text_class">Escritórios</p>
 
                     <p class="above_office_text" id="text_offices">Av. Cor. Eduardo Galhardo, 3, <svg
-                            class="contacts_svg svg_address_lisboa" width="15" height="15" viewBox="0 0 15 15" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                            class="contacts_svg svg_address_lisboa" width="15" height="15" viewBox="0 0 15 15"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                 fill="white" fill-opacity="0.74" />
@@ -493,23 +507,25 @@
                 <div class="offices_div" id="second_offices_div">
                     <p class="offices_text_class">Telefones</p>
 
-                    <p class="above_office_text" id="phones_offices1">(+351) 211 454 004 <svg class="contacts_svg"
-                            width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <p class="above_office_text" id="phones_offices1">(+351) 211 454 004 <svg
+                            class="contacts_svg svg_phone svg_phone_1_lisboa" width="15" height="15" viewBox="0 0 15 15"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                 fill="white" fill-opacity="0.74" />
                         </svg>
                     </p>
-                    <p class="above_office_text" id="phones_offices2">(+351) 960 256 862 <svg class="contacts_svg"
-                            width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <p class="above_office_text" id="phones_offices2">(+351) 960 256 862 <svg
+                            class="contacts_svg svg_phone svg_phone_2_lisboa" width="15" height="15" viewBox="0 0 15 15"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                 fill="white" fill-opacity="0.74" />
                         </svg>
                     </p>
                     <p class="above_office_text" id="phones_offices3">(+351) 965 258 220 (Dir. Comercial) <svg
-                            class="contacts_svg" width="15" height="15" viewBox="0 0 15 15" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                            class="contacts_svg svg_phone svg_phone_3_lisboa" width="15" height="15" viewBox="0 0 15 15"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                 fill="white" fill-opacity="0.74" />
@@ -521,8 +537,8 @@
                 <div class="offices_div" id="third_offices_div">
                     <p class="offices_text_class">E-mail</p>
 
-                    <p class="above_office_text">info@anturio.com <svg class="contacts_svg" width="15" height="15"
-                            viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <p class="above_office_text">info@anturio.com <svg class="contacts_svg email_anturio_svg" width="15"
+                            height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                 fill="white" fill-opacity="0.74" />
@@ -559,10 +575,10 @@
                         <div class="card-body card-contact-us">
                             <div class="offices_div" id="first_offices_div">
                                 <p class="offices_text_class">Escritórios</p>
-            
+
                                 <p class="above_office_text" id="text_offices">Av. Cor. Eduardo Galhardo, 3, <svg
-                                        class="contacts_svg svg_address_lisboa" width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                        class="contacts_svg svg_address_lisboa" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
@@ -571,47 +587,50 @@
                                     1170-105 Lisboa, Portugal
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="second_offices_div">
                                 <p class="offices_text_class">Telefones</p>
-            
-                                <p class="above_office_text" id="phones_offices1">(+351) 211 454 004 <svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                <p class="above_office_text" id="phones_offices1">(+351) 211 454 004 <svg
+                                        class="contacts_svg svg_phone svg_phone_1_lisboa" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
-                                <p class="above_office_text" id="phones_offices2">(+351) 960 256 862 <svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <p class="above_office_text" id="phones_offices2">(+351) 960 256 862 <svg
+                                        class="contacts_svg svg_phone svg_phone_2_lisboa" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
-                                <p class="above_office_text" id="phones_offices3">(+351) 965 258 220 (Dir. Comercial) <svg
-                                        class="contacts_svg" width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                <p class="above_office_text" id="phones_offices3">(+351) 965 258 220 (Dir. Comercial)
+                                    <svg class="contacts_svg svg_phone svg_phone_3_lisboa" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="third_offices_div">
                                 <p class="offices_text_class">E-mail</p>
-            
-                                <p class="above_office_text">info@anturio.com <svg class="contacts_svg" width="15" height="15"
+
+                                <p class="above_office_text">info@anturio.com <svg
+                                        class="contacts_svg email_anturio_svg" width="15" height="15"
                                         viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg></p>
                             </div>
-            
+
                         </div>
                     </div>
                 </div>
@@ -639,50 +658,53 @@
                         <div class="card-body card-contact-us">
                             <div class="offices_div" id="first_offices_div">
                                 <p class="offices_text_class">Escritórios</p>
-            
-                                <p class="above_office_text" id="text_offices">Morada Rua do Outeiro, nº 1315, 1º andar J,
-                                    4470-637 Maia, Portugal<svg
-                                        class="contacts_svg" width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+
+                                <p class="above_office_text" id="text_offices">Morada Rua do Outeiro, nº 1315, 1º andar
+                                    J,
+                                    4470-637 Maia, Portugal <svg class="contacts_svg svg_address_porto" width="15"
+                                        height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="second_offices_div">
                                 <p class="offices_text_class">Telefones</p>
-            
-                                <p class="above_office_text" id="phones_offices1"> (+351) 211 454 004<svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                <p class="above_office_text" id="phones_offices1"> (+351) 211 454 004 <svg
+                                        class="contacts_svg svg_phone svg_phone_1_porto" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
-                                <p class="above_office_text" id="phones_offices2">(+351) 961 401 165<svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <p class="above_office_text" id="phones_offices2">(+351) 961 401 165 <svg
+                                        class="contacts_svg svg_phone svg_phone_2_porto" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="third_offices_div">
                                 <p class="offices_text_class">E-mail</p>
-            
-                                <p class="above_office_text">info@anturio.com <svg class="contacts_svg" width="15" height="15"
+
+                                <p class="above_office_text">info@anturio.com <svg
+                                        class="contacts_svg email_anturio_svg" width="15" height="15"
                                         viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg></p>
                             </div>
-            
+
                         </div>
                     </div>
                 </div>
@@ -710,50 +732,52 @@
                         <div class="card-body card-contact-us">
                             <div class="offices_div" id="first_offices_div">
                                 <p class="offices_text_class">Escritórios</p>
-            
+
                                 <p class="above_office_text" id="text_offices">R. Regimento Infantaria 11, nº30 2ºA,
-                                    2900-584 Setúbal, Portugal<svg
-                                        class="contacts_svg" width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    2900-584 Setúbal, Portugal <svg class="contacts_svg svg_address_setubal" width="15"
+                                        height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="second_offices_div">
                                 <p class="offices_text_class">Telefones</p>
-            
-                                <p class="above_office_text" id="phones_offices1">(+351) 211 454 004<svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                <p class="above_office_text" id="phones_offices1">(+351) 211 454 004 <svg
+                                        class="contacts_svg svg_phone svg_phone_1_setubal" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
-                                <p class="above_office_text" id="phones_offices2"> (+351) 938 994 183<svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <p class="above_office_text" id="phones_offices2"> (+351) 938 994 183 <svg
+                                        class="contacts_svg svg_phone svg_phone_2_setubal" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="third_offices_div">
                                 <p class="offices_text_class">E-mail</p>
-            
-                                <p class="above_office_text">info@anturio.com <svg class="contacts_svg" width="15" height="15"
+
+                                <p class="above_office_text">info@anturio.com <svg
+                                        class="contacts_svg email_anturio_svg" width="15" height="15"
                                         viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg></p>
                             </div>
-            
+
                         </div>
                     </div>
                 </div>
@@ -781,50 +805,52 @@
                         <div class="card-body card-contact-us">
                             <div class="offices_div" id="first_offices_div">
                                 <p class="offices_text_class">Escritórios</p>
-            
+
                                 <p class="above_office_text" id="text_offices">Largo de S. Luís 11-C, 3º Esq.
-                                    8000-143 Faro, Portugal<svg
-                                        class="contacts_svg" width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    8000-143 Faro, Portugal <svg class="contacts_svg svg_address_faro" width="15"
+                                        height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="second_offices_div">
                                 <p class="offices_text_class">Telefones</p>
-            
-                                <p class="above_office_text" id="phones_offices1">(+351) 211 454 004<svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                <p class="above_office_text" id="phones_offices1">(+351) 211 454 004 <svg
+                                        class="contacts_svg svg_phone svg_phone_1_faro" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
-                                <p class="above_office_text" id="phones_offices2">(+351) 967 334 745<svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <p class="above_office_text" id="phones_offices2">(+351) 967 334 745 <svg
+                                        class="contacts_svg svg_phone svg_phone_2_faro" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="third_offices_div">
                                 <p class="offices_text_class">E-mail</p>
-            
-                                <p class="above_office_text">info@anturio.com <svg class="contacts_svg" width="15" height="15"
+
+                                <p class="above_office_text">info@anturio.com <svg
+                                        class="contacts_svg email_anturio_svg" width="15" height="15"
                                         viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg></p>
                             </div>
-            
+
                         </div>
                     </div>
                 </div>
@@ -852,50 +878,52 @@
                         <div class="card-body card-contact-us">
                             <div class="offices_div" id="first_offices_div">
                                 <p class="offices_text_class">Escritórios</p>
-            
+
                                 <p class="above_office_text" id="text_offices">Av. Luís Camões, Edf. Camões R/C,
-                                    9000-168 Funchal, Portugal<svg
-                                        class="contacts_svg" width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    9000-168 Funchal, Portugal <svg class="contacts_svg svg_address_funchal" width="15"
+                                        height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="second_offices_div">
                                 <p class="offices_text_class">Telefones</p>
-            
-                                <p class="above_office_text" id="phones_offices1"> (+351) 211 454 004<svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                <p class="above_office_text" id="phones_offices1"> (+351) 211 454 004 <svg
+                                        class="contacts_svg svg_phone svg_phone_1_funchal" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
-                                <p class="above_office_text" id="phones_offices2"> (+351) 961 348 300<svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <p class="above_office_text" id="phones_offices2"> (+351) 961 348 300 <svg
+                                        class="contacts_svg svg_phone svg_phone_2_funchal" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="third_offices_div">
                                 <p class="offices_text_class">E-mail</p>
-            
-                                <p class="above_office_text">info@anturio.com <svg class="contacts_svg" width="15" height="15"
+
+                                <p class="above_office_text">info@anturio.com <svg
+                                        class="contacts_svg email_anturio_svg" width="15" height="15"
                                         viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg></p>
                             </div>
-            
+
                         </div>
                     </div>
                 </div>
@@ -923,44 +951,45 @@
                         <div class="card-body card-contact-us">
                             <div class="offices_div" id="first_offices_div">
                                 <p class="offices_text_class">Escritórios</p>
-            
+
                                 <p class="above_office_text" id="text_offices">Calle Francisco Alonso, 2, 1º 20
-                                    28660 Boadilla del Monte, Madrid, España
-                                    <svg
-                                        class="contacts_svg" width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    28660 Boadilla del Monte, Madrid, España <svg
+                                        class="contacts_svg  svg_address_madrid" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="second_offices_div">
                                 <p class="offices_text_class">Telefones</p>
-            
-                                <p class="above_office_text" id="phones_offices1">(+34) 682 351 263<svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                <p class="above_office_text" id="phones_offices1">(+34) 682 351 263 <svg
+                                        class="contacts_svg svg_phone svg_phone_1_madrid" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="third_offices_div">
                                 <p class="offices_text_class">E-mail</p>
-            
-                                <p class="above_office_text">info@anturio.com <svg class="contacts_svg" width="15" height="15"
+
+                                <p class="above_office_text">info@anturio.com <svg
+                                        class="contacts_svg email_anturio_svg" width="15" height="15"
                                         viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg></p>
                             </div>
-            
+
                         </div>
                     </div>
                 </div>
@@ -988,51 +1017,53 @@
                         <div class="card-body card-contact-us">
                             <div class="offices_div" id="first_offices_div">
                                 <p class="offices_text_class">Escritórios</p>
-            
+
                                 <p class="above_office_text" id="text_offices">Rua Kwame Nkrumah, nº417 R\C,
-                                    Maputo – Moçambique<svg
-                                        class="contacts_svg" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    Maputo – Moçambique <svg class="contacts_svg  svg_address_moncambique" width="15"
+                                        height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
+                                            fill="white" fill-opacity="0.74" />
+                                    </svg>
+                                </p>
+                            </div>
+
+                            <hr class="horizontal-line">
+                            <div class="offices_div" id="second_offices_div">
+                                <p class="offices_text_class">Telefones</p>
+
+                                <p class="above_office_text" id="phones_offices1">
+                                    (+258) 21 483 353 <svg class="contacts_svg svg_phone svg_phone_1_moncambique"
+                                        width="15" height="15" viewBox="0 0 15 15" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
-                            </div>
-            
-                            <hr class="horizontal-line">
-                            <div class="offices_div" id="second_offices_div">
-                                <p class="offices_text_class">Telefones</p>
-            
-                                <p class="above_office_text" id="phones_offices1">
-                                    (+258) 21 483 353<svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
-                                            fill="white" fill-opacity="0.74" />
-                                    </svg>
-                                </p>
-                                <p class="above_office_text" id="phones_offices2">(+258) 821 799 555<svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <p class="above_office_text" id="phones_offices2">(+258) 821 799 555 <svg
+                                        class="contacts_svg svg_phone svg_phone_2_moncambique" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="third_offices_div">
                                 <p class="offices_text_class">E-mail</p>
-            
-                                <p class="above_office_text">info@anturio.com <svg class="contacts_svg" width="15" height="15"
+
+                                <p class="above_office_text">info@anturio.com <svg
+                                        class="contacts_svg email_anturio_svg" width="15" height="15"
                                         viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg></p>
                             </div>
-            
+
                         </div>
                     </div>
                 </div>
@@ -1060,50 +1091,53 @@
                         <div class="card-body card-contact-us">
                             <div class="offices_div" id="first_offices_div">
                                 <p class="offices_text_class">Escritórios</p>
-            
-                                <p class="above_office_text" id="text_offices">Rua à direita do Gamek, 5.º Quart. C/2(A),
-                                    Morro Bento, Luanda<svg
-                                        class="contacts_svg" width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+
+                                <p class="above_office_text" id="text_offices">Rua à direita do Gamek, 5.º Quart.
+                                    C/2(A),
+                                    Morro Bento, Luanda <svg class="contacts_svg  svg_address_angola" width="15"
+                                        height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="second_offices_div">
                                 <p class="offices_text_class">Telefones</p>
-            
-                                <p class="above_office_text" id="phones_offices1"> (+244) 928 402 097<svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                <p class="above_office_text" id="phones_offices1"> (+244) 928 402 097 <svg
+                                        class="contacts_svg svg_phone svg_phone_1_angola" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
-                                <p class="above_office_text" id="phones_offices2">(+244) 991 402 097<svg class="contacts_svg"
-                                        width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <p class="above_office_text" id="phones_offices2">(+244) 991 402 097 <svg
+                                        class="contacts_svg svg_phone svg_phone_2_angola" width="15" height="15"
+                                        viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg>
                                 </p>
                             </div>
-            
+
                             <hr class="horizontal-line">
                             <div class="offices_div" id="third_offices_div">
                                 <p class="offices_text_class">E-mail</p>
-            
-                                <p class="above_office_text">info@anturio.com <svg class="contacts_svg" width="15" height="15"
+
+                                <p class="above_office_text">info@anturio.com <svg
+                                        class="contacts_svg email_anturio_svg" width="15" height="15"
                                         viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M1.95833 1.95833V13.0417H13.0417V7.5H14.625V13.0417C14.625 13.9125 13.9125 14.625 13.0417 14.625H1.95833C1.07958 14.625 0.375 13.9125 0.375 13.0417V1.95833C0.375 1.0875 1.07958 0.375 1.95833 0.375H7.5V1.95833H1.95833ZM9.08333 1.95833V0.375H14.625V5.91667H13.0417V3.07458L5.25958 10.8567L4.14333 9.74042L11.9254 1.95833H9.08333Z"
                                             fill="white" fill-opacity="0.74" />
                                     </svg></p>
                             </div>
-            
+
                         </div>
                     </div>
                 </div>
@@ -1994,6 +2028,53 @@
                 </div>
             </div>
 
+            <!-- Início SECÇÃO O QUE PODE GANHAR COM ESTA SOLUÇÃO-->
+            <div id="solution_gains">
+                <div id="solution_gains_text">
+                    <p>O que pode ganhar com esta solução<span style="color:red">.</span></p>
+                </div>
+                <div class="solution_gains_class">
+                    <div class="solution_gains_sub" id="solution_gains_first">
+                        <svg class="svg_gains" width="48" height="38" viewBox="0 0 48 38" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M45.9167 37.9019C45.9167 37.9019 49.0001 37.9019 49.0001 34.7908C49.0001 31.6797 45.9167 22.3464 33.5834 22.3464C21.2501 22.3464 18.1667 31.6797 18.1667 34.7908C18.1667 37.9019 21.2501 37.9019 21.2501 37.9019H45.9167ZM21.3179 34.7908H45.8489C45.8634 34.7891 45.8777 34.7871 45.8921 34.7846L45.9167 34.7784C45.9106 33.957 45.4018 31.5739 43.5734 29.4273C41.8714 27.4144 38.8806 25.4575 33.5834 25.4575C28.2893 25.4575 25.2985 27.4175 23.5934 29.4273C21.765 31.5739 21.2532 33.9602 21.2501 34.7784C21.2726 34.7828 21.2953 34.7869 21.3179 34.7908ZM33.5834 16.1242C35.2189 16.1242 36.7874 15.4686 37.9439 14.3017C39.1004 13.1348 39.7501 11.5522 39.7501 9.90194C39.7501 8.2517 39.1004 6.66905 37.9439 5.50216C36.7874 4.33527 35.2189 3.67971 33.5834 3.67971C31.9479 3.67971 30.3794 4.33527 29.2229 5.50216C28.0664 6.66905 27.4167 8.2517 27.4167 9.90194C27.4167 11.5522 28.0664 13.1348 29.2229 14.3017C30.3794 15.4686 31.9479 16.1242 33.5834 16.1242ZM42.8334 9.90194C42.8334 11.1276 42.5942 12.3413 42.1293 13.4736C41.6644 14.606 40.9831 15.6349 40.1242 16.5016C39.2652 17.3683 38.2455 18.0558 37.1232 18.5248C36.001 18.9939 34.7981 19.2353 33.5834 19.2353C32.3687 19.2353 31.1659 18.9939 30.0436 18.5248C28.9213 18.0558 27.9016 17.3683 27.0427 16.5016C26.1837 15.6349 25.5024 14.606 25.0375 13.4736C24.5727 12.3413 24.3334 11.1276 24.3334 9.90194C24.3334 7.42658 25.308 5.05261 27.0427 3.30227C28.7774 1.55193 31.1302 0.568604 33.5834 0.568604C36.0367 0.568604 38.3894 1.55193 40.1242 3.30227C41.8589 5.05261 42.8334 7.42658 42.8334 9.90194ZM21.0527 23.2175C19.8194 22.8256 18.548 22.568 17.2602 22.449C16.5367 22.3796 15.8102 22.3454 15.0834 22.3464C2.75008 22.3464 -0.333252 31.6797 -0.333252 34.7908C-0.333252 36.8659 0.693498 37.9019 2.75008 37.9019H15.7494C15.2923 36.9307 15.0644 35.8658 15.0834 34.7908C15.0834 31.6486 16.2458 28.4379 18.4442 25.7562C19.1935 24.8415 20.0661 23.9859 21.0527 23.2175ZM14.8367 25.4575C9.69375 25.5197 6.77383 27.4486 5.09341 29.4273C3.25266 31.5864 2.75008 33.9788 2.75008 34.7908H12.0001C12.0001 31.5397 12.996 28.301 14.8367 25.4575ZM4.29175 11.4575C4.29175 8.98214 5.2663 6.60817 7.00101 4.85783C8.73572 3.10749 11.0885 2.12416 13.5417 2.12416C15.995 2.12416 18.3478 3.10749 20.0825 4.85783C21.8172 6.60817 22.7917 8.98214 22.7917 11.4575C22.7917 13.9328 21.8172 16.3068 20.0825 18.0572C18.3478 19.8075 15.995 20.7908 13.5417 20.7908C11.0885 20.7908 8.73572 19.8075 7.00101 18.0572C5.2663 16.3068 4.29175 13.9328 4.29175 11.4575ZM13.5417 5.23527C11.9062 5.23527 10.3377 5.89082 9.18126 7.05772C8.02478 8.22461 7.37508 9.80726 7.37508 11.4575C7.37508 13.1077 8.02478 14.6904 9.18126 15.8573C10.3377 17.0242 11.9062 17.6797 13.5417 17.6797C15.1772 17.6797 16.7458 17.0242 17.9022 15.8573C19.0587 14.6904 19.7084 13.1077 19.7084 11.4575C19.7084 9.80726 19.0587 8.22461 17.9022 7.05772C16.7458 5.89082 15.1772 5.23527 13.5417 5.23527Z"
+                                fill="#ED1C23" />
+                        </svg>
+
+                        <p class="solution_gains_sub_title">Controlo e acompanhamento da execução dos projetos</p>
+                        <p class="solution_gains_sub_text">Gestão de todas as operações complexas assentes em
+                            orçamentos. Todas as atividades são registadas e monitorizadas para maior capacidade de
+                            planeamento e rapidez na execução.</p>
+                    </div>
+                    <div class="solution_gains_sub" id="solution_gains_second">
+                        <svg class="svg_gains" width="48" height="38" viewBox="0 0 48 38" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M45.9167 37.9019C45.9167 37.9019 49.0001 37.9019 49.0001 34.7908C49.0001 31.6797 45.9167 22.3464 33.5834 22.3464C21.2501 22.3464 18.1667 31.6797 18.1667 34.7908C18.1667 37.9019 21.2501 37.9019 21.2501 37.9019H45.9167ZM21.3179 34.7908H45.8489C45.8634 34.7891 45.8777 34.7871 45.8921 34.7846L45.9167 34.7784C45.9106 33.957 45.4018 31.5739 43.5734 29.4273C41.8714 27.4144 38.8806 25.4575 33.5834 25.4575C28.2893 25.4575 25.2985 27.4175 23.5934 29.4273C21.765 31.5739 21.2532 33.9602 21.2501 34.7784C21.2726 34.7828 21.2953 34.7869 21.3179 34.7908ZM33.5834 16.1242C35.2189 16.1242 36.7874 15.4686 37.9439 14.3017C39.1004 13.1348 39.7501 11.5522 39.7501 9.90194C39.7501 8.2517 39.1004 6.66905 37.9439 5.50216C36.7874 4.33527 35.2189 3.67971 33.5834 3.67971C31.9479 3.67971 30.3794 4.33527 29.2229 5.50216C28.0664 6.66905 27.4167 8.2517 27.4167 9.90194C27.4167 11.5522 28.0664 13.1348 29.2229 14.3017C30.3794 15.4686 31.9479 16.1242 33.5834 16.1242ZM42.8334 9.90194C42.8334 11.1276 42.5942 12.3413 42.1293 13.4736C41.6644 14.606 40.9831 15.6349 40.1242 16.5016C39.2652 17.3683 38.2455 18.0558 37.1232 18.5248C36.001 18.9939 34.7981 19.2353 33.5834 19.2353C32.3687 19.2353 31.1659 18.9939 30.0436 18.5248C28.9213 18.0558 27.9016 17.3683 27.0427 16.5016C26.1837 15.6349 25.5024 14.606 25.0375 13.4736C24.5727 12.3413 24.3334 11.1276 24.3334 9.90194C24.3334 7.42658 25.308 5.05261 27.0427 3.30227C28.7774 1.55193 31.1302 0.568604 33.5834 0.568604C36.0367 0.568604 38.3894 1.55193 40.1242 3.30227C41.8589 5.05261 42.8334 7.42658 42.8334 9.90194ZM21.0527 23.2175C19.8194 22.8256 18.548 22.568 17.2602 22.449C16.5367 22.3796 15.8102 22.3454 15.0834 22.3464C2.75008 22.3464 -0.333252 31.6797 -0.333252 34.7908C-0.333252 36.8659 0.693498 37.9019 2.75008 37.9019H15.7494C15.2923 36.9307 15.0644 35.8658 15.0834 34.7908C15.0834 31.6486 16.2458 28.4379 18.4442 25.7562C19.1935 24.8415 20.0661 23.9859 21.0527 23.2175ZM14.8367 25.4575C9.69375 25.5197 6.77383 27.4486 5.09341 29.4273C3.25266 31.5864 2.75008 33.9788 2.75008 34.7908H12.0001C12.0001 31.5397 12.996 28.301 14.8367 25.4575ZM4.29175 11.4575C4.29175 8.98214 5.2663 6.60817 7.00101 4.85783C8.73572 3.10749 11.0885 2.12416 13.5417 2.12416C15.995 2.12416 18.3478 3.10749 20.0825 4.85783C21.8172 6.60817 22.7917 8.98214 22.7917 11.4575C22.7917 13.9328 21.8172 16.3068 20.0825 18.0572C18.3478 19.8075 15.995 20.7908 13.5417 20.7908C11.0885 20.7908 8.73572 19.8075 7.00101 18.0572C5.2663 16.3068 4.29175 13.9328 4.29175 11.4575ZM13.5417 5.23527C11.9062 5.23527 10.3377 5.89082 9.18126 7.05772C8.02478 8.22461 7.37508 9.80726 7.37508 11.4575C7.37508 13.1077 8.02478 14.6904 9.18126 15.8573C10.3377 17.0242 11.9062 17.6797 13.5417 17.6797C15.1772 17.6797 16.7458 17.0242 17.9022 15.8573C19.0587 14.6904 19.7084 13.1077 19.7084 11.4575C19.7084 9.80726 19.0587 8.22461 17.9022 7.05772C16.7458 5.89082 15.1772 5.23527 13.5417 5.23527Z"
+                                fill="#ED1C23" />
+                        </svg>
+                        <p class="solution_gains_sub_title">Agilidade nos calculos e tomadas de decisões</p>
+                        <p class="solution_gains_sub_text">Gestão do cronograma financeiro com controlo de custos
+                            diretos e indiretos de cada obra, análise de desvios entre o previsto e o realizado, tanto
+                            em quantidades como em custos, assim como as respetivas percentagens.</p>
+                    </div>
+                    <div class="solution_gains_sub" id="solution_gains_third">
+                        <svg class="svg_gains" width="48" height="38" viewBox="0 0 48 38" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M45.9167 37.9019C45.9167 37.9019 49.0001 37.9019 49.0001 34.7908C49.0001 31.6797 45.9167 22.3464 33.5834 22.3464C21.2501 22.3464 18.1667 31.6797 18.1667 34.7908C18.1667 37.9019 21.2501 37.9019 21.2501 37.9019H45.9167ZM21.3179 34.7908H45.8489C45.8634 34.7891 45.8777 34.7871 45.8921 34.7846L45.9167 34.7784C45.9106 33.957 45.4018 31.5739 43.5734 29.4273C41.8714 27.4144 38.8806 25.4575 33.5834 25.4575C28.2893 25.4575 25.2985 27.4175 23.5934 29.4273C21.765 31.5739 21.2532 33.9602 21.2501 34.7784C21.2726 34.7828 21.2953 34.7869 21.3179 34.7908ZM33.5834 16.1242C35.2189 16.1242 36.7874 15.4686 37.9439 14.3017C39.1004 13.1348 39.7501 11.5522 39.7501 9.90194C39.7501 8.2517 39.1004 6.66905 37.9439 5.50216C36.7874 4.33527 35.2189 3.67971 33.5834 3.67971C31.9479 3.67971 30.3794 4.33527 29.2229 5.50216C28.0664 6.66905 27.4167 8.2517 27.4167 9.90194C27.4167 11.5522 28.0664 13.1348 29.2229 14.3017C30.3794 15.4686 31.9479 16.1242 33.5834 16.1242ZM42.8334 9.90194C42.8334 11.1276 42.5942 12.3413 42.1293 13.4736C41.6644 14.606 40.9831 15.6349 40.1242 16.5016C39.2652 17.3683 38.2455 18.0558 37.1232 18.5248C36.001 18.9939 34.7981 19.2353 33.5834 19.2353C32.3687 19.2353 31.1659 18.9939 30.0436 18.5248C28.9213 18.0558 27.9016 17.3683 27.0427 16.5016C26.1837 15.6349 25.5024 14.606 25.0375 13.4736C24.5727 12.3413 24.3334 11.1276 24.3334 9.90194C24.3334 7.42658 25.308 5.05261 27.0427 3.30227C28.7774 1.55193 31.1302 0.568604 33.5834 0.568604C36.0367 0.568604 38.3894 1.55193 40.1242 3.30227C41.8589 5.05261 42.8334 7.42658 42.8334 9.90194ZM21.0527 23.2175C19.8194 22.8256 18.548 22.568 17.2602 22.449C16.5367 22.3796 15.8102 22.3454 15.0834 22.3464C2.75008 22.3464 -0.333252 31.6797 -0.333252 34.7908C-0.333252 36.8659 0.693498 37.9019 2.75008 37.9019H15.7494C15.2923 36.9307 15.0644 35.8658 15.0834 34.7908C15.0834 31.6486 16.2458 28.4379 18.4442 25.7562C19.1935 24.8415 20.0661 23.9859 21.0527 23.2175ZM14.8367 25.4575C9.69375 25.5197 6.77383 27.4486 5.09341 29.4273C3.25266 31.5864 2.75008 33.9788 2.75008 34.7908H12.0001C12.0001 31.5397 12.996 28.301 14.8367 25.4575ZM4.29175 11.4575C4.29175 8.98214 5.2663 6.60817 7.00101 4.85783C8.73572 3.10749 11.0885 2.12416 13.5417 2.12416C15.995 2.12416 18.3478 3.10749 20.0825 4.85783C21.8172 6.60817 22.7917 8.98214 22.7917 11.4575C22.7917 13.9328 21.8172 16.3068 20.0825 18.0572C18.3478 19.8075 15.995 20.7908 13.5417 20.7908C11.0885 20.7908 8.73572 19.8075 7.00101 18.0572C5.2663 16.3068 4.29175 13.9328 4.29175 11.4575ZM13.5417 5.23527C11.9062 5.23527 10.3377 5.89082 9.18126 7.05772C8.02478 8.22461 7.37508 9.80726 7.37508 11.4575C7.37508 13.1077 8.02478 14.6904 9.18126 15.8573C10.3377 17.0242 11.9062 17.6797 13.5417 17.6797C15.1772 17.6797 16.7458 17.0242 17.9022 15.8573C19.0587 14.6904 19.7084 13.1077 19.7084 11.4575C19.7084 9.80726 19.0587 8.22461 17.9022 7.05772C16.7458 5.89082 15.1772 5.23527 13.5417 5.23527Z"
+                                fill="#ED1C23" />
+                        </svg>
+                        <p class="solution_gains_sub_title">Integração com gestão comercial e financeira</p>
+                        <p class="solution_gains_sub_text">Gestão de todas as operações complexas assentes em
+                            orçamentos. Todas as atividades são registadas e monitorizadas para maior capacidade de
+                            planeamento e rapidez na execução.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM SECÇÃO O QUE PODE GANHAR COM ESTA SOLUÇÃO-->
+
             <!-- Ideal Solution Chart Div-->
             <div id="ideal_solution_chart">
                 <p id="ideal_solution_chart_text">A solução ideal para Construção Civil<span style="color:red">.</span>
@@ -2440,7 +2521,9 @@
                             <div id="collapseOne" class="text_accordion collapse show" aria-labelledby="headingOne"
                                 data-parent="#accordionDistribution">
                                 <div class="card-body">
-                                    Possibilidade de definir corredores, prateleiras, alvéolos, racks e zonas de armazém, para uma visão gráfica imediata de onde guardar e encontrar cada artigo. As zonas podem ser configuradas à exata medida das necessidades de cada negócio.
+                                    Possibilidade de definir corredores, prateleiras, alvéolos, racks e zonas de
+                                    armazém, para uma visão gráfica imediata de onde guardar e encontrar cada artigo. As
+                                    zonas podem ser configuradas à exata medida das necessidades de cada negócio.
                                 </div>
                             </div>
                         </div>
@@ -2466,7 +2549,10 @@
                             <div id="collapseTwo" class="text_accordion collapse" aria-labelledby="headingTwo"
                                 data-parent="#accordionDistribution">
                                 <div class="card-body">
-                                    O alvéolo, parte integrante de zonas de armazém onde se guarda a mercadoria, apresenta a localização exata de cada artigo. Possibilidade de definir diversas parametrizações de alvéolos, como capacidade, referências ou prioridades, para indicação automática do melhor alvéolo nas saídas e entradas de stock.
+                                    O alvéolo, parte integrante de zonas de armazém onde se guarda a mercadoria,
+                                    apresenta a localização exata de cada artigo. Possibilidade de definir diversas
+                                    parametrizações de alvéolos, como capacidade, referências ou prioridades, para
+                                    indicação automática do melhor alvéolo nas saídas e entradas de stock.
                                 </div>
                             </div>
                         </div>
@@ -2492,7 +2578,10 @@
                             <div id="collapseThree" class="text_accordion collapse" aria-labelledby="headingThree"
                                 data-parent="#accordionDistribution">
                                 <div class="card-body">
-                                    Visualização gráfica dos conteúdos em armazém, para consulta simples e rápida da taxa de ocupação dos alvéolos de cada zona, e obtenção de um extrato de movimentos do respetivo alvéolo. Possibilidade de observar os diferentes níveis dos alvéolos por cores, indicativas do estado da sua lotação.
+                                    Visualização gráfica dos conteúdos em armazém, para consulta simples e rápida da
+                                    taxa de ocupação dos alvéolos de cada zona, e obtenção de um extrato de movimentos
+                                    do respetivo alvéolo. Possibilidade de observar os diferentes níveis dos alvéolos
+                                    por cores, indicativas do estado da sua lotação.
                                 </div>
                             </div>
                         </div>
@@ -2518,7 +2607,9 @@
                             <div id="collapseFour" class="text_accordion collapse" aria-labelledby="headingFour"
                                 data-parent="#accordionDistribution">
                                 <div class="card-body">
-                                    Simplicidade na criação de dossiers internos para dar saída de material de forma automática, minimizando o erro humano nas operações e assegurando o cumprimento de todos os prazos de entrega.
+                                    Simplicidade na criação de dossiers internos para dar saída de material de forma
+                                    automática, minimizando o erro humano nas operações e assegurando o cumprimento de
+                                    todos os prazos de entrega.
                                 </div>
                             </div>
                         </div>
@@ -2544,7 +2635,9 @@
                             <div id="collapseFive" class="text_accordion collapse" aria-labelledby="headingFive"
                                 data-parent="#accordionDistribution">
                                 <div class="card-body">
-                                    Picagem, impressão e controlo de listas de encomendas não processadas. Listas com toda a informação ordenada, com indicação de alvéolos de retirada de mercadoria para tratamento de expedição de encomendas.
+                                    Picagem, impressão e controlo de listas de encomendas não processadas. Listas com
+                                    toda a informação ordenada, com indicação de alvéolos de retirada de mercadoria para
+                                    tratamento de expedição de encomendas.
                                 </div>
                             </div>
                         </div>
@@ -2570,7 +2663,8 @@
                             <div id="collapseSix" class="text_accordion collapse" aria-labelledby="headingSix"
                                 data-parent="#accordionDistribution">
                                 <div class="card-body">
-                                    Gestão de motoristas e de viaturas de transporte de mercadorias para uma organização fácil e completa da expedição.
+                                    Gestão de motoristas e de viaturas de transporte de mercadorias para uma organização
+                                    fácil e completa da expedição.
                                 </div>
                             </div>
                         </div>
@@ -2971,7 +3065,8 @@
 
             <div id="demo-section-construction" class="demo-section">
                 <p class="demo-section-text">Maximize recursos,
-                    <strong>minimize custos</strong></p>
+                    <strong>minimize custos</strong>
+                </p>
                 <button class="white-button">
                     Pedir a demo
                 </button>
@@ -3001,8 +3096,8 @@
                 </div>
 
                 <div id="complete_management_info">
-                    <p id="complete_management_text">Controlo global do plano geral de produção<span
-                            class="other-color" style="color:red">.</span></p>
+                    <p id="complete_management_text">Controlo global do plano geral de produção<span class="other-color"
+                            style="color:red">.</span></p>
                     <div class="accordion" id="accordionIndustry">
                         <div class="card">
                             <div class="accordion_background card-header" id="headingOne">
@@ -3011,9 +3106,10 @@
                                         class="btn buttons_text_management btn-link btn-block text-left buttonOne"
                                         type="button" data-toggle="collapse" data-target="#collapseOne"
                                         aria-expanded="true" aria-controls="collapseOne">
-                                        Gestão de gamas operatórias e planeamento de ordens de fabrico <svg id="first_svg_management"
-                                            class="accordion_svgs first_svg_management" width="32" height="33"
-                                            viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        Gestão de gamas operatórias e planeamento de ordens de fabrico <svg
+                                            id="first_svg_management" class="accordion_svgs first_svg_management"
+                                            width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="16" cy="16.5" r="16" fill="#ED1C23" />
                                             <path
                                                 d="M8.34175 19.6231C8.15178 19.8174 8.15178 20.1279 8.34175 20.3222L9.47467 21.4809C9.67065 21.6814 9.99312 21.6816 10.1893 21.4813L15.4377 16.1249C15.6338 15.9248 15.956 15.9248 16.152 16.1249L21.4004 21.4813C21.5966 21.6816 21.9191 21.6814 22.1151 21.4809L23.248 20.3222C23.438 20.1279 23.438 19.8174 23.248 19.6231L16.1524 12.3657C15.9563 12.1651 15.6335 12.1651 15.4374 12.3657L8.34175 19.6231Z"
@@ -3027,7 +3123,8 @@
                             <div id="collapseOne" class="text_accordion collapse show" aria-labelledby="headingOne"
                                 data-parent="#accordionIndustry">
                                 <div class="card-body">
-                                    Definição de operações, tempos de produção, tempos de dispersão entre duas operações e/ou coeficientes de sobreposição entre operações e componentes.
+                                    Definição de operações, tempos de produção, tempos de dispersão entre duas operações
+                                    e/ou coeficientes de sobreposição entre operações e componentes.
                                 </div>
                             </div>
                         </div>
@@ -3038,9 +3135,10 @@
                                         class="btn buttons_text_management btn-link btn-block text-left collapsed buttonTwo"
                                         type="button" data-toggle="collapse" data-target="#collapseTwo"
                                         aria-expanded="false" aria-controls="collapseTwo">
-                                        Ecrãs com funções personalizáveis também em touch <svg id="second_svg_management"
-                                            class="accordion_svgs second_svg_management" width="32" height="33"
-                                            viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        Ecrãs com funções personalizáveis também em touch <svg
+                                            id="second_svg_management" class="accordion_svgs second_svg_management"
+                                            width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <circle cx="16" cy="16.5" r="16" fill="#424242" />
                                             <path
                                                 d="M23.2481 14.2231C23.4381 14.0288 23.4381 13.7183 23.2481 13.524L22.1152 12.3653C21.9192 12.1648 21.5967 12.1646 21.4005 12.3649L16.1521 17.7213C15.9561 17.9214 15.6339 17.9214 15.4378 17.7213L10.1894 12.3649C9.99322 12.1646 9.67075 12.1648 9.47477 12.3653L8.34185 13.524C8.15187 13.7183 8.15187 14.0288 8.34185 14.2231L15.4375 21.4805C15.6336 21.6811 15.9564 21.6811 16.1525 21.4805L23.2481 14.2231Z"
@@ -3053,7 +3151,9 @@
                             <div id="collapseTwo" class="text_accordion collapse" aria-labelledby="headingTwo"
                                 data-parent="#accordionIndustry">
                                 <div class="card-body">
-                                    Terminais de ecrã tátil para chão-de-fábrica, para um registo rápido e intuitivo dos tempos de operação, paragens ocorridas, quantidades fabricadas, entre outros valores.
+                                    Terminais de ecrã tátil para chão-de-fábrica, para um registo rápido e intuitivo dos
+                                    tempos de operação, paragens ocorridas, quantidades fabricadas, entre outros
+                                    valores.
                                 </div>
                             </div>
                         </div>
@@ -3079,7 +3179,10 @@
                             <div id="collapseThree" class="text_accordion collapse" aria-labelledby="headingThree"
                                 data-parent="#accordionIndustry">
                                 <div class="card-body">
-                                    Módulo MRP (Material Reqirements Planning) desenhado para permitir uma gestão eficaz e controlada dos stocks e recursos produtivos, possibilitando uma avaliação eficaz das necessidades de compra e fabrico para um determinado período, de acordo com diversos critérios.
+                                    Módulo MRP (Material Reqirements Planning) desenhado para permitir uma gestão eficaz
+                                    e controlada dos stocks e recursos produtivos, possibilitando uma avaliação eficaz
+                                    das necessidades de compra e fabrico para um determinado período, de acordo com
+                                    diversos critérios.
                                 </div>
                             </div>
                         </div>
@@ -3105,7 +3208,9 @@
                             <div id="collapseFour" class="text_accordion collapse" aria-labelledby="headingFour"
                                 data-parent="#accordionIndustry">
                                 <div class="card-body">
-                                    Integração com a Solução Business Core (composta pelos módulos Gestão, BPM, Contabilidade e Imobilizado) por dossiers de fabrico, consumos, subcontratação e encomendas.
+                                    Integração com a Solução Business Core (composta pelos módulos Gestão, BPM,
+                                    Contabilidade e Imobilizado) por dossiers de fabrico, consumos, subcontratação e
+                                    encomendas.
                                 </div>
                             </div>
                         </div>
@@ -3131,7 +3236,10 @@
                             <div id="collapseFive" class="text_accordion collapse" aria-labelledby="headingFive"
                                 data-parent="#accordionIndustry">
                                 <div class="card-body">
-                                    Partindo dos dados introduzidos nos diários de trabalho, possibilidade de acompanhar a evolução de indicadores úteis como o OEE (Overall Equipament Effectiveness), o índice de qualidade, de disponibilidade e de performance, em gráficos simples e apelativos.
+                                    Partindo dos dados introduzidos nos diários de trabalho, possibilidade de acompanhar
+                                    a evolução de indicadores úteis como o OEE (Overall Equipament Effectiveness), o
+                                    índice de qualidade, de disponibilidade e de performance, em gráficos simples e
+                                    apelativos.
                                 </div>
                             </div>
                         </div>
@@ -3660,8 +3768,8 @@
 
                                 </div>
                                 <div id="social_media">
-                                    <svg width="32" href="#" class="hover_social_media" height="32" viewBox="0 0 32 32"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="instagram_click hover" width="32" href="#" class="hover_social_media"
+                                        height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd"
                                             d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z"
                                             fill="white" />
