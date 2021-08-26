@@ -59,14 +59,20 @@ function HomeLoad() {
     } else if (rndInt == 3) {
         $('#industry-sectors-slider').show();
         $('#title-2').html("Solução Indústria");
+        $('#title-1').html("Solução para Indústria");
+        $('#title-3').html("Gestão e otimização dos processos de fabrico");
 
     } else if (rndInt == 2) {
         $('#distribution-sectors-slider').show();
         $('#title-2').html("Solução Distribuição");
+        $('#title-1').html("Solução para Distribuição");
+        $('#title-3').html("Mais eficiência na ocupação de armazéns e linhas de distribuição");
     }
     else {
         $('#construction-sectors-slider').show();
         $('#title-2').html("Solução Construção");
+        $('#title-1').html("Solução para Construção Civil");
+        $('#title-3').html("Maior controlo e rigor na gestão de obras e projetos");
     }
     //Adicionar Secções a ocultar na página inicial
     window.scrollTo(0, 0);
@@ -783,30 +789,35 @@ function changeSlider() {
             $('#distribution-sectors-slider').show("slow");
 
             $('#title-2').html("Solução Distribuição");
-            animate(document.getElementById("title-2"));
+            $('#title-1').html("Solução para Distribuição");
+            $('#title-3').html("Mais eficiência na ocupação de armazéns e linhas de distribuição");
             animate(document.getElementById('distribution-sectors-slider'));
 
         } else if ($("#distribution-sectors-slider").is(":visible")) {
             $('#distribution-sectors-slider').hide();
             $('#industry-sectors-slider').show("slow");
             $('#title-2').html("Solução Indústria");
-            animate(document.getElementById("title-2"));
+            $('#title-1').html("Solução para Indústria");
+            $('#title-3').html("Gestão e otimização dos processos de fabrico");
             animate(document.getElementById('industry-sectors-slider'));
 
         } else if ($("#industry-sectors-slider").is(":visible")) {
             $('#industry-sectors-slider').hide();
             $('#it-sectors-slider').show("slow");
             $('#title-2').html("Solução IT");
-            animate(document.getElementById("title-2"));
             animate(document.getElementById('it-sectors-slider'));
         }
         else {
             $('#it-sectors-slider').hide();
             $('#construction-sectors-slider').show("slow");
             $('#title-2').html("Solução Construção");
-            animate(document.getElementById("title-2"));
+            $('#title-1').html("Solução para Construção Civil");
+            $('#title-3').html("Maior controlo e rigor na gestão de obras e projetos");
             animate(document.getElementById('construction-sectors-slider'));
         }
+        animate(document.getElementById("title-2"));
+        animate(document.getElementById("title-1"));
+        animate(document.getElementById("title-3"));
     }
 
     timer = setTimeout(function () {
