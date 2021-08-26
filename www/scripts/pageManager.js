@@ -119,6 +119,7 @@ function ContactUsLoad() {
     if (document.getElementsByClassName('buttonOne')[0].getAttribute('aria-expanded') === "false") {
         $(".buttonOne").click();
     }
+    $(".first_svg_management").html(red_svg);
 }
 
 // ******************************************************************************
@@ -154,6 +155,7 @@ function ConstructionLoad() {
     $carousel = $('#carouseReviews');
     $carouselItems = $('.carousel-item', $carousel);
     setNextPrev();
+    $(".first_svg_management").html(red_svg);
 
 }
 
@@ -192,6 +194,7 @@ function DistributionLoad() {
     $carousel = $('#carouseReviewsDistribution');
     $carouselItems = $('.carousel-item', $carousel);
     setNextPrev();
+    $(".first_svg_management").html(red_svg);
 }
 
 // ******************************************************************************
@@ -227,6 +230,7 @@ function IndustryLoad() {
     $carousel = $('#carouseReviewsIndustry');
     $carouselItems = $('.carousel-item', $carousel);
     setNextPrev();
+    $(".first_svg_management").html(red_svg);
 }
 
 // ******************************************************************************
