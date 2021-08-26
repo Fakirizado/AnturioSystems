@@ -2877,6 +2877,12 @@ grid-row-end: -1;
     justify-content: space-between;
     margin-top: 40px;
 }
+.line-solution-bigger{
+    justify-content: space-around;
+}
+.line-solution-bigger .solution-card-item{
+    width: 30%;
+}
 .solution-card-item{
     box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
     border-radius: 8px;
@@ -2917,6 +2923,12 @@ grid-row-end: -1;
         margin-right: 5%;
         margin-left: 5%;
         margin-top: 5px;
+    }
+    .line-solution-bigger{
+        justify-content: space-around;
+    }
+    .line-solution-bigger .solution-card-item{
+        width: 45%;
     }
     .carouselSolution .carousel-item{
         background-color: #F5F5F5;
@@ -3108,6 +3120,7 @@ grid-row-end: -1;
 
   /* INÍCIO SECÇÃO CONTROLO E PLANEAMENTO */
 .control_and_planning{
+    padding-bottom: 30px;
     background: #212121;
 }
 
@@ -3174,8 +3187,22 @@ grid-row-end: -1;
     margin-right: 11%;
 }
 
+@media only screen and (min-width: 1501px){
+    .control_and_planning_img img {
+        width: 950px;
+    }
+}
 
-@media only screen and (max-width: 992px){
+@media only screen and (min-width: 2000px){
+    .control_and_planning_img img {
+        width: 1100px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 1500px){
     .control_and_planning_content{
         flex-direction: column-reverse;
         justify-content: center;
