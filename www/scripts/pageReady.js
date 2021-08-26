@@ -144,6 +144,14 @@ $(document).ready(function () {
         IndustryLoad();
     });
 
+    $("#contact-us-phone-btn").on("click", function () {
+        ContactUsLoad();
+    });
+
+    $("#contact-us-phone-btn-mobile").on("click", function () {
+        ContactUsLoad();
+    });
+
 
 
     $(".logo").on("click", function () {
