@@ -259,6 +259,7 @@ function ITLoad() {
     $('#different_sectors').hide();
     $('#distribution-sections').hide();
     $('#construction-sections').hide();
+    $('#industry-sections').hide();
     $('#section-ti-homepage').show();
     $('#div_trusted_clients').show();
     //$('#industry-sections').show();
