@@ -262,7 +262,7 @@ function ITLoad() {
     $('#industry-sections').hide();
     $('#section-ti-homepage').show();
     $('#div_trusted_clients').show();
-    //$('#industry-sections').show();
+    $('#it-sections').show();
     window.scrollTo(0, 0);
     $('#video-banner').prop("src", "img/it-homepage.jpg");
     animate(document.getElementById("section-ti-homepage"));
@@ -272,9 +272,9 @@ function ITLoad() {
     if (document.getElementsByClassName('buttonOne')[3].getAttribute('aria-expanded') === "false") {
         $(".buttonOne").click();
     }
-    //$carousel = $('#carouseReviewsIndustry');
-    //$carouselItems = $('.carousel-item', $carousel);
-    //setNextPrev();
+    $carousel = $('#carouseReviewsIT');
+    $carouselItems = $('.carousel-item', $carousel);
+    setNextPrev();
     $(".first_svg_management").html(red_svg);
 }
 
