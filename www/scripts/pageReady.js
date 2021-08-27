@@ -144,6 +144,10 @@ $(document).ready(function () {
         IndustryLoad();
     });
 
+    $("#svg_it").on("click", function () {
+        ITLoad();
+    });
+
     $("#contact-us-phone-btn").on("click", function () {
         ContactUsLoad();
     });
@@ -246,7 +250,11 @@ $(document).ready(function () {
             $('#distribution-sectors-slider').hide();
             $('#it-sectors-slider').show();
             $('#title-2').html("Solução TI");
+            $('#title-1').html("Solução para Tecnologias de Informação");
+            $('#title-3').html("A solução ideal para gerir TI");
             animate(document.getElementById("title-2"));
+            animate(document.getElementById("title-1"));
+            animate(document.getElementById("title-3"));
             animate(document.getElementById('it-sectors-slider'));
             timer = setTimeout(function () {
                 changeSlider();

@@ -330,7 +330,7 @@ nav ul li a {
     #content-homepage-construction{
         height: calc( 100vh - 190px );
     }
-    #content-homepage-distribution, #content-homepage-industry{
+    #content-homepage-distribution, #content-homepage-industry, #content-homepage-ti{
         height: calc( 100vh - 190px );
     }
     #content-contact-us{
@@ -696,6 +696,8 @@ grid-row-end: -1;
     .hamburguer-hr{
         border: 1px solid #EEEEEE;
         margin-right: 5%;
+        margin-top: 1px;
+        margin-bottom: 1px;
     }
     #hamburguer-icons-text{
         font-family: Montserrat;
@@ -729,7 +731,7 @@ grid-row-end: -1;
         font-family: 'Ubuntu';
         font-style: normal;
         font-weight: bold;
-        font-size: 10px;
+        font-size: 16px;
         line-height: 20px;
         letter-spacing: 0.30px;
         text-transform: uppercase;
@@ -1745,7 +1747,7 @@ grid-row-end: -1;
   /* CONTACT US - FIM */
 
 /* INICIO DIV CONSTRUÇÃO */
-#content-homepage-construction, #content-homepage-distribution, #content-homepage-industry {
+#content-homepage-construction, #content-homepage-distribution, #content-homepage-industry, #content-homepage-ti {
     position: relative;
 }
 

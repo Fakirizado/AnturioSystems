@@ -39,6 +39,7 @@ function HomeLoad() {
     $('#section-construction-homepage').hide();
     $('#section-distribution-homepage').hide();
     $('#section-industry-homepage').hide();
+    $('#section-ti-homepage').hide();
     $('#construction-sections').hide();
     $('#distribution-sections').hide();
     $('#industry-sections').hide();
@@ -56,6 +57,8 @@ function HomeLoad() {
     if (rndInt == 4) {
         $('#it-sectors-slider').show();
         $('#title-2').html("Solução TI");
+        $('#title-1').html("Solução para Tecnologias de Informação");
+        $('#title-3').html("A solução ideal para gerir TI");
     } else if (rndInt == 3) {
         $('#industry-sectors-slider').show();
         $('#title-2').html("Solução Indústria");
@@ -98,6 +101,7 @@ function ContactUsLoad() {
     $('#div_with_sectors').hide();
     $('#we-solution-page').hide();
     $('#section-construction-homepage').hide();
+    $('#section-ti-homepage').hide();
     $('#section-distribution-homepage').hide();
     $('#section-industry-homepage').hide();
     $('#div_trusted_clients').hide();
@@ -136,6 +140,7 @@ function ConstructionLoad() {
     $('#section-construction-homepage').hide();
     $('#section-distribution-homepage').hide();
     $('#section-industry-homepage').hide();
+    $('#section-ti-homepage').hide();
     $('#section-contact-us').hide();
     $('#different_sectors').hide();
     $('#distribution-sections').hide();
@@ -171,6 +176,7 @@ function DistributionLoad() {
     $('#div_with_sectors').hide();
     $('#we-solution-page').hide();
     $('#section-construction-homepage').hide();
+    $('#section-ti-homepage').hide();
     $('#section-distribution-homepage').hide();
     $('#section-industry-homepage').hide();
     $('#section-contact-us').hide();
@@ -182,7 +188,7 @@ function DistributionLoad() {
     $('#distribution-sections').show();
     $('#distribution-sections').show();
     window.scrollTo(0, 0);
-    $('#video-banner').prop("src", "img/construction_background.jpg");
+    $('#video-banner').prop("src", "img/distribution-homepage.jpg");
     animate(document.getElementById("section-distribution-homepage"));
     animate(document.getElementById("video-banner"));
     resetArrowConstruction("distribution");
@@ -209,6 +215,7 @@ function IndustryLoad() {
     $('#div_with_sectors').hide();
     $('#we-solution-page').hide();
     $('#section-construction-homepage').hide();
+    $('#section-ti-homepage').hide();
     $('#section-distribution-homepage').hide();
     $('#section-industry-homepage').hide();
     $('#section-contact-us').hide();
@@ -219,7 +226,7 @@ function IndustryLoad() {
     $('#div_trusted_clients').show();
     $('#industry-sections').show();
     window.scrollTo(0, 0);
-    $('#video-banner').prop("src", "img/construction_background.jpg");
+    $('#video-banner').prop("src", "img/industry-homepage.jpg");
     animate(document.getElementById("section-industry-homepage"));
     animate(document.getElementById("video-banner"));
     resetArrowConstruction("industry");
@@ -232,6 +239,44 @@ function IndustryLoad() {
     setNextPrev();
     $(".first_svg_management").html(red_svg);
 }
+
+// ******************************************************************************
+// ******************************************************************************
+// FUNÇÃO QUE OCULTA TODAS AS SECÇÕES E MOSTRA APENAS A PÁGINA DE T.I
+// ******************************************************************************
+// ******************************************************************************
+
+function ITLoad() {
+    $('#first-hr').hide();
+    $('#content-first-page').hide();
+    $('#div_with_sectors').hide();
+    $('#we-solution-page').hide();
+    $('#section-construction-homepage').hide();
+    $('#section-ti-homepage').hide();
+    $('#section-distribution-homepage').hide();
+    $('#section-industry-homepage').hide();
+    $('#section-contact-us').hide();
+    $('#different_sectors').hide();
+    $('#distribution-sections').hide();
+    $('#construction-sections').hide();
+    $('#section-ti-homepage').show();
+    $('#div_trusted_clients').show();
+    //$('#industry-sections').show();
+    window.scrollTo(0, 0);
+    $('#video-banner').prop("src", "img/it-homepage.jpg");
+    animate(document.getElementById("section-ti-homepage"));
+    animate(document.getElementById("video-banner"));
+    resetArrowConstruction("industry");
+    currentPage = "industry";
+    if (document.getElementsByClassName('buttonOne')[3].getAttribute('aria-expanded') === "false") {
+        $(".buttonOne").click();
+    }
+    $carousel = $('#carouseReviewsIndustry');
+    $carouselItems = $('.carousel-item', $carousel);
+    setNextPrev();
+    $(".first_svg_management").html(red_svg);
+}
+
 
 // ******************************************************************************
 // ******************************************************************************
@@ -250,7 +295,7 @@ function ChangePageButton() {
         IndustryLoad();
     }
     else {
-
+        ITLoad();
     }
 }
 
@@ -475,6 +520,8 @@ function IndustryHamburguerClick() {
 }
 
 function ITHamburguerClick() {
+    $('.menu-icon').click();
+    ITLoad();
 
 }
 
@@ -595,6 +642,7 @@ function svgs_hovers() {
 
         $("#svg_it").on({
             click: function () {
+                ITLoad();
                 document.getElementById('svg_it').innerHTML = svg_it_hover_mobile;
             }
         });
@@ -622,6 +670,7 @@ function svgs_hovers() {
 
         $("#svg_it").on({
             click: function () {
+                ITLoad();
                 document.getElementById('svg_it').innerHTML = svg_it_hover_mobile;
             }
         });
@@ -667,6 +716,9 @@ function svgs_hovers() {
             },
             mouseleave: function () {
                 document.getElementById('svg_it').innerHTML = svg_it;
+            },
+            click: function () {
+                ITLoad();
             }
         });
     }
@@ -809,6 +861,8 @@ function changeSlider() {
             $('#industry-sectors-slider').hide();
             $('#it-sectors-slider').show("slow");
             $('#title-2').html("Solução IT");
+            $('#title-1').html("Solução para Tecnologias de Informação");
+            $('#title-3').html("A solução ideal para gerir TI");
             animate(document.getElementById('it-sectors-slider'));
         }
         else {
