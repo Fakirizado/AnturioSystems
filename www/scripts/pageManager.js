@@ -574,7 +574,7 @@ function toMobile() {
         svg_construction_mobile + ` </svg>`;
 
     document.getElementById('first_two_icons').innerHTML +=
-        `<svg width="82" id="svg_industry" class = "svg_sectors" height="85" viewBox="0 0 82 85" fill="none" xmlns="http://www.w3.org/2000/svg">` +
+        `<svg width="82" id="svg_industry" class = "svg_sectors" height="85" viewBox="0 0 82 89" fill="none" xmlns="http://www.w3.org/2000/svg">` +
         svg_industry_mobile + `</svg>`
 
     $('#svg_distribution').remove();
@@ -585,7 +585,7 @@ function toMobile() {
 
 
     document.getElementById('second_two_icons').innerHTML +=
-        `<svg width="68" id="svg_it" class = "svg_sectors" height="84" viewBox="0 0 68 84" fill="none" xmlns="http://www.w3.org/2000/svg">` +
+        `<svg width="68" id="svg_it" class = "svg_sectors" height="84" viewBox="0 0 68 89" fill="none" xmlns="http://www.w3.org/2000/svg">` +
         svg_it_mobile + `</svg>`
 }
 
@@ -598,21 +598,21 @@ function toMobile() {
 function toWeb() {
     $('#svg_construction').remove();
     $('#svg_industry').remove();
-    document.getElementById('first_two_icons').innerHTML = `<svg width="122" id="svg_construction" class = "svg_sectors" height="109" viewBox="0 0 122 109" fill="none" xmlns="http://www.w3.org/2000/svg">` +
+    document.getElementById('first_two_icons').innerHTML = `<svg width="120" height="109" viewBox="0 0 120 109" id="svg_construction" class = "svg_sectors" fill="none" xmlns="http://www.w3.org/2000/svg">` +
         svg_construction + `</svg>`
 
     document.getElementById('first_two_icons').innerHTML +=
-        `<svg width="93" id="svg_industry" class = "svg_sectors" height="107" viewBox="0 0 93 107" fill="none" xmlns="http://www.w3.org/2000/svg">` +
+        `<svg id="svg_industry" class = "svg_sectors" width="120" height="109" viewBox="0 0 120 109" fill="none" xmlns="http://www.w3.org/2000/svg">` +
         svg_industry + `</svg>`
 
 
     $('#svg_distribution').remove();
     $('#svg_it').remove();
     document.getElementById('second_two_icons').innerHTML =
-        `<svg width="128" id="svg_distribution" class = "svg_sectors" height="111" viewBox="0 0 128 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+        `<svg width="120" height="109" viewBox="0 0 120 109" id="svg_distribution" class = "svg_sectors" fill="none" xmlns="http://www.w3.org/2000/svg">
     ` + svg_distribution + `</svg>`
 
-    document.getElementById('second_two_icons').innerHTML += `<svg width="94" id="svg_it" class = "svg_sectors" height="109" viewBox="0 0 94 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+    document.getElementById('second_two_icons').innerHTML += `<svg width="120" height="109" viewBox="0 0 120 109" id="svg_it" class = "svg_sectors" fill="none" xmlns="http://www.w3.org/2000/svg">
     ` + svg_it + `</svg>`
 }
 
