@@ -266,14 +266,14 @@ function ITLoad() {
     $('#video-banner').prop("src", "img/it-homepage.jpg");
     animate(document.getElementById("section-ti-homepage"));
     animate(document.getElementById("video-banner"));
-    resetArrowConstruction("industry");
-    currentPage = "industry";
+    resetArrowConstruction("it");
+    currentPage = "it";
     if (document.getElementsByClassName('buttonOne')[3].getAttribute('aria-expanded') === "false") {
         $(".buttonOne").click();
     }
-    $carousel = $('#carouseReviewsIndustry');
-    $carouselItems = $('.carousel-item', $carousel);
-    setNextPrev();
+    //$carousel = $('#carouseReviewsIndustry');
+    //$carouselItems = $('.carousel-item', $carousel);
+    //setNextPrev();
     $(".first_svg_management").html(red_svg);
 }
 

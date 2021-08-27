@@ -99,6 +99,12 @@ $(document).ready(function () {
         arrowConstructionRigth('industry');
     });
 
+    jquerySwipeHandler.handleSwipe("#arrow-it-rigth", [
+        jquerySwipeHandler.CLICK
+    ], function (direction) {
+        arrowConstructionRigth('it');
+    });
+
     jquerySwipeHandler.handleSwipe("#arrow-construction-left", [
         jquerySwipeHandler.CLICK
     ], function (direction) {
@@ -115,6 +121,12 @@ $(document).ready(function () {
         jquerySwipeHandler.CLICK
     ], function (direction) {
         arrowConstructionLeft('industry');
+    });
+
+    jquerySwipeHandler.handleSwipe("#arrow-it-left", [
+        jquerySwipeHandler.CLICK
+    ], function (direction) {
+        arrowConstructionLeft('it');
     });
 
     jquerySwipeHandler.handleSwipe(".sub-homepage-info", [
