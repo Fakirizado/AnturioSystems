@@ -43,6 +43,7 @@ function HomeLoad() {
     $('#construction-sections').hide();
     $('#distribution-sections').hide();
     $('#industry-sections').hide();
+    $('#it-sections').hide();
     $('#content-first-page').show();
     $('#different_sectors').show();
     $('#div_with_sectors').show();
@@ -107,6 +108,7 @@ function ContactUsLoad() {
     $('#div_trusted_clients').hide();
     $('#construction-sections').hide();
     $('#distribution-sections').hide();
+    $('#it-sections').hide();
     $('#industry-sections').hide();
     $('#section-contact-us').show();
     window.scrollTo(0, 0);
@@ -145,6 +147,7 @@ function ConstructionLoad() {
     $('#different_sectors').hide();
     $('#distribution-sections').hide();
     $('#industry-sections').hide();
+    $('#it-sections').hide();
     $('#section-construction-homepage').show();
     $('#div_trusted_clients').show();
     $('#construction-sections').show();
@@ -183,6 +186,7 @@ function DistributionLoad() {
     $('#different_sectors').hide();
     $('#construction-sections').hide();
     $('#industry-sections').hide();
+    $('#it-sections').hide();
     $('#section-distribution-homepage').show();
     $('#div_trusted_clients').show();
     $('#distribution-sections').show();
@@ -222,6 +226,7 @@ function IndustryLoad() {
     $('#different_sectors').hide();
     $('#distribution-sections').hide();
     $('#construction-sections').hide();
+    $('#it-sections').hide();
     $('#section-industry-homepage').show();
     $('#div_trusted_clients').show();
     $('#industry-sections').show();
