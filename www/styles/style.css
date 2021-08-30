@@ -3258,3 +3258,195 @@ grid-row-end: -1;
 
 }
   /* FIM SECÇÃO CONTROLO E PLANEAMENTO */
+
+
+
+
+
+  /* Início SECÇÃO AS MELHORES SOLUÇÕES */
+
+  .best-solutions-it{
+    background: #F5F5F5;
+  }
+
+  .best-solutions-title p{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 61px;
+    line-height: 72px;
+    text-align: center;
+    letter-spacing: -0.5px;
+    color: #18191F;
+    padding-bottom: 40px;
+    padding-top:60px;
+  }
+  .card-title{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.25px;
+    color: #212121;
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+  .card-sub-title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #FC2B22;
+  }
+  .card-front-content{
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+  }
+  .card-absolute-item{
+      position:absolute;
+      right: 0;
+      bottom: 0;
+  }
+  .cards-line{
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 60px;
+  }
+  .card-back-1{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: left;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.74);
+  }
+  .card-back-2{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 36px;
+    text-align: left;
+    letter-spacing: 0.25px;
+    color: #FFFFFF;
+  }
+  .card-back-3{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    text-align: left;
+  }
+  .card-back-content{
+      display: flex;
+      justify-content: center;
+      height: inherit;
+      flex-direction: column;
+      margin-right: 11%;
+      margin-left: 11%;
+  }
+
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 46%;
+    min-height: 310px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background: #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background: #ED1C23;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05);
+    transform: rotateY(180deg);
+  }
+  .best-solutions-cards{
+      margin-left: 11%;
+      margin-right: 11%;
+  }
+
+  @media(max-width: 992px) {
+    .best-solutions-cards{
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .flip-card{
+        width: 48.5%;
+        min-height: 380px;
+    }
+  }
+  @media(max-width: 575px) {
+      .cards-line{
+          flex-direction: column;
+          gap: 60px;
+      }
+      .flip-card-inner{
+          width: 100%;
+          height: 380px;
+      }
+      .flip-card{
+          width: 100%;
+      }
+      .best-solutions-title p{
+          font-size: 50px;
+      }
+
+
+
+
+  }
+
+
+
+
+
+
+
+  /* Fim SECÇÃO AS MELHORES SOLUÇÕES */
