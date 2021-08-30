@@ -39,9 +39,11 @@ function HomeLoad() {
     $('#section-construction-homepage').hide();
     $('#section-distribution-homepage').hide();
     $('#section-industry-homepage').hide();
+    $('#section-ti-homepage').hide();
     $('#construction-sections').hide();
     $('#distribution-sections').hide();
     $('#industry-sections').hide();
+    $('#it-sections').hide();
     $('#content-first-page').show();
     $('#different_sectors').show();
     $('#div_with_sectors').show();
@@ -56,17 +58,25 @@ function HomeLoad() {
     if (rndInt == 4) {
         $('#it-sectors-slider').show();
         $('#title-2').html("Solução TI");
+        $('#title-1').html("Solução para Tecnologias de Informação");
+        $('#title-3').html("A solução ideal para gerir TI");
     } else if (rndInt == 3) {
         $('#industry-sectors-slider').show();
         $('#title-2').html("Solução Indústria");
+        $('#title-1').html("Solução para Indústria");
+        $('#title-3').html("Gestão e otimização dos processos de fabrico");
 
     } else if (rndInt == 2) {
         $('#distribution-sectors-slider').show();
         $('#title-2').html("Solução Distribuição");
+        $('#title-1').html("Solução para Distribuição");
+        $('#title-3').html("Mais eficiência na ocupação de armazéns e linhas de distribuição");
     }
     else {
         $('#construction-sectors-slider').show();
         $('#title-2').html("Solução Construção");
+        $('#title-1').html("Solução para Construção Civil");
+        $('#title-3').html("Maior controlo e rigor na gestão de obras e projetos");
     }
     //Adicionar Secções a ocultar na página inicial
     window.scrollTo(0, 0);
@@ -92,11 +102,13 @@ function ContactUsLoad() {
     $('#div_with_sectors').hide();
     $('#we-solution-page').hide();
     $('#section-construction-homepage').hide();
+    $('#section-ti-homepage').hide();
     $('#section-distribution-homepage').hide();
     $('#section-industry-homepage').hide();
     $('#div_trusted_clients').hide();
     $('#construction-sections').hide();
     $('#distribution-sections').hide();
+    $('#it-sections').hide();
     $('#industry-sections').hide();
     $('#section-contact-us').show();
     window.scrollTo(0, 0);
@@ -113,6 +125,7 @@ function ContactUsLoad() {
     if (document.getElementsByClassName('buttonOne')[0].getAttribute('aria-expanded') === "false") {
         $(".buttonOne").click();
     }
+    $(".first_svg_management").html(red_svg);
 }
 
 // ******************************************************************************
@@ -129,10 +142,12 @@ function ConstructionLoad() {
     $('#section-construction-homepage').hide();
     $('#section-distribution-homepage').hide();
     $('#section-industry-homepage').hide();
+    $('#section-ti-homepage').hide();
     $('#section-contact-us').hide();
     $('#different_sectors').hide();
     $('#distribution-sections').hide();
     $('#industry-sections').hide();
+    $('#it-sections').hide();
     $('#section-construction-homepage').show();
     $('#div_trusted_clients').show();
     $('#construction-sections').show();
@@ -148,6 +163,7 @@ function ConstructionLoad() {
     $carousel = $('#carouseReviews');
     $carouselItems = $('.carousel-item', $carousel);
     setNextPrev();
+    $(".first_svg_management").html(red_svg);
 
 }
 
@@ -163,18 +179,20 @@ function DistributionLoad() {
     $('#div_with_sectors').hide();
     $('#we-solution-page').hide();
     $('#section-construction-homepage').hide();
+    $('#section-ti-homepage').hide();
     $('#section-distribution-homepage').hide();
     $('#section-industry-homepage').hide();
     $('#section-contact-us').hide();
     $('#different_sectors').hide();
     $('#construction-sections').hide();
     $('#industry-sections').hide();
+    $('#it-sections').hide();
     $('#section-distribution-homepage').show();
     $('#div_trusted_clients').show();
     $('#distribution-sections').show();
     $('#distribution-sections').show();
     window.scrollTo(0, 0);
-    $('#video-banner').prop("src", "img/construction_background.jpg");
+    $('#video-banner').prop("src", "img/distribution-homepage.jpg");
     animate(document.getElementById("section-distribution-homepage"));
     animate(document.getElementById("video-banner"));
     resetArrowConstruction("distribution");
@@ -186,6 +204,7 @@ function DistributionLoad() {
     $carousel = $('#carouseReviewsDistribution');
     $carouselItems = $('.carousel-item', $carousel);
     setNextPrev();
+    $(".first_svg_management").html(red_svg);
 }
 
 // ******************************************************************************
@@ -200,17 +219,19 @@ function IndustryLoad() {
     $('#div_with_sectors').hide();
     $('#we-solution-page').hide();
     $('#section-construction-homepage').hide();
+    $('#section-ti-homepage').hide();
     $('#section-distribution-homepage').hide();
     $('#section-industry-homepage').hide();
     $('#section-contact-us').hide();
     $('#different_sectors').hide();
     $('#distribution-sections').hide();
     $('#construction-sections').hide();
+    $('#it-sections').hide();
     $('#section-industry-homepage').show();
     $('#div_trusted_clients').show();
     $('#industry-sections').show();
     window.scrollTo(0, 0);
-    $('#video-banner').prop("src", "img/construction_background.jpg");
+    $('#video-banner').prop("src", "img/industry-homepage.jpg");
     animate(document.getElementById("section-industry-homepage"));
     animate(document.getElementById("video-banner"));
     resetArrowConstruction("industry");
@@ -221,7 +242,47 @@ function IndustryLoad() {
     $carousel = $('#carouseReviewsIndustry');
     $carouselItems = $('.carousel-item', $carousel);
     setNextPrev();
+    $(".first_svg_management").html(red_svg);
 }
+
+// ******************************************************************************
+// ******************************************************************************
+// FUNÇÃO QUE OCULTA TODAS AS SECÇÕES E MOSTRA APENAS A PÁGINA DE T.I
+// ******************************************************************************
+// ******************************************************************************
+
+function ITLoad() {
+    $('#first-hr').hide();
+    $('#content-first-page').hide();
+    $('#div_with_sectors').hide();
+    $('#we-solution-page').hide();
+    $('#section-construction-homepage').hide();
+    $('#section-ti-homepage').hide();
+    $('#section-distribution-homepage').hide();
+    $('#section-industry-homepage').hide();
+    $('#section-contact-us').hide();
+    $('#different_sectors').hide();
+    $('#distribution-sections').hide();
+    $('#construction-sections').hide();
+    $('#industry-sections').hide();
+    $('#section-ti-homepage').show();
+    $('#div_trusted_clients').show();
+    $('#it-sections').show();
+    window.scrollTo(0, 0);
+    $('#video-banner').prop("src", "img/it-homepage.jpg");
+    animate(document.getElementById("section-ti-homepage"));
+    animate(document.getElementById("video-banner"));
+    resetArrowConstruction("it");
+    currentPage = "it";
+    if (document.getElementsByClassName('buttonOne')[3].getAttribute('aria-expanded') === "false") {
+        $(".buttonOne").click();
+    }
+    $carousel = $('#carouseReviewsIT');
+    $carouselItems = $('.carousel-item', $carousel);
+    setNextPrev();
+    $(".first_svg_management").html(red_svg);
+}
+
 
 // ******************************************************************************
 // ******************************************************************************
@@ -240,7 +301,7 @@ function ChangePageButton() {
         IndustryLoad();
     }
     else {
-
+        ITLoad();
     }
 }
 
@@ -465,6 +526,8 @@ function IndustryHamburguerClick() {
 }
 
 function ITHamburguerClick() {
+    $('.menu-icon').click();
+    ITLoad();
 
 }
 
@@ -511,7 +574,7 @@ function toMobile() {
         svg_construction_mobile + ` </svg>`;
 
     document.getElementById('first_two_icons').innerHTML +=
-        `<svg width="82" id="svg_industry" class = "svg_sectors" height="85" viewBox="0 0 82 85" fill="none" xmlns="http://www.w3.org/2000/svg">` +
+        `<svg width="82" id="svg_industry" class = "svg_sectors" height="85" viewBox="0 0 82 89" fill="none" xmlns="http://www.w3.org/2000/svg">` +
         svg_industry_mobile + `</svg>`
 
     $('#svg_distribution').remove();
@@ -522,7 +585,7 @@ function toMobile() {
 
 
     document.getElementById('second_two_icons').innerHTML +=
-        `<svg width="68" id="svg_it" class = "svg_sectors" height="84" viewBox="0 0 68 84" fill="none" xmlns="http://www.w3.org/2000/svg">` +
+        `<svg width="68" id="svg_it" class = "svg_sectors" height="84" viewBox="0 0 68 89" fill="none" xmlns="http://www.w3.org/2000/svg">` +
         svg_it_mobile + `</svg>`
 }
 
@@ -535,21 +598,21 @@ function toMobile() {
 function toWeb() {
     $('#svg_construction').remove();
     $('#svg_industry').remove();
-    document.getElementById('first_two_icons').innerHTML = `<svg width="122" id="svg_construction" class = "svg_sectors" height="109" viewBox="0 0 122 109" fill="none" xmlns="http://www.w3.org/2000/svg">` +
+    document.getElementById('first_two_icons').innerHTML = `<svg width="120" height="109" viewBox="0 0 120 109" id="svg_construction" class = "svg_sectors" fill="none" xmlns="http://www.w3.org/2000/svg">` +
         svg_construction + `</svg>`
 
     document.getElementById('first_two_icons').innerHTML +=
-        `<svg width="93" id="svg_industry" class = "svg_sectors" height="107" viewBox="0 0 93 107" fill="none" xmlns="http://www.w3.org/2000/svg">` +
+        `<svg id="svg_industry" class = "svg_sectors" width="120" height="109" viewBox="0 0 120 109" fill="none" xmlns="http://www.w3.org/2000/svg">` +
         svg_industry + `</svg>`
 
 
     $('#svg_distribution').remove();
     $('#svg_it').remove();
     document.getElementById('second_two_icons').innerHTML =
-        `<svg width="128" id="svg_distribution" class = "svg_sectors" height="111" viewBox="0 0 128 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+        `<svg width="120" height="109" viewBox="0 0 120 109" id="svg_distribution" class = "svg_sectors" fill="none" xmlns="http://www.w3.org/2000/svg">
     ` + svg_distribution + `</svg>`
 
-    document.getElementById('second_two_icons').innerHTML += `<svg width="94" id="svg_it" class = "svg_sectors" height="109" viewBox="0 0 94 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+    document.getElementById('second_two_icons').innerHTML += `<svg width="120" height="109" viewBox="0 0 120 109" id="svg_it" class = "svg_sectors" fill="none" xmlns="http://www.w3.org/2000/svg">
     ` + svg_it + `</svg>`
 }
 
@@ -585,6 +648,7 @@ function svgs_hovers() {
 
         $("#svg_it").on({
             click: function () {
+                ITLoad();
                 document.getElementById('svg_it').innerHTML = svg_it_hover_mobile;
             }
         });
@@ -612,6 +676,7 @@ function svgs_hovers() {
 
         $("#svg_it").on({
             click: function () {
+                ITLoad();
                 document.getElementById('svg_it').innerHTML = svg_it_hover_mobile;
             }
         });
@@ -657,6 +722,9 @@ function svgs_hovers() {
             },
             mouseleave: function () {
                 document.getElementById('svg_it').innerHTML = svg_it;
+            },
+            click: function () {
+                ITLoad();
             }
         });
     }
@@ -783,30 +851,37 @@ function changeSlider() {
             $('#distribution-sectors-slider').show("slow");
 
             $('#title-2').html("Solução Distribuição");
-            animate(document.getElementById("title-2"));
+            $('#title-1').html("Solução para Distribuição");
+            $('#title-3').html("Mais eficiência na ocupação de armazéns e linhas de distribuição");
             animate(document.getElementById('distribution-sectors-slider'));
 
         } else if ($("#distribution-sectors-slider").is(":visible")) {
             $('#distribution-sectors-slider').hide();
             $('#industry-sectors-slider').show("slow");
             $('#title-2').html("Solução Indústria");
-            animate(document.getElementById("title-2"));
+            $('#title-1').html("Solução para Indústria");
+            $('#title-3').html("Gestão e otimização dos processos de fabrico");
             animate(document.getElementById('industry-sectors-slider'));
 
         } else if ($("#industry-sectors-slider").is(":visible")) {
             $('#industry-sectors-slider').hide();
             $('#it-sectors-slider').show("slow");
             $('#title-2').html("Solução IT");
-            animate(document.getElementById("title-2"));
+            $('#title-1').html("Solução para Tecnologias de Informação");
+            $('#title-3').html("A solução ideal para gerir TI");
             animate(document.getElementById('it-sectors-slider'));
         }
         else {
             $('#it-sectors-slider').hide();
             $('#construction-sectors-slider').show("slow");
             $('#title-2').html("Solução Construção");
-            animate(document.getElementById("title-2"));
+            $('#title-1').html("Solução para Construção Civil");
+            $('#title-3').html("Maior controlo e rigor na gestão de obras e projetos");
             animate(document.getElementById('construction-sectors-slider'));
         }
+        animate(document.getElementById("title-2"));
+        animate(document.getElementById("title-1"));
+        animate(document.getElementById("title-3"));
     }
 
     timer = setTimeout(function () {
@@ -1085,7 +1160,7 @@ function changeHtmlIdealSolution() {
 // ******************************************************************************
 
 function mobileVersionOffices() {
-    if ($(window).width() < 608) {
+    if ($(window).width() < 621) {
         document.getElementById('accordionOffices').style.display = "block"
         document.getElementById('contact-us-office-info').style.display = "none"
         document.getElementById('offices_cities').style.display = "none"

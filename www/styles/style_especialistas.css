@@ -330,7 +330,7 @@ nav ul li a {
   #content-homepage-construction{
       height: calc( 100vh - 190px );
   }
-  #content-homepage-distribution, #content-homepage-industry{
+  #content-homepage-distribution, #content-homepage-industry, #content-homepage-ti{
       height: calc( 100vh - 190px );
   }
   #content-contact-us{
@@ -696,6 +696,8 @@ grid-row-end: -1;
   .hamburguer-hr{
       border: 1px solid #EEEEEE;
       margin-right: 5%;
+      margin-top: 1px;
+      margin-bottom: 1px;
   }
   #hamburguer-icons-text{
       font-family: Montserrat;
@@ -729,7 +731,7 @@ grid-row-end: -1;
       font-family: 'Ubuntu';
       font-style: normal;
       font-weight: bold;
-      font-size: 10px;
+      font-size: 16px;
       line-height: 20px;
       letter-spacing: 0.30px;
       text-transform: uppercase;
@@ -1745,7 +1747,7 @@ grid-row-end: -1;
 /* CONTACT US - FIM */
 
 /* INICIO DIV CONSTRUÇÃO */
-#content-homepage-construction, #content-homepage-distribution, #content-homepage-industry {
+#content-homepage-construction, #content-homepage-distribution, #content-homepage-industry, #content-homepage-ti {
   position: relative;
 }
 
@@ -2877,6 +2879,12 @@ line-height: 56px;
   justify-content: space-between;
   margin-top: 40px;
 }
+.line-solution-bigger{
+  justify-content: space-around;
+}
+.line-solution-bigger .solution-card-item{
+  width: 30%;
+}
 .solution-card-item{
   box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
   border-radius: 8px;
@@ -2918,8 +2926,15 @@ line-height: 56px;
       margin-left: 5%;
       margin-top: 5px;
   }
+  .line-solution-bigger{
+      justify-content: space-around;
+  }
+  .line-solution-bigger .solution-card-item{
+      width: 45%;
+  }
   .carouselSolution .carousel-item{
       background-color: #F5F5F5;
+      padding-bottom: 50px;
   }
 
   .carouselSolution .carousel-control-projects{
@@ -2944,7 +2959,8 @@ line-height: 56px;
       display: none;
   }
   .solution-cards-carousel-mobile{
-      display: block
+      display: block;
+      padding-bottom: 30px;
   }
   .solution-business-title{
       padding-bottom: 30px;
@@ -2966,11 +2982,15 @@ line-height: 56px;
       margin-left: 2%;
   }
   .carouselSolution .carousel-control-next .carousel-control-next-icon{
-      display: none;
+      display: block;
 
   }
   .carouselSolution .carousel-control-prev .carousel-control-prev-icon{
-      display: none;
+      display: block;
+  }
+  .carouselSolution .carousel-item{
+      background-color: #F5F5F5;
+      padding-bottom: 0px;
   }
 
 }
@@ -2990,12 +3010,12 @@ line-height: 56px;
   margin-top: 0%;
   margin-bottom: 54px;
 }
-#solution_gains{
+.solution_gains{
   background: #F5F5F5;
   padding-bottom: 5%;
 }
 
-#solution_gains_text{
+.solution_gains_text{
   font-family: Ubuntu;
   font-style: normal;
   font-weight: normal;
@@ -3055,7 +3075,7 @@ line-height: 56px;
 
 /* tablet*/
 @media only screen and (max-width: 992px) {
-  #solution_gains_text{
+  .solution_gains_text{
   font-family: Ubuntu;
   font-style: normal;
   font-weight: normal;
@@ -3099,3 +3119,267 @@ line-height: 56px;
 
 
 /* FIM SECÇÃO O QUE PODE GANHAR COM ESTA SOLUÇÃO */
+
+/* INÍCIO SECÇÃO CONTROLO E PLANEAMENTO */
+.control_and_planning{
+  padding-bottom: 30px;
+  background: #212121;
+}
+
+.control_and_planning_title{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 61px;
+  line-height: 72px;
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+  margin-right: 18%;
+  margin-left: 18%;
+  margin-bottom: 80px;
+  padding-top: 40px;
+}
+
+
+.control_and_planning_text{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 61px;
+  line-height: 72px;
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+  width: 50%;
+}
+.control_and_planning_img{
+  width: 50%;
+}
+.control_and_planning_img img{
+  width: 632px;
+  height: auto;
+}
+
+.control_and_planning_text_title{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 36px;
+  letter-spacing: 0.25px;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.control_and_planning_text_content{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  font-feature-settings: 'salt' on, 'liga' off;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.control_and_planning_content{
+  display: flex;
+  margin-left: 11%;
+  margin-right: 11%;
+}
+
+@media only screen and (min-width: 1501px){
+  .control_and_planning_img img {
+      width: 950px;
+  }
+}
+
+@media only screen and (min-width: 2000px){
+  .control_and_planning_img img {
+      width: 1100px;
+  }
+}
+
+.control_and_planing_text_items{
+  padding-bottom: 20px;
+}
+
+
+
+
+@media only screen and (max-width: 1500px){
+  .control_and_planning_content{
+      flex-direction: column-reverse;
+      justify-content: center;
+  }
+  .control_and_planning_text{
+      width: 100%;
+      padding-bottom: 40px;
+  }
+
+  .control_and_planing_text_items p{
+      text-align: center;
+      margin-right: 10%;
+      margin-left: 10%;
+  }
+
+  .control_and_planning_title{
+      font-size: 49px;
+     line-height: 56px;
+     margin-right: 10%;
+     margin-left: 10%;
+  }
+  .control_and_planning_img{
+      text-align: center;
+      width: 100%;
+  }
+  .control_and_planning_img img{
+      margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .control_and_planning_img img{
+      width: inherit;
+  }
+}
+
+
+@media only screen and (max-width: 550px){
+  .control_and_planning_title{
+      font-size: 35px;
+      line-height: 36px;
+  }
+  .control_and_planning_content {
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+
+}
+/* FIM SECÇÃO CONTROLO E PLANEAMENTO */
+
+/* INÍCIO SECÇÃO A NOSSA EXPERIÊNCIA */
+.our_experience{
+  display: flex;
+  background: #212121;
+}
+.our_experience_left_title{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 98px;
+  line-height: 112px;
+  letter-spacing: -1.5px;
+  color: #FFFFFF;
+}
+
+.our_experience_left_text{
+  width: 80%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+}
+
+.our_experience_right_text{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.our_experience_left{
+  width:50%;
+  margin-left: 11%;
+  margin-top: 8%;
+  padding-bottom: 8%;
+}
+.our_experience_right{
+  width: 50%;
+  margin-right: 11%;
+  align-self: center;
+  margin-left: 5%;
+  margin-top: 8%;
+  padding-bottom: 8%;
+}
+
+.development_text_first_line{
+  display: flex;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: rgba(255, 255, 255, 0.74);
+  margin-right: 2%;
+}
+
+
+.development_text_second_line{
+  display: flex;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: rgba(255, 255, 255, 0.74);
+  margin-right: 2%;
+}
+
+.infrastructures_text_first_line{
+  display: flex;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: rgba(255, 255, 255, 0.74);
+  margin-right: 2%;
+}
+
+.business_text_first_line{
+  display: flex;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: rgba(255, 255, 255, 0.74);
+  margin-right: 2%;
+}
+.first_dev{
+  margin-right: 10%;
+}
+
+.our_experience_right_title{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.development{
+  margin-bottom: 8%;
+}
+
+.infrastructures{
+  margin-bottom: 8%;
+}
+
+/* FIM SECÇÃO A NOSSA EXPERIÊNCIA */
