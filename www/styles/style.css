@@ -3451,7 +3451,7 @@ grid-row-end: -1;
 
   /* Fim SECÇÃO AS MELHORES SOLUÇÕES */
 
-  /* INÍCIO SECÇÃO A NOSSA EXPERIÊNCIA */
+/* INÍCIO SECÇÃO A NOSSA EXPERIÊNCIA */
 .our_experience{
     display: flex;
     background: #212121;
@@ -3495,7 +3495,7 @@ grid-row-end: -1;
     padding-bottom: 8%;
   }
   .our_experience_right{
-    width: 31%;
+    width: 75%;
     margin-right: 11%;
     align-self: center;
     margin-left: 5%;
@@ -3569,13 +3569,83 @@ grid-row-end: -1;
   .development{
     margin-bottom: 8%;
   }
+  .development_mobile{
+    margin-bottom: 8%;
+  }
   
   .infrastructures{
     margin-bottom: 8%;
   }
   
+  @media only screen and (max-width: 1220px) {
+    
+    .our_experience_left_title{
+      font-size: 61px;
+      line-height: 72px;
+      letter-spacing: -0.5px;
+    }
+  
+    .our_experience_left_text{
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.25px;
+    }
+    .our_experience_right{
+      margin-right: 2%;
+    }
+   /* .our_experience_left_title{
+      display: flex;
+      align-self: center;
+    }
+    .our_experience_left_text{
+      display: flex;
+      align-self: center;
+    }*/
+  }
+  
+  @media only screen and (max-width: 992px) {
+    
+    .our_experience_left_title{
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 35px;
+      line-height: 36px;
+      text-align: center;
+      letter-spacing: 0.25px;
+      color: #FFFFFF;
+      width: 100%;
+      text-align: left;
+      padding: 0;
+    }
+  
+    @media only screen and (max-width: 725px) {
+      
+    }
+  
+    .our_experience_right{
+      width: 60%;
+    }
+    
+    .our_experience_left_text{
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      padding: 0;
+      width: 80%;
+    }
+    .right_content{
+      margin-right: 62%;
+    }
+  
+    .our_experience_left{
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  
+    
   /* FIM SECÇÃO A NOSSA EXPERIÊNCIA */
-
 
   /* INICIO SECÇÃO SETORES IT */
 
