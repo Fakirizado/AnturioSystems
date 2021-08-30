@@ -67,6 +67,8 @@ $(document).ready(function () {
         $(".menu-icon").click();
     });
 
+    $('[data-toggle="tooltip"]').tooltip();
+
 
     //ADICIONA CLIQUES NOS BOTÕES DE REDES SOCIAIS
 
@@ -309,7 +311,49 @@ $(document).ready(function () {
 
     });
 
-    // QUANDO UM MENU DO HEADER É SELECIADO ALTERA A COR DOS RESTANTES ELEMENTOS
+
+    // Adição do event-listener para trocar a percentagem do gráfico 
+    $(".it-tooltip-banca, .it-tooltip-banca-grey").on({
+        mouseenter: function () {
+            $(".percentage-it").html("35%");
+
+        }, mouseleave: function () {
+            $(".percentage-it").html("95%");
+        }
+    });
+
+    $(".it-tooltip-tele, .it-tooltip-tele-grey").on({
+        mouseenter: function () {
+            $(".percentage-it").html("30%");
+
+        }, mouseleave: function () {
+            $(".percentage-it").html("95%");
+        }
+    });
+
+    $(".it-tooltip-admin, .it-tooltip-admin-grey").on({
+        mouseenter: function () {
+            $(".percentage-it").html("15%");
+
+        }, mouseleave: function () {
+            $(".percentage-it").html("95%");
+        }
+    });
+
+    $(".it-tooltip-transport, .it-tooltip-transport-grey").on({
+        mouseenter: function () {
+            $(".percentage-it").html("15%");
+
+        }, mouseleave: function () {
+            $(".percentage-it").html("95%");
+        }
+    });
+
+
+
+    
+
+    // QUANDO UM MENU DO HEADER É SELECIONADO ALTERA A COR DOS RESTANTES ELEMENTOS
 
     $("#language-btn, #dropdown-language").on({
         mouseenter: function () {

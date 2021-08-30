@@ -3634,8 +3634,60 @@ grid-row-end: -1;
       font-size: 49px;
       line-height: 56px;
       color: #616161;
-      
   }
+  .tooltip-inner{
+    background-color: #C4C4C4;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #424242;
+    padding: 10px;
+  }
+  .bs-tooltip-right .arrow::before{
+    border-right-color: #C4C4C4;
+  }
+  .it-tooltip-transport-grey:hover ~ .it-tooltip-transport{
+      stroke-width: 31.5;
+  }
+  .it-tooltip-admin-grey:hover ~ .it-tooltip-admin{
+    stroke-width: 31.5;
+}
+    .it-tooltip-tele-grey:hover ~ .it-tooltip-tele{
+        stroke-width: 31.5;
+    }
+    .it-tooltip-banca-grey:hover ~ .it-tooltip-banca{
+        stroke-width: 31.5;
+    }
+    .it-tooltip-transport:hover,.it-tooltip-banca:hover, .it-tooltip-tele:hover,.it-tooltip-admin:hover {
+        stroke-width: 31.5;
+    }
+
+    @media(max-width: 1300px) {
+        .sectores-it-content-info svg{
+            width: 400px;
+            height: 400px;
+        }
+        .percentage-it{
+            right: 90px;
+        }
+    }
+
+    @media(max-width: 1200px) {
+        .sectors-it-content{
+            margin-right: 4%;
+            margin-left: 4%;
+        }
+        .sectors-it-title-2{
+            width: 80%;
+        }
+
+    }
+
 
 
   /* FIM SECÇÃO SETORES IT */
