@@ -483,7 +483,7 @@ $(document).ready(function () {
 
     $("#first-dropdown-option-1").on({
         mouseenter: function () {
-            $("#first-dropdown-option-1").html(`Construção <span
+            $("#first-dropdown-option-1").html(`Construção<span
              class="dot_point_geral">.</span>`)
         }, mouseleave: function () {
             $("#first-dropdown-option-1").html(`Construção`);
@@ -492,7 +492,7 @@ $(document).ready(function () {
 
     $("#first-dropdown-option-2").on({
         mouseenter: function () {
-            $("#first-dropdown-option-2").html(`Distribuição <span
+            $("#first-dropdown-option-2").html(`Distribuição<span
              class="dot_point_geral">.</span>`);
 
         }, mouseleave: function () {
@@ -502,7 +502,7 @@ $(document).ready(function () {
 
     $("#first-dropdown-option-3").on({
         mouseenter: function () {
-            $("#first-dropdown-option-3").html(`Indústria <span
+            $("#first-dropdown-option-3").html(`Indústria<span
              class="dot_point_geral">.</span>`);
 
         }, mouseleave: function () {
@@ -512,7 +512,7 @@ $(document).ready(function () {
 
     $("#first-dropdown-option-4").on({
         mouseenter: function () {
-            $("#first-dropdown-option-4").html(`TI <span
+            $("#first-dropdown-option-4").html(`TI<span
              class="dot_point_geral">.</span>`);
 
         }, mouseleave: function () {
