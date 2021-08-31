@@ -76,6 +76,14 @@ $(document).ready(function () {
     $(".instagram_click").on("click", function () {
         window.open("https://www.instagram.com/anturiocorp/");
     });
+
+    $(".anturio_click").on("click", function () {
+        window.open("http://anturio.com/");
+    });
+
+    $(".youtube_click").on("click", function () {
+        window.open("https://www.youtube.com/user/anturiocorp");
+    });
     
     $(".facebook_click").on("click", function () {
         window.open("https://www.facebook.com/ANTURIOcom");
